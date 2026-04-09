@@ -37,6 +37,28 @@ son legibles por humanos y consumibles por scripts.
 - **Contenido principal**: Mítica+ (M+)
 - **Objetivo**: Aprender las tres specs, priorizando tank y heal
 
+## Contexto del usuario como jugador
+- Jugador veterano con mucho conocimiento del juego
+- Fue top EU como Druid Balance en Wrath of the Lich King
+- Su rol actual NO es competitivo personal - quiere hacer escuela
+- Está mentorizando a un grupo de 8-10 personas en su guild
+- Filosofía: no copiar rotaciones, entender POR QUÉ funciona lo que funciona
+- Enfoque epistemológico: entender las condiciones que hacen efectiva una acción
+- Ejemplo suyo: "No mires cuándo se tiran defensivos. Ponte a curar y tus
+  ojos aprenderán cuándo entra el daño"
+- El problema que ve: las guías copian al top 0.1% sin contexto, los jugadores
+  copian sin entender, y cuando algo cambia no saben adaptarse
+- El tank es el ejemplo más visible: el que más castiga el fallo, el que más
+  fricción genera, y el que peores herramientas tiene para entender los bosses
+
+## Modelo de trabajo
+- Las herramientas son para uso del USUARIO, no para la guild directamente
+- NO se expone IA a la guild - el usuario es el intermediario
+- Flujo: usuario + Claude analizan datos → generan documentos legibles →
+  el usuario los comparte como quiera (Discord, voz, docs)
+- Los análisis deben ser consumibles por el usuario como "pizarra" de enseñanza
+- La estructura debe poder escalar a addons propios en el futuro
+
 ## Estado del proyecto (última actualización: 2026-04-09)
 
 ### Completado
