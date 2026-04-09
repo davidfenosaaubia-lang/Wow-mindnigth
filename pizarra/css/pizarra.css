@@ -1,0 +1,276 @@
+:root {
+  /* Base */
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-card: #1f2b47;
+  --bg-card-hover: #253555;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0b0;
+  --text-muted: #666680;
+  --border: #2a3a5c;
+  --accent: #4fc3f7;
+
+  /* Calidad de objeto */
+  --poor: #9d9d9d;
+  --common: #ffffff;
+  --uncommon: #1eff00;
+  --rare: #0070dd;
+  --epic: #a335ee;
+  --legendary: #ff8000;
+
+  /* Clases WoW */
+  --clase-guerrero: #C79C6E;
+  --clase-paladin: #F58CBA;
+  --clase-cazador: #ABD473;
+  --clase-picaro: #FFF569;
+  --clase-sacerdote: #FFFFFF;
+  --clase-dk: #C41F3B;
+  --clase-chaman: #0070DE;
+  --clase-mago: #69CCF0;
+  --clase-brujo: #9482C9;
+  --clase-monje: #00FF96;
+  --clase-druida: #FF7D0A;
+  --clase-dh: #A330C9;
+  --clase-evocador: #33937F;
+
+  /* Stagger */
+  --stagger-leve: #00ff96;
+  --stagger-moderado: #ffcc00;
+  --stagger-intenso: #ff4444;
+
+  /* Stats */
+  --stat-crit: #ff6b6b;
+  --stat-haste: #ffd93d;
+  --stat-mastery: #6bcb77;
+  --stat-vers: #4d96ff;
+
+  /* Parse colors (WCL) */
+  --parse-gris: #666666;
+  --parse-verde: #1eff00;
+  --parse-azul: #0070dd;
+  --parse-morado: #a335ee;
+  --parse-naranja: #ff8000;
+  --parse-rosa: #e268a8;
+  --parse-oro: #e5cc80;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+/* Navegación lateral */
+.nav-lateral {
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.nav-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-lateral a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 6px;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.nav-lateral a:hover,
+.nav-lateral a.activo {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+/* Contenido principal */
+.contenido {
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.titulo-pagina {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Tarjetas */
+.grid-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: background 0.2s;
+}
+
+.tarjeta:hover {
+  background: var(--bg-card-hover);
+}
+
+.tarjeta-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.clase-indicator {
+  width: 4px;
+  height: 40px;
+  border-radius: 2px;
+}
+
+.tarjeta-nombre {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.tarjeta-spec {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Tabla de equipo */
+.tabla-equipo {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.tabla-equipo th {
+  text-align: left;
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.tabla-equipo td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabla-equipo tr:hover {
+  background: var(--bg-card-hover);
+}
+
+.ilvl {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.ilvl-alto { color: var(--epic); }
+.ilvl-medio { color: var(--rare); }
+.ilvl-bajo { color: var(--uncommon); }
+
+.alerta {
+  background: rgba(255, 68, 68, 0.1);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: #ff8888;
+}
+
+.mejora {
+  background: rgba(79, 195, 247, 0.1);
+  border: 1px solid rgba(79, 195, 247, 0.3);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* Secciones */
+.seccion {
+  margin-bottom: 2rem;
+}
+
+.seccion-titulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Gráficas */
+.grafica-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.tag-tank { background: rgba(79, 195, 247, 0.2); color: var(--accent); }
+.tag-healer { background: rgba(0, 255, 150, 0.2); color: var(--clase-monje); }
+.tag-dps { background: rgba(255, 68, 68, 0.2); color: #ff6b6b; }
+.tag-si { background: rgba(0, 255, 150, 0.15); color: #00ff96; }
+.tag-no { background: rgba(255, 68, 68, 0.15); color: #ff4444; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .nav-lateral {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .contenido {
+    padding: 1rem;
+  }
+}

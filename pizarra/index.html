@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizarra - Wow Midnight</title>
+  <link rel="stylesheet" href="css/pizarra.css">
+</head>
+<body>
+  <div class="layout">
+    <nav class="nav-lateral">
+      <a href="index.html" class="nav-logo">Wow Midnight</a>
+      <a href="index.html" class="activo">Panel</a>
+      <a href="jugador.html?nombre=kymera">Jugador</a>
+      <a href="comparar.html">Comparar</a>
+      <a href="boss.html">Boss</a>
+      <a href="mazmorra.html">Mazmorra</a>
+    </nav>
+
+    <main class="contenido" id="app">
+      <h1 class="titulo-pagina">Artic Penguins</h1>
+      <p class="subtitulo">Panel de la guild &middot; Herramientas de an&aacute;lisis</p>
+
+      <div class="grid-tarjetas" id="tarjetas">
+        <!-- Se llena con JS -->
+      </div>
+
+      <div class="seccion" style="margin-top:2rem;">
+        <h2 class="seccion-titulo">Estado del ecosistema</h2>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem;">
+          <div class="tarjeta">
+            <div style="color:var(--accent);font-size:1.5rem;font-weight:700;" id="n-terminos">-</div>
+            <div style="color:var(--text-secondary);font-size:0.85rem;">T&eacute;rminos en Rosetta</div>
+          </div>
+          <div class="tarjeta">
+            <div style="color:var(--accent);font-size:1.5rem;font-weight:700;" id="n-mazmorras">-</div>
+            <div style="color:var(--text-secondary);font-size:0.85rem;">Mazmorras mapeadas</div>
+          </div>
+          <div class="tarjeta">
+            <div style="color:var(--accent);font-size:1.5rem;font-weight:700;" id="n-instancias">-</div>
+            <div style="color:var(--text-secondary);font-size:0.85rem;">Instancias totales</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script>
+    // Datos de jugadores conocidos (se irá ampliando)
+    const JUGADORES = [
+      {
+        nombre: 'Kymera',
+        clase: 'Monje',
+        spec: 'Maestro cervecero',
+        rol: 'TANK',
+        servidor: "Zul'jin",
+        ilvl: '~277',
+        tier: '4p',
+        alertas: ['Falta enchant espalda', 'Falta enchant muñecas'],
+        link: 'jugador.html?nombre=kymera'
+      }
+    ];
+
+    function renderTarjetas() {
+      const container = document.getElementById('tarjetas');
+      let html = '';
+
+      JUGADORES.forEach(j => {
+        const colorTag = j.rol === 'TANK' ? 'tag-tank' : j.rol === 'HEALER' ? 'tag-healer' : 'tag-dps';
+        const alertasHtml = j.alertas.length > 0
+          ? `<div style="margin-top:0.75rem;">${j.alertas.map(a => `<div class="alerta" style="margin-bottom:0.25rem;padding:0.4rem 0.75rem;">${a}</div>`).join('')}</div>`
+          : '';
+
+        html += `
+          <a href="${j.link}" class="tarjeta" style="text-decoration:none;color:inherit;">
+            <div class="tarjeta-header">
+              <div class="clase-indicator" style="background:${colorClase(j.clase)};"></div>
+              <div>
+                <div class="tarjeta-nombre">${j.nombre}</div>
+                <div class="tarjeta-spec">${j.spec} &middot; ${j.servidor}</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:0.5rem;align-items:center;">
+              <span class="tag ${colorTag}">${j.rol}</span>
+              <span style="color:var(--text-secondary);font-size:0.85rem;">ilvl ${j.ilvl}</span>
+              <span style="color:var(--epic);font-size:0.85rem;font-weight:600;">${j.tier}</span>
+            </div>
+            ${alertasHtml}
+          </a>
+        `;
+      });
+
+      // Placeholder para añadir más jugadores
+      html += `
+        <div class="tarjeta" style="display:flex;align-items:center;justify-content:center;border-style:dashed;color:var(--text-muted);">
+          <div style="text-align:center;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">+</div>
+            <div>A&ntilde;adir jugador</div>
+          </div>
+        </div>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    async function renderStats() {
+      const mazmorras = await cargarJSON(RUTAS.mazmorras);
+      const instancias = await cargarJSON(RUTAS.instancias);
+      const stats = await cargarJSON(RUTAS.rosettaStats);
+
+      if (mazmorras) {
+        document.getElementById('n-mazmorras').textContent = mazmorras.mazmorras?.length || 0;
+      }
+      if (instancias) {
+        document.getElementById('n-instancias').textContent = instancias.instancias?.length || 0;
+      }
+      if (stats) {
+        document.getElementById('n-terminos').textContent = stats.terminos?.length || 0;
+      }
+    }
+
+    renderTarjetas();
+    renderStats();
+  </script>
+</body>
+</html>
