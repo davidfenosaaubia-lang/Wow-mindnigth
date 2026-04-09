@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: '0 6 * * 3'  # Cada miércoles a las 6:00 UTC (después del reset EU)
 
+permissions:
+  contents: write
+
 jobs:
   actualizar-rosetta:
     runs-on: ubuntu-latest
@@ -27,6 +30,14 @@ jobs:
           BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
           BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
         run: python3 scripts/rosetta-api.py --todo
+
+      - name: Ver qué archivos se generaron
+        run: |
+          echo "Contenido de rosetta/api/:"
+          ls -la rosetta/api/
+          echo "---"
+          echo "Archivos JSON generados:"
+          find rosetta/api/ -name "*.json" | head -20
 
       - name: Commit y push si hay cambios
         run: |
