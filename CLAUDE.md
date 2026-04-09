@@ -78,18 +78,28 @@ son legibles por humanos y consumibles por scripts.
   - conocimiento/monje/perfiles/kymera-brewmaster-2026-04-09.simc
   - conocimiento/monje/perfiles/analisis-kymera-2026-04-09.json
 - Script Warcraft Logs: scripts/wcl-analyzer.py (GraphQL v2)
-- WCL API keys configuradas (pendiente: añadir secrets en GitHub)
+- WCL API keys configuradas (WCL_CLIENT_SECRET en GitHub, falta WCL_CLIENT_ID)
+- Pizarra visual creada (pizarra/):
+  - index.html: panel de guild con tarjeta de Kymera
+  - jugador.html: perfil detallado de equipo, enchants, mejoras
+  - CSS tema oscuro con colores de clase WoW
+  - JS vanilla + Chart.js CDN, sin frameworks
+- Guild: Artic Penguins (posiblemente Sanguino EU)
 
 ### Pendiente
+- Hacer repo público para activar GitHub Pages (pizarra web)
+- Añadir WCL_CLIENT_ID a GitHub Secrets
 - Descargar habilidades individuales por spec desde talent tree API
   (el endpoint spec_talent_tree existe pero hay que ajustar el parsing)
 - Crear rotaciones detalladas para Maestro cervecero y Tejedor de niebla
-- Explorar integración con Warcraft Logs API y Raidbots
-- Primer análisis de logs reales del usuario
+- Primer análisis de logs reales con WCL API
+- Ampliar pizarra: vista de boss (timeline de daño), comparar, mazmorra
+- Añadir más jugadores de la guild al panel
 - Verificar nombres de habilidades del Monje con datos de la API
 
 ### Próximos pasos sugeridos
-1. Arreglar descarga de habilidades del talent tree
-2. Crear guía de rotación Maestro cervecero para M+
-3. Crear guía de rotación Tejedor de niebla para M+
-4. Primer ejercicio práctico: exportar perfil SimC y simular
+1. Hacer repo público y activar GitHub Pages
+2. Añadir WCL_CLIENT_ID y probar conexión con Warcraft Logs
+3. Arreglar descarga de habilidades del talent tree
+4. Vista de boss con timeline de daño (la más valiosa para el usuario)
+5. Añadir jugadores de la guild al panel
