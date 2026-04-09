@@ -1,0 +1,30 @@
+Autenticando con Blizzard API...
+  OK: Autenticación correcta
+
+=== Descargando clases y especializaciones ===
+  WARN: /data/wow/playable-class/index no encontrado (404)
+  WARN: /data/wow/playable-class/index no encontrado (404)
+  ERROR: No se pudo obtener el índice de clases
+  indice_es: None
+  indice_en: None
+
+=== Descargando mazmorras ===
+  Probando /data/wow/mythic-keystone/dungeon/index...
+  WARN: /data/wow/mythic-keystone/dungeon/index no encontrado (404)
+  WARN: /data/wow/mythic-keystone/dungeon/index no encontrado (404)
+  Probando /data/wow/dungeon/index...
+  WARN: /data/wow/dungeon/index no encontrado (404)
+  WARN: /data/wow/dungeon/index no encontrado (404)
+  Probando /data/wow/journal-instance/index...
+  WARN: /data/wow/journal-instance/index no encontrado (404)
+  WARN: /data/wow/journal-instance/index no encontrado (404)
+  ERROR: No se encontraron mazmorras en ningún endpoint
+
+=== Descargando bandas ===
+  WARN: /data/wow/journal-expansion/index no encontrado (404)
+  WARN: /data/wow/journal-expansion/index no encontrado (404)
+  ERROR: No se pudo obtener índice de expansiones
+
+============================================================
+  Descarga completa. 0 archivos generados.
+============================================================
