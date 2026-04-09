@@ -1,0 +1,74 @@
+{
+  "personaje": {
+    "nombre": "Kymera",
+    "clase": "Monje / Monk",
+    "spec": "Maestro cervecero / Brewmaster",
+    "raza": "Enano / Dwarf",
+    "nivel": 90,
+    "servidor": "Zul'jin (EU)",
+    "profesiones": ["Encantamiento (21)", "Joyería (1)"],
+    "fecha_perfil": "2026-04-09"
+  },
+  "equipo": {
+    "ilvl_estimado": "~277",
+    "tier_set": {
+      "set": "Elegido de Ra-den",
+      "piezas": [
+        { "ranura": "Cabeza", "ilvl": 276, "nombre_es": "Rostro temible de elegido de Ra-den" },
+        { "ranura": "Pecho", "ilvl": 289, "nombre_es": "Atuendo de batalla de elegido de Ra-den" },
+        { "ranura": "Manos", "ilvl": 289, "nombre_es": "Puñotruenos de elegido de Ra-den" },
+        { "ranura": "Piernas", "ilvl": 276, "nombre_es": "Recorredores raudos de elegido de Ra-den" }
+      ],
+      "bonus": "4 piezas (4p) - ACTIVO",
+      "notas": "Tener el 4p es crítico. No cambiar ninguna de estas piezas por un upgrade de ilvl a menos que SimC lo confirme."
+    },
+    "crafted": [
+      { "ranura": "Cuello", "ilvl": 285, "nombre_es": "Amuleto sin'dorei magistral", "stats": "Celeridad + Golpe crítico", "calidad": 5 },
+      { "ranura": "Arma", "ilvl": 285, "nombre_es": "Bastón pica de Aln'hara", "stats": "Maestría + Celeridad", "calidad": 5 }
+    ],
+    "trinkets": [
+      { "nombre_es": "Crisol de energías erráticas", "ilvl": 263 },
+      { "nombre_es": "Pluma de alascuas", "ilvl": 266 }
+    ],
+    "puntos_debiles": [
+      { "ranura": "Muñecas", "ilvl": 263, "nombre_es": "Brazales de piel de Vacío", "comentario": "Pieza más baja junto con anillo y trinkets" },
+      { "ranura": "Anillo 2", "ilvl": 263, "nombre_es": "Vínculo de la Luz" },
+      { "ranura": "Trinket 1", "ilvl": 263, "nombre_es": "Crisol de energías erráticas" },
+      { "ranura": "Hombros", "ilvl": 272, "nombre_es": "Manto de sangrepluma", "comentario": "No es tier, posible slot para upgrade" }
+    ],
+    "encantamientos": {
+      "cabeza": "SI",
+      "pecho": "SI",
+      "piernas": "SI",
+      "pies": "SI",
+      "anillo_1": "SI",
+      "anillo_2": "SI",
+      "arma": "SI",
+      "espalda": "NO - falta encantamiento",
+      "muñecas": "NO - falta encantamiento"
+    },
+    "gemas": {
+      "cuello": "SI (1 gema)",
+      "anillo_1": "SI (1 gema)",
+      "anillo_2": "SI (1 gema)"
+    }
+  },
+  "observaciones": [
+    "4 piezas de tier activo - muy bien, no tocar",
+    "2 piezas crafted a calidad 5 y ilvl 285 - bien optimizado",
+    "Tiene 3 loadouts de talentos guardados (activo, suuu, kiira) - indica que experimenta con builds",
+    "Raza Enano: bonus defensivo (Forma de piedra elimina veneno/enfermedad/sangrado) útil para tank en M+",
+    "Profesiones: Encantamiento a 21 es bajo, conviene subirlo para self-enchant. Joyería a 1 prácticamente sin empezar"
+  ],
+  "mejoras_inmediatas": [
+    "Encantar espalda y muñecas (no tienen encantamiento)",
+    "Subir muñecas (263) - buscar upgrade en M+ o raid",
+    "Trinkets (263/266) - zona con más margen de mejora",
+    "Hombros (272) - no es tier, puede reemplazarse libremente"
+  ],
+  "para_simular": [
+    "Top Gear en Raidbots con las alternativas de bolsa",
+    "Comparar trinkets: tiene Receptáculo de almas torturadas (266), Glóbulo putrefacto (266) y otros en la bolsa",
+    "Verificar si los crafted stats (Celeridad+Crit en cuello, Maestría+Celeridad en arma) son óptimos para BrM"
+  ]
+}
