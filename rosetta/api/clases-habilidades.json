@@ -1,0 +1,357 @@
+{
+  "fuente": "Blizzard API",
+  "tipo": "Clases, especializaciones y habilidades",
+  "region": "eu",
+  "generado": "2026-04-09 16:15:37",
+  "clases": [
+    {
+      "id": 3,
+      "es": "Cazador",
+      "en": "Hunter",
+      "especializaciones": [
+        {
+          "id": 253,
+          "es": "Bestias",
+          "en": "Beast Mastery",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 254,
+          "es": "Puntería",
+          "en": "Marksmanship",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 255,
+          "es": "Supervivencia",
+          "en": "Survival",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "es": "Brujo",
+      "en": "Warlock",
+      "especializaciones": [
+        {
+          "id": 265,
+          "es": "Aflicción",
+          "en": "Affliction",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 266,
+          "es": "Demonología",
+          "en": "Demonology",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 267,
+          "es": "Destrucción",
+          "en": "Destruction",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "es": "Druida",
+      "en": "Druid",
+      "especializaciones": [
+        {
+          "id": 102,
+          "es": "Equilibrio",
+          "en": "Balance",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 103,
+          "es": "Feral",
+          "en": "Feral",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 104,
+          "es": "Guardián",
+          "en": "Guardian",
+          "rol": "TANK",
+          "habilidades": []
+        },
+        {
+          "id": 105,
+          "es": "Restauración",
+          "en": "Restoration",
+          "rol": "HEALER",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "es": "Mago",
+      "en": "Mage",
+      "especializaciones": [
+        {
+          "id": 62,
+          "es": "Arcano",
+          "en": "Arcane",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 63,
+          "es": "Fuego",
+          "en": "Fire",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 64,
+          "es": "Escarcha",
+          "en": "Frost",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "es": "Caballero de la Muerte",
+      "en": "Death Knight",
+      "especializaciones": [
+        {
+          "id": 250,
+          "es": "Sangre",
+          "en": "Blood",
+          "rol": "TANK",
+          "habilidades": []
+        },
+        {
+          "id": 251,
+          "es": "Escarcha",
+          "en": "Frost",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 252,
+          "es": "Profano",
+          "en": "Unholy",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "es": "Cazador de demonios",
+      "en": "Demon Hunter",
+      "especializaciones": [
+        {
+          "id": 577,
+          "es": "Devastación",
+          "en": "Havoc",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 581,
+          "es": "Venganza",
+          "en": "Vengeance",
+          "rol": "TANK",
+          "habilidades": []
+        },
+        {
+          "id": 1480,
+          "es": "Devorador",
+          "en": "Devourer",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "es": "Monje",
+      "en": "Monk",
+      "especializaciones": [
+        {
+          "id": 268,
+          "es": "Maestro cervecero",
+          "en": "Brewmaster",
+          "rol": "TANK",
+          "habilidades": []
+        },
+        {
+          "id": 269,
+          "es": "Viajero del viento",
+          "en": "Windwalker",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 270,
+          "es": "Tejedor de niebla",
+          "en": "Mistweaver",
+          "rol": "HEALER",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "es": "Sacerdote",
+      "en": "Priest",
+      "especializaciones": []
+    },
+    {
+      "id": 2,
+      "es": "Paladín",
+      "en": "Paladin",
+      "especializaciones": [
+        {
+          "id": 65,
+          "es": "Sagrado",
+          "en": "Holy",
+          "rol": "HEALER",
+          "habilidades": []
+        },
+        {
+          "id": 66,
+          "es": "Protección",
+          "en": "Protection",
+          "rol": "TANK",
+          "habilidades": []
+        },
+        {
+          "id": 70,
+          "es": "Reprensión",
+          "en": "Retribution",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "es": "Pícaro",
+      "en": "Rogue",
+      "especializaciones": [
+        {
+          "id": 259,
+          "es": "Asesinato",
+          "en": "Assassination",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 260,
+          "es": "Forajido",
+          "en": "Outlaw",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 261,
+          "es": "Sutileza",
+          "en": "Subtlety",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "es": "Chamán",
+      "en": "Shaman",
+      "especializaciones": [
+        {
+          "id": 262,
+          "es": "Elemental",
+          "en": "Elemental",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 263,
+          "es": "Mejora",
+          "en": "Enhancement",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 264,
+          "es": "Restauración",
+          "en": "Restoration",
+          "rol": "HEALER",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "es": "Guerrero",
+      "en": "Warrior",
+      "especializaciones": [
+        {
+          "id": 71,
+          "es": "Armas",
+          "en": "Arms",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 72,
+          "es": "Furia",
+          "en": "Fury",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 73,
+          "es": "Protección",
+          "en": "Protection",
+          "rol": "TANK",
+          "habilidades": []
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "es": "Evocador",
+      "en": "Evoker",
+      "especializaciones": [
+        {
+          "id": 1467,
+          "es": "Devastación",
+          "en": "Devastation",
+          "rol": "DAMAGE",
+          "habilidades": []
+        },
+        {
+          "id": 1468,
+          "es": "Preservación",
+          "en": "Preservation",
+          "rol": "HEALER",
+          "habilidades": []
+        },
+        {
+          "id": 1473,
+          "es": "Aumento",
+          "en": "Augmentation",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,30 +1,443 @@
 Autenticando con Blizzard API...
   OK: Autenticación correcta
 
+=== Test de conexión ===
+  200 | /data/wow/playable-class/index | ns=static-eu
+       Keys: ['_links', 'classes']
+       OK!
+
 === Descargando clases y especializaciones ===
-  WARN: /data/wow/playable-class/index no encontrado (404)
-  WARN: /data/wow/playable-class/index no encontrado (404)
-  ERROR: No se pudo obtener el índice de clases
-  indice_es: None
-  indice_en: None
+  OK: Encontradas 13 clases (key: 'classes')
+  Clase: Cazador (Hunter) [id:3]
+    Spec: Bestias (Beast Mastery) [id:253]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Puntería (Marksmanship) [id:254]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Supervivencia (Survival) [id:255]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Brujo (Warlock) [id:9]
+    Spec: Aflicción (Affliction) [id:265]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Demonología (Demonology) [id:266]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Destrucción (Destruction) [id:267]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Druida (Druid) [id:11]
+    Spec: Equilibrio (Balance) [id:102]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Feral (Feral) [id:103]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Guardián (Guardian) [id:104]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Restauración (Restoration) [id:105]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Mago (Mage) [id:8]
+    Spec: Arcano (Arcane) [id:62]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Fuego (Fire) [id:63]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Escarcha (Frost) [id:64]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Caballero de la Muerte (Death Knight) [id:6]
+    Spec: Sangre (Blood) [id:250]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Escarcha (Frost) [id:251]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Profano (Unholy) [id:252]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Cazador de demonios (Demon Hunter) [id:12]
+    Spec: Devastación (Havoc) [id:577]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Venganza (Vengeance) [id:581]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Devorador (Devourer) [id:1480]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Monje (Monk) [id:10]
+    Spec: Maestro cervecero (Brewmaster) [id:268]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Viajero del viento (Windwalker) [id:269]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Tejedor de niebla (Mistweaver) [id:270]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Sacerdote (Priest) [id:5]
+  ERROR en /data/wow/playable-class/5: 504 Server Error: Gateway Timeout for url: https://eu.api.blizzard.com/data/wow/playable-class/5?namespace=static-eu&locale=en_US
+  Clase: Paladín (Paladin) [id:2]
+    Spec: Sagrado (Holy) [id:65]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Protección (Protection) [id:66]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Reprensión (Retribution) [id:70]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Pícaro (Rogue) [id:4]
+    Spec: Asesinato (Assassination) [id:259]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Forajido (Outlaw) [id:260]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Sutileza (Subtlety) [id:261]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Chamán (Shaman) [id:7]
+    Spec: Elemental (Elemental) [id:262]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Mejora (Enhancement) [id:263]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Restauración (Restoration) [id:264]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Guerrero (Warrior) [id:1]
+    Spec: Armas (Arms) [id:71]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Furia (Fury) [id:72]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Protección (Protection) [id:73]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+  Clase: Evocador (Evoker) [id:13]
+    Spec: Devastación (Devastation) [id:1467]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Preservación (Preservation) [id:1468]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Aumento (Augmentation) [id:1473]
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+
+  TOTAL: 13 clases, 0 habilidades
+
+  GUARDADO: /home/runner/work/Wow-mindnigth/Wow-mindnigth/rosetta/api/clases-habilidades.json
 
 === Descargando mazmorras ===
   Probando /data/wow/mythic-keystone/dungeon/index...
-  WARN: /data/wow/mythic-keystone/dungeon/index no encontrado (404)
-  WARN: /data/wow/mythic-keystone/dungeon/index no encontrado (404)
-  Probando /data/wow/dungeon/index...
-  WARN: /data/wow/dungeon/index no encontrado (404)
-  WARN: /data/wow/dungeon/index no encontrado (404)
-  Probando /data/wow/journal-instance/index...
-  WARN: /data/wow/journal-instance/index no encontrado (404)
-  WARN: /data/wow/journal-instance/index no encontrado (404)
-  ERROR: No se encontraron mazmorras en ningún endpoint
+    OK: 82 entradas (key: 'dungeons')
+    Cervecería del Trueno -> Stormstout Brewery
+    Puerta del Sol Poniente -> Gate of the Setting Sun
+    Monasterio del Shadopan -> Shado-Pan Monastery
+    Asedio del Templo de Niuzao -> Siege of Niuzao Temple
+    Palacio Mogu'shan -> Mogu'shan Palace
+    Templo del Dragón de Jade -> Temple of the Jade Serpent
+    Scholomance -> Scholomance
+    Cámaras Escarlata -> Scarlet Halls
+    Monasterio Escarlata -> Scarlet Monastery
+    El Vergel Eterno -> The Everbloom
+    Puerto de Hierro -> Iron Docks
+    Trecho Celestial -> Skyreach
+    Auchindoun -> Auchindoun
+    Minas Machacasangre -> Bloodmaul Slag Mines
+    Cementerio de Sombraluna -> Shadowmoon Burial Grounds
+    Terminal Malavía -> Grimrail Depot
+    Cumbre de Roca Negra Superior -> Upper Blackrock Spire
+    Cámaras del Valor -> Halls of Valor
+    Ojo de Azshara -> Eye of Azshara
+    Arboleda Corazón Oscuro -> Darkheart Thicket
+    Torreón Grajo Negro -> Black Rook Hold
+    Guarida de Neltharion -> Neltharion's Lair
+    Cámara de las Celadoras -> Vault of the Wardens
+    Fauce de Almas -> Maw of Souls
+    La Arquería -> The Arcway
+    Corte de las Estrellas -> Court of Stars
+    Regreso a Karazhan: superior -> Return to Karazhan: Upper
+    Trono del Triunvirato -> Seat of the Triumvirate
+    Regreso a Karazhan: inferior -> Return to Karazhan: Lower
+    Catedral de la Noche Eterna -> Cathedral of Eternal Night
+    VETA MADRE -> The MOTHERLODE!!
+    Mansión Crestavía -> Waycrest Manor
+    Reposo de los Reyes -> Kings' Rest
+    Templo de Sethraliss -> Temple of Sethraliss
+    Catacumbas Putrefactas -> The Underrot
+    Altar de la Tormenta -> Shrine of the Storm
+    Atal'Dazar -> Atal'Dazar
+    Fuerte Libre -> Freehold
+    Tol Dagor -> Tol Dagor
+    Asedio de Boralus -> Siege of Boralus
+    Operación: Mecandria - Desguace -> Operation: Mechagon - Junkyard
+    Operación: Mecandria - Taller -> Operation: Mechagon - Workshop
+    Nieblas de Tirna Scithe -> Mists of Tirna Scithe
+    Estela Necrótica -> The Necrotic Wake
+    El Otro Lado -> De Other Side
+    Salas de la Expiación -> Halls of Atonement
+    Bajapeste -> Plaguefall
+    Cavernas Sanguinas -> Sanguine Depths
+    Agujas de Ascensión -> Spires of Ascension
+    Teatro del Dolor -> Theater of Pain
+    Estanques de Vida Rubí -> Ruby Life Pools
+    La Ofensiva Nokhud -> The Nokhud Offensive
+    La Cámara Azur -> The Azure Vault
+    Academia Algeth'ar -> Algeth'ar Academy
+    Uldaman: Legado de Tyr -> Uldaman: Legacy of Tyr
+    Neltharus -> Neltharus
+    Hondonada Frondacuero -> Brackenhide Hollow
+    Salas de Infusión -> Halls of Infusion
+    Tazavesh: Calles de las Maravillas -> Tazavesh: Streets of Wonder
+    Tazavesh: Gambito de So'leah -> Tazavesh: So'leah's Gambit
+    La Cumbre del Vórtice -> The Vortex Pinnacle
+    El Amanecer del Infinito: la Caída de Galakrond -> Dawn of the Infinite: Galakrond's Fall
+    El Amanecer del Infinito: el Ascenso de Murozond -> Dawn of the Infinite: Murozond's Rise
+    Operación: Compuerta -> Operation: Floodgate
+    Foso de Saron -> Pit of Saron
+    Aguja Brisaveloz -> Windrunner Spire
+    Bancal del Magister -> Magisters' Terrace
+    Punto de Nexo: Xenas -> Nexus-Point Xenas
+    Cavernas de Maisara -> Maisara Caverns
+    Trono de las Mareas -> Throne of the Tides
+    Priorato de la Llama Sagrada -> Priory of the Sacred Flame
+    El Grajero -> The Rookery
+    La Petrocámara -> The Stonevault
+    Ciudad Tejida -> City of Threads
+    Ara-Kara, Ciudad de los Ecos -> Ara-Kara, City of Echoes
+    Grieta de Flama Oscura -> Darkflame Cleft
+    El Rompealbas -> The Dawnbreaker
+    Lagar de Tragoceniza -> Cinderbrew Meadery
+    Grim Batol -> Grim Batol
+    El Núcleo Pétreo -> The Stonecore
+    Ecodomo Al'dani -> Eco-Dome Al'dani
+    Trono del Triunvirato -> Seat of the Triumvirate
+
+  GUARDADO: /home/runner/work/Wow-mindnigth/Wow-mindnigth/rosetta/api/mazmorras.json
 
 === Descargando bandas ===
-  WARN: /data/wow/journal-expansion/index no encontrado (404)
-  WARN: /data/wow/journal-expansion/index no encontrado (404)
-  ERROR: No se pudo obtener índice de expansiones
+  OK: 13 expansiones
+  Expansion: Mists of Pandaria
+    [raids] Cámaras Mogu'shan -> Mogu'shan Vaults
+    [raids] Corazón del Miedo -> Heart of Fear
+    [raids] Veranda de la Primavera Eterna -> Terrace of Endless Spring
+    [raids] Solio del Trueno -> Throne of Thunder
+    [raids] Asedio de Orgrimmar -> Siege of Orgrimmar
+    [dungeons] Puerta del Sol Poniente -> Gate of the Setting Sun
+    [dungeons] Palacio Mogu'shan -> Mogu'shan Palace
+    [dungeons] Cámaras Escarlata -> Scarlet Halls
+    [dungeons] Monasterio Escarlata -> Scarlet Monastery
+    [dungeons] Scholomance -> Scholomance
+    [dungeons] Monasterio del Shadopan -> Shado-Pan Monastery
+    [dungeons] Asedio del Templo de Niuzao -> Siege of Niuzao Temple
+    [dungeons] Cervecería del Trueno -> Stormstout Brewery
+    [dungeons] Templo del Dragón de Jade -> Temple of the Jade Serpent
+  Expansion: World of Warcraft
+    [raids] Núcleo de magma -> Molten Core
+    [raids] Guarida de Alanegra -> Blackwing Lair
+    [raids] Ruinas de Ahn'Qiraj -> Ruins of Ahn'Qiraj
+    [raids] Templo de Ahn'Qiraj -> Temple of Ahn'Qiraj
+    [raids] Profundidades de Roca Negra -> Blackrock Depths
+    [dungeons] Cavernas de Brazanegra -> Blackfathom Deeps
+    [dungeons] Profundidades de Roca Negra -> Blackrock Depths
+    [dungeons] Minas de la Muerte -> Deadmines
+    [dungeons] La Masacre: Jardines de la Capital -> Dire Maul - Capital Gardens
+    [dungeons] La Masacre: Ágora de Gordok -> Dire Maul - Gordok Commons
+    [dungeons] La Masacre: Barrio Alabeo -> Dire Maul - Warpwood Quarter
+    [dungeons] Gnomeregan -> Gnomeregan
+    [dungeons] Cumbre de Roca Negra Inferior -> Lower Blackrock Spire
+    [dungeons] Maraudon -> Maraudon
+    [dungeons] Sima Ígnea -> Ragefire Chasm
+    [dungeons] Zahúrda Rajacieno -> Razorfen Downs
+    [dungeons] Horado Rajacieno -> Razorfen Kraul
+    [dungeons] Cámaras Escarlata -> Scarlet Halls
+    [dungeons] Monasterio Escarlata -> Scarlet Monastery
+    [dungeons] Scholomance -> Scholomance
+    [dungeons] Castillo de Colmillo Oscuro -> Shadowfang Keep
+    [dungeons] Stratholme: Entrada Principal -> Stratholme - Main Gate
+    [dungeons] Stratholme: Entrada de Servicio -> Stratholme - Service Entrance
+    [dungeons] Las Mazmorras -> The Stockade
+    [dungeons] El Templo de Atal'Hakkar -> The Temple of Atal'hakkar
+    [dungeons] Uldaman -> Uldaman
+    [dungeons] Cuevas de los Lamentos -> Wailing Caverns
+    [dungeons] Zul'Farrak -> Zul'Farrak
+  Expansion: Burning Crusade
+    [raids] Karazhan -> Karazhan
+    [raids] Guarida de Gruul -> Gruul's Lair
+    [raids] Guarida de Magtheridon -> Magtheridon's Lair
+    [raids] Caverna Santuario Serpiente -> Serpentshrine Cavern
+    [raids] El Ojo -> The Eye
+    [raids] La Batalla del Monte Hyjal -> The Battle for Mount Hyjal
+    [raids] Templo Oscuro -> Black Temple
+    [raids] Meseta de La Fuente del Sol -> Sunwell Plateau
+    [dungeons] Criptas Auchenai -> Auchenai Crypts
+    [dungeons] Murallas del Fuego Infernal -> Hellfire Ramparts
+    [dungeons] Bancal del Magister -> Magisters' Terrace
+    [dungeons] Tumbas de Maná -> Mana-Tombs
+    [dungeons] Antiguas Laderas de Trabalomas -> Old Hillsbrad Foothills
+    [dungeons] Salas Sethekk -> Sethekk Halls
+    [dungeons] Laberinto de las Sombras -> Shadow Labyrinth
+    [dungeons] El Arcatraz -> The Arcatraz
+    [dungeons] La Ciénaga Negra -> The Black Morass
+    [dungeons] El Horno de Sangre -> The Blood Furnace
+    [dungeons] El Invernáculo -> The Botanica
+    [dungeons] El Mechanar -> The Mechanar
+    [dungeons] Las Salas Arrasadas -> The Shattered Halls
+    [dungeons] Recinto de los Esclavos -> The Slave Pens
+    [dungeons] La Cámara de Vapor -> The Steamvault
+    [dungeons] La Sotiénaga -> The Underbog
+  Expansion: Wrath of the Lich King
+    [raids] La Cámara de Archavon -> Vault of Archavon
+    [raids] Naxxramas -> Naxxramas
+    [raids] El Sagrario Obsidiana -> The Obsidian Sanctum
+    [raids] El Ojo de la Eternidad -> The Eye of Eternity
+    [raids] Ulduar -> Ulduar
+    [raids] Prueba del Cruzado -> Trial of the Crusader
+    [raids] Guarida de Onyxia -> Onyxia's Lair
+    [raids] Ciudadela de la Corona de Hielo -> Icecrown Citadel
+    [raids] El Sagrario Rubí -> The Ruby Sanctum
+    [dungeons] Ahn'kahet: El Antiguo Reino -> Ahn'kahet: The Old Kingdom
+    [dungeons] Azjol-Nerub -> Azjol-Nerub
+    [dungeons] Fortaleza de Drak'Tharon -> Drak'Tharon Keep
+    [dungeons] Gundrak -> Gundrak
+    [dungeons] Cámaras de Relámpagos -> Halls of Lightning
+    [dungeons] Cámaras de Reflexión -> Halls of Reflection
+    [dungeons] Cámaras de Piedra -> Halls of Stone
+    [dungeons] Foso de Saron -> Pit of Saron
+    [dungeons] La Matanza de Stratholme -> The Culling of Stratholme
+    [dungeons] La Forja de Almas -> The Forge of Souls
+    [dungeons] El Nexo -> The Nexus
+    [dungeons] El Oculus -> The Oculus
+    [dungeons] El Bastión Violeta -> The Violet Hold
+    [dungeons] Prueba del Campeón -> Trial of the Champion
+    [dungeons] Fortaleza de Utgarde -> Utgarde Keep
+    [dungeons] Pináculo de Utgarde -> Utgarde Pinnacle
+  Expansion: Cataclysm
+    [raids] Bastión de Baradin -> Baradin Hold
+    [raids] Descenso de Alanegra -> Blackwing Descent
+    [raids] El Bastión del Crepúsculo -> The Bastion of Twilight
+    [raids] Trono de los Cuatro Vientos -> Throne of the Four Winds
+    [raids] Tierras de Fuego -> Firelands
+    [raids] Alma de Dragón -> Dragon Soul
+    [dungeons] Cavernas Roca Negra -> Blackrock Caverns
+    [dungeons] Minas de la Muerte -> Deadmines
+    [dungeons] Fin de los Días -> End Time
+    [dungeons] Grim Batol -> Grim Batol
+    [dungeons] Cámaras de los Orígenes -> Halls of Origination
+    [dungeons] Hora del Crepúsculo -> Hour of Twilight
+    [dungeons] Ciudad Perdida de los Tol'vir -> Lost City of the Tol'vir
+    [dungeons] Castillo de Colmillo Oscuro -> Shadowfang Keep
+    [dungeons] El Núcleo Pétreo -> The Stonecore
+    [dungeons] La Cumbre del Vórtice -> The Vortex Pinnacle
+    [dungeons] Trono de las Mareas -> Throne of the Tides
+    [dungeons] Pozo de la Eternidad -> Well of Eternity
+    [dungeons] Zul'Aman -> Zul'Aman
+    [dungeons] Zul'Gurub -> Zul'Gurub
+  Expansion: Warlords of Draenor
+    [raids] Ogrópolis -> Highmaul
+    [raids] Fundición Roca Negra -> Blackrock Foundry
+    [raids] Ciudadela del Fuego Infernal -> Hellfire Citadel
+    [dungeons] Auchindoun -> Auchindoun
+    [dungeons] Minas Machacasangre -> Bloodmaul Slag Mines
+    [dungeons] Terminal Malavía -> Grimrail Depot
+    [dungeons] Puerto de Hierro -> Iron Docks
+    [dungeons] Cementerio de Sombraluna -> Shadowmoon Burial Grounds
+    [dungeons] Trecho Celestial -> Skyreach
+    [dungeons] El Vergel Eterno -> The Everbloom
+    [dungeons] Cumbre de Roca Negra Superior -> Upper Blackrock Spire
+  Expansion: Legion
+    [raids] Pesadilla Esmeralda -> The Emerald Nightmare
+    [raids] Prueba del Valor -> Trial of Valor
+    [raids] Bastión Nocturno -> The Nighthold
+    [raids] Tumba de Sargeras -> Tomb of Sargeras
+    [raids] Antorus, el Trono Ardiente -> Antorus, the Burning Throne
+    [raids] Puntos de invasión -> Invasion Points
+    [dungeons] Asalto al Bastión Violeta -> Assault on Violet Hold
+    [dungeons] Torreón Grajo Negro -> Black Rook Hold
+    [dungeons] Catedral de la Noche Eterna -> Cathedral of Eternal Night
+    [dungeons] Corte de las Estrellas -> Court of Stars
+    [dungeons] Arboleda Corazón Oscuro -> Darkheart Thicket
+    [dungeons] Ojo de Azshara -> Eye of Azshara
+    [dungeons] Cámaras del Valor -> Halls of Valor
+    [dungeons] Fauce de Almas -> Maw of Souls
+    [dungeons] Guarida de Neltharion -> Neltharion's Lair
+    [dungeons] Regreso a Karazhan -> Return to Karazhan
+    [dungeons] Trono del Triunvirato -> Seat of the Triumvirate
+    [dungeons] La Arquería -> The Arcway
+    [dungeons] Cámara de las Celadoras -> Vault of the Wardens
+  Expansion: Battle for Azeroth
+    [raids] Uldir -> Uldir
+    [raids] Batalla de Dazar'alor -> Battle of Dazar'alor
+    [raids] Crisol de Tormentas -> Crucible of Storms
+    [raids] Palacio Eterno -> The Eternal Palace
+    [raids] Ny'alotha, Ciudad del Despertar -> Ny'alotha, the Waking City
+    [dungeons] Atal'Dazar -> Atal'Dazar
+    [dungeons] Fuerte Libre -> Freehold
+    [dungeons] Reposo de los Reyes -> Kings' Rest
+    [dungeons] Operación: Mecandria -> Operation: Mechagon
+    [dungeons] Altar de la Tormenta -> Shrine of the Storm
+    [dungeons] Asedio de Boralus -> Siege of Boralus
+    [dungeons] Templo de Sethraliss -> Temple of Sethraliss
+    [dungeons] VETA MADRE -> The MOTHERLODE!!
+    [dungeons] Catacumbas Putrefactas -> The Underrot
+    [dungeons] Tol Dagor -> Tol Dagor
+    [dungeons] Mansión Crestavía -> Waycrest Manor
+  Expansion: Shadowlands
+    [raids] Castillo de Nathria -> Castle Nathria
+    [raids] Sagrario de Dominación -> Sanctum of Domination
+    [raids] Sepulcro de los Primeros -> Sepulcher of the First Ones
+    [dungeons] El Otro Lado -> De Other Side
+    [dungeons] Salas de la Expiación -> Halls of Atonement
+    [dungeons] Nieblas de Tirna Scithe -> Mists of Tirna Scithe
+    [dungeons] Bajapeste -> Plaguefall
+    [dungeons] Cavernas Sanguinas -> Sanguine Depths
+    [dungeons] Agujas de Ascensión -> Spires of Ascension
+    [dungeons] Tazavesh, el Mercado Velado -> Tazavesh, the Veiled Market
+    [dungeons] Estela Necrótica -> The Necrotic Wake
+    [dungeons] Teatro del Dolor -> Theater of Pain
+  Expansion: Dragonflight
+    [raids] Islas Dragón -> Dragon Isles
+    [raids] Cámara de las Encarnaciones -> Vault of the Incarnates
+    [raids] Aberrus, el Crisol Ensombrecido -> Aberrus, the Shadowed Crucible
+    [raids] Amirdrassil, la Esperanza del Sueño -> Amirdrassil, the Dream's Hope
+    [dungeons] Academia Algeth'ar -> Algeth'ar Academy
+    [dungeons] Hondonada Frondacuero -> Brackenhide Hollow
+    [dungeons] Salas de Infusión -> Halls of Infusion
+    [dungeons] Neltharus -> Neltharus
+    [dungeons] Estanques de Vida Rubí -> Ruby Life Pools
+    [dungeons] Cámara Azur -> The Azure Vault
+    [dungeons] La Ofensiva Nokhud -> The Nokhud Offensive
+    [dungeons] Uldaman: Legado de Tyr -> Uldaman: Legacy of Tyr
+    [dungeons] Amanecer del Infinito -> Dawn of the Infinite
+  Expansion: Temporada actual
+    [raids] Khaz Algar -> Khaz Algar
+    [raids] Forja de Maná Omega -> Manaforge Omega
+    [raids] Midnight -> Midnight
+    [raids] La Falla Onírica -> The Dreamrift
+    [raids] La Aguja del Vacío -> The Voidspire
+    [raids] Marcha a Quel'Danas -> March on Quel'Danas
+    [dungeons] Ara-Kara, Ciudad de los Ecos -> Ara-Kara, City of Echoes
+    [dungeons] Bancal del Magister -> Magisters' Terrace
+    [dungeons] Cavernas de Maisara -> Maisara Caverns
+    [dungeons] Punto de Nexo: Xenas -> Nexus-Point Xenas
+    [dungeons] Aguja Brisaveloz -> Windrunner Spire
+    [dungeons] Academia Algeth'ar -> Algeth'ar Academy
+    [dungeons] Foso de Saron -> Pit of Saron
+    [dungeons] Trono del Triunvirato -> Seat of the Triumvirate
+    [dungeons] Trecho Celestial -> Skyreach
+    [dungeons] El Rompealbas -> The Dawnbreaker
+    [dungeons] Priorato de la Llama Sagrada -> Priory of the Sacred Flame
+    [dungeons] Operación: Compuerta -> Operation: Floodgate
+    [dungeons] Ecodomo Al'dani -> Eco-Dome Al'dani
+    [dungeons] Salas de la Expiación -> Halls of Atonement
+    [dungeons] Tazavesh, el Mercado Velado -> Tazavesh, the Veiled Market
+    [dungeons] Mazmorras de piedra angular -> Keystone Dungeons
+  Expansion: Midnight
+    [raids] Midnight -> Midnight
+    [raids] La Falla Onírica -> The Dreamrift
+    [raids] La Aguja del Vacío -> The Voidspire
+    [raids] Marcha a Quel'Danas -> March on Quel'Danas
+    [dungeons] Guarida de Nalorakk -> Den of Nalorakk
+    [dungeons] Bancal del Magister -> Magisters' Terrace
+    [dungeons] Cavernas de Maisara -> Maisara Caverns
+    [dungeons] Frontal de la Muerte -> Murder Row
+    [dungeons] Punto de Nexo: Xenas -> Nexus-Point Xenas
+    [dungeons] El Valle Cegador -> The Blinding Vale
+    [dungeons] Arena Lacravacua -> Voidscar Arena
+    [dungeons] Aguja Brisaveloz -> Windrunner Spire
+  Expansion: The War Within
+    [raids] Khaz Algar -> Khaz Algar
+    [raids] Palacio Nerub'ar -> Nerub-ar Palace
+    [raids] Liberación de Minahonda -> Liberation of Undermine
+    [raids] Forja de Maná Omega -> Manaforge Omega
+    [dungeons] Ara-Kara, Ciudad de los Ecos -> Ara-Kara, City of Echoes
+    [dungeons] Lagar de Tragoceniza -> Cinderbrew Meadery
+    [dungeons] Ciudad Tejida -> City of Threads
+    [dungeons] Grieta de Flama Oscura -> Darkflame Cleft
+    [dungeons] Priorato de la Llama Sagrada -> Priory of the Sacred Flame
+    [dungeons] El Rompealbas -> The Dawnbreaker
+    [dungeons] El Grajero -> The Rookery
+    [dungeons] La Petrocámara -> The Stonevault
+    [dungeons] Operación: Compuerta -> Operation: Floodgate
+    [dungeons] Ecodomo Al'dani -> Eco-Dome Al'dani
+
+  GUARDADO: /home/runner/work/Wow-mindnigth/Wow-mindnigth/rosetta/api/instancias.json
 
 ============================================================
-  Descarga completa. 0 archivos generados.
+  Descarga completa. 3 archivos generados.
+  Archivos en: rosetta/api/
 ============================================================

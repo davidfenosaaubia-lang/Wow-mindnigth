@@ -1,0 +1,1618 @@
+{
+  "fuente": "Blizzard API",
+  "tipo": "Bandas, mazmorras y contenido por expansión",
+  "region": "eu",
+  "generado": "2026-04-09 16:15:51",
+  "instancias": [
+    {
+      "id": 317,
+      "es": "Cámaras Mogu'shan",
+      "en": "Mogu'shan Vaults",
+      "expansion": "Mists of Pandaria",
+      "tipo": "raids"
+    },
+    {
+      "id": 330,
+      "es": "Corazón del Miedo",
+      "en": "Heart of Fear",
+      "expansion": "Mists of Pandaria",
+      "tipo": "raids"
+    },
+    {
+      "id": 320,
+      "es": "Veranda de la Primavera Eterna",
+      "en": "Terrace of Endless Spring",
+      "expansion": "Mists of Pandaria",
+      "tipo": "raids"
+    },
+    {
+      "id": 362,
+      "es": "Solio del Trueno",
+      "en": "Throne of Thunder",
+      "expansion": "Mists of Pandaria",
+      "tipo": "raids"
+    },
+    {
+      "id": 369,
+      "es": "Asedio de Orgrimmar",
+      "en": "Siege of Orgrimmar",
+      "expansion": "Mists of Pandaria",
+      "tipo": "raids"
+    },
+    {
+      "id": 303,
+      "es": "Puerta del Sol Poniente",
+      "en": "Gate of the Setting Sun",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 321,
+      "es": "Palacio Mogu'shan",
+      "en": "Mogu'shan Palace",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 311,
+      "es": "Cámaras Escarlata",
+      "en": "Scarlet Halls",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 316,
+      "es": "Monasterio Escarlata",
+      "en": "Scarlet Monastery",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 246,
+      "es": "Scholomance",
+      "en": "Scholomance",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 312,
+      "es": "Monasterio del Shadopan",
+      "en": "Shado-Pan Monastery",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 324,
+      "es": "Asedio del Templo de Niuzao",
+      "en": "Siege of Niuzao Temple",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 302,
+      "es": "Cervecería del Trueno",
+      "en": "Stormstout Brewery",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 313,
+      "es": "Templo del Dragón de Jade",
+      "en": "Temple of the Jade Serpent",
+      "expansion": "Mists of Pandaria",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 741,
+      "es": "Núcleo de magma",
+      "en": "Molten Core",
+      "expansion": "World of Warcraft",
+      "tipo": "raids"
+    },
+    {
+      "id": 742,
+      "es": "Guarida de Alanegra",
+      "en": "Blackwing Lair",
+      "expansion": "World of Warcraft",
+      "tipo": "raids"
+    },
+    {
+      "id": 743,
+      "es": "Ruinas de Ahn'Qiraj",
+      "en": "Ruins of Ahn'Qiraj",
+      "expansion": "World of Warcraft",
+      "tipo": "raids"
+    },
+    {
+      "id": 744,
+      "es": "Templo de Ahn'Qiraj",
+      "en": "Temple of Ahn'Qiraj",
+      "expansion": "World of Warcraft",
+      "tipo": "raids"
+    },
+    {
+      "id": 1301,
+      "es": "Profundidades de Roca Negra",
+      "en": "Blackrock Depths",
+      "expansion": "World of Warcraft",
+      "tipo": "raids"
+    },
+    {
+      "id": 227,
+      "es": "Cavernas de Brazanegra",
+      "en": "Blackfathom Deeps",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 228,
+      "es": "Profundidades de Roca Negra",
+      "en": "Blackrock Depths",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 63,
+      "es": "Minas de la Muerte",
+      "en": "Deadmines",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 230,
+      "es": "La Masacre: Jardines de la Capital",
+      "en": "Dire Maul - Capital Gardens",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1277,
+      "es": "La Masacre: Ágora de Gordok",
+      "en": "Dire Maul - Gordok Commons",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1276,
+      "es": "La Masacre: Barrio Alabeo",
+      "en": "Dire Maul - Warpwood Quarter",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 231,
+      "es": "Gnomeregan",
+      "en": "Gnomeregan",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 229,
+      "es": "Cumbre de Roca Negra Inferior",
+      "en": "Lower Blackrock Spire",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 232,
+      "es": "Maraudon",
+      "en": "Maraudon",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 226,
+      "es": "Sima Ígnea",
+      "en": "Ragefire Chasm",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 233,
+      "es": "Zahúrda Rajacieno",
+      "en": "Razorfen Downs",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 234,
+      "es": "Horado Rajacieno",
+      "en": "Razorfen Kraul",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 311,
+      "es": "Cámaras Escarlata",
+      "en": "Scarlet Halls",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 316,
+      "es": "Monasterio Escarlata",
+      "en": "Scarlet Monastery",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 246,
+      "es": "Scholomance",
+      "en": "Scholomance",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 64,
+      "es": "Castillo de Colmillo Oscuro",
+      "en": "Shadowfang Keep",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 236,
+      "es": "Stratholme: Entrada Principal",
+      "en": "Stratholme - Main Gate",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1292,
+      "es": "Stratholme: Entrada de Servicio",
+      "en": "Stratholme - Service Entrance",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 238,
+      "es": "Las Mazmorras",
+      "en": "The Stockade",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 237,
+      "es": "El Templo de Atal'Hakkar",
+      "en": "The Temple of Atal'hakkar",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 239,
+      "es": "Uldaman",
+      "en": "Uldaman",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 240,
+      "es": "Cuevas de los Lamentos",
+      "en": "Wailing Caverns",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 241,
+      "es": "Zul'Farrak",
+      "en": "Zul'Farrak",
+      "expansion": "World of Warcraft",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 745,
+      "es": "Karazhan",
+      "en": "Karazhan",
+      "expansion": "Burning Crusade",
+      "tipo": "raids"
+    },
+    {
+      "id": 746,
+      "es": "Guarida de Gruul",
+      "en": "Gruul's Lair",
+      "expansion": "Burning Crusade",
+      "tipo": "raids"
+    },
+    {
+      "id": 747,
+      "es": "Guarida de Magtheridon",
+      "en": "Magtheridon's Lair",
+      "expansion": "Burning Crusade",
+      "tipo": "raids"
+    },
+    {
+      "id": 748,
+      "es": "Caverna Santuario Serpiente",
+      "en": "Serpentshrine Cavern",
+      "expansion": "Burning Crusade",
+      "tipo": "raids"
+    },
+    {
+      "id": 749,
+      "es": "El Ojo",
+      "en": "The Eye",
+      "expansion": "Burning Crusade",
+      "tipo": "raids"
+    },
+    {
+      "id": 750,
+      "es": "La Batalla del Monte Hyjal",
+      "en": "The Battle for Mount Hyjal",
+      "expansion": "Burning Crusade",
+      "tipo": "raids"
+    },
+    {
+      "id": 751,
+      "es": "Templo Oscuro",
+      "en": "Black Temple",
+      "expansion": "Burning Crusade",
+      "tipo": "raids"
+    },
+    {
+      "id": 752,
+      "es": "Meseta de La Fuente del Sol",
+      "en": "Sunwell Plateau",
+      "expansion": "Burning Crusade",
+      "tipo": "raids"
+    },
+    {
+      "id": 247,
+      "es": "Criptas Auchenai",
+      "en": "Auchenai Crypts",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 248,
+      "es": "Murallas del Fuego Infernal",
+      "en": "Hellfire Ramparts",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 249,
+      "es": "Bancal del Magister",
+      "en": "Magisters' Terrace",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 250,
+      "es": "Tumbas de Maná",
+      "en": "Mana-Tombs",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 251,
+      "es": "Antiguas Laderas de Trabalomas",
+      "en": "Old Hillsbrad Foothills",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 252,
+      "es": "Salas Sethekk",
+      "en": "Sethekk Halls",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 253,
+      "es": "Laberinto de las Sombras",
+      "en": "Shadow Labyrinth",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 254,
+      "es": "El Arcatraz",
+      "en": "The Arcatraz",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 255,
+      "es": "La Ciénaga Negra",
+      "en": "The Black Morass",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 256,
+      "es": "El Horno de Sangre",
+      "en": "The Blood Furnace",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 257,
+      "es": "El Invernáculo",
+      "en": "The Botanica",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 258,
+      "es": "El Mechanar",
+      "en": "The Mechanar",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 259,
+      "es": "Las Salas Arrasadas",
+      "en": "The Shattered Halls",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 260,
+      "es": "Recinto de los Esclavos",
+      "en": "The Slave Pens",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 261,
+      "es": "La Cámara de Vapor",
+      "en": "The Steamvault",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 262,
+      "es": "La Sotiénaga",
+      "en": "The Underbog",
+      "expansion": "Burning Crusade",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 753,
+      "es": "La Cámara de Archavon",
+      "en": "Vault of Archavon",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 754,
+      "es": "Naxxramas",
+      "en": "Naxxramas",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 755,
+      "es": "El Sagrario Obsidiana",
+      "en": "The Obsidian Sanctum",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 756,
+      "es": "El Ojo de la Eternidad",
+      "en": "The Eye of Eternity",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 759,
+      "es": "Ulduar",
+      "en": "Ulduar",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 757,
+      "es": "Prueba del Cruzado",
+      "en": "Trial of the Crusader",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 760,
+      "es": "Guarida de Onyxia",
+      "en": "Onyxia's Lair",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 758,
+      "es": "Ciudadela de la Corona de Hielo",
+      "en": "Icecrown Citadel",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 761,
+      "es": "El Sagrario Rubí",
+      "en": "The Ruby Sanctum",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "raids"
+    },
+    {
+      "id": 271,
+      "es": "Ahn'kahet: El Antiguo Reino",
+      "en": "Ahn'kahet: The Old Kingdom",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 272,
+      "es": "Azjol-Nerub",
+      "en": "Azjol-Nerub",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 273,
+      "es": "Fortaleza de Drak'Tharon",
+      "en": "Drak'Tharon Keep",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 274,
+      "es": "Gundrak",
+      "en": "Gundrak",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 275,
+      "es": "Cámaras de Relámpagos",
+      "en": "Halls of Lightning",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 276,
+      "es": "Cámaras de Reflexión",
+      "en": "Halls of Reflection",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 277,
+      "es": "Cámaras de Piedra",
+      "en": "Halls of Stone",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 278,
+      "es": "Foso de Saron",
+      "en": "Pit of Saron",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 279,
+      "es": "La Matanza de Stratholme",
+      "en": "The Culling of Stratholme",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 280,
+      "es": "La Forja de Almas",
+      "en": "The Forge of Souls",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 281,
+      "es": "El Nexo",
+      "en": "The Nexus",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 282,
+      "es": "El Oculus",
+      "en": "The Oculus",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 283,
+      "es": "El Bastión Violeta",
+      "en": "The Violet Hold",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 284,
+      "es": "Prueba del Campeón",
+      "en": "Trial of the Champion",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 285,
+      "es": "Fortaleza de Utgarde",
+      "en": "Utgarde Keep",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 286,
+      "es": "Pináculo de Utgarde",
+      "en": "Utgarde Pinnacle",
+      "expansion": "Wrath of the Lich King",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 75,
+      "es": "Bastión de Baradin",
+      "en": "Baradin Hold",
+      "expansion": "Cataclysm",
+      "tipo": "raids"
+    },
+    {
+      "id": 73,
+      "es": "Descenso de Alanegra",
+      "en": "Blackwing Descent",
+      "expansion": "Cataclysm",
+      "tipo": "raids"
+    },
+    {
+      "id": 72,
+      "es": "El Bastión del Crepúsculo",
+      "en": "The Bastion of Twilight",
+      "expansion": "Cataclysm",
+      "tipo": "raids"
+    },
+    {
+      "id": 74,
+      "es": "Trono de los Cuatro Vientos",
+      "en": "Throne of the Four Winds",
+      "expansion": "Cataclysm",
+      "tipo": "raids"
+    },
+    {
+      "id": 78,
+      "es": "Tierras de Fuego",
+      "en": "Firelands",
+      "expansion": "Cataclysm",
+      "tipo": "raids"
+    },
+    {
+      "id": 187,
+      "es": "Alma de Dragón",
+      "en": "Dragon Soul",
+      "expansion": "Cataclysm",
+      "tipo": "raids"
+    },
+    {
+      "id": 66,
+      "es": "Cavernas Roca Negra",
+      "en": "Blackrock Caverns",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 63,
+      "es": "Minas de la Muerte",
+      "en": "Deadmines",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 184,
+      "es": "Fin de los Días",
+      "en": "End Time",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 71,
+      "es": "Grim Batol",
+      "en": "Grim Batol",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 70,
+      "es": "Cámaras de los Orígenes",
+      "en": "Halls of Origination",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 186,
+      "es": "Hora del Crepúsculo",
+      "en": "Hour of Twilight",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 69,
+      "es": "Ciudad Perdida de los Tol'vir",
+      "en": "Lost City of the Tol'vir",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 64,
+      "es": "Castillo de Colmillo Oscuro",
+      "en": "Shadowfang Keep",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 67,
+      "es": "El Núcleo Pétreo",
+      "en": "The Stonecore",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 68,
+      "es": "La Cumbre del Vórtice",
+      "en": "The Vortex Pinnacle",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 65,
+      "es": "Trono de las Mareas",
+      "en": "Throne of the Tides",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 185,
+      "es": "Pozo de la Eternidad",
+      "en": "Well of Eternity",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 77,
+      "es": "Zul'Aman",
+      "en": "Zul'Aman",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 76,
+      "es": "Zul'Gurub",
+      "en": "Zul'Gurub",
+      "expansion": "Cataclysm",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 477,
+      "es": "Ogrópolis",
+      "en": "Highmaul",
+      "expansion": "Warlords of Draenor",
+      "tipo": "raids"
+    },
+    {
+      "id": 457,
+      "es": "Fundición Roca Negra",
+      "en": "Blackrock Foundry",
+      "expansion": "Warlords of Draenor",
+      "tipo": "raids"
+    },
+    {
+      "id": 669,
+      "es": "Ciudadela del Fuego Infernal",
+      "en": "Hellfire Citadel",
+      "expansion": "Warlords of Draenor",
+      "tipo": "raids"
+    },
+    {
+      "id": 547,
+      "es": "Auchindoun",
+      "en": "Auchindoun",
+      "expansion": "Warlords of Draenor",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 385,
+      "es": "Minas Machacasangre",
+      "en": "Bloodmaul Slag Mines",
+      "expansion": "Warlords of Draenor",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 536,
+      "es": "Terminal Malavía",
+      "en": "Grimrail Depot",
+      "expansion": "Warlords of Draenor",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 558,
+      "es": "Puerto de Hierro",
+      "en": "Iron Docks",
+      "expansion": "Warlords of Draenor",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 537,
+      "es": "Cementerio de Sombraluna",
+      "en": "Shadowmoon Burial Grounds",
+      "expansion": "Warlords of Draenor",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 476,
+      "es": "Trecho Celestial",
+      "en": "Skyreach",
+      "expansion": "Warlords of Draenor",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 556,
+      "es": "El Vergel Eterno",
+      "en": "The Everbloom",
+      "expansion": "Warlords of Draenor",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 559,
+      "es": "Cumbre de Roca Negra Superior",
+      "en": "Upper Blackrock Spire",
+      "expansion": "Warlords of Draenor",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 768,
+      "es": "Pesadilla Esmeralda",
+      "en": "The Emerald Nightmare",
+      "expansion": "Legion",
+      "tipo": "raids"
+    },
+    {
+      "id": 861,
+      "es": "Prueba del Valor",
+      "en": "Trial of Valor",
+      "expansion": "Legion",
+      "tipo": "raids"
+    },
+    {
+      "id": 786,
+      "es": "Bastión Nocturno",
+      "en": "The Nighthold",
+      "expansion": "Legion",
+      "tipo": "raids"
+    },
+    {
+      "id": 875,
+      "es": "Tumba de Sargeras",
+      "en": "Tomb of Sargeras",
+      "expansion": "Legion",
+      "tipo": "raids"
+    },
+    {
+      "id": 946,
+      "es": "Antorus, el Trono Ardiente",
+      "en": "Antorus, the Burning Throne",
+      "expansion": "Legion",
+      "tipo": "raids"
+    },
+    {
+      "id": 959,
+      "es": "Puntos de invasión",
+      "en": "Invasion Points",
+      "expansion": "Legion",
+      "tipo": "raids"
+    },
+    {
+      "id": 777,
+      "es": "Asalto al Bastión Violeta",
+      "en": "Assault on Violet Hold",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 740,
+      "es": "Torreón Grajo Negro",
+      "en": "Black Rook Hold",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 900,
+      "es": "Catedral de la Noche Eterna",
+      "en": "Cathedral of Eternal Night",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 800,
+      "es": "Corte de las Estrellas",
+      "en": "Court of Stars",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 762,
+      "es": "Arboleda Corazón Oscuro",
+      "en": "Darkheart Thicket",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 716,
+      "es": "Ojo de Azshara",
+      "en": "Eye of Azshara",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 721,
+      "es": "Cámaras del Valor",
+      "en": "Halls of Valor",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 727,
+      "es": "Fauce de Almas",
+      "en": "Maw of Souls",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 767,
+      "es": "Guarida de Neltharion",
+      "en": "Neltharion's Lair",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 860,
+      "es": "Regreso a Karazhan",
+      "en": "Return to Karazhan",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 945,
+      "es": "Trono del Triunvirato",
+      "en": "Seat of the Triumvirate",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 726,
+      "es": "La Arquería",
+      "en": "The Arcway",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 707,
+      "es": "Cámara de las Celadoras",
+      "en": "Vault of the Wardens",
+      "expansion": "Legion",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1031,
+      "es": "Uldir",
+      "en": "Uldir",
+      "expansion": "Battle for Azeroth",
+      "tipo": "raids"
+    },
+    {
+      "id": 1176,
+      "es": "Batalla de Dazar'alor",
+      "en": "Battle of Dazar'alor",
+      "expansion": "Battle for Azeroth",
+      "tipo": "raids"
+    },
+    {
+      "id": 1177,
+      "es": "Crisol de Tormentas",
+      "en": "Crucible of Storms",
+      "expansion": "Battle for Azeroth",
+      "tipo": "raids"
+    },
+    {
+      "id": 1179,
+      "es": "Palacio Eterno",
+      "en": "The Eternal Palace",
+      "expansion": "Battle for Azeroth",
+      "tipo": "raids"
+    },
+    {
+      "id": 1180,
+      "es": "Ny'alotha, Ciudad del Despertar",
+      "en": "Ny'alotha, the Waking City",
+      "expansion": "Battle for Azeroth",
+      "tipo": "raids"
+    },
+    {
+      "id": 968,
+      "es": "Atal'Dazar",
+      "en": "Atal'Dazar",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1001,
+      "es": "Fuerte Libre",
+      "en": "Freehold",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1041,
+      "es": "Reposo de los Reyes",
+      "en": "Kings' Rest",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1178,
+      "es": "Operación: Mecandria",
+      "en": "Operation: Mechagon",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1036,
+      "es": "Altar de la Tormenta",
+      "en": "Shrine of the Storm",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1023,
+      "es": "Asedio de Boralus",
+      "en": "Siege of Boralus",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1030,
+      "es": "Templo de Sethraliss",
+      "en": "Temple of Sethraliss",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1012,
+      "es": "VETA MADRE",
+      "en": "The MOTHERLODE!!",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1022,
+      "es": "Catacumbas Putrefactas",
+      "en": "The Underrot",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1002,
+      "es": "Tol Dagor",
+      "en": "Tol Dagor",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1021,
+      "es": "Mansión Crestavía",
+      "en": "Waycrest Manor",
+      "expansion": "Battle for Azeroth",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1190,
+      "es": "Castillo de Nathria",
+      "en": "Castle Nathria",
+      "expansion": "Shadowlands",
+      "tipo": "raids"
+    },
+    {
+      "id": 1193,
+      "es": "Sagrario de Dominación",
+      "en": "Sanctum of Domination",
+      "expansion": "Shadowlands",
+      "tipo": "raids"
+    },
+    {
+      "id": 1195,
+      "es": "Sepulcro de los Primeros",
+      "en": "Sepulcher of the First Ones",
+      "expansion": "Shadowlands",
+      "tipo": "raids"
+    },
+    {
+      "id": 1188,
+      "es": "El Otro Lado",
+      "en": "De Other Side",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1185,
+      "es": "Salas de la Expiación",
+      "en": "Halls of Atonement",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1184,
+      "es": "Nieblas de Tirna Scithe",
+      "en": "Mists of Tirna Scithe",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1183,
+      "es": "Bajapeste",
+      "en": "Plaguefall",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1189,
+      "es": "Cavernas Sanguinas",
+      "en": "Sanguine Depths",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1186,
+      "es": "Agujas de Ascensión",
+      "en": "Spires of Ascension",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1194,
+      "es": "Tazavesh, el Mercado Velado",
+      "en": "Tazavesh, the Veiled Market",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1182,
+      "es": "Estela Necrótica",
+      "en": "The Necrotic Wake",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1187,
+      "es": "Teatro del Dolor",
+      "en": "Theater of Pain",
+      "expansion": "Shadowlands",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1205,
+      "es": "Islas Dragón",
+      "en": "Dragon Isles",
+      "expansion": "Dragonflight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1200,
+      "es": "Cámara de las Encarnaciones",
+      "en": "Vault of the Incarnates",
+      "expansion": "Dragonflight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1208,
+      "es": "Aberrus, el Crisol Ensombrecido",
+      "en": "Aberrus, the Shadowed Crucible",
+      "expansion": "Dragonflight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1207,
+      "es": "Amirdrassil, la Esperanza del Sueño",
+      "en": "Amirdrassil, the Dream's Hope",
+      "expansion": "Dragonflight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1201,
+      "es": "Academia Algeth'ar",
+      "en": "Algeth'ar Academy",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1196,
+      "es": "Hondonada Frondacuero",
+      "en": "Brackenhide Hollow",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1204,
+      "es": "Salas de Infusión",
+      "en": "Halls of Infusion",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1199,
+      "es": "Neltharus",
+      "en": "Neltharus",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1202,
+      "es": "Estanques de Vida Rubí",
+      "en": "Ruby Life Pools",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1203,
+      "es": "Cámara Azur",
+      "en": "The Azure Vault",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1198,
+      "es": "La Ofensiva Nokhud",
+      "en": "The Nokhud Offensive",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1197,
+      "es": "Uldaman: Legado de Tyr",
+      "en": "Uldaman: Legacy of Tyr",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1209,
+      "es": "Amanecer del Infinito",
+      "en": "Dawn of the Infinite",
+      "expansion": "Dragonflight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1278,
+      "es": "Khaz Algar",
+      "en": "Khaz Algar",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
+      "id": 1302,
+      "es": "Forja de Maná Omega",
+      "en": "Manaforge Omega",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
+      "id": 1312,
+      "es": "Midnight",
+      "en": "Midnight",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
+      "id": 1314,
+      "es": "La Falla Onírica",
+      "en": "The Dreamrift",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
+      "id": 1307,
+      "es": "La Aguja del Vacío",
+      "en": "The Voidspire",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
+      "id": 1308,
+      "es": "Marcha a Quel'Danas",
+      "en": "March on Quel'Danas",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
+      "id": 1271,
+      "es": "Ara-Kara, Ciudad de los Ecos",
+      "en": "Ara-Kara, City of Echoes",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1300,
+      "es": "Bancal del Magister",
+      "en": "Magisters' Terrace",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1315,
+      "es": "Cavernas de Maisara",
+      "en": "Maisara Caverns",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1316,
+      "es": "Punto de Nexo: Xenas",
+      "en": "Nexus-Point Xenas",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1299,
+      "es": "Aguja Brisaveloz",
+      "en": "Windrunner Spire",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1201,
+      "es": "Academia Algeth'ar",
+      "en": "Algeth'ar Academy",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 278,
+      "es": "Foso de Saron",
+      "en": "Pit of Saron",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 945,
+      "es": "Trono del Triunvirato",
+      "en": "Seat of the Triumvirate",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 476,
+      "es": "Trecho Celestial",
+      "en": "Skyreach",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1270,
+      "es": "El Rompealbas",
+      "en": "The Dawnbreaker",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1267,
+      "es": "Priorato de la Llama Sagrada",
+      "en": "Priory of the Sacred Flame",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1298,
+      "es": "Operación: Compuerta",
+      "en": "Operation: Floodgate",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1303,
+      "es": "Ecodomo Al'dani",
+      "en": "Eco-Dome Al'dani",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1185,
+      "es": "Salas de la Expiación",
+      "en": "Halls of Atonement",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1194,
+      "es": "Tazavesh, el Mercado Velado",
+      "en": "Tazavesh, the Veiled Market",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1319,
+      "es": "Mazmorras de piedra angular",
+      "en": "Keystone Dungeons",
+      "expansion": "Temporada actual",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1312,
+      "es": "Midnight",
+      "en": "Midnight",
+      "expansion": "Midnight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1314,
+      "es": "La Falla Onírica",
+      "en": "The Dreamrift",
+      "expansion": "Midnight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1307,
+      "es": "La Aguja del Vacío",
+      "en": "The Voidspire",
+      "expansion": "Midnight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1308,
+      "es": "Marcha a Quel'Danas",
+      "en": "March on Quel'Danas",
+      "expansion": "Midnight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1311,
+      "es": "Guarida de Nalorakk",
+      "en": "Den of Nalorakk",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1300,
+      "es": "Bancal del Magister",
+      "en": "Magisters' Terrace",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1315,
+      "es": "Cavernas de Maisara",
+      "en": "Maisara Caverns",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1304,
+      "es": "Frontal de la Muerte",
+      "en": "Murder Row",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1316,
+      "es": "Punto de Nexo: Xenas",
+      "en": "Nexus-Point Xenas",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1309,
+      "es": "El Valle Cegador",
+      "en": "The Blinding Vale",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1313,
+      "es": "Arena Lacravacua",
+      "en": "Voidscar Arena",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1299,
+      "es": "Aguja Brisaveloz",
+      "en": "Windrunner Spire",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1278,
+      "es": "Khaz Algar",
+      "en": "Khaz Algar",
+      "expansion": "The War Within",
+      "tipo": "raids"
+    },
+    {
+      "id": 1273,
+      "es": "Palacio Nerub'ar",
+      "en": "Nerub-ar Palace",
+      "expansion": "The War Within",
+      "tipo": "raids"
+    },
+    {
+      "id": 1296,
+      "es": "Liberación de Minahonda",
+      "en": "Liberation of Undermine",
+      "expansion": "The War Within",
+      "tipo": "raids"
+    },
+    {
+      "id": 1302,
+      "es": "Forja de Maná Omega",
+      "en": "Manaforge Omega",
+      "expansion": "The War Within",
+      "tipo": "raids"
+    },
+    {
+      "id": 1271,
+      "es": "Ara-Kara, Ciudad de los Ecos",
+      "en": "Ara-Kara, City of Echoes",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1272,
+      "es": "Lagar de Tragoceniza",
+      "en": "Cinderbrew Meadery",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1274,
+      "es": "Ciudad Tejida",
+      "en": "City of Threads",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1210,
+      "es": "Grieta de Flama Oscura",
+      "en": "Darkflame Cleft",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1267,
+      "es": "Priorato de la Llama Sagrada",
+      "en": "Priory of the Sacred Flame",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1270,
+      "es": "El Rompealbas",
+      "en": "The Dawnbreaker",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1268,
+      "es": "El Grajero",
+      "en": "The Rookery",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1269,
+      "es": "La Petrocámara",
+      "en": "The Stonevault",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1298,
+      "es": "Operación: Compuerta",
+      "en": "Operation: Floodgate",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1303,
+      "es": "Ecodomo Al'dani",
+      "en": "Eco-Dome Al'dani",
+      "expansion": "The War Within",
+      "tipo": "dungeons"
+    }
+  ]
+}

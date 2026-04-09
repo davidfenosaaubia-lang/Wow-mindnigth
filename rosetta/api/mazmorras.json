@@ -1,0 +1,418 @@
+{
+  "fuente": "Blizzard API",
+  "tipo": "Mazmorras",
+  "region": "eu",
+  "generado": "2026-04-09 16:15:38",
+  "mazmorras": [
+    {
+      "id": 56,
+      "es": "Cervecería del Trueno",
+      "en": "Stormstout Brewery"
+    },
+    {
+      "id": 57,
+      "es": "Puerta del Sol Poniente",
+      "en": "Gate of the Setting Sun"
+    },
+    {
+      "id": 58,
+      "es": "Monasterio del Shadopan",
+      "en": "Shado-Pan Monastery"
+    },
+    {
+      "id": 59,
+      "es": "Asedio del Templo de Niuzao",
+      "en": "Siege of Niuzao Temple"
+    },
+    {
+      "id": 60,
+      "es": "Palacio Mogu'shan",
+      "en": "Mogu'shan Palace"
+    },
+    {
+      "id": 2,
+      "es": "Templo del Dragón de Jade",
+      "en": "Temple of the Jade Serpent"
+    },
+    {
+      "id": 76,
+      "es": "Scholomance",
+      "en": "Scholomance"
+    },
+    {
+      "id": 77,
+      "es": "Cámaras Escarlata",
+      "en": "Scarlet Halls"
+    },
+    {
+      "id": 78,
+      "es": "Monasterio Escarlata",
+      "en": "Scarlet Monastery"
+    },
+    {
+      "id": 168,
+      "es": "El Vergel Eterno",
+      "en": "The Everbloom"
+    },
+    {
+      "id": 169,
+      "es": "Puerto de Hierro",
+      "en": "Iron Docks"
+    },
+    {
+      "id": 161,
+      "es": "Trecho Celestial",
+      "en": "Skyreach"
+    },
+    {
+      "id": 164,
+      "es": "Auchindoun",
+      "en": "Auchindoun"
+    },
+    {
+      "id": 163,
+      "es": "Minas Machacasangre",
+      "en": "Bloodmaul Slag Mines"
+    },
+    {
+      "id": 165,
+      "es": "Cementerio de Sombraluna",
+      "en": "Shadowmoon Burial Grounds"
+    },
+    {
+      "id": 166,
+      "es": "Terminal Malavía",
+      "en": "Grimrail Depot"
+    },
+    {
+      "id": 167,
+      "es": "Cumbre de Roca Negra Superior",
+      "en": "Upper Blackrock Spire"
+    },
+    {
+      "id": 200,
+      "es": "Cámaras del Valor",
+      "en": "Halls of Valor"
+    },
+    {
+      "id": 197,
+      "es": "Ojo de Azshara",
+      "en": "Eye of Azshara"
+    },
+    {
+      "id": 198,
+      "es": "Arboleda Corazón Oscuro",
+      "en": "Darkheart Thicket"
+    },
+    {
+      "id": 199,
+      "es": "Torreón Grajo Negro",
+      "en": "Black Rook Hold"
+    },
+    {
+      "id": 206,
+      "es": "Guarida de Neltharion",
+      "en": "Neltharion's Lair"
+    },
+    {
+      "id": 207,
+      "es": "Cámara de las Celadoras",
+      "en": "Vault of the Wardens"
+    },
+    {
+      "id": 208,
+      "es": "Fauce de Almas",
+      "en": "Maw of Souls"
+    },
+    {
+      "id": 209,
+      "es": "La Arquería",
+      "en": "The Arcway"
+    },
+    {
+      "id": 210,
+      "es": "Corte de las Estrellas",
+      "en": "Court of Stars"
+    },
+    {
+      "id": 234,
+      "es": "Regreso a Karazhan: superior",
+      "en": "Return to Karazhan: Upper"
+    },
+    {
+      "id": 239,
+      "es": "Trono del Triunvirato",
+      "en": "Seat of the Triumvirate"
+    },
+    {
+      "id": 227,
+      "es": "Regreso a Karazhan: inferior",
+      "en": "Return to Karazhan: Lower"
+    },
+    {
+      "id": 233,
+      "es": "Catedral de la Noche Eterna",
+      "en": "Cathedral of Eternal Night"
+    },
+    {
+      "id": 247,
+      "es": "VETA MADRE",
+      "en": "The MOTHERLODE!!"
+    },
+    {
+      "id": 248,
+      "es": "Mansión Crestavía",
+      "en": "Waycrest Manor"
+    },
+    {
+      "id": 249,
+      "es": "Reposo de los Reyes",
+      "en": "Kings' Rest"
+    },
+    {
+      "id": 250,
+      "es": "Templo de Sethraliss",
+      "en": "Temple of Sethraliss"
+    },
+    {
+      "id": 251,
+      "es": "Catacumbas Putrefactas",
+      "en": "The Underrot"
+    },
+    {
+      "id": 252,
+      "es": "Altar de la Tormenta",
+      "en": "Shrine of the Storm"
+    },
+    {
+      "id": 244,
+      "es": "Atal'Dazar",
+      "en": "Atal'Dazar"
+    },
+    {
+      "id": 245,
+      "es": "Fuerte Libre",
+      "en": "Freehold"
+    },
+    {
+      "id": 246,
+      "es": "Tol Dagor",
+      "en": "Tol Dagor"
+    },
+    {
+      "id": 353,
+      "es": "Asedio de Boralus",
+      "en": "Siege of Boralus"
+    },
+    {
+      "id": 369,
+      "es": "Operación: Mecandria - Desguace",
+      "en": "Operation: Mechagon - Junkyard"
+    },
+    {
+      "id": 370,
+      "es": "Operación: Mecandria - Taller",
+      "en": "Operation: Mechagon - Workshop"
+    },
+    {
+      "id": 375,
+      "es": "Nieblas de Tirna Scithe",
+      "en": "Mists of Tirna Scithe"
+    },
+    {
+      "id": 376,
+      "es": "Estela Necrótica",
+      "en": "The Necrotic Wake"
+    },
+    {
+      "id": 377,
+      "es": "El Otro Lado",
+      "en": "De Other Side"
+    },
+    {
+      "id": 378,
+      "es": "Salas de la Expiación",
+      "en": "Halls of Atonement"
+    },
+    {
+      "id": 379,
+      "es": "Bajapeste",
+      "en": "Plaguefall"
+    },
+    {
+      "id": 380,
+      "es": "Cavernas Sanguinas",
+      "en": "Sanguine Depths"
+    },
+    {
+      "id": 381,
+      "es": "Agujas de Ascensión",
+      "en": "Spires of Ascension"
+    },
+    {
+      "id": 382,
+      "es": "Teatro del Dolor",
+      "en": "Theater of Pain"
+    },
+    {
+      "id": 399,
+      "es": "Estanques de Vida Rubí",
+      "en": "Ruby Life Pools"
+    },
+    {
+      "id": 400,
+      "es": "La Ofensiva Nokhud",
+      "en": "The Nokhud Offensive"
+    },
+    {
+      "id": 401,
+      "es": "La Cámara Azur",
+      "en": "The Azure Vault"
+    },
+    {
+      "id": 402,
+      "es": "Academia Algeth'ar",
+      "en": "Algeth'ar Academy"
+    },
+    {
+      "id": 403,
+      "es": "Uldaman: Legado de Tyr",
+      "en": "Uldaman: Legacy of Tyr"
+    },
+    {
+      "id": 404,
+      "es": "Neltharus",
+      "en": "Neltharus"
+    },
+    {
+      "id": 405,
+      "es": "Hondonada Frondacuero",
+      "en": "Brackenhide Hollow"
+    },
+    {
+      "id": 406,
+      "es": "Salas de Infusión",
+      "en": "Halls of Infusion"
+    },
+    {
+      "id": 391,
+      "es": "Tazavesh: Calles de las Maravillas",
+      "en": "Tazavesh: Streets of Wonder"
+    },
+    {
+      "id": 392,
+      "es": "Tazavesh: Gambito de So'leah",
+      "en": "Tazavesh: So'leah's Gambit"
+    },
+    {
+      "id": 438,
+      "es": "La Cumbre del Vórtice",
+      "en": "The Vortex Pinnacle"
+    },
+    {
+      "id": 463,
+      "es": "El Amanecer del Infinito: la Caída de Galakrond",
+      "en": "Dawn of the Infinite: Galakrond's Fall"
+    },
+    {
+      "id": 464,
+      "es": "El Amanecer del Infinito: el Ascenso de Murozond",
+      "en": "Dawn of the Infinite: Murozond's Rise"
+    },
+    {
+      "id": 525,
+      "es": "Operación: Compuerta",
+      "en": "Operation: Floodgate"
+    },
+    {
+      "id": 556,
+      "es": "Foso de Saron",
+      "en": "Pit of Saron"
+    },
+    {
+      "id": 557,
+      "es": "Aguja Brisaveloz",
+      "en": "Windrunner Spire"
+    },
+    {
+      "id": 558,
+      "es": "Bancal del Magister",
+      "en": "Magisters' Terrace"
+    },
+    {
+      "id": 559,
+      "es": "Punto de Nexo: Xenas",
+      "en": "Nexus-Point Xenas"
+    },
+    {
+      "id": 560,
+      "es": "Cavernas de Maisara",
+      "en": "Maisara Caverns"
+    },
+    {
+      "id": 456,
+      "es": "Trono de las Mareas",
+      "en": "Throne of the Tides"
+    },
+    {
+      "id": 499,
+      "es": "Priorato de la Llama Sagrada",
+      "en": "Priory of the Sacred Flame"
+    },
+    {
+      "id": 500,
+      "es": "El Grajero",
+      "en": "The Rookery"
+    },
+    {
+      "id": 501,
+      "es": "La Petrocámara",
+      "en": "The Stonevault"
+    },
+    {
+      "id": 502,
+      "es": "Ciudad Tejida",
+      "en": "City of Threads"
+    },
+    {
+      "id": 503,
+      "es": "Ara-Kara, Ciudad de los Ecos",
+      "en": "Ara-Kara, City of Echoes"
+    },
+    {
+      "id": 504,
+      "es": "Grieta de Flama Oscura",
+      "en": "Darkflame Cleft"
+    },
+    {
+      "id": 505,
+      "es": "El Rompealbas",
+      "en": "The Dawnbreaker"
+    },
+    {
+      "id": 506,
+      "es": "Lagar de Tragoceniza",
+      "en": "Cinderbrew Meadery"
+    },
+    {
+      "id": 507,
+      "es": "Grim Batol",
+      "en": "Grim Batol"
+    },
+    {
+      "id": 541,
+      "es": "El Núcleo Pétreo",
+      "en": "The Stonecore"
+    },
+    {
+      "id": 542,
+      "es": "Ecodomo Al'dani",
+      "en": "Eco-Dome Al'dani"
+    },
+    {
+      "id": 583,
+      "es": "Trono del Triunvirato",
+      "en": "Seat of the Triumvirate"
+    }
+  ]
+}
