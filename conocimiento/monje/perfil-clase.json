@@ -1,0 +1,110 @@
+{
+  "clase": {
+    "id": 10,
+    "es": "Monje",
+    "en": "Monk"
+  },
+  "descripcion": "Clase versátil con acceso a los tres roles. Basada en artes marciales, chi y cerveza. Alta movilidad en todas las specs.",
+  "recurso_primario": {
+    "es": "Energía / Chi",
+    "en": "Energy / Chi",
+    "notas": "Energía se regenera constantemente (como Pícaro). Chi se genera con builders y se gasta con spenders. Maestro cervecero usa energía sin chi."
+  },
+  "especializaciones": {
+    "maestro_cervecero": {
+      "id": 268,
+      "es": "Maestro cervecero",
+      "en": "Brewmaster",
+      "rol": "TANK",
+      "descripcion": "Tanque basado en esquivar (dodge) y stagger - un sistema único que convierte daño instantáneo en daño gradual. No bloquea como Paladín ni tiene escudo como Guerrero: gestiona el daño convirtiéndolo en DoT sobre sí mismo.",
+      "mecanica_clave": {
+        "es": "Tambaleo",
+        "en": "Stagger",
+        "explicacion": "Parte del daño que recibes no se aplica inmediatamente, se convierte en un DoT que te hace daño gradual. Puedes purgar parte de ese DoT con Brebaje purificador. Es tu principal herramienta de supervivencia.",
+        "niveles": [
+          { "es": "Tambaleo leve", "en": "Light Stagger", "color": "verde" },
+          { "es": "Tambaleo moderado", "en": "Moderate Stagger", "color": "amarillo" },
+          { "es": "Tambaleo intenso", "en": "Heavy Stagger", "color": "rojo" }
+        ]
+      },
+      "stats_prioridad": [
+        { "stat_es": "Versatilidad", "stat_en": "Versatility", "razon": "Reduce daño recibido y aumenta daño/sanación. El stat más consistente para tanques." },
+        { "stat_es": "Golpe crítico", "stat_en": "Critical Strike", "razon": "Más esquiva vía Elusive Brawler, más daño y más healing de Celestial Brew." },
+        { "stat_es": "Maestría", "stat_en": "Mastery", "razon": "Aumenta el % de ataque esquivado. Sinergiza con Elusive Brawler." },
+        { "stat_es": "Celeridad", "stat_en": "Haste", "razon": "Reduce GCD y CD de brews. Valor variable según build." }
+      ],
+      "notas_stats": "IMPORTANTE: Los pesos de stats cambian con tu equipo. Simula siempre en Raidbots. Esta lista es orientativa.",
+      "conceptos_clave": [
+        "Gestionar Stagger: cuándo purificar y cuándo aguantar",
+        "Rotación de brews: no desperdiciar cargas pero no guardarlas demasiado",
+        "Kiting: el Monje tanque puede mantener distancia cuando el daño es excesivo",
+        "Posicionamiento: alta movilidad para agrupar mobs en M+"
+      ]
+    },
+    "tejedor_de_niebla": {
+      "id": 270,
+      "es": "Tejedor de niebla",
+      "en": "Mistweaver",
+      "rol": "HEALER",
+      "descripcion": "Sanador híbrido que puede curar con hechizos a distancia o con golpes cuerpo a cuerpo (fistweaving). Dos estilos de juego legítimos según el contenido.",
+      "estilos": {
+        "caster": {
+          "nombre": "Casting / Sanación tradicional",
+          "descripcion": "Curar desde atrás con hechizos directos y HoTs. Más seguro, más predecible."
+        },
+        "fistweaving": {
+          "nombre": "Fistweaving / Puños del trueno",
+          "descripcion": "Curar atacando enemigos cuerpo a cuerpo. Genera sanación como porcentaje del daño hecho. Más DPS del sanador, más riesgo."
+        }
+      },
+      "stats_prioridad": [
+        { "stat_es": "Celeridad", "stat_en": "Haste", "razon": "Reduce tiempos de cast y GCD. Fundamental para responder rápido." },
+        { "stat_es": "Golpe crítico", "stat_en": "Critical Strike", "razon": "Sanaciones críticas. Importante para throughput." },
+        { "stat_es": "Versatilidad", "stat_en": "Versatility", "razon": "Más sanación, menos daño recibido. Bueno para supervivencia." },
+        { "stat_es": "Maestría", "stat_en": "Mastery", "razon": "Genera un escudo de absorción proporcional a la sanación hecha." }
+      ],
+      "notas_stats": "Los pesos varían MUCHO entre caster y fistweaving. Simula con tu build específica.",
+      "conceptos_clave": [
+        "Elegir estilo según contenido: fistweaving para M+ (contribuyes DPS), caster para raid (más throughput)",
+        "Gestión de maná: el Monje sanador tiene tools de recuperación de maná que otros no",
+        "Cocoon (Capullo de vida): tu external más potente, saber cuándo usarlo",
+        "Revival / Renacimiento: sanación masiva de raid, timing crucial"
+      ]
+    },
+    "viajero_del_viento": {
+      "id": 269,
+      "es": "Viajero del viento",
+      "en": "Windwalker",
+      "rol": "DAMAGE",
+      "descripcion": "DPS cuerpo a cuerpo con énfasis en no repetir habilidades consecutivas (Mastery: Combo Strikes). Alta movilidad y buen cleave.",
+      "mecanica_clave": {
+        "es": "Maestría: Golpes de combo",
+        "en": "Mastery: Combo Strikes",
+        "explicacion": "Cada habilidad que uses debe ser DIFERENTE a la anterior. Si repites la misma, pierdes el bonus de maestría. Esto define toda la rotación."
+      },
+      "stats_prioridad": [
+        { "stat_es": "Versatilidad", "stat_en": "Versatility", "razon": "Aumento directo de daño." },
+        { "stat_es": "Golpe crítico", "stat_en": "Critical Strike", "razon": "Más daño por golpe crítico." },
+        { "stat_es": "Maestría", "stat_en": "Mastery", "razon": "Más bonus por no repetir habilidades. Define tu gameplay." },
+        { "stat_es": "Celeridad", "stat_en": "Haste", "razon": "Reduce GCD y CDs. Valor variable." }
+      ],
+      "notas_stats": "WW es la spec donde el orden de stats es MÁS volátil. Simula siempre.",
+      "conceptos_clave": [
+        "NUNCA repetir la misma habilidad dos veces seguidas",
+        "Touch of Death (Toque de muerte): ejecución potente, timing clave",
+        "Storm, Earth and Fire (Tormenta, Tierra y Fuego): tu CD principal de cleave, aprenderlo bien",
+        "Mark of the Crane: tu cleave escala con los objetivos marcados"
+      ]
+    }
+  },
+  "habilidades_compartidas": {
+    "descripcion": "Habilidades del árbol de clase que comparten las tres specs",
+    "notas": "Los nombres exactos ES se verificarán con rosetta/api/ cuando se descarguen los talent trees"
+  },
+  "proximos_pasos": [
+    "Verificar nombres de habilidades con rosetta/api/clases-habilidades.json cuando tenga datos",
+    "Crear rotaciones detalladas por spec",
+    "Crear checklists de WeakAuras recomendadas para cada spec",
+    "Analizar primer log real del usuario"
+  ]
+}

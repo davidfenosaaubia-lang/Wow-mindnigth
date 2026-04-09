@@ -29,29 +29,40 @@ son legibles por humanos y consumibles por scripts.
 - Cada archivo JSON de rosetta tiene la misma estructura:
   {categoria, descripcion, terminos: [{es, en, contexto?, notas?}]}
 
+## Usuario: clase y specs
+- **Clase**: Monje (Monk)
+- **Main spec**: Maestro cervecero (Brewmaster) - TANK
+- **Segundo foco**: Tejedor de niebla (Mistweaver) - HEALER
+- **También**: Viajero del viento (Windwalker) - DPS
+- **Contenido principal**: Mítica+ (M+)
+- **Objetivo**: Aprender las tres specs, priorizando tank y heal
+
 ## Estado del proyecto (última actualización: 2026-04-09)
 
 ### Completado
-- Estructura base del repositorio creada
+- Estructura base del repositorio
 - Rosetta manual: 6 archivos en rosetta/ con ~140 términos curados
-  (stats, clases, combate, equipo, contenido, simulación)
-- Inventario de fuentes de datos: analisis/fuentes/inventario.json
-  (Blizzard API, WCL, SimC, Raidbots, Archon, Wowhead, WoWAnalyzer, Subcreation)
-- Addons esenciales documentados: analisis/herramientas/addons-esenciales.json
+- Rosetta API funcionando:
+  - rosetta/api/clases-habilidades.json (13 clases, todas las specs ES/EN)
+  - rosetta/api/mazmorras.json (82 mazmorras ES/EN)
+  - rosetta/api/instancias.json (todas las bandas/mazmorras por expansión ES/EN)
+  - Blizzard API key configurada en GitHub Secrets
+  - GitHub Action ejecutándose cada miércoles automáticamente
+- Inventario de fuentes: analisis/fuentes/inventario.json
+- Addons esenciales: analisis/herramientas/addons-esenciales.json
 - Marco de aprendizaje: conocimiento/fundamentos/marco-aprendizaje.json
-- Script rosetta-api.py para descargar datos ES/EN de Blizzard API
-- GitHub Action configurada (.github/workflows/rosetta-api.yml)
+- Perfil del Monje: conocimiento/monje/perfil-clase.json
 
 ### Pendiente
-- Ejecutar rosetta-api.py por primera vez (necesita secrets en GitHub)
-  - BLIZZARD_CLIENT_ID: aa3f940d04da479e96a92a7be57d9d34
-  - BLIZZARD_CLIENT_SECRET: configurar en GitHub Settings > Secrets
-- El usuario aún no ha indicado qué clase/spec juega
-- Personalizar Rosetta con habilidades específicas de su clase
+- Descargar habilidades individuales por spec desde talent tree API
+  (el endpoint spec_talent_tree existe pero hay que ajustar el parsing)
+- Crear rotaciones detalladas para Maestro cervecero y Tejedor de niebla
 - Explorar integración con Warcraft Logs API y Raidbots
-- Triangulación práctica con datos reales del usuario
+- Primer análisis de logs reales del usuario
+- Verificar nombres de habilidades del Monje con datos de la API
 
 ### Próximos pasos sugeridos
-1. Configurar secrets en GitHub y ejecutar la Action para poblar rosetta/api/
-2. Elegir clase/spec y profundizar en su análisis
-3. Primer ejercicio práctico: simular personaje y comparar con logs
+1. Arreglar descarga de habilidades del talent tree
+2. Crear guía de rotación Maestro cervecero para M+
+3. Crear guía de rotación Tejedor de niebla para M+
+4. Primer ejercicio práctico: exportar perfil SimC y simular
