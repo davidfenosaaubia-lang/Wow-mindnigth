@@ -1,0 +1,43 @@
+name: Actualizar Rosetta desde Blizzard API
+
+# Se ejecuta manualmente o cuando quieras
+on:
+  workflow_dispatch:  # Botón manual en GitHub
+  schedule:
+    - cron: '0 6 * * 3'  # Cada miércoles a las 6:00 UTC (después del reset EU)
+
+jobs:
+  actualizar-rosetta:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install requests
+
+      - name: Ejecutar Rosetta API
+        env:
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+        run: python3 scripts/rosetta-api.py --todo
+
+      - name: Comprobar si hay cambios
+        id: check
+        run: |
+          git diff --quiet rosetta/api/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit y push si hay cambios
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "Rosetta Bot"
+          git config user.email "rosetta-bot@users.noreply.github.com"
+          git add rosetta/api/
+          git commit -m "Actualizar Rosetta API - datos $(date +%Y-%m-%d)"
+          git push
