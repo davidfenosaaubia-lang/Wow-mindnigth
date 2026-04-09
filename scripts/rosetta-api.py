@@ -95,23 +95,69 @@ class BlizzardAPI:
         if namespace is None:
             namespace = f"static-{self.region}"
 
+        # Usar Bearer token en header (formato actual de la API)
+        headers = {
+            "Authorization": f"Bearer {self.token}",
+        }
         params = {
             "namespace": namespace,
             "locale": locale,
-            "access_token": self.token,
         }
 
         url = f"{self.urls['api']}{endpoint}"
         try:
-            resp = requests.get(url, params=params, timeout=15)
+            resp = requests.get(url, headers=headers, params=params, timeout=15)
             if resp.status_code == 404:
-                print(f"  WARN: {endpoint} no encontrado (404)")
+                # Mostrar body del 404 para debug
+                body = resp.text[:200] if resp.text else "(vacío)"
+                print(f"  WARN 404: {endpoint} ns={namespace} -> {body}")
+                return None
+            if resp.status_code == 403:
+                print(f"  WARN 403: {endpoint} -> Acceso denegado")
                 return None
             resp.raise_for_status()
             return resp.json()
         except Exception as e:
             print(f"  ERROR en {endpoint}: {e}")
             return None
+
+    def test_conexion(self):
+        """Prueba varios endpoints y namespaces para encontrar el formato correcto."""
+        print("\n=== Test de conexión ===")
+        # Probar distintos namespaces y endpoints
+        tests = [
+            ("/data/wow/playable-class/index", f"static-{self.region}"),
+            ("/data/wow/playable-class/index", f"static-classic-{self.region}"),
+            ("/data/wow/playable-class/index", None),
+            ("/data/wow/search/playable-class", f"static-{self.region}"),
+            ("/data/wow/playable-race/index", f"static-{self.region}"),
+            ("/data/wow/power-type/index", f"static-{self.region}"),
+            ("/data/wow/item-class/index", f"static-{self.region}"),
+        ]
+
+        headers = {"Authorization": f"Bearer {self.token}"}
+
+        for endpoint, ns in tests:
+            params = {"locale": "en_US"}
+            if ns:
+                params["namespace"] = ns
+            url = f"{self.urls['api']}{endpoint}"
+            try:
+                resp = requests.get(url, headers=headers, params=params, timeout=10)
+                status = resp.status_code
+                body_preview = resp.text[:150] if resp.text else "(vacío)"
+                print(f"  {status} | {endpoint} | ns={ns}")
+                if status == 200:
+                    data = resp.json()
+                    print(f"       Keys: {list(data.keys())}")
+                    print(f"       OK!")
+                    return endpoint, ns
+                else:
+                    print(f"       {body_preview}")
+            except Exception as e:
+                print(f"  ERR | {endpoint} | {e}")
+
+        return None, None
 
 
 # ============================================================
@@ -460,6 +506,9 @@ def main():
     api = BlizzardAPI(args.client_id, args.client_secret, args.region)
     if not api.autenticar():
         sys.exit(1)
+
+    # Test de conexión: probar qué endpoints funcionan
+    api.test_conexion()
 
     archivos = []
 
