@@ -52,6 +52,11 @@ son legibles por humanos y consumibles por scripts.
 - Addons esenciales: analisis/herramientas/addons-esenciales.json
 - Marco de aprendizaje: conocimiento/fundamentos/marco-aprendizaje.json
 - Perfil del Monje: conocimiento/monje/perfil-clase.json
+- Perfil SimC de Kymera (BrM, EU/Zul'jin, ~277 ilvl, 4p tier):
+  - conocimiento/monje/perfiles/kymera-brewmaster-2026-04-09.simc
+  - conocimiento/monje/perfiles/analisis-kymera-2026-04-09.json
+- Script Warcraft Logs: scripts/wcl-analyzer.py (GraphQL v2)
+- WCL API keys configuradas (pendiente: añadir secrets en GitHub)
 
 ### Pendiente
 - Descargar habilidades individuales por spec desde talent tree API
