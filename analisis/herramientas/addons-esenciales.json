@@ -1,0 +1,66 @@
+{
+  "descripcion": "Addons del juego que necesitas para generar y consumir datos. Sin estos no hay análisis posible.",
+  "addons": [
+    {
+      "nombre": "SimulationCraft (addon)",
+      "funcion": "Exportar tu perfil de personaje para simulación",
+      "como_se_usa": "Escribe /simc en el chat del juego. Copia el texto que aparece y pégalo en Raidbots.",
+      "prioridad": "Esencial",
+      "notas": "Sin este addon no puedes simular tu personaje actual. Es el puente entre juego y simulador."
+    },
+    {
+      "nombre": "Details! Damage Meter",
+      "funcion": "Medidor de DPS/HPS en tiempo real",
+      "como_se_usa": "Se muestra automáticamente durante combate. Muestra tu DPS, el del grupo, desglose por habilidad.",
+      "prioridad": "Esencial",
+      "notas": "El feedback inmediato. Te dice en tiempo real cómo lo estás haciendo."
+    },
+    {
+      "nombre": "Warcraft Logs Uploader",
+      "funcion": "Grabar y subir logs de combate",
+      "como_se_usa": "Aplicación de escritorio. Activa /combatlog en el juego, después sube con la app.",
+      "prioridad": "Esencial",
+      "notas": "Sin logs no hay análisis post-combate. Acostúmbrate a loggear siempre."
+    },
+    {
+      "nombre": "WeakAuras",
+      "funcion": "Mostrar información personalizada en pantalla",
+      "como_se_usa": "Importas 'auras' (configuraciones) de wago.io o las creas tú.",
+      "prioridad": "Esencial",
+      "notas": "Te avisa de procs, CDs disponibles, mecánicas de boss. Totalmente personalizable."
+    },
+    {
+      "nombre": "BigWigs / Deadly Boss Mods (DBM)",
+      "funcion": "Avisos de mecánicas de boss",
+      "como_se_usa": "Se activa automáticamente en mazmorras y bandas. Da alertas visuales y sonoras.",
+      "prioridad": "Esencial para PvE",
+      "notas": "BigWigs es más limpio, DBM más agresivo con los avisos. Ambos válidos. Elige uno."
+    },
+    {
+      "nombre": "Raider.IO",
+      "funcion": "Ver puntuación de M+ de jugadores",
+      "como_se_usa": "Muestra el score de M+ al pasar el ratón sobre un jugador.",
+      "prioridad": "Útil para M+",
+      "notas": "El juego ahora tiene su propio sistema de puntuación integrado, pero Raider.IO da más detalle."
+    },
+    {
+      "nombre": "Pawn",
+      "funcion": "Mostrar si un objeto es mejora según stat weights",
+      "como_se_usa": "Importas stat weights de Raidbots. Te marca con flecha verde si un objeto es upgrade.",
+      "prioridad": "Útil pero con matices",
+      "notas": "CUIDADO: los stat weights cambian con cada pieza de equipo. Puede dar falsos positivos. Mejor usar Top Gear de Raidbots directamente."
+    },
+    {
+      "nombre": "Hekili",
+      "funcion": "Sugerencia de rotación en tiempo real",
+      "como_se_usa": "Muestra qué habilidad usar en cada momento según la APL de SimC.",
+      "prioridad": "Útil para aprender",
+      "notas": "Excelente para aprender la rotación. No sustituye entenderla, pero acelera el aprendizaje."
+    }
+  ],
+  "instalacion": {
+    "metodo": "Usa CurseForge (app) o WowUp para instalar y actualizar addons automáticamente.",
+    "ruta_addons": "World of Warcraft/_retail_/Interface/AddOns/",
+    "notas": "Los addons se actualizan frecuentemente. Mantén tu gestor de addons actualizado."
+  }
+}

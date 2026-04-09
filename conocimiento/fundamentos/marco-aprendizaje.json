@@ -1,0 +1,86 @@
+{
+  "descripcion": "Marco de aprendizaje para WoW. No es lineal: es un sistema donde cada pieza afecta a las demás.",
+  "filosofia": {
+    "principio": "Epistemología antes que mecánica",
+    "explicacion": "Antes de aprender QUÉ hacer, hay que aprender CÓMO saber qué hacer. Cómo evaluar información, cómo distinguir dato de opinión, cómo verificar.",
+    "consecuencia": "Por eso empezamos por la Rosetta (idioma) y el inventario de fuentes (herramientas), no por 'qué talentos ponerse'."
+  },
+  "capas": [
+    {
+      "nivel": 1,
+      "nombre": "Idioma y herramientas",
+      "descripcion": "Poder leer, buscar y operar con las fuentes de información",
+      "incluye": [
+        "Rosetta ES/EN operativa",
+        "Addons instalados y configurados",
+        "Cuentas en Warcraft Logs, Raidbots",
+        "Saber exportar perfil SimC y hacer una simulación básica"
+      ],
+      "estado": "En construcción (Rosetta creada, falta puesta en práctica)"
+    },
+    {
+      "nivel": 2,
+      "nombre": "Mecánicas base del personaje",
+      "descripcion": "Entender cómo funcionan los sistemas del juego",
+      "incluye": [
+        "Qué hace cada stat y cómo interactúan",
+        "Cómo funciona tu clase/spec: recursos, builders, spenders",
+        "La rotación/lista de prioridades básica",
+        "Qué significan los números que ves en Details!"
+      ],
+      "depende_de": [1],
+      "estado": "Pendiente"
+    },
+    {
+      "nivel": 3,
+      "nombre": "Optimización básica",
+      "descripcion": "Tomar decisiones informadas sobre equipo y talentos",
+      "incluye": [
+        "Usar Raidbots Top Gear para elegir equipo",
+        "Entender stat weights y por qué cambian",
+        "Elegir talentos según tipo de contenido (M+ vs raid vs ST vs AoE)",
+        "Saber cuándo un upgrade de ilvl supera a stats mejores"
+      ],
+      "depende_de": [1, 2],
+      "estado": "Pendiente"
+    },
+    {
+      "nivel": 4,
+      "nombre": "Análisis de rendimiento",
+      "descripcion": "Medir, comparar y mejorar tu juego real",
+      "incluye": [
+        "Leer tus logs en Warcraft Logs",
+        "Usar WoWAnalyzer para feedback",
+        "Comparar tu DPS con medianas de tu spec/ilvl",
+        "Identificar qué habilidades usas mal (bajo uptime, CDs desperdiciados)",
+        "Triangular: sim dice X, log dice Y → investigar diferencia"
+      ],
+      "depende_de": [1, 2, 3],
+      "estado": "Pendiente"
+    },
+    {
+      "nivel": 5,
+      "nombre": "Contexto avanzado",
+      "descripcion": "Entender el meta, las excepciones y los matices",
+      "incluye": [
+        "Por qué la sim no coincide con la realidad",
+        "Cuándo ignorar las 'mejores builds' porque tu contexto es diferente",
+        "Valor del daño en el momento correcto vs DPS total",
+        "Cómo los cambios de parche/hotfix afectan al meta",
+        "Sinergias de grupo: qué aporta tu spec al equipo además de DPS"
+      ],
+      "depende_de": [1, 2, 3, 4],
+      "estado": "Pendiente"
+    }
+  ],
+  "retroalimentacion": {
+    "descripcion": "Por qué esto no es lineal",
+    "ejemplos": [
+      "Aprendes que la celeridad reduce el GCD (nivel 2) → vuelves a nivel 3 porque ahora entiendes por qué tus stat weights cambiaron",
+      "Lees un log (nivel 4) y ves que tu DoT tiene 60% uptime → vuelves a nivel 2 a repasar la rotación",
+      "Descubres que en M+ el cleave importa más que el ST (nivel 5) → replaneas talentos (nivel 3)",
+      "Un hotfix cambia un talento → toda la cadena de nivel 2 en adelante puede cambiar"
+    ],
+    "principio": "Cada cosa nueva que aprendes puede invalidar algo que creías saber. Eso no es un error, es el proceso."
+  }
+}

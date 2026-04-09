@@ -1,0 +1,170 @@
+{
+  "categoria": "Clases y especializaciones",
+  "descripcion": "Las 13 clases jugables y sus especializaciones. Cada clase tiene 2-4 specs, cada spec define un rol y estilo de juego.",
+  "terminos": [
+    {
+      "es": "Guerrero",
+      "en": "Warrior",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Armas", "en": "Arms", "rol": "DPS cuerpo a cuerpo" },
+        { "es": "Furia", "en": "Fury", "rol": "DPS cuerpo a cuerpo" },
+        { "es": "Protección", "en": "Protection", "rol": "Tanque" }
+      ]
+    },
+    {
+      "es": "Paladín",
+      "en": "Paladin",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Sagrado", "en": "Holy", "rol": "Sanador" },
+        { "es": "Protección", "en": "Protection", "rol": "Tanque" },
+        { "es": "Reprensión", "en": "Retribution", "rol": "DPS cuerpo a cuerpo" }
+      ]
+    },
+    {
+      "es": "Cazador",
+      "en": "Hunter",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Bestias", "en": "Beast Mastery", "rol": "DPS a distancia" },
+        { "es": "Puntería", "en": "Marksmanship", "rol": "DPS a distancia" },
+        { "es": "Supervivencia", "en": "Survival", "rol": "DPS cuerpo a cuerpo" }
+      ]
+    },
+    {
+      "es": "Pícaro",
+      "en": "Rogue",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Asesinato", "en": "Assassination", "rol": "DPS cuerpo a cuerpo" },
+        { "es": "Forajido", "en": "Outlaw", "rol": "DPS cuerpo a cuerpo" },
+        { "es": "Sutileza", "en": "Subtlety", "rol": "DPS cuerpo a cuerpo" }
+      ]
+    },
+    {
+      "es": "Sacerdote",
+      "en": "Priest",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Disciplina", "en": "Discipline", "rol": "Sanador" },
+        { "es": "Sagrado", "en": "Holy", "rol": "Sanador" },
+        { "es": "Sombra", "en": "Shadow", "rol": "DPS a distancia" }
+      ]
+    },
+    {
+      "es": "Caballero de la Muerte",
+      "en": "Death Knight",
+      "contexto": "Clase",
+      "notas": "Abreviado: DK. Clase héroe (empieza a nivel alto).",
+      "specs": [
+        { "es": "Sangre", "en": "Blood", "rol": "Tanque" },
+        { "es": "Escarcha", "en": "Frost", "rol": "DPS cuerpo a cuerpo" },
+        { "es": "Profano", "en": "Unholy", "rol": "DPS cuerpo a cuerpo" }
+      ]
+    },
+    {
+      "es": "Chamán",
+      "en": "Shaman",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Elemental", "en": "Elemental", "rol": "DPS a distancia" },
+        { "es": "Mejora", "en": "Enhancement", "rol": "DPS cuerpo a cuerpo" },
+        { "es": "Restauración", "en": "Restoration", "rol": "Sanador" }
+      ]
+    },
+    {
+      "es": "Mago",
+      "en": "Mage",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Arcano", "en": "Arcane", "rol": "DPS a distancia" },
+        { "es": "Fuego", "en": "Fire", "rol": "DPS a distancia" },
+        { "es": "Escarcha", "en": "Frost", "rol": "DPS a distancia" }
+      ]
+    },
+    {
+      "es": "Brujo",
+      "en": "Warlock",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Aflicción", "en": "Affliction", "rol": "DPS a distancia" },
+        { "es": "Demonología", "en": "Demonology", "rol": "DPS a distancia" },
+        { "es": "Destrucción", "en": "Destruction", "rol": "DPS a distancia" }
+      ]
+    },
+    {
+      "es": "Monje",
+      "en": "Monk",
+      "contexto": "Clase",
+      "specs": [
+        { "es": "Maestro cervecero", "en": "Brewmaster", "rol": "Tanque" },
+        { "es": "Tejedor de niebla", "en": "Mistweaver", "rol": "Sanador" },
+        { "es": "Viajero del viento", "en": "Windwalker", "rol": "DPS cuerpo a cuerpo" }
+      ]
+    },
+    {
+      "es": "Druida",
+      "en": "Druid",
+      "contexto": "Clase",
+      "notas": "Única clase con 4 especializaciones y acceso a los 4 roles.",
+      "specs": [
+        { "es": "Equilibrio", "en": "Balance", "rol": "DPS a distancia" },
+        { "es": "Feral", "en": "Feral", "rol": "DPS cuerpo a cuerpo" },
+        { "es": "Guardián", "en": "Guardian", "rol": "Tanque" },
+        { "es": "Restauración", "en": "Restoration", "rol": "Sanador" }
+      ]
+    },
+    {
+      "es": "Cazador de demonios",
+      "en": "Demon Hunter",
+      "contexto": "Clase",
+      "notas": "Abreviado: DH. Clase héroe. Solo 2 especializaciones.",
+      "specs": [
+        { "es": "Devastación", "en": "Havoc", "rol": "DPS cuerpo a cuerpo" },
+        { "es": "Venganza", "en": "Vengeance", "rol": "Tanque" }
+      ]
+    },
+    {
+      "es": "Evocador",
+      "en": "Evoker",
+      "contexto": "Clase",
+      "notas": "Clase héroe de Dragonflight. Solo raza Dracthyr.",
+      "specs": [
+        { "es": "Devastación", "en": "Devastation", "rol": "DPS a distancia" },
+        { "es": "Preservación", "en": "Preservation", "rol": "Sanador" },
+        { "es": "Aumento", "en": "Augmentation", "rol": "DPS soporte" }
+      ]
+    },
+    {
+      "es": "Tanque",
+      "en": "Tank",
+      "contexto": "Rol",
+      "notas": "Absorbe daño del grupo, controla posicionamiento de enemigos. En grupos: 1 tanque por mazmorra, 2 por banda."
+    },
+    {
+      "es": "Sanador",
+      "en": "Healer",
+      "contexto": "Rol",
+      "notas": "Mantiene vivo al grupo. En grupos: 1 por mazmorra, 2-5 por banda."
+    },
+    {
+      "es": "DPS (Daño por segundo)",
+      "en": "DPS (Damage Per Second)",
+      "contexto": "Rol",
+      "notas": "Se usa tanto para el rol como para la métrica. 'Hacer DPS' = hacer daño. 'Tu DPS' = tu daño por segundo."
+    },
+    {
+      "es": "DPS cuerpo a cuerpo",
+      "en": "Melee DPS",
+      "contexto": "Subrrol",
+      "notas": "DPS que ataca de cerca. En inglés: melee."
+    },
+    {
+      "es": "DPS a distancia",
+      "en": "Ranged DPS",
+      "contexto": "Subrrol",
+      "notas": "DPS que ataca de lejos. En inglés: ranged. Incluye casters y cazadores."
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "categoria": "Estadísticas de personaje",
+  "descripcion": "Atributos primarios y secundarios que definen el poder de un personaje. Son la base de toda optimización.",
+  "terminos": [
+    {
+      "es": "Fuerza",
+      "en": "Strength",
+      "contexto": "Atributo primario",
+      "notas": "Primario para Guerrero, Paladín, Caballero de la Muerte. Aumenta poder de ataque."
+    },
+    {
+      "es": "Agilidad",
+      "en": "Agility",
+      "contexto": "Atributo primario",
+      "notas": "Primario para Cazador, Pícaro, Monje, Druida (feral/guardián), Cazador de demonios, Evocador. Aumenta poder de ataque y probabilidad de esquivar."
+    },
+    {
+      "es": "Intelecto",
+      "en": "Intellect",
+      "contexto": "Atributo primario",
+      "notas": "Primario para Mago, Brujo, Sacerdote, Chamán (elemental/restauración), Druida (equilibrio/restauración), Evocador. Aumenta poder con hechizos."
+    },
+    {
+      "es": "Aguante",
+      "en": "Stamina",
+      "contexto": "Atributo primario",
+      "notas": "Aumenta puntos de vida. Todos los personajes lo tienen. Especialmente relevante para tanques."
+    },
+    {
+      "es": "Golpe crítico",
+      "en": "Critical Strike",
+      "contexto": "Atributo secundario",
+      "notas": "Probabilidad de hacer daño/sanación doble. En SimC aparece como 'crit'. Abreviado: Crit."
+    },
+    {
+      "es": "Celeridad",
+      "en": "Haste",
+      "contexto": "Atributo secundario",
+      "notas": "Reduce tiempos de lanzamiento, GCD, y aumenta velocidad de ataque. En SimC: 'haste'. Uno de los stats más complejos porque afecta a muchas cosas."
+    },
+    {
+      "es": "Maestría",
+      "en": "Mastery",
+      "contexto": "Atributo secundario",
+      "notas": "Efecto único por especialización. Cada spec tiene su propia maestría. En SimC: 'mastery'."
+    },
+    {
+      "es": "Versatilidad",
+      "en": "Versatility",
+      "contexto": "Atributo secundario",
+      "notas": "Aumenta daño/sanación hecho y reduce daño recibido (a la mitad del %). En SimC: 'versatility'. Simple pero efectivo."
+    },
+    {
+      "es": "Armadura",
+      "en": "Armor",
+      "contexto": "Estadística defensiva",
+      "notas": "Reduce daño físico recibido. Escala con el nivel del atacante."
+    },
+    {
+      "es": "Poder de ataque",
+      "en": "Attack Power",
+      "contexto": "Estadística derivada",
+      "notas": "Derivado de Fuerza o Agilidad. Determina el daño base de habilidades físicas."
+    },
+    {
+      "es": "Poder con hechizos",
+      "en": "Spell Power",
+      "contexto": "Estadística derivada",
+      "notas": "Derivado de Intelecto. Determina el daño/sanación base de hechizos."
+    },
+    {
+      "es": "Puntos de vida",
+      "en": "Health Points (HP)",
+      "contexto": "Recurso",
+      "notas": "Vida total del personaje."
+    },
+    {
+      "es": "Maná",
+      "en": "Mana",
+      "contexto": "Recurso",
+      "notas": "Recurso principal de sanadores y algunos DPS casters."
+    },
+    {
+      "es": "Energía",
+      "en": "Energy",
+      "contexto": "Recurso",
+      "notas": "Recurso de Pícaro, Monje (viajero del viento), Druida (feral). Se regenera constantemente."
+    },
+    {
+      "es": "Furia",
+      "en": "Rage",
+      "contexto": "Recurso",
+      "notas": "Recurso de Guerrero y Druida (oso). Se genera al atacar y recibir daño."
+    },
+    {
+      "es": "Foco",
+      "en": "Focus",
+      "contexto": "Recurso",
+      "notas": "Recurso del Cazador. Se regenera constantemente, similar a energía."
+    },
+    {
+      "es": "Poder rúnico",
+      "en": "Runic Power",
+      "contexto": "Recurso",
+      "notas": "Recurso secundario del Caballero de la Muerte. Se genera al usar runas."
+    },
+    {
+      "es": "Runas",
+      "en": "Runes",
+      "contexto": "Recurso",
+      "notas": "Recurso primario del Caballero de la Muerte. Se recargan con el tiempo."
+    },
+    {
+      "es": "Poder sagrado",
+      "en": "Holy Power",
+      "contexto": "Recurso",
+      "notas": "Recurso del Paladín. Se genera con habilidades constructoras, se gasta en finalizadoras."
+    },
+    {
+      "es": "Puntos de combo",
+      "en": "Combo Points",
+      "contexto": "Recurso",
+      "notas": "Recurso del Pícaro y Druida feral. Constructoras generan, finalizadoras gastan."
+    },
+    {
+      "es": "Poder astral",
+      "en": "Astral Power",
+      "contexto": "Recurso",
+      "notas": "Recurso del Druida equilibrio."
+    },
+    {
+      "es": "Demencia",
+      "en": "Insanity",
+      "contexto": "Recurso",
+      "notas": "Recurso del Sacerdote sombra."
+    },
+    {
+      "es": "Maelstrom",
+      "en": "Maelstrom",
+      "contexto": "Recurso",
+      "notas": "Recurso del Chamán elemental/mejora. Mismo nombre en ambos idiomas."
+    },
+    {
+      "es": "Piedras de alma",
+      "en": "Soul Shards",
+      "contexto": "Recurso",
+      "notas": "Recurso del Brujo."
+    },
+    {
+      "es": "Esencia",
+      "en": "Essence",
+      "contexto": "Recurso",
+      "notas": "Recurso del Evocador."
+    },
+    {
+      "es": "Índice de objetos",
+      "en": "Item Level (ilvl)",
+      "contexto": "Potencia de equipo",
+      "notas": "Número que resume la potencia de un objeto. Abreviado: ilvl. Referencia universal para comparar equipo."
+    },
+    {
+      "es": "Nivel de objeto equipado",
+      "en": "Equipped Item Level",
+      "contexto": "Potencia de equipo",
+      "notas": "Media del ilvl de todo tu equipo. Lo que otros jugadores ven."
+    }
+  ]
+}

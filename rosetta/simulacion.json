@@ -1,0 +1,192 @@
+{
+  "categoria": "Simulación y theorycraft",
+  "descripcion": "Términos del ecosistema de análisis y simulación. Esta es la terminología que más barrera crea porque casi toda está en inglés y no tiene traducción oficial en el juego.",
+  "terminos": [
+    {
+      "es": "SimulationCraft (SimC)",
+      "en": "SimulationCraft (SimC)",
+      "contexto": "Herramienta",
+      "notas": "El motor de simulación de referencia. Simula combates miles de veces para dar resultados estadísticos. Open source."
+    },
+    {
+      "es": "Raidbots",
+      "en": "Raidbots",
+      "contexto": "Herramienta web",
+      "notas": "Interfaz web para SimC. Hace accesible la simulación sin instalar nada. La herramienta que más usaremos."
+    },
+    {
+      "es": "Peso de estadística",
+      "en": "Stat Weight",
+      "contexto": "Resultado de simulación",
+      "notas": "Cuánto DPS ganas por cada punto de una estadística. CUIDADO: cambian según tu equipo actual, no son fijos."
+    },
+    {
+      "es": "Simulación de pesos",
+      "en": "Stat Weight Sim",
+      "contexto": "Tipo de simulación",
+      "notas": "Simula añadiendo stats uno a uno para calcular su valor relativo. Hay que rehacerla con cada cambio de equipo."
+    },
+    {
+      "es": "Comparación de objetos",
+      "en": "Top Gear / Gear Compare",
+      "contexto": "Tipo de simulación",
+      "notas": "Simula combinaciones de equipo para encontrar la mejor. Más fiable que stat weights para elegir equipo."
+    },
+    {
+      "es": "Simulación de talento",
+      "en": "Talent Compare",
+      "contexto": "Tipo de simulación",
+      "notas": "Compara builds de talentos simulando cada una."
+    },
+    {
+      "es": "Perfil de personaje",
+      "en": "Character Profile / SimC String",
+      "contexto": "Input de simulación",
+      "notas": "Texto que describe tu personaje (equipo, talentos, stats). Se exporta con el addon SimC."
+    },
+    {
+      "es": "Lista de acciones",
+      "en": "Action Priority List (APL)",
+      "contexto": "Configuración SimC",
+      "notas": "Las reglas que SimC sigue para decidir qué habilidad usar. Escritas por theorycrafters. Definen la 'rotación' óptima."
+    },
+    {
+      "es": "Iteraciones",
+      "en": "Iterations",
+      "contexto": "Configuración SimC",
+      "notas": "Número de combates simulados. Más iteraciones = resultado más preciso pero más lento. 10.000+ para resultados fiables."
+    },
+    {
+      "es": "Intervalo de confianza",
+      "en": "Confidence Interval",
+      "contexto": "Estadística",
+      "notas": "Rango donde cae el DPS real con X% de certeza. Si dos sims se solapan, la diferencia no es significativa."
+    },
+    {
+      "es": "Margen de error",
+      "en": "Error margin",
+      "contexto": "Estadística",
+      "notas": "Cuánto puede variar el resultado. Si la diferencia entre dos opciones es menor que el error, son equivalentes."
+    },
+    {
+      "es": "Pelea de bolsillo (Patchwerk)",
+      "en": "Patchwerk",
+      "contexto": "Tipo de simulación",
+      "notas": "Simulación de combate contra un objetivo quieto. DPS puro sin mecánicas. Referencia base pero irreal."
+    },
+    {
+      "es": "Combate con movimiento",
+      "en": "HecticAddCleave / DungeonSlice",
+      "contexto": "Tipo de simulación",
+      "notas": "Simulaciones más realistas: HecticAddCleave añade adds y movimiento. DungeonSlice simula una M+."
+    },
+    {
+      "es": "Duración del combate",
+      "en": "Fight Length",
+      "contexto": "Configuración SimC",
+      "notas": "Cuánto dura la pelea simulada. Afecta mucho al resultado (CDs largos se benefician de peleas cortas)."
+    },
+    {
+      "es": "Warcraft Logs",
+      "en": "Warcraft Logs (WCL)",
+      "contexto": "Herramienta web",
+      "notas": "La web donde se suben los logs de combate reales. Fuente principal de datos reales (no simulados)."
+    },
+    {
+      "es": "Registro / Log",
+      "en": "Log",
+      "contexto": "Datos",
+      "notas": "Archivo con todo lo que pasó en un combate real. Se genera con el addon Warcraft Logs Uploader."
+    },
+    {
+      "es": "Parse",
+      "en": "Parse",
+      "contexto": "Métrica WCL",
+      "notas": "Percentil en Warcraft Logs. Parse morado (95-99), naranja (99+), rosa (100 = #1). Cada color tiene significado."
+    },
+    {
+      "es": "Percentil todo-estrellas",
+      "en": "All-Star Points",
+      "contexto": "Métrica WCL",
+      "notas": "Puntuación que combina tus mejores parses en todos los bosses. Rankings globales."
+    },
+    {
+      "es": "WoWAnalyzer",
+      "en": "WoWAnalyzer",
+      "contexto": "Herramienta web",
+      "notas": "Analiza tus logs y te dice qué hiciste bien/mal. Da sugerencias específicas de mejora."
+    },
+    {
+      "es": "Archon",
+      "en": "Archon (archon.gg)",
+      "contexto": "Herramienta web",
+      "notas": "Agrega datos de miles de jugadores para mostrar builds, talentos y equipo más usados por los mejores."
+    },
+    {
+      "es": "Wowhead",
+      "en": "Wowhead",
+      "contexto": "Base de datos",
+      "notas": "La base de datos más completa de WoW. Objetos, quests, habilidades, guías. Primera parada para buscar info."
+    },
+    {
+      "es": "Build / Configuración",
+      "en": "Build",
+      "contexto": "Theorycraft",
+      "notas": "Combinación de talentos + equipo + stats. 'Build de M+' vs 'build de raid' pueden ser muy diferentes."
+    },
+    {
+      "es": "Talentos",
+      "en": "Talents",
+      "contexto": "Sistema del juego",
+      "notas": "Árbol de habilidades personalizables. Dos árboles: clase (compartido) y especialización (único)."
+    },
+    {
+      "es": "Cadena de importación de talentos",
+      "en": "Talent Import String",
+      "contexto": "Utilidad",
+      "notas": "Texto codificado que puedes pegar en el juego para copiar una build de talentos."
+    },
+    {
+      "es": "Addon",
+      "en": "Addon",
+      "contexto": "Modificación del juego",
+      "notas": "Extensión del interfaz del juego. Escritos en Lua. Ejemplos: WeakAuras, Details!, SimC addon."
+    },
+    {
+      "es": "WeakAuras",
+      "en": "WeakAuras (WA)",
+      "contexto": "Addon",
+      "notas": "El addon más importante. Muestra información personalizable en pantalla. Se comparten builds de WA."
+    },
+    {
+      "es": "Details!",
+      "en": "Details!",
+      "contexto": "Addon",
+      "notas": "Medidor de DPS/HPS en tiempo real. Imprescindible para saber cómo lo estás haciendo."
+    },
+    {
+      "es": "Daño por ejecución",
+      "en": "Execute damage",
+      "contexto": "Mecánica",
+      "notas": "Daño extra o habilidades especiales cuando el boss está bajo cierto % de vida (generalmente 20-35%)."
+    },
+    {
+      "es": "Escalar / Escalado",
+      "en": "Scaling",
+      "contexto": "Theorycraft",
+      "notas": "Cómo mejora una spec cuando le das más stats. 'Escala bien con crit' = cada punto de crit le da más que a otras specs."
+    },
+    {
+      "es": "Sinergia",
+      "en": "Synergy",
+      "contexto": "Theorycraft",
+      "notas": "Cuando dos efectos se potencian mutuamente. Ej: un talento que da crit + un proc que se activa con crit."
+    },
+    {
+      "es": "Punto de ruptura",
+      "en": "Breakpoint",
+      "contexto": "Theorycraft",
+      "notas": "Cantidad exacta de un stat donde ocurre un salto de valor. Ej: la celeridad exacta para un tick extra de un DoT."
+    }
+  ]
+}

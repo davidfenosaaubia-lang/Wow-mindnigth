@@ -1,0 +1,192 @@
+{
+  "descripcion": "Inventario crítico de fuentes de datos para WoW. Qué ofrece cada una, qué NO ofrece, y cuándo usarla.",
+  "fuentes": [
+    {
+      "nombre": "Blizzard API",
+      "tipo": "API oficial",
+      "url": "https://develop.battle.net/documentation/world-of-warcraft",
+      "ofrece": [
+        "Datos de personaje (equipo, stats, talentos, logros)",
+        "Datos de guild (miembros, actividad)",
+        "Datos del juego (items, hechizos, mazmorras, bandas)",
+        "Rankings de M+ y PvP",
+        "Perfil del personaje actualizado"
+      ],
+      "no_ofrece": [
+        "Logs de combate",
+        "DPS/HPS de combates reales",
+        "Simulaciones",
+        "Rankings de rendimiento (parses)"
+      ],
+      "fiabilidad": "Máxima - es la fuente oficial",
+      "idioma": "Soporta español (es_ES). Los nombres de objetos, hechizos y zonas vienen localizados.",
+      "acceso": "Requiere cuenta de desarrollador en Battle.net. API key gratuita.",
+      "notas": "Esta es nuestra piedra Rosetta automática: podemos consultar cualquier nombre en español e inglés directo de la API."
+    },
+    {
+      "nombre": "Warcraft Logs",
+      "tipo": "Plataforma de análisis de logs",
+      "url": "https://www.warcraftlogs.com",
+      "ofrece": [
+        "Logs detallados de combates reales (cada habilidad, cada tick de daño)",
+        "Rankings por boss, spec, ilvl",
+        "Parses (percentiles) individuales",
+        "Datos agregados: medianas de DPS por spec en cada boss",
+        "Timeline detallado de cada combate",
+        "Análisis de uso de CDs, uptime de buffs/debuffs"
+      ],
+      "no_ofrece": [
+        "Simulaciones (son datos reales, no teóricos)",
+        "Recomendaciones de equipo/talentos",
+        "Contexto: un parse alto puede ser por padding, cheese o condiciones ideales"
+      ],
+      "fiabilidad": "Alta para datos reales, pero requiere interpretar contexto",
+      "idioma": "Interfaz en inglés. Nombres de hechizos en inglés (ID interno). Necesita nuestra Rosetta.",
+      "acceso": "Gratuito para ver. API v2 (GraphQL) con key gratuita para queries.",
+      "notas": "CRÍTICO: un parse no te dice si el jugador hizo las mecánicas bien. Solo mide números. Triangular con WoWAnalyzer."
+    },
+    {
+      "nombre": "SimulationCraft (SimC)",
+      "tipo": "Motor de simulación (local/open source)",
+      "url": "https://www.simulationcraft.org",
+      "ofrece": [
+        "Simulación teórica de DPS en condiciones controladas",
+        "Stat weights personalizados para tu perfil",
+        "Comparación de equipo, talentos, trinkets",
+        "APL (Action Priority Lists) que definen la rotación óptima",
+        "Código fuente abierto: puedes ver exactamente cómo calcula"
+      ],
+      "no_ofrece": [
+        "Datos reales (es una simulación, no lo que pasa en el juego)",
+        "Impacto de mecánicas de boss (movimiento, fases)",
+        "Error humano (simula juego perfecto)",
+        "Rendimiento en sanación (solo DPS)"
+      ],
+      "fiabilidad": "Alta para comparaciones relativas. Menos fiable para números absolutos.",
+      "idioma": "Inglés. Usa IDs y nombres internos del juego.",
+      "acceso": "Open source, descargable. O usar Raidbots como interfaz web.",
+      "notas": "La simulación simula juego PERFECTO. Tu DPS real será menor. Úsalo para comparar A vs B, no como objetivo de DPS."
+    },
+    {
+      "nombre": "Raidbots",
+      "tipo": "Interfaz web para SimC",
+      "url": "https://www.raidbots.com",
+      "ofrece": [
+        "Top Gear: mejor combinación de equipo de tu bolsa",
+        "Droptimizer: qué boss/mazmorra te da más mejora",
+        "Stat Weights: pesos de estadísticas personalizados",
+        "Talent Compare: comparar builds de talentos",
+        "Interfaz simple para SimC sin instalar nada"
+      ],
+      "no_ofrece": [
+        "Nada que SimC no pueda hacer (es una interfaz, no un motor diferente)",
+        "Análisis de logs reales",
+        "Recomendaciones de gameplay/rotación"
+      ],
+      "fiabilidad": "Igual que SimC (usa SimC por debajo)",
+      "idioma": "Inglés",
+      "acceso": "Gratuito con límites. Premium para sims más rápidas y sin cola.",
+      "notas": "La herramienta MÁS PRÁCTICA del día a día. 'Top Gear' es lo que usarás constantemente."
+    },
+    {
+      "nombre": "Archon (archon.gg)",
+      "tipo": "Agregador de datos de jugadores top",
+      "url": "https://www.archon.gg",
+      "ofrece": [
+        "Builds más usadas por los mejores jugadores (talentos, equipo, stats)",
+        "Tier lists de specs por tipo de contenido",
+        "Datos de popularidad y win rate de talentos",
+        "Filtros por nivel de contenido (M+ nivel, dificultad de raid)"
+      ],
+      "no_ofrece": [
+        "Explicación de POR QUÉ una build es mejor",
+        "Contexto de spec (una spec puede estar baja por ser difícil, no mala)",
+        "Datos para tu nivel específico (agrega desde top players)"
+      ],
+      "fiabilidad": "Buena para ver tendencias. Peligro: copiar sin entender.",
+      "idioma": "Inglés",
+      "acceso": "Gratuito",
+      "notas": "Útil para saber QUÉ usan los buenos. Peligroso si copias sin entender POR QUÉ. Siempre verificar con SimC."
+    },
+    {
+      "nombre": "Wowhead",
+      "tipo": "Base de datos y guías",
+      "url": "https://www.wowhead.com",
+      "ofrece": [
+        "Base de datos completa: cada objeto, hechizo, quest, NPC del juego",
+        "Guías de clase/spec escritas por theorycrafters",
+        "Calculadora de talentos",
+        "Comentarios de la comunidad con tips",
+        "Noticias y PTR/beta coverage"
+      ],
+      "no_ofrece": [
+        "Simulaciones personalizadas",
+        "Datos de rendimiento real (parses/logs)",
+        "Las guías pueden estar desactualizadas post-hotfix"
+      ],
+      "fiabilidad": "Alta para datos del juego. Las guías varían en calidad según el autor.",
+      "idioma": "Tiene versión en español (es.wowhead.com) pero está menos mantenida. Usar EN como referencia.",
+      "acceso": "Gratuito (con ads). Sin API pública fácil.",
+      "notas": "Primer sitio para buscar 'qué es esto'. Para optimización, mejor ir a fuentes especializadas."
+    },
+    {
+      "nombre": "WoWAnalyzer",
+      "tipo": "Analizador de logs con feedback",
+      "url": "https://wowanalyzer.com",
+      "ofrece": [
+        "Análisis automático de tus logs con notas/sugerencias",
+        "Identifica errores específicos (CD no usado, DoT caído, recurso desperdiciado)",
+        "Puntuación por categoría (recursos, cooldowns, buffs)",
+        "Compara tu juego contra el óptimo"
+      ],
+      "no_ofrece": [
+        "Rankings/comparación con otros jugadores (eso es WCL)",
+        "Simulaciones",
+        "Soporte completo para todas las specs (algunos specs tienen mejor soporte)"
+      ],
+      "fiabilidad": "Buena para identificar errores obvios. Puede dar falsos positivos en contextos específicos.",
+      "idioma": "Inglés",
+      "acceso": "Gratuito. Open source.",
+      "notas": "Excelente complemento a Warcraft Logs. WCL te dice CUÁNTO hiciste, WoWAnalyzer te dice QUÉ hiciste mal."
+    },
+    {
+      "nombre": "Subcreation",
+      "tipo": "Agregador de datos M+",
+      "url": "https://subcreation.net",
+      "ofrece": [
+        "Tier list de specs para M+ basada en datos reales",
+        "Builds más usadas en M+ alto",
+        "Análisis por mazmorra específica"
+      ],
+      "no_ofrece": [
+        "Datos de raid",
+        "Análisis individual",
+        "Contexto de por qué una spec rinde mejor"
+      ],
+      "fiabilidad": "Buena para tendencias de M+",
+      "idioma": "Inglés",
+      "acceso": "Gratuito",
+      "notas": "Similar a Archon pero más enfocado en M+."
+    }
+  ],
+  "triangulacion": {
+    "descripcion": "Cómo cruzar fuentes para obtener información fiable",
+    "reglas": [
+      "NUNCA confiar en una sola fuente para decisiones de equipo/talentos",
+      "SimC/Raidbots para responder '¿qué equipo me pongo?' → dato teórico",
+      "Warcraft Logs para responder '¿qué están usando los que lo hacen bien?' → dato real",
+      "WoWAnalyzer para responder '¿qué estoy haciendo mal?' → feedback personal",
+      "Archon/Subcreation para responder '¿qué tendencia hay?' → contexto meta",
+      "Si SimC dice A pero los logs dicen B → investigar por qué (mecánicas de boss, error humano, condiciones del sim)",
+      "Los datos agregados (medianas) son más fiables que los datos individuales (top 1 parse)"
+    ],
+    "flujo_recomendado": [
+      "1. Simula tu personaje en Raidbots para saber tu potencial teórico",
+      "2. Juega y sube logs a Warcraft Logs",
+      "3. Analiza tus logs en WoWAnalyzer para ver errores",
+      "4. Compara tus parses en WCL con la mediana de tu spec",
+      "5. Consulta Archon para ver si tu build está alineada con lo que funciona",
+      "6. Repite: simula de nuevo con equipo nuevo, juega, analiza"
+    ]
+  }
+}

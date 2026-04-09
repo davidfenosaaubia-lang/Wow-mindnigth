@@ -1,0 +1,197 @@
+{
+  "categoria": "Términos de combate y mecánicas",
+  "descripcion": "Vocabulario que aparece constantemente en guías, logs y conversaciones sobre WoW. Mezcla de términos traducidos oficialmente y jerga comunitaria.",
+  "terminos": [
+    {
+      "es": "Daño por segundo",
+      "en": "DPS (Damage Per Second)",
+      "contexto": "Métrica",
+      "notas": "La métrica principal de rendimiento para DPS. Lo que miden los logs y simuladores."
+    },
+    {
+      "es": "Sanación por segundo",
+      "en": "HPS (Healing Per Second)",
+      "contexto": "Métrica",
+      "notas": "Equivalente de DPS para sanadores. Menos fiable como métrica porque depende del daño recibido."
+    },
+    {
+      "es": "Tiempo de reutilización",
+      "en": "Cooldown (CD)",
+      "contexto": "Mecánica",
+      "notas": "Tiempo que tarda una habilidad en poder usarse de nuevo. 'Usar CDs' = usar habilidades con cooldown largo (ofensivas/defensivas)."
+    },
+    {
+      "es": "Tiempo de reutilización global",
+      "en": "Global Cooldown (GCD)",
+      "contexto": "Mecánica",
+      "notas": "Tiempo mínimo entre acciones (generalmente 1.5s, reducible con celeridad). Fundamental para rotaciones."
+    },
+    {
+      "es": "Activación / Proc",
+      "en": "Proc",
+      "contexto": "Mecánica",
+      "notas": "Efecto que se activa aleatoriamente. 'Procear' = que se active un proc. Del inglés 'Programmed Random OCcurrence'."
+    },
+    {
+      "es": "Daño en el tiempo",
+      "en": "DoT (Damage over Time)",
+      "contexto": "Tipo de habilidad",
+      "notas": "Habilidad que hace daño gradual durante un periodo. Ej: venenos, maldiciones, sangrado."
+    },
+    {
+      "es": "Sanación en el tiempo",
+      "en": "HoT (Heal over Time)",
+      "contexto": "Tipo de habilidad",
+      "notas": "Habilidad que sana gradualmente. Ej: Rejuvenecimiento del druida."
+    },
+    {
+      "es": "Área de efecto",
+      "en": "AoE (Area of Effect)",
+      "contexto": "Tipo de habilidad",
+      "notas": "Habilidad que afecta a un área. Opuesto: objetivo único (single target / ST)."
+    },
+    {
+      "es": "Objetivo único",
+      "en": "Single Target (ST)",
+      "contexto": "Tipo de habilidad",
+      "notas": "Habilidad que afecta a un solo objetivo. Opuesto a AoE."
+    },
+    {
+      "es": "Escisión",
+      "en": "Cleave",
+      "contexto": "Tipo de daño",
+      "notas": "Daño a 2-3 objetivos cercanos. Entre single target y AoE puro. Muy relevante en M+."
+    },
+    {
+      "es": "Beneficio",
+      "en": "Buff",
+      "contexto": "Efecto",
+      "notas": "Efecto positivo temporal. 'Buffear' = aplicar un buff."
+    },
+    {
+      "es": "Perjuicio",
+      "en": "Debuff",
+      "contexto": "Efecto",
+      "notas": "Efecto negativo temporal. Lo aplicas a enemigos o te lo aplican a ti."
+    },
+    {
+      "es": "Amenaza",
+      "en": "Threat",
+      "contexto": "Mecánica de tanqueo",
+      "notas": "Determina a quién atacan los enemigos. El tanque debe tener más amenaza que nadie."
+    },
+    {
+      "es": "Aggro",
+      "en": "Aggro",
+      "contexto": "Mecánica de tanqueo",
+      "notas": "Tener aggro = el enemigo te ataca. 'Robar aggro' = superar la amenaza del tanque. Mismo término en ambos idiomas."
+    },
+    {
+      "es": "Provocar",
+      "en": "Taunt",
+      "contexto": "Habilidad de tanque",
+      "notas": "Fuerza al enemigo a atacarte. Todos los tanques la tienen."
+    },
+    {
+      "es": "Interrumpir",
+      "en": "Interrupt / Kick",
+      "contexto": "Habilidad",
+      "notas": "Cortar el lanzamiento de un hechizo enemigo. 'Kick' viene de la habilidad del Pícaro pero se usa genéricamente."
+    },
+    {
+      "es": "Disipar",
+      "en": "Dispel",
+      "contexto": "Habilidad",
+      "notas": "Eliminar un efecto (buff enemigo o debuff aliado). Cada clase disipa tipos específicos."
+    },
+    {
+      "es": "Purificar",
+      "en": "Cleanse / Purify",
+      "contexto": "Habilidad",
+      "notas": "Tipo específico de disipación. Varía por clase."
+    },
+    {
+      "es": "Lanzamiento",
+      "en": "Cast",
+      "contexto": "Acción",
+      "notas": "Usar una habilidad con tiempo de lanzamiento. 'Castear' = lanzar un hechizo."
+    },
+    {
+      "es": "Canalizar",
+      "en": "Channel",
+      "contexto": "Acción",
+      "notas": "Habilidad que requiere mantener el lanzamiento durante toda su duración."
+    },
+    {
+      "es": "Instantáneo",
+      "en": "Instant (cast)",
+      "contexto": "Tipo de lanzamiento",
+      "notas": "Habilidad sin tiempo de lanzamiento. Se usa inmediatamente."
+    },
+    {
+      "es": "Rotación",
+      "en": "Rotation",
+      "contexto": "Gameplay",
+      "notas": "Secuencia de habilidades que se usa para maximizar daño/sanación. En realidad es una lista de prioridades, no una rotación fija."
+    },
+    {
+      "es": "Lista de prioridades",
+      "en": "Priority List",
+      "contexto": "Gameplay",
+      "notas": "Término más preciso que 'rotación'. Orden de prioridad para decidir qué habilidad usar en cada GCD."
+    },
+    {
+      "es": "Tiempo activo",
+      "en": "Uptime",
+      "contexto": "Métrica",
+      "notas": "Porcentaje del tiempo que un efecto está activo. Ej: 'uptime de tu DoT' = qué % del combate estuvo aplicado."
+    },
+    {
+      "es": "Tiempo de actividad",
+      "en": "Activity Time / Active Time",
+      "contexto": "Métrica",
+      "notas": "% del tiempo que estuviste haciendo algo (no parado). Métrica de rendimiento en logs."
+    },
+    {
+      "es": "Recuento de muertes",
+      "en": "Kill Count",
+      "contexto": "Métrica"
+    },
+    {
+      "es": "Habilidad constructora",
+      "en": "Builder",
+      "contexto": "Tipo de habilidad",
+      "notas": "Habilidad que genera recurso (combo points, holy power, etc)."
+    },
+    {
+      "es": "Habilidad finalizadora",
+      "en": "Spender / Finisher",
+      "contexto": "Tipo de habilidad",
+      "notas": "Habilidad que gasta recurso acumulado. Generalmente más potente que los builders."
+    },
+    {
+      "es": "Defensiva",
+      "en": "Defensive (cooldown)",
+      "contexto": "Tipo de habilidad",
+      "notas": "Habilidad que reduce daño recibido o te protege. 'Usar defensivas' = activar tus CDs defensivos."
+    },
+    {
+      "es": "Ofensiva",
+      "en": "Offensive (cooldown) / Burst",
+      "contexto": "Tipo de habilidad",
+      "notas": "Habilidad que aumenta tu daño temporalmente. 'Burst' = momento de máximo daño."
+    },
+    {
+      "es": "Ráfaga / Burst",
+      "en": "Burst",
+      "contexto": "Gameplay",
+      "notas": "Periodo de alto daño cuando se alinean cooldowns. 'Ventana de burst'."
+    },
+    {
+      "es": "Daño sostenido",
+      "en": "Sustained damage",
+      "contexto": "Gameplay",
+      "notas": "Daño constante fuera de ventanas de burst. Opuesto a burst."
+    }
+  ]
+}

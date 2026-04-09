@@ -1,0 +1,186 @@
+{
+  "categoria": "Equipamiento y ranuras",
+  "descripcion": "Ranuras de equipo, calidades de objetos y términos relacionados con la adquisición y mejora de equipo.",
+  "terminos": [
+    {
+      "es": "Cabeza",
+      "en": "Head",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Cuello",
+      "en": "Neck",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Hombros",
+      "en": "Shoulder",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Espalda",
+      "en": "Back / Cloak",
+      "contexto": "Ranura de equipo",
+      "notas": "La ranura se llama 'espalda' pero el objeto suele ser una capa (cloak)."
+    },
+    {
+      "es": "Pecho",
+      "en": "Chest",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Muñecas",
+      "en": "Wrist / Bracers",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Manos",
+      "en": "Hands / Gloves",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Cintura",
+      "en": "Waist / Belt",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Piernas",
+      "en": "Legs",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Pies",
+      "en": "Feet / Boots",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Dedo",
+      "en": "Finger / Ring",
+      "contexto": "Ranura de equipo",
+      "notas": "Dos ranuras de anillos (Dedo 1 y Dedo 2)."
+    },
+    {
+      "es": "Abalorio",
+      "en": "Trinket",
+      "contexto": "Ranura de equipo",
+      "notas": "Dos ranuras. Los trinkets son los objetos más complejos: tienen efectos únicos (procs, activos, pasivos). Muy analizados en SimC."
+    },
+    {
+      "es": "Mano principal",
+      "en": "Main Hand",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "Mano secundaria",
+      "en": "Off Hand",
+      "contexto": "Ranura de equipo"
+    },
+    {
+      "es": "A dos manos",
+      "en": "Two-Handed (2H)",
+      "contexto": "Tipo de arma",
+      "notas": "Arma que ocupa ambas ranuras de manos."
+    },
+    {
+      "es": "A una mano",
+      "en": "One-Handed (1H)",
+      "contexto": "Tipo de arma"
+    },
+    {
+      "es": "Índice de objetos",
+      "en": "Item Level (ilvl)",
+      "contexto": "Calidad numérica",
+      "notas": "El número más importante del equipo. Mayor ilvl = mejores stats base."
+    },
+    {
+      "es": "Pobre",
+      "en": "Poor (Gray)",
+      "contexto": "Calidad de objeto",
+      "notas": "Color gris. Para vender."
+    },
+    {
+      "es": "Común",
+      "en": "Common (White)",
+      "contexto": "Calidad de objeto",
+      "notas": "Color blanco."
+    },
+    {
+      "es": "Poco común",
+      "en": "Uncommon (Green)",
+      "contexto": "Calidad de objeto",
+      "notas": "Color verde."
+    },
+    {
+      "es": "Raro",
+      "en": "Rare (Blue)",
+      "contexto": "Calidad de objeto",
+      "notas": "Color azul."
+    },
+    {
+      "es": "Épico",
+      "en": "Epic (Purple)",
+      "contexto": "Calidad de objeto",
+      "notas": "Color morado. La calidad estándar en endgame."
+    },
+    {
+      "es": "Legendario",
+      "en": "Legendary (Orange)",
+      "contexto": "Calidad de objeto",
+      "notas": "Color naranja. Objetos especiales, generalmente únicos por expansión."
+    },
+    {
+      "es": "Mejor en casilla",
+      "en": "Best in Slot (BiS)",
+      "contexto": "Theorycraft",
+      "notas": "El mejor objeto posible para esa ranura según simulaciones. Varía por spec y build."
+    },
+    {
+      "es": "Conjunto de tier",
+      "en": "Tier Set",
+      "contexto": "Equipo especial",
+      "notas": "Set de 4-5 piezas con bonus especiales (2p y 4p). De bandas. Muy importante para el rendimiento."
+    },
+    {
+      "es": "Bonus de 2 piezas",
+      "en": "2-piece bonus (2p / 2pc)",
+      "contexto": "Set bonus",
+      "notas": "Efecto que se activa al llevar 2 piezas del tier set."
+    },
+    {
+      "es": "Bonus de 4 piezas",
+      "en": "4-piece bonus (4p / 4pc)",
+      "contexto": "Set bonus",
+      "notas": "Efecto que se activa al llevar 4 piezas del tier set. Generalmente más potente."
+    },
+    {
+      "es": "Gema",
+      "en": "Gem",
+      "contexto": "Mejora de equipo",
+      "notas": "Se insertan en objetos con engastes (sockets) para dar stats adicionales."
+    },
+    {
+      "es": "Engaste",
+      "en": "Socket",
+      "contexto": "Propiedad de objeto",
+      "notas": "Hueco en un objeto donde va una gema. Los sockets añaden mucho valor a un objeto."
+    },
+    {
+      "es": "Encantamiento",
+      "en": "Enchant",
+      "contexto": "Mejora de equipo",
+      "notas": "Mejora permanente que se aplica a ciertas ranuras. Obligatorio en endgame."
+    },
+    {
+      "es": "Botín",
+      "en": "Loot",
+      "contexto": "Recompensa",
+      "notas": "Objetos que dropean de enemigos/cofres. 'Lootear' = recoger botín."
+    },
+    {
+      "es": "Forja de cresta",
+      "en": "Crest upgrade",
+      "contexto": "Sistema de mejora",
+      "notas": "Sistema de The War Within para mejorar ilvl de objetos usando crestas."
+    }
+  ]
+}

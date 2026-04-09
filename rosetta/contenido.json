@@ -1,0 +1,154 @@
+{
+  "categoria": "Contenido de juego: mazmorras, bandas y modos",
+  "descripcion": "Tipos de contenido PvE, dificultades y términos asociados. Donde se aplica todo lo que aprendes.",
+  "terminos": [
+    {
+      "es": "Mazmorra",
+      "en": "Dungeon",
+      "contexto": "Tipo de contenido",
+      "notas": "Contenido para 5 jugadores (1 tanque, 1 sanador, 3 DPS)."
+    },
+    {
+      "es": "Banda",
+      "en": "Raid",
+      "contexto": "Tipo de contenido",
+      "notas": "Contenido para 10-30 jugadores. Es donde se prueba el rendimiento real al más alto nivel."
+    },
+    {
+      "es": "Mítica+",
+      "en": "Mythic+ (M+)",
+      "contexto": "Modo de dificultad",
+      "notas": "Mazmorras con dificultad escalable (+2, +5, +10...). Tiene temporizador. La principal fuente de contenido repetible."
+    },
+    {
+      "es": "Piedra angular",
+      "en": "Keystone (Key)",
+      "contexto": "Objeto M+",
+      "notas": "El objeto que define el nivel y mazmorra de tu M+. 'Pushear keys' = hacer M+ cada vez más altas."
+    },
+    {
+      "es": "A tiempo",
+      "en": "Timed / In time",
+      "contexto": "Resultado M+",
+      "notas": "Completar la M+ dentro del temporizador. Necesario para subir tu piedra angular."
+    },
+    {
+      "es": "Fuera de tiempo",
+      "en": "Depleted / Over time",
+      "contexto": "Resultado M+",
+      "notas": "No completar a tiempo. Aún da botín pero la piedra no sube."
+    },
+    {
+      "es": "Afijo",
+      "en": "Affix",
+      "contexto": "Modificador M+",
+      "notas": "Modificadores que cambian las mecánicas en M+. Rotan semanalmente."
+    },
+    {
+      "es": "Normal",
+      "en": "Normal (N)",
+      "contexto": "Dificultad de banda"
+    },
+    {
+      "es": "Heroico",
+      "en": "Heroic (HC)",
+      "contexto": "Dificultad de banda"
+    },
+    {
+      "es": "Mítico",
+      "en": "Mythic (M)",
+      "contexto": "Dificultad de banda",
+      "notas": "La máxima dificultad de banda. 20 jugadores fijos. Donde compite la élite."
+    },
+    {
+      "es": "Jefe / Boss",
+      "en": "Boss",
+      "contexto": "Enemigo principal",
+      "notas": "Los enemigos principales de mazmorras y bandas. Cada boss tiene mecánicas únicas."
+    },
+    {
+      "es": "Basura / Trash",
+      "en": "Trash (mobs)",
+      "contexto": "Enemigos menores",
+      "notas": "Enemigos entre bosses. En M+ son tan importantes como los bosses por el temporizador."
+    },
+    {
+      "es": "Wipe",
+      "en": "Wipe",
+      "contexto": "Resultado de combate",
+      "notas": "Muerte de todo el grupo. 'Wipear' = morir todos. Mismo término en ambos idiomas."
+    },
+    {
+      "es": "Pull / Tirar",
+      "en": "Pull",
+      "contexto": "Acción",
+      "notas": "Iniciar combate con un grupo de enemigos. 'Buen pull' = agrupar enemigos bien para AoE."
+    },
+    {
+      "es": "Enfurecer",
+      "en": "Enrage",
+      "contexto": "Mecánica de boss",
+      "notas": "Timer oculto de los bosses. Si no lo matas a tiempo, se enfurece y mata al grupo. Test de DPS."
+    },
+    {
+      "es": "Fase",
+      "en": "Phase",
+      "contexto": "Mecánica de boss",
+      "notas": "Los bosses tienen fases con mecánicas diferentes. 'Fase 2' = segunda fase del boss."
+    },
+    {
+      "es": "Mecánica",
+      "en": "Mechanic",
+      "contexto": "Diseño de encuentro",
+      "notas": "Patrón de ataque o evento del boss que requiere una respuesta específica."
+    },
+    {
+      "es": "Esquivar (la zona)",
+      "en": "Dodge / Soak / Avoid",
+      "contexto": "Respuesta a mecánica",
+      "notas": "Distintas respuestas: dodge = salir de la zona, soak = absorber el daño con el grupo, avoid = evitar el efecto."
+    },
+    {
+      "es": "Repartir daño",
+      "en": "Soak / Stack / Spread",
+      "contexto": "Respuesta a mecánica",
+      "notas": "Soak = juntarse para repartir, spread = separarse para no compartir, stack = apilarse."
+    },
+    {
+      "es": "Puntuación de Mítica+",
+      "en": "Mythic+ Rating / Rio (Raider.IO)",
+      "contexto": "Sistema de puntuación",
+      "notas": "Puntuación que refleja tu progreso en M+. Raider.IO es el addon/web que popularizó el sistema, ahora integrado en el juego."
+    },
+    {
+      "es": "Registro de combate",
+      "en": "Combat Log",
+      "contexto": "Datos",
+      "notas": "El archivo que registra todo lo que pasa en combate. Se sube a Warcraft Logs para análisis."
+    },
+    {
+      "es": "Percentil / Parse",
+      "en": "Parse (percentile)",
+      "contexto": "Métrica de Warcraft Logs",
+      "notas": "Tu rendimiento comparado con otros jugadores de tu spec en ese boss. Parse 95 = mejor que el 95% de jugadores."
+    },
+    {
+      "es": "Mediana",
+      "en": "Median",
+      "contexto": "Estadística",
+      "notas": "El valor del medio. Más fiable que la media para comparar rendimiento (menos afectada por extremos)."
+    },
+    {
+      "es": "Progresión",
+      "en": "Progression (Prog)",
+      "contexto": "Fase de banda",
+      "notas": "Periodo donde un grupo intenta matar bosses por primera vez. Lo opuesto a 'farm'."
+    },
+    {
+      "es": "Farmeo",
+      "en": "Farm",
+      "contexto": "Fase de banda",
+      "notas": "Repetir contenido ya dominado para obtener equipo. Lo opuesto a 'progresión'."
+    }
+  ]
+}
