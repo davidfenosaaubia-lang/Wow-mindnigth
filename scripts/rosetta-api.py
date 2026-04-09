@@ -12,8 +12,7 @@ Uso:
 
   Opciones:
     --region eu|us|kr|tw    Región (default: eu)
-    --solo-clase NOMBRE     Descargar solo una clase (en inglés: warrior, mage, etc.)
-    --todo                  Descargar todo (clases, mazmorras, bandas, objetos)
+    --todo                  Descargar todo (clases, mazmorras, bandas)
 """
 
 import argparse
@@ -67,7 +66,7 @@ class BlizzardAPI:
         self.token_expiry = 0
 
     def autenticar(self):
-        """Obtiene token OAuth2. Se renueva automáticamente si expira."""
+        """Obtiene token OAuth2."""
         if self.token and time.time() < self.token_expiry:
             return True
 
@@ -82,22 +81,15 @@ class BlizzardAPI:
             resp.raise_for_status()
             datos = resp.json()
             self.token = datos["access_token"]
-            # Renovar 60s antes de que expire
             self.token_expiry = time.time() + datos.get("expires_in", 86400) - 60
-            print("  ✓ Autenticación correcta")
+            print("  OK: Autenticación correcta")
             return True
-        except requests.exceptions.HTTPError as e:
-            if resp.status_code == 401:
-                print("  ✗ Error de autenticación: client_id o client_secret incorrectos")
-            else:
-                print(f"  ✗ Error HTTP: {e}")
-            return False
-        except requests.exceptions.RequestException as e:
-            print(f"  ✗ Error de conexión: {e}")
+        except Exception as e:
+            print(f"  ERROR autenticación: {e}")
             return False
 
     def get(self, endpoint, locale="es_ES", namespace=None):
-        """Hace una petición GET a la API. Reintenta si el token expiró."""
+        """Hace una petición GET a la API."""
         self.autenticar()
 
         if namespace is None:
@@ -112,22 +104,14 @@ class BlizzardAPI:
         url = f"{self.urls['api']}{endpoint}"
         try:
             resp = requests.get(url, params=params, timeout=15)
+            if resp.status_code == 404:
+                print(f"  WARN: {endpoint} no encontrado (404)")
+                return None
             resp.raise_for_status()
             return resp.json()
-        except requests.exceptions.HTTPError as e:
-            if resp.status_code == 404:
-                return None  # Recurso no existe
-            print(f"  ✗ Error en {endpoint}: {e}")
+        except Exception as e:
+            print(f"  ERROR en {endpoint}: {e}")
             return None
-        except requests.exceptions.RequestException as e:
-            print(f"  ✗ Error de conexión en {endpoint}: {e}")
-            return None
-
-    def get_bilingue(self, endpoint, namespace=None):
-        """Obtiene un recurso en español e inglés."""
-        es = self.get(endpoint, locale=LOCALES["es"], namespace=namespace)
-        en = self.get(endpoint, locale=LOCALES["en"], namespace=namespace)
-        return es, en
 
 
 # ============================================================
@@ -135,71 +119,140 @@ class BlizzardAPI:
 # ============================================================
 
 def descargar_clases(api):
-    """Descarga todas las clases y sus especializaciones con habilidades."""
+    """Descarga todas las clases con sus specs y habilidades."""
     print("\n=== Descargando clases y especializaciones ===")
 
-    indice_es, indice_en = api.get_bilingue("/data/wow/playable-class/index")
+    indice_es = api.get("/data/wow/playable-class/index", locale=LOCALES["es"])
+    indice_en = api.get("/data/wow/playable-class/index", locale=LOCALES["en"])
+
     if not indice_es or not indice_en:
-        print("  ✗ No se pudo obtener el índice de clases")
+        print("  ERROR: No se pudo obtener el índice de clases")
+        print(f"  indice_es: {indice_es}")
+        print(f"  indice_en: {indice_en}")
         return None
 
-    clases = []
-    clases_en = {c["id"]: c["name"] for c in indice_en["classes"]}
+    # Buscar la key correcta para la lista de clases
+    clases_key = None
+    for key in ["classes", "playable_classes"]:
+        if key in indice_es:
+            clases_key = key
+            break
 
-    for clase_ref in indice_es["classes"]:
+    if not clases_key:
+        print(f"  ERROR: Formato inesperado. Keys disponibles: {list(indice_es.keys())}")
+        print(f"  Primeros 500 chars: {json.dumps(indice_es, ensure_ascii=False)[:500]}")
+        return None
+
+    print(f"  OK: Encontradas {len(indice_es[clases_key])} clases (key: '{clases_key}')")
+
+    clases_en_map = {}
+    for c in indice_en[clases_key]:
+        clases_en_map[c["id"]] = c["name"]
+
+    clases = []
+    for clase_ref in indice_es[clases_key]:
         clase_id = clase_ref["id"]
         nombre_es = clase_ref["name"]
-        nombre_en = clases_en.get(clase_id, "?")
-        print(f"  Descargando: {nombre_es} ({nombre_en})...")
+        nombre_en = clases_en_map.get(clase_id, "?")
+        print(f"  Clase: {nombre_es} ({nombre_en}) [id:{clase_id}]")
 
-        # Detalle de la clase
-        detalle_es, detalle_en = api.get_bilingue(f"/data/wow/playable-class/{clase_id}")
-        if not detalle_es or not detalle_en:
-            continue
+        # Detalle de la clase para obtener specs
+        det_es = api.get(f"/data/wow/playable-class/{clase_id}", locale=LOCALES["es"])
+        det_en = api.get(f"/data/wow/playable-class/{clase_id}", locale=LOCALES["en"])
 
         specs = []
-        specs_en = {s["id"]: s["name"] for s in detalle_en.get("specializations", [])}
+        if det_es and det_en:
+            # Buscar la key de especialización
+            spec_key = None
+            for key in ["specializations", "specs"]:
+                if key in det_es:
+                    spec_key = key
+                    break
 
-        for spec_ref in detalle_es.get("specializations", []):
-            spec_id = spec_ref["id"]
-            spec_nombre_es = spec_ref["name"]
-            spec_nombre_en = specs_en.get(spec_id, "?")
+            if spec_key:
+                specs_en_map = {}
+                for s in det_en.get(spec_key, []):
+                    specs_en_map[s["id"]] = s["name"]
 
-            # Detalle de la especialización (incluye habilidades)
-            spec_es, spec_en = api.get_bilingue(
-                f"/data/wow/playable-specialization/{spec_id}"
-            )
+                for spec_ref in det_es.get(spec_key, []):
+                    spec_id = spec_ref["id"]
+                    spec_es = spec_ref["name"]
+                    spec_en = specs_en_map.get(spec_id, "?")
+                    print(f"    Spec: {spec_es} ({spec_en}) [id:{spec_id}]")
 
-            habilidades = []
-            if spec_es and spec_en:
-                habs_en = {}
-                for grupo in spec_en.get("ability_groups", []):
-                    for hab in grupo.get("abilities", []):
-                        spell = hab.get("spell", hab.get("ability", {}))
-                        if spell and "id" in spell:
-                            habs_en[spell["id"]] = spell.get("name", "?")
+                    # Detalle de la spec para habilidades
+                    sp_es = api.get(f"/data/wow/playable-specialization/{spec_id}",
+                                    locale=LOCALES["es"])
+                    sp_en = api.get(f"/data/wow/playable-specialization/{spec_id}",
+                                    locale=LOCALES["en"])
 
-                for grupo in spec_es.get("ability_groups", []):
-                    for hab in grupo.get("abilities", []):
-                        spell = hab.get("spell", hab.get("ability", {}))
-                        if spell and "id" in spell:
-                            habilidades.append({
-                                "id": spell["id"],
-                                "es": spell.get("name", "?"),
-                                "en": habs_en.get(spell["id"], "?"),
-                            })
+                    habilidades = []
+                    rol = "?"
+                    if sp_es and sp_en:
+                        rol = sp_es.get("role", {}).get("type", "?")
 
-                rol = spec_es.get("role", {}).get("type", "?")
+                        # Recoger habilidades de todas las estructuras posibles
+                        habs_en = {}
+                        for source_key in ["abilities", "ability_groups",
+                                           "spells", "spell_groups"]:
+                            items_en = sp_en.get(source_key, [])
+                            for item in items_en:
+                                # Puede ser directamente una habilidad o un grupo
+                                if "spell" in item or "ability" in item:
+                                    spell = item.get("spell", item.get("ability", {}))
+                                    if spell and "id" in spell:
+                                        habs_en[spell["id"]] = spell.get("name", "?")
+                                elif "abilities" in item:
+                                    # Es un grupo de habilidades
+                                    for hab in item["abilities"]:
+                                        spell = hab.get("spell", hab.get("ability", {}))
+                                        if spell and "id" in spell:
+                                            habs_en[spell["id"]] = spell.get("name", "?")
+                                elif "id" in item and "name" in item:
+                                    # Es directamente una habilidad
+                                    habs_en[item["id"]] = item["name"]
+
+                        for source_key in ["abilities", "ability_groups",
+                                           "spells", "spell_groups"]:
+                            items_es = sp_es.get(source_key, [])
+                            for item in items_es:
+                                if "spell" in item or "ability" in item:
+                                    spell = item.get("spell", item.get("ability", {}))
+                                    if spell and "id" in spell:
+                                        habilidades.append({
+                                            "id": spell["id"],
+                                            "es": spell.get("name", "?"),
+                                            "en": habs_en.get(spell["id"], "?"),
+                                        })
+                                elif "abilities" in item:
+                                    for hab in item["abilities"]:
+                                        spell = hab.get("spell", hab.get("ability", {}))
+                                        if spell and "id" in spell:
+                                            habilidades.append({
+                                                "id": spell["id"],
+                                                "es": spell.get("name", "?"),
+                                                "en": habs_en.get(spell["id"], "?"),
+                                            })
+                                elif "id" in item and "name" in item:
+                                    habilidades.append({
+                                        "id": item["id"],
+                                        "es": item["name"],
+                                        "en": habs_en.get(item["id"], "?"),
+                                    })
+
+                        if not habilidades:
+                            # Debug: mostrar qué keys tiene la spec
+                            print(f"      (sin habilidades - keys: {list(sp_es.keys())})")
+
+                    specs.append({
+                        "id": spec_id,
+                        "es": spec_es,
+                        "en": spec_en,
+                        "rol": rol,
+                        "habilidades": habilidades,
+                    })
             else:
-                rol = "?"
-
-            specs.append({
-                "id": spec_id,
-                "es": spec_nombre_es,
-                "en": spec_nombre_en,
-                "rol": rol,
-                "habilidades": habilidades,
-            })
+                print(f"    WARN: Sin specs. Keys: {list(det_es.keys())}")
 
         clases.append({
             "id": clase_id,
@@ -207,6 +260,13 @@ def descargar_clases(api):
             "en": nombre_en,
             "especializaciones": specs,
         })
+
+    total_habs = sum(
+        len(s["habilidades"])
+        for c in clases
+        for s in c["especializaciones"]
+    )
+    print(f"\n  TOTAL: {len(clases)} clases, {total_habs} habilidades")
 
     return {
         "fuente": "Blizzard API",
@@ -218,35 +278,51 @@ def descargar_clases(api):
 
 
 def descargar_mazmorras(api):
-    """Descarga las mazmorras actuales."""
+    """Descarga mazmorras de M+."""
     print("\n=== Descargando mazmorras ===")
 
-    # El índice de mazmorras de M+ está en el endpoint de mythic keystone
-    indice_es = api.get("/data/wow/mythic-keystone/dungeon/index",
-                        locale=LOCALES["es"], namespace=f"dynamic-{api.region}")
-    indice_en = api.get("/data/wow/mythic-keystone/dungeon/index",
-                        locale=LOCALES["en"], namespace=f"dynamic-{api.region}")
-
-    if not indice_es or not indice_en:
-        print("  ✗ No se pudo obtener el índice de mazmorras M+")
-        # Intentar con el índice estático
-        indice_es, indice_en = api.get_bilingue("/data/wow/dungeon/index")
-        if not indice_es or not indice_en:
-            print("  ✗ Tampoco se pudo con el índice estático")
-            return None
+    # Probar varios endpoints
+    endpoints = [
+        ("/data/wow/mythic-keystone/dungeon/index", f"dynamic-{api.region}"),
+        ("/data/wow/dungeon/index", f"static-{api.region}"),
+        ("/data/wow/journal-instance/index", f"static-{api.region}"),
+    ]
 
     mazmorras = []
-    maz_en = {}
-    for m in indice_en.get("dungeons", indice_en.get("instances", [])):
-        maz_en[m["id"]] = m["name"]
+    for endpoint, namespace in endpoints:
+        print(f"  Probando {endpoint}...")
+        data_es = api.get(endpoint, locale=LOCALES["es"], namespace=namespace)
+        data_en = api.get(endpoint, locale=LOCALES["en"], namespace=namespace)
 
-    for m in indice_es.get("dungeons", indice_es.get("instances", [])):
-        mazmorras.append({
-            "id": m["id"],
-            "es": m["name"],
-            "en": maz_en.get(m["id"], "?"),
-        })
-        print(f"  {m['name']} → {maz_en.get(m['id'], '?')}")
+        if not data_es or not data_en:
+            continue
+
+        # Buscar la key que contiene la lista
+        list_key = None
+        for key in ["dungeons", "instances"]:
+            if key in data_es and len(data_es[key]) > 0:
+                list_key = key
+                break
+
+        if not list_key:
+            print(f"    Keys disponibles: {list(data_es.keys())}")
+            continue
+
+        print(f"    OK: {len(data_es[list_key])} entradas (key: '{list_key}')")
+        en_map = {m["id"]: m["name"] for m in data_en[list_key]}
+
+        for m in data_es[list_key]:
+            mazmorras.append({
+                "id": m["id"],
+                "es": m["name"],
+                "en": en_map.get(m["id"], "?"),
+            })
+            print(f"    {m['name']} -> {en_map.get(m['id'], '?')}")
+        break  # Si encontramos datos, no probar más endpoints
+
+    if not mazmorras:
+        print("  ERROR: No se encontraron mazmorras en ningún endpoint")
+        return None
 
     return {
         "fuente": "Blizzard API",
@@ -258,81 +334,71 @@ def descargar_mazmorras(api):
 
 
 def descargar_bandas(api):
-    """Descarga las bandas (raids)."""
+    """Descarga las bandas (raids) de todas las expansiones."""
     print("\n=== Descargando bandas ===")
 
-    indice_es, indice_en = api.get_bilingue("/data/wow/raid/index")
-    if not indice_es or not indice_en:
-        # Intentar con journal
-        indice_es, indice_en = api.get_bilingue("/data/wow/journal-expansion/index")
-        if not indice_es or not indice_en:
-            print("  ✗ No se pudo obtener el índice de bandas")
-            return None
+    # Intentar con journal-expansion
+    idx_es = api.get("/data/wow/journal-expansion/index", locale=LOCALES["es"])
+    idx_en = api.get("/data/wow/journal-expansion/index", locale=LOCALES["en"])
+
+    if not idx_es or not idx_en:
+        print("  ERROR: No se pudo obtener índice de expansiones")
+        return None
+
+    # Buscar la key correcta
+    tiers_key = None
+    for key in ["tiers", "expansions"]:
+        if key in idx_es:
+            tiers_key = key
+            break
+
+    if not tiers_key:
+        print(f"  Keys disponibles: {list(idx_es.keys())}")
+        return None
+
+    print(f"  OK: {len(idx_es[tiers_key])} expansiones")
 
     bandas = []
+    for tier in idx_es[tiers_key]:
+        tier_id = tier["id"]
+        tier_name = tier.get("name", f"Expansion {tier_id}")
+        print(f"  Expansion: {tier_name}")
 
-    # Si tenemos raids directamente
-    if "raids" in indice_es:
-        raids_en = {r["id"]: r["name"] for r in indice_en.get("raids", [])}
-        for r in indice_es.get("raids", []):
-            bandas.append({
-                "id": r["id"],
-                "es": r["name"],
-                "en": raids_en.get(r["id"], "?"),
-            })
-            print(f"  {r['name']} → {raids_en.get(r['id'], '?')}")
-    # Si tenemos expansiones del journal, buscar instancias de tipo RAID
-    elif "tiers" in indice_es:
-        tiers_en = {t["id"]: t for t in indice_en.get("tiers", [])}
-        for tier in indice_es.get("tiers", []):
-            tier_id = tier["id"]
-            det_es = api.get(f"/data/wow/journal-expansion/{tier_id}", locale=LOCALES["es"])
-            det_en = api.get(f"/data/wow/journal-expansion/{tier_id}", locale=LOCALES["en"])
-            if det_es and det_en:
-                raids_en = {r["id"]: r["name"] for r in det_en.get("raids", [])}
-                for r in det_es.get("raids", []):
-                    bandas.append({
-                        "id": r["id"],
-                        "es": r["name"],
-                        "en": raids_en.get(r["id"], "?"),
-                        "expansion": tier.get("name", "?"),
-                    })
-                    print(f"  {r['name']} → {raids_en.get(r['id'], '?')}")
+        det_es = api.get(f"/data/wow/journal-expansion/{tier_id}", locale=LOCALES["es"])
+        det_en = api.get(f"/data/wow/journal-expansion/{tier_id}", locale=LOCALES["en"])
 
-    return {
-        "fuente": "Blizzard API",
-        "tipo": "Bandas (Raids)",
-        "region": api.region,
-        "generado": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "bandas": bandas,
-    }
+        if not det_es or not det_en:
+            continue
 
+        # Buscar raids y dungeons en la respuesta
+        for content_key in ["raids", "dungeons", "instances"]:
+            items_es = det_es.get(content_key, [])
+            items_en = det_en.get(content_key, [])
+            if not items_es:
+                continue
 
-def descargar_stats_personaje(api):
-    """Descarga los nombres oficiales de las estadísticas del juego."""
-    print("\n=== Descargando nombres de estadísticas ===")
+            en_map = {i["id"]: i["name"] for i in items_en}
+            for item in items_es:
+                entry = {
+                    "id": item["id"],
+                    "es": item["name"],
+                    "en": en_map.get(item["id"], "?"),
+                    "expansion": tier_name,
+                    "tipo": content_key,
+                }
+                bandas.append(entry)
+                print(f"    [{content_key}] {item['name']} -> {en_map.get(item['id'], '?')}")
 
-    # Las power types dan los nombres de recursos
-    pt_es = api.get("/data/wow/power-type/index", locale=LOCALES["es"])
-    pt_en = api.get("/data/wow/power-type/index", locale=LOCALES["en"])
-
-    recursos = []
-    if pt_es and pt_en:
-        rec_en = {r["id"]: r["name"] for r in pt_en.get("power_types", [])}
-        for r in pt_es.get("power_types", []):
-            recursos.append({
-                "id": r["id"],
-                "es": r["name"],
-                "en": rec_en.get(r["id"], "?"),
-            })
-            print(f"  {r['name']} → {rec_en.get(r['id'], '?')}")
+    if not bandas:
+        print("  WARN: No se encontraron instancias")
+        return None
 
     return {
         "fuente": "Blizzard API",
-        "tipo": "Estadísticas y recursos",
+        "tipo": "Bandas, mazmorras y contenido por expansión",
         "region": api.region,
         "generado": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "recursos": recursos,
+        "instancias": bandas,
     }
 
 
@@ -341,12 +407,12 @@ def descargar_stats_personaje(api):
 # ============================================================
 
 def guardar(datos, nombre_archivo):
-    """Guarda datos como JSON con formato legible."""
+    """Guarda datos como JSON."""
     SALIDA.mkdir(parents=True, exist_ok=True)
     ruta = SALIDA / nombre_archivo
     with open(ruta, "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=2)
-    print(f"\n  ✓ Guardado en: {ruta}")
+    print(f"\n  GUARDADO: {ruta}")
     return ruta
 
 
@@ -375,13 +441,9 @@ def main():
         help="Región del servidor (default: eu)",
     )
     parser.add_argument(
-        "--solo-clase",
-        help="Descargar solo una clase (nombre en inglés: warrior, mage, etc.)",
-    )
-    parser.add_argument(
         "--todo",
         action="store_true",
-        help="Descargar todo: clases, mazmorras, bandas, stats",
+        help="Descargar todo: clases, mazmorras, bandas",
     )
 
     args = parser.parse_args()
@@ -391,22 +453,6 @@ def main():
         print("  NECESITAS UNA API KEY DE BLIZZARD (gratuita)")
         print("=" * 60)
         print()
-        print("  1. Ve a https://develop.battle.net/access/clients")
-        print("  2. Inicia sesión con tu cuenta de Battle.net")
-        print("  3. Crea un nuevo cliente (nombre: lo que quieras)")
-        print("  4. Copia el Client ID y Client Secret")
-        print("  5. Ejecuta:")
-        print()
-        print("     python3 scripts/rosetta-api.py \\")
-        print("       --client-id TU_CLIENT_ID \\")
-        print("       --client-secret TU_CLIENT_SECRET")
-        print()
-        print("  O con variables de entorno:")
-        print()
-        print("     export BLIZZARD_CLIENT_ID=tu_id")
-        print("     export BLIZZARD_CLIENT_SECRET=tu_secret")
-        print("     python3 scripts/rosetta-api.py --todo")
-        print()
         print("  Más info: rosetta/api/COMO-OBTENER-API-KEY.md")
         sys.exit(1)
 
@@ -415,30 +461,26 @@ def main():
     if not api.autenticar():
         sys.exit(1)
 
-    archivos_generados = []
+    archivos = []
 
-    # Por defecto, descargar clases
-    if args.todo or not args.solo_clase:
-        datos = descargar_clases(api)
-        if datos:
-            archivos_generados.append(guardar(datos, "clases-habilidades.json"))
+    # Siempre descargar clases
+    datos = descargar_clases(api)
+    if datos:
+        archivos.append(guardar(datos, "clases-habilidades.json"))
 
     if args.todo:
         datos = descargar_mazmorras(api)
         if datos:
-            archivos_generados.append(guardar(datos, "mazmorras.json"))
+            archivos.append(guardar(datos, "mazmorras.json"))
 
         datos = descargar_bandas(api)
         if datos:
-            archivos_generados.append(guardar(datos, "bandas.json"))
-
-        datos = descargar_stats_personaje(api)
-        if datos:
-            archivos_generados.append(guardar(datos, "stats-recursos.json"))
+            archivos.append(guardar(datos, "instancias.json"))
 
     print("\n" + "=" * 60)
-    print(f"  Descarga completa. {len(archivos_generados)} archivos generados.")
-    print("  Los archivos están en: rosetta/api/")
+    print(f"  Descarga completa. {len(archivos)} archivos generados.")
+    if archivos:
+        print("  Archivos en: rosetta/api/")
     print("=" * 60)
 
 
