@@ -237,57 +237,60 @@ def descargar_clases(api):
                     if sp_es and sp_en:
                         rol = sp_es.get("role", {}).get("type", "?")
 
-                        # Recoger habilidades de todas las estructuras posibles
-                        habs_en = {}
-                        for source_key in ["abilities", "ability_groups",
-                                           "spells", "spell_groups"]:
-                            items_en = sp_en.get(source_key, [])
-                            for item in items_en:
-                                # Puede ser directamente una habilidad o un grupo
-                                if "spell" in item or "ability" in item:
-                                    spell = item.get("spell", item.get("ability", {}))
-                                    if spell and "id" in spell:
-                                        habs_en[spell["id"]] = spell.get("name", "?")
-                                elif "abilities" in item:
-                                    # Es un grupo de habilidades
-                                    for hab in item["abilities"]:
-                                        spell = hab.get("spell", hab.get("ability", {}))
-                                        if spell and "id" in spell:
-                                            habs_en[spell["id"]] = spell.get("name", "?")
-                                elif "id" in item and "name" in item:
-                                    # Es directamente una habilidad
-                                    habs_en[item["id"]] = item["name"]
+                        # Las habilidades están en el talent tree
+                        tree_ref = sp_es.get("spec_talent_tree", {})
+                        if "href" in tree_ref.get("key", {}):
+                            # Extraer el path del href
+                            href = tree_ref["key"]["href"]
+                            # href es una URL completa, extraer solo el path
+                            from urllib.parse import urlparse
+                            path = urlparse(href).path
+                            tree_es = api.get(path, locale=LOCALES["es"])
+                            tree_en = api.get(path, locale=LOCALES["en"])
 
-                        for source_key in ["abilities", "ability_groups",
-                                           "spells", "spell_groups"]:
-                            items_es = sp_es.get(source_key, [])
-                            for item in items_es:
-                                if "spell" in item or "ability" in item:
-                                    spell = item.get("spell", item.get("ability", {}))
-                                    if spell and "id" in spell:
-                                        habilidades.append({
-                                            "id": spell["id"],
-                                            "es": spell.get("name", "?"),
-                                            "en": habs_en.get(spell["id"], "?"),
-                                        })
-                                elif "abilities" in item:
-                                    for hab in item["abilities"]:
-                                        spell = hab.get("spell", hab.get("ability", {}))
+                            if tree_es and tree_en:
+                                # Mapear talentos EN por ID
+                                talent_en_map = {}
+                                for node in tree_en.get("talent_nodes", []):
+                                    for rank in node.get("talent_entries", node.get("ranks", [])):
+                                        spell = rank.get("spell", rank.get("talent", {}))
                                         if spell and "id" in spell:
+                                            talent_en_map[spell["id"]] = spell.get("name", "?")
+                                        # También buscar dentro de tooltip
+                                        tooltip = rank.get("tooltip", {})
+                                        spell_tt = tooltip.get("spell", {})
+                                        if spell_tt and "id" in spell_tt:
+                                            talent_en_map[spell_tt["id"]] = spell_tt.get("name", "?")
+
+                                # Recoger talentos ES
+                                seen = set()
+                                for node in tree_es.get("talent_nodes", []):
+                                    for rank in node.get("talent_entries", node.get("ranks", [])):
+                                        spell = rank.get("spell", rank.get("talent", {}))
+                                        if spell and "id" in spell and spell["id"] not in seen:
+                                            seen.add(spell["id"])
                                             habilidades.append({
                                                 "id": spell["id"],
                                                 "es": spell.get("name", "?"),
-                                                "en": habs_en.get(spell["id"], "?"),
+                                                "en": talent_en_map.get(spell["id"], "?"),
                                             })
-                                elif "id" in item and "name" in item:
-                                    habilidades.append({
-                                        "id": item["id"],
-                                        "es": item["name"],
-                                        "en": habs_en.get(item["id"], "?"),
-                                    })
+                                        tooltip = rank.get("tooltip", {})
+                                        spell_tt = tooltip.get("spell", {})
+                                        if spell_tt and "id" in spell_tt and spell_tt["id"] not in seen:
+                                            seen.add(spell_tt["id"])
+                                            habilidades.append({
+                                                "id": spell_tt["id"],
+                                                "es": spell_tt.get("name", "?"),
+                                                "en": talent_en_map.get(spell_tt["id"], "?"),
+                                            })
+
+                                print(f"      {len(habilidades)} habilidades del talent tree")
+                            else:
+                                print(f"      WARN: No se pudo descargar talent tree")
+                        else:
+                            print(f"      (sin talent tree ref)")
 
                         if not habilidades:
-                            # Debug: mostrar qué keys tiene la spec
                             print(f"      (sin habilidades - keys: {list(sp_es.keys())})")
 
                     specs.append({
