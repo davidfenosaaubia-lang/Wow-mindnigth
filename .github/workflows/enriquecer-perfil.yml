@@ -32,6 +32,7 @@ jobs:
           BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
           BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
         run: |
+          mkdir -p pizarra/datos/jugadores
           python3 scripts/enriquecer-perfil.py \
             --perfil "${{ github.event.inputs.perfil }}" \
             2>&1 | tee pizarra/datos/jugadores/ultimo-enriquecer-log.txt
