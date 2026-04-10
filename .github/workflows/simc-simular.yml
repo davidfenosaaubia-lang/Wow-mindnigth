@@ -11,6 +11,15 @@ on:
         description: 'Numero de iteraciones'
         required: true
         default: '10000'
+      modo:
+        description: 'Modo: normal, stat_weights, dungeon_slice'
+        required: true
+        default: 'normal'
+        type: choice
+        options:
+          - normal
+          - stat_weights
+          - dungeon_slice
 
 permissions:
   contents: write
@@ -49,22 +58,39 @@ jobs:
 
       - name: Ejecutar simulación
         run: |
-          echo "=== Ejecutando simulación ==="
-          echo "Perfil: ${{ github.event.inputs.perfil }}"
-          echo "Iteraciones: ${{ github.event.inputs.iteraciones }}"
-
           PERFIL="${{ github.event.inputs.perfil }}"
+          MODO="${{ github.event.inputs.modo }}"
+          ITERS="${{ github.event.inputs.iteraciones }}"
           NOMBRE=$(basename "$PERFIL" .simc)
           SALIDA="analisis/simulaciones"
           mkdir -p "$SALIDA"
 
-          simc "$PERFIL" \
-            iterations=${{ github.event.inputs.iteraciones }} \
-            json2="${SALIDA}/${NOMBRE}-resultado.json" \
-            html="${SALIDA}/${NOMBRE}-resultado.html" \
-            2>&1 | tee "${SALIDA}/${NOMBRE}-log.txt"
+          echo "=== Simulación ==="
+          echo "Perfil: $PERFIL"
+          echo "Modo: $MODO"
+          echo "Iteraciones: $ITERS"
 
-          echo "=== Simulación completada ==="
+          # Opciones extra según modo
+          EXTRA=""
+          SUFIJO="resultado"
+          if [ "$MODO" = "stat_weights" ]; then
+            EXTRA="calculate_scale_factors=1 scale_only=intellect,agility,stamina,crit,haste,mastery,versatility"
+            SUFIJO="stat-weights"
+            echo "Calculando pesos de estadísticas..."
+          elif [ "$MODO" = "dungeon_slice" ]; then
+            EXTRA="fight_style=DungeonSlice"
+            SUFIJO="dungeon"
+            echo "Simulando M+ (DungeonSlice)..."
+          fi
+
+          simc "$PERFIL" \
+            iterations=$ITERS \
+            $EXTRA \
+            json2="${SALIDA}/${NOMBRE}-${SUFIJO}.json" \
+            html="${SALIDA}/${NOMBRE}-${SUFIJO}.html" \
+            2>&1 | tee "${SALIDA}/${NOMBRE}-${SUFIJO}-log.txt"
+
+          echo "=== Completado ==="
           ls -la "$SALIDA/"
 
       - name: Commit y push resultados
