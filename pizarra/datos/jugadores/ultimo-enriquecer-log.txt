@@ -5,21 +5,21 @@ Items encontrados: 15
 === Enriqueciendo perfil de Kymera ===
   Buscando imagen: kymera @ zuljin
   OK: Imagen encontrada (3 assets)
-  [Cabeza] item 250015... Rostro temible de elegido de Ra den
-  [Cuello] item 240950... Amuleto sin'dorei magistral
-  [Hombros] item 258581... Manto de sangrepluma
-  [Espalda] item 251206... Capa de tejido de flujo
-  [Pecho] item 250018... Atuendo de batalla de elegido de Ra den
-  [Muñecas] item 249327... Brazales de piel de Vacío
-  [Manos] item 250016... Puñotruenos de elegido de Ra den
-  [Cintura] item 251082... Cincho de chascaparra
-  [Piernas] item 250014... Recorredores raudos de elegido de Ra den
-  [Pies] item 251210... Alpargatas de eclipse
-  [Anillo 1] item 151311... Anillo del Triunvirato
-  [Anillo 2] item 249369... Vínculo de la Luz
-  [Trinket 1] item 264507... Crisol de energías erráticas
-  [Trinket 2] item 250144... Pluma de alascuas
-  [Arma] item 245771... Bastón pica de Aln'hara
+  [Cabeza] item 250015... Rostro temible de elegido de Ra den (5 stats)
+  [Cuello] item 240950... Amuleto sin'dorei magistral (3 stats)
+  [Hombros] item 258581... Manto de sangrepluma (5 stats)
+  [Espalda] item 251206... Capa de tejido de flujo (6 stats)
+  [Pecho] item 250018... Atuendo de batalla de elegido de Ra den (5 stats)
+  [Muñecas] item 249327... Brazales de piel de Vacío (5 stats)
+  [Manos] item 250016... Puñotruenos de elegido de Ra den (5 stats)
+  [Cintura] item 251082... Cincho de chascaparra (5 stats)
+  [Piernas] item 250014... Recorredores raudos de elegido de Ra den (5 stats)
+  [Pies] item 251210... Alpargatas de eclipse (5 stats)
+  [Anillo 1] item 151311... Anillo del Triunvirato (3 stats)
+  [Anillo 2] item 249369... Vínculo de la Luz (3 stats)
+  [Trinket 1] item 264507... Crisol de energías erráticas (3 stats)
+  [Trinket 2] item 250144... Pluma de alascuas (2 stats)
+  [Arma] item 245771... Bastón pica de Aln'hara (4 stats)
 
   GUARDADO: pizarra/datos/jugadores/kymera.json
   ilvl medio: 275

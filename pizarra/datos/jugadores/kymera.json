@@ -24,6 +24,40 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_helm_leather_raidmonkmidnight_d_01.jpg",
+      "tipo": "Cuero",
+      "ranura_tipo": "Cabeza",
+      "armadura": 10,
+      "durabilidad": 100,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 9,
+          "display": "+9 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 9,
+          "display": "+9 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 14,
+          "display": "+14 aguante"
+        },
+        {
+          "tipo": "golpe crítico",
+          "valor": 5,
+          "display": "+5 golpe crítico"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 13,
+          "display": "+13 celeridad"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": 7961,
       "tiene_enchant": true,
       "gem_ids": [],
@@ -41,6 +75,30 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_12_profession_jewelcrafting_necklace2_gold.jpg",
+      "tipo": "Miscelánea",
+      "ranura_tipo": "Cuello",
+      "armadura": 0,
+      "durabilidad": 0,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "aguante",
+          "valor": 580,
+          "display": "+580 aguante"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 103,
+          "display": "+103 celeridad"
+        },
+        {
+          "tipo": "maestría",
+          "valor": 103,
+          "display": "+103 maestría"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": null,
       "tiene_enchant": false,
       "gem_ids": [
@@ -60,6 +118,40 @@
       "calidad_nombre": "Raro",
       "calidad_color": "#0070dd",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_leather_draenordungeon_c_01shoulder.jpg",
+      "tipo": "Cuero",
+      "ranura_tipo": "Hombro",
+      "armadura": 6,
+      "durabilidad": 60,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 3,
+          "display": "+3 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 3,
+          "display": "+3 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 5,
+          "display": "+5 aguante"
+        },
+        {
+          "tipo": "versatilidad",
+          "valor": 3,
+          "display": "+3 versatilidad"
+        },
+        {
+          "tipo": "maestría",
+          "valor": 4,
+          "display": "+4 maestría"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": null,
       "tiene_enchant": false,
       "gem_ids": [],
@@ -77,6 +169,45 @@
       "calidad_nombre": "Raro",
       "calidad_color": "#0070dd",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_cape_cloth_dungeonharronir_c_01.jpg",
+      "tipo": "Tela",
+      "ranura_tipo": "Espalda",
+      "armadura": 4,
+      "durabilidad": 0,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 4,
+          "display": "+4 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 4,
+          "display": "+4 agilidad"
+        },
+        {
+          "tipo": "fuerza",
+          "valor": 4,
+          "display": "+4 fuerza"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 6,
+          "display": "+6 aguante"
+        },
+        {
+          "tipo": "versatilidad",
+          "valor": 3,
+          "display": "+3 versatilidad"
+        },
+        {
+          "tipo": "maestría",
+          "valor": 5,
+          "display": "+5 maestría"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": null,
       "tiene_enchant": false,
       "gem_ids": [],
@@ -94,6 +225,40 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_chest_leather_raidmonkmidnight_d_01.jpg",
+      "tipo": "Cuero",
+      "ranura_tipo": "Torso",
+      "armadura": 14,
+      "durabilidad": 165,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 9,
+          "display": "+9 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 9,
+          "display": "+9 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 14,
+          "display": "+14 aguante"
+        },
+        {
+          "tipo": "golpe crítico",
+          "valor": 12,
+          "display": "+12 golpe crítico"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 6,
+          "display": "+6 celeridad"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": 7987,
       "tiene_enchant": true,
       "gem_ids": [],
@@ -111,6 +276,40 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_bracer_leather_raidroguemidnight_d_01.jpg",
+      "tipo": "Cuero",
+      "ranura_tipo": "Muñecas",
+      "armadura": 7,
+      "durabilidad": 55,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 5,
+          "display": "+5 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 5,
+          "display": "+5 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 8,
+          "display": "+8 aguante"
+        },
+        {
+          "tipo": "golpe crítico",
+          "valor": 7,
+          "display": "+7 golpe crítico"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 3,
+          "display": "+3 celeridad"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": null,
       "tiene_enchant": false,
       "gem_ids": [],
@@ -128,6 +327,40 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_glove_leather_raidmonkmidnight_d_01.jpg",
+      "tipo": "Cuero",
+      "ranura_tipo": "Manos",
+      "armadura": 8,
+      "durabilidad": 55,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 7,
+          "display": "+7 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 7,
+          "display": "+7 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 10,
+          "display": "+10 aguante"
+        },
+        {
+          "tipo": "golpe crítico",
+          "valor": 4,
+          "display": "+4 golpe crítico"
+        },
+        {
+          "tipo": "versatilidad",
+          "valor": 10,
+          "display": "+10 versatilidad"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": null,
       "tiene_enchant": false,
       "gem_ids": [],
@@ -145,6 +378,40 @@
       "calidad_nombre": "Raro",
       "calidad_color": "#0070dd",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_belt_leather_dungeonharronir_c_01.jpg",
+      "tipo": "Cuero",
+      "ranura_tipo": "Cintura",
+      "armadura": 6,
+      "durabilidad": 50,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 5,
+          "display": "+5 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 5,
+          "display": "+5 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 8,
+          "display": "+8 aguante"
+        },
+        {
+          "tipo": "golpe crítico",
+          "valor": 6,
+          "display": "+6 golpe crítico"
+        },
+        {
+          "tipo": "maestría",
+          "valor": 4,
+          "display": "+4 maestría"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": null,
       "tiene_enchant": false,
       "gem_ids": [],
@@ -162,6 +429,40 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_pant_leather_raidmonkmidnight_d_01.jpg",
+      "tipo": "Cuero",
+      "ranura_tipo": "Piernas",
+      "armadura": 12,
+      "durabilidad": 120,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 9,
+          "display": "+9 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 9,
+          "display": "+9 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 14,
+          "display": "+14 aguante"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 12,
+          "display": "+12 celeridad"
+        },
+        {
+          "tipo": "maestría",
+          "valor": 6,
+          "display": "+6 maestría"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": 8159,
       "tiene_enchant": true,
       "gem_ids": [],
@@ -179,6 +480,40 @@
       "calidad_nombre": "Raro",
       "calidad_color": "#0070dd",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_boot_leather_dungeonharronir_c_01.jpg",
+      "tipo": "Cuero",
+      "ranura_tipo": "Pies",
+      "armadura": 7,
+      "durabilidad": 65,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 5,
+          "display": "+5 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 5,
+          "display": "+5 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 8,
+          "display": "+8 aguante"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 4,
+          "display": "+4 celeridad"
+        },
+        {
+          "tipo": "versatilidad",
+          "valor": 6,
+          "display": "+6 versatilidad"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": 7993,
       "tiene_enchant": true,
       "gem_ids": [],
@@ -196,6 +531,30 @@
       "calidad_nombre": "Raro",
       "calidad_color": "#0070dd",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_70_dungeon_ring2b.jpg",
+      "tipo": "Miscelánea",
+      "ranura_tipo": "Dedo",
+      "armadura": 0,
+      "durabilidad": 0,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "aguante",
+          "valor": 11,
+          "display": "+11 aguante"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 21,
+          "display": "+21 celeridad"
+        },
+        {
+          "tipo": "versatilidad",
+          "valor": 16,
+          "display": "+16 versatilidad"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": 8027,
       "tiene_enchant": true,
       "gem_ids": [
@@ -215,6 +574,30 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_12_jewelry_silvermoonelf_ring_blue1.jpg",
+      "tipo": "Miscelánea",
+      "ranura_tipo": "Dedo",
+      "armadura": 0,
+      "durabilidad": 0,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "aguante",
+          "valor": 8,
+          "display": "+8 aguante"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 5,
+          "display": "+5 celeridad"
+        },
+        {
+          "tipo": "maestría",
+          "valor": 21,
+          "display": "+21 maestría"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": 8023,
       "tiene_enchant": true,
       "gem_ids": [
@@ -234,6 +617,30 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_112_raidtrinkets_etherealenergystoragebattery_gold.jpg",
+      "tipo": "Miscelánea",
+      "ranura_tipo": "Abalorio",
+      "armadura": 0,
+      "durabilidad": 0,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 50,
+          "display": "+50 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 50,
+          "display": "+50 agilidad"
+        },
+        {
+          "tipo": "fuerza",
+          "valor": 50,
+          "display": "+50 fuerza"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": null,
       "tiene_enchant": false,
       "gem_ids": [],
@@ -251,6 +658,25 @@
       "calidad_nombre": "Raro",
       "calidad_color": "#0070dd",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_icon_feather06a.jpg",
+      "tipo": "Miscelánea",
+      "ranura_tipo": "Abalorio",
+      "armadura": 0,
+      "durabilidad": 0,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "intelecto",
+          "valor": 7,
+          "display": "+7 intelecto"
+        },
+        {
+          "tipo": "agilidad",
+          "valor": 7,
+          "display": "+7 agilidad"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": null,
       "tiene_enchant": false,
       "gem_ids": [],
@@ -268,6 +694,35 @@
       "calidad_nombre": "Épico",
       "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_staff_2h_dungeonharronir_c_01.jpg",
+      "tipo": "Bastón",
+      "ranura_tipo": "Dos manos",
+      "armadura": 0,
+      "durabilidad": 120,
+      "vinculacion": "Se liga al recogerlo",
+      "stats": [
+        {
+          "tipo": "agilidad",
+          "valor": 83,
+          "display": "+83 agilidad"
+        },
+        {
+          "tipo": "aguante",
+          "valor": 1031,
+          "display": "+1031 aguante"
+        },
+        {
+          "tipo": "golpe crítico",
+          "valor": 65,
+          "display": "+65 golpe crítico"
+        },
+        {
+          "tipo": "celeridad",
+          "valor": 65,
+          "display": "+65 celeridad"
+        }
+      ],
+      "procedencia_tipo": "",
+      "procedencia_nombre": "",
       "enchant_id": 8039,
       "tiene_enchant": true,
       "gem_ids": [],
@@ -276,5 +731,5 @@
     }
   ],
   "ilvl_medio": 275,
-  "generado": "2026-04-10 17:21:22"
+  "generado": "2026-04-10 18:22:39"
 }
