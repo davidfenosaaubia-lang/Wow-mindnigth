@@ -103,37 +103,34 @@
       background: rgba(255,68,68,0.05);
     }
 
-    .item-slot a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      font-size: 0;
+    .item-icon-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      border: 2px solid var(--epic);
+      display: block;
     }
 
-    /* Wowhead pone iconos de 18px por defecto, forzar más grandes */
-    .item-slot a img,
-    .item-slot a .iconlarge,
-    .item-slot a .iconmedium,
-    .item-slot a .iconsmall {
-      width: 40px !important;
-      height: 40px !important;
+    .item-slot-alerta .item-icon-img {
+      border-color: var(--stagger-intenso);
     }
 
-    .item-slot .item-ilvl-badge {
+    .item-ilvl-badge {
       position: absolute;
-      bottom: -2px;
-      right: -2px;
+      bottom: 0px;
+      right: 0px;
       font-size: 0.6rem;
       font-weight: 700;
-      background: rgba(0,0,0,0.8);
-      padding: 0.1rem 0.25rem;
+      background: rgba(0,0,0,0.85);
+      padding: 0.1rem 0.3rem;
       border-radius: 2px;
       font-variant-numeric: tabular-nums;
+      line-height: 1;
     }
 
     .item-wrapper {
       position: relative;
-      display: inline-flex;
+      display: inline-block;
     }
 
     .item-ilvl {
@@ -221,17 +218,30 @@
     // Datos del equipo con IDs completos del SimC para tooltips correctos
     // bonus_id hace que Wowhead muestre el ilvl real (con upgrades)
     // ench= muestra el enchant, gems= muestra las gemas
+    // icon: nombre interno del icono en wow.zamimg.com (se obtiene de Wowhead/API)
+    // Si no sabemos el icono exacto, usamos uno genérico por ranura
+    const ICONOS_RANURA = {
+      'Cabeza': 'inv_helm_leather_raidmonk_v_01', 'Cuello': 'inv_misc_necklace_6_0_014',
+      'Hombros': 'inv_shoulder_leather_raidmonk_v_01', 'Espalda': 'inv_cape_pandaria_d_01',
+      'Pecho': 'inv_chest_leather_raidmonk_v_01', 'Muñecas': 'inv_bracer_leather_raiddruid_q_01',
+      'Cintura': 'inv_belt_leather_raidmonk_v_01', 'Manos': 'inv_glove_leather_raidmonk_v_01',
+      'Piernas': 'inv_pant_leather_raidmonk_v_01', 'Pies': 'inv_boot_leather_raidmonk_v_01',
+      'Anillo 1': 'inv_ring_80_03a', 'Anillo 2': 'inv_ring_80_03b',
+      'Trinket 1': 'inv_trinket_80_nightmare02', 'Trinket 2': 'inv_icon_feather06a',
+      'Arma': 'inv_staff_2h_monk_c_01',
+    };
+
     const EQUIPO = [
       // Lado izquierdo
-      { pos: 'izq', ranura: 'Cabeza', id: 250015, ilvl: 276, nombre: 'Rostro temible de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true,
+      { pos: 'izq', ranura: 'Cabeza', id: 250015, ilvl: 276, nombre: 'Rostro temible de elegido de Ra-den', calidad: 'epico', tier: true,
         wh: 'item=250015&bonus=13334:6652:12667:12798:13338:13575:3161&ench=7961' },
-      { pos: 'izq', ranura: 'Cuello', id: 240950, ilvl: 285, nombre: 'Amuleto sin\'dorei magistral', calidad: 'epico', crafted: true, gema: true,
+      { pos: 'izq', ranura: 'Cuello', id: 240950, ilvl: 285, nombre: 'Amuleto sin\'dorei magistral', calidad: 'epico', crafted: true,
         wh: 'item=240950&bonus=12214:12497:12066:12686:8960:8795:13622:13667&gems=240983' },
       { pos: 'izq', ranura: 'Hombros', id: 258581, ilvl: 272, nombre: 'Manto de sangrepluma', calidad: 'epico',
         wh: 'item=258581&bonus=13440:6652:13577:12699:12797' },
       { pos: 'izq', ranura: 'Espalda', id: 251206, ilvl: 276, nombre: 'Capa de tejido de flujo', calidad: 'epico', alerta: 'Sin enchant',
         wh: 'item=251206&bonus=13440:6652:13577:12699:12798' },
-      { pos: 'izq', ranura: 'Pecho', id: 250018, ilvl: 289, nombre: 'Atuendo de batalla de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true,
+      { pos: 'izq', ranura: 'Pecho', id: 250018, ilvl: 289, nombre: 'Atuendo de batalla de elegido de Ra-den', calidad: 'epico', tier: true,
         wh: 'item=250018&bonus=12806:43:13440:13336:13575:3174&ench=7987' },
       { pos: 'izq', ranura: 'Muñecas', id: 249327, ilvl: 263, nombre: 'Brazales de piel de Vacío', calidad: 'epico', alerta: 'Sin enchant',
         wh: 'item=249327&bonus=6652:12667:13577:13334:12794' },
@@ -241,13 +251,13 @@
       // Lado derecho
       { pos: 'der', ranura: 'Manos', id: 250016, ilvl: 289, nombre: 'Puñotruenos de elegido de Ra-den', calidad: 'epico', tier: true,
         wh: 'item=250016&bonus=13337:13440:6652:13574:12806' },
-      { pos: 'der', ranura: 'Piernas', id: 250014, ilvl: 276, nombre: 'Recorredores raudos de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true,
+      { pos: 'der', ranura: 'Piernas', id: 250014, ilvl: 276, nombre: 'Recorredores raudos de elegido de Ra-den', calidad: 'epico', tier: true,
         wh: 'item=250014&bonus=6652:12798:13339:13575:3161&ench=8159' },
-      { pos: 'der', ranura: 'Pies', id: 251210, ilvl: 276, nombre: 'Alpargatas de eclipse', calidad: 'epico', enchant: true,
+      { pos: 'der', ranura: 'Pies', id: 251210, ilvl: 276, nombre: 'Alpargatas de eclipse', calidad: 'epico',
         wh: 'item=251210&bonus=13440:6652:13577:12699:12798&ench=7993' },
-      { pos: 'der', ranura: 'Anillo 1', id: 151311, ilvl: 266, nombre: 'Anillo del Triunvirato', calidad: 'epico', enchant: true, gema: true,
+      { pos: 'der', ranura: 'Anillo 1', id: 151311, ilvl: 266, nombre: 'Anillo del Triunvirato', calidad: 'epico',
         wh: 'item=151311&bonus=12795:13440:6652:13668:12699&ench=8027&gems=240914' },
-      { pos: 'der', ranura: 'Anillo 2', id: 249369, ilvl: 263, nombre: 'Vínculo de la Luz', calidad: 'epico', enchant: true, gema: true,
+      { pos: 'der', ranura: 'Anillo 2', id: 249369, ilvl: 263, nombre: 'Vínculo de la Luz', calidad: 'epico',
         wh: 'item=249369&bonus=6652:13668:13333:12790&ench=8023&gems=240882' },
       { pos: 'der', ranura: 'Trinket 1', id: 264507, ilvl: 263, nombre: 'Crisol de energías erráticas', calidad: 'epico',
         wh: 'item=264507&bonus=12790' },
@@ -255,7 +265,7 @@
         wh: 'item=250144&bonus=12795:13440:6652:12699' },
 
       // Arma
-      { pos: 'arma', ranura: 'Arma', id: 245771, ilvl: 285, nombre: 'Bastón pica de Aln\'hara', calidad: 'epico', crafted: true, enchant: true,
+      { pos: 'arma', ranura: 'Arma', id: 245771, ilvl: 285, nombre: 'Bastón pica de Aln\'hara', calidad: 'epico', crafted: true,
         wh: 'item=245771&bonus=12214:12497:12066:13640:8960:8795:13622:13667&ench=8039' },
     ];
 
@@ -272,14 +282,19 @@
       const alertaClass = item.alerta ? 'item-slot-alerta' : '';
       const wowheadUrl = `https://es.wowhead.com/item=${item.id}`;
       const whData = item.wh ? `${item.wh}&domain=es` : `item=${item.id}&domain=es`;
+      const iconName = item.icon || ICONOS_RANURA[item.ranura] || 'inv_misc_questionmark';
+      const iconUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconName}.jpg`;
 
       return `
-        <div class="item-slot ${alertaClass}" title="${item.ranura}: ${item.nombre} (${item.ilvl})">
+        <a href="${wowheadUrl}" data-wowhead="${whData}" target="_blank"
+           class="item-slot ${alertaClass}" title="${item.ranura}: ${item.nombre} (${item.ilvl})"
+           style="text-decoration:none;">
           <div class="item-wrapper">
-            <a href="${wowheadUrl}" data-wowhead="${whData}&iconSize=large" target="_blank"></a>
+            <img src="${iconUrl}" alt="${item.nombre}" class="item-icon-img"
+                 onerror="this.src='https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg'"/>
             <span class="item-ilvl-badge ${claseIlvl(item.ilvl)}">${item.ilvl}</span>
           </div>
-        </div>
+        </a>
       `;
     }
 
