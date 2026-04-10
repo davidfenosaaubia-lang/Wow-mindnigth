@@ -4,10 +4,10 @@ SimulationCraft 1201-01 for World of Warcraft 12.0.1.66838 Live (hotfix 2026-04-
 
 Simulating... ( iterations=10000, threads=4, target_error=0.000, max_time=300, vary_combat_length=0.20, optimal_raid=1, fight_style=None )
 
-Generating Baseline: 1/1 [....................] 103/10000 83.957 29secGenerating Baseline: 1/1 [....................] 204/10000 88.826 27secGenerating Baseline: 1/1 [>...................] 304/10000 90.402 26secGenerating Baseline: 1/1 [>...................] 404/10000 88.433 27secGenerating Baseline: 1/1 [>...................] 507/10000 89.840 26secGenerating Baseline: 1/1 [>...................] 607/10000 90.838 25secGenerating Baseline: 1/1 [>...................] 710/10000 91.607 25secGenerating Baseline: 1/1 [=>..................] 810/10000 92.109 24secGenerating Baseline: 1/1 [=>..................] 910/10000 92.595 24secGenerating Baseline: 1/1 [=>..................] 1010/10000 93.039 24secGenerating Baseline: 1/1 [=>..................] 1111/10000 93.495 23secGenerating Baseline: 1/1 [=>..................] 1214/10000 93.751 23secGenerating Baseline: 1/1 [==>.................] 1314/10000 93.978 23secGenerating Baseline: 1/1 [==>.................] 1414/10000 94.249 22secGenerating Baseline: 1/1 [==>.................] 1517/10000 94.120 22secGenerating Baseline: 1/1 [==>.................] 1617/10000 94.281 22secGenerating Baseline: 1/1 [==>.................] 1717/10000 94.505 21secGenerating Baseline: 1/1 [===>................] 1818/10000 94.753 21secGenerating Baseline: 1/1 [===>................] 1918/10000 94.971 21secGenerating Baseline: 1/1 [===>................] 2018/10000 95.180 20secGenerating Baseline: 1/1 [===>................] 2118/10000 95.372 20secGenerating Baseline: 1/1 [===>................] 2224/10000 95.278 20secGenerating Baseline: 1/1 [====>...............] 2325/10000 93.913 20secGenerating Baseline: 1/1 [====>...............] 2425/10000 92.516 20secGenerating Baseline: 1/1 [====>...............] 2526/10000 91.891 20secGenerating Baseline: 1/1 [====>...............] 2629/10000 91.269 20secGenerating Baseline: 1/1 [====>...............] 2732/10000 90.732 20secGenerating Baseline: 1/1 [=====>..............] 2836/10000 90.160 19secGenerating Baseline: 1/1 [=====>..............] 2940/10000 89.657 19secGenerating Baseline: 1/1 [=====>..............] 3046/10000 89.320 19secGenerating Baseline: 1/1 [=====>..............] 3152/10000 88.905 19secGenerating Baseline: 1/1 [======>.............] 3254/10000 88.589 19secGenerating Baseline: 1/1 [======>.............] 3358/10000 88.220 18secGenerating Baseline: 1/1 [======>.............] 3462/10000 87.899 18secGenerating Baseline: 1/1 [======>.............] 3564/10000 87.662 18secGenerating Baseline: 1/1 [======>.............] 3667/10000 87.387 18secGenerating Baseline: 1/1 [=======>............] 3770/10000 87.087 17secGenerating Baseline: 1/1 [=======>............] 3873/10000 86.861 17secGenerating Baseline: 1/1 [=======>............] 3976/10000 86.617 17secGenerating Baseline: 1/1 [=======>............] 4078/10000 86.392 17secGenerating Baseline: 1/1 [=======>............] 4178/10000 86.186 16secGenerating Baseline: 1/1 [========>...........] 4279/10000 85.961 16secGenerating Baseline: 1/1 [========>...........] 4382/10000 85.788 16secGenerating Baseline: 1/1 [========>...........] 4487/10000 85.602 16secGenerating Baseline: 1/1 [========>...........] 4589/10000 85.758 15secGenerating Baseline: 1/1 [========>...........] 4689/10000 86.007 15secGenerating Baseline: 1/1 [=========>..........] 4789/10000 86.229 15secGenerating Baseline: 1/1 [=========>..........] 4889/10000 86.467 14secGenerating Baseline: 1/1 [=========>..........] 4989/10000 86.680 14secGenerating Baseline: 1/1 [=========>..........] 5090/10000 86.892 14secGenerating Baseline: 1/1 [=========>..........] 5190/10000 87.090 13secGenerating Baseline: 1/1 [==========>.........] 5290/10000 87.290 13secGenerating Baseline: 1/1 [==========>.........] 5390/10000 87.477 13secGenerating Baseline: 1/1 [==========>.........] 5490/10000 87.655 12secGenerating Baseline: 1/1 [==========>.........] 5590/10000 87.833 12secGenerating Baseline: 1/1 [==========>.........] 5690/10000 88.007 12secGenerating Baseline: 1/1 [===========>........] 5790/10000 88.167 11secGenerating Baseline: 1/1 [===========>........] 5890/10000 88.336 11secGenerating Baseline: 1/1 [===========>........] 5991/10000 88.499 11secGenerating Baseline: 1/1 [===========>........] 6092/10000 88.655 11secGenerating Baseline: 1/1 [===========>........] 6192/10000 88.799 10secGenerating Baseline: 1/1 [============>.......] 6292/10000 88.947 10secGenerating Baseline: 1/1 [============>.......] 6392/10000 89.080 10secGenerating Baseline: 1/1 [============>.......] 6492/10000 89.227 9sec Generating Baseline: 1/1 [============>.......] 6592/10000 89.356 9sec Generating Baseline: 1/1 [============>.......] 6693/10000 89.500 9sec Generating Baseline: 1/1 [=============>......] 6794/10000 89.637 8sec Generating Baseline: 1/1 [=============>......] 6897/10000 89.755 8sec Generating Baseline: 1/1 [=============>......] 6997/10000 89.879 8sec Generating Baseline: 1/1 [=============>......] 7097/10000 89.993 8sec Generating Baseline: 1/1 [=============>......] 7197/10000 90.115 7sec Generating Baseline: 1/1 [==============>.....] 7297/10000 90.219 7sec Generating Baseline: 1/1 [==============>.....] 7397/10000 90.328 7sec Generating Baseline: 1/1 [==============>.....] 7498/10000 90.436 6sec Generating Baseline: 1/1 [==============>.....] 7598/10000 90.549 6sec Generating Baseline: 1/1 [==============>.....] 7698/10000 90.642 6sec Generating Baseline: 1/1 [===============>....] 7798/10000 90.744 6sec Generating Baseline: 1/1 [===============>....] 7898/10000 90.835 5sec Generating Baseline: 1/1 [===============>....] 7998/10000 90.940 5sec Generating Baseline: 1/1 [===============>....] 8098/10000 91.026 5sec Generating Baseline: 1/1 [===============>....] 8199/10000 91.127 4sec Generating Baseline: 1/1 [================>...] 8299/10000 91.205 4sec Generating Baseline: 1/1 [================>...] 8399/10000 91.296 4sec Generating Baseline: 1/1 [================>...] 8499/10000 91.372 4sec Generating Baseline: 1/1 [================>...] 8599/10000 91.465 3sec Generating Baseline: 1/1 [================>...] 8700/10000 91.549 3sec Generating Baseline: 1/1 [=================>..] 8804/10000 91.634 3sec Generating Baseline: 1/1 [=================>..] 8908/10000 91.714 2sec Generating Baseline: 1/1 [=================>..] 9012/10000 91.795 2sec Generating Baseline: 1/1 [=================>..] 9116/10000 91.870 2sec Generating Baseline: 1/1 [=================>..] 9216/10000 91.944 2sec Generating Baseline: 1/1 [==================>.] 9316/10000 92.012 1sec Generating Baseline: 1/1 [==================>.] 9416/10000 92.086 1sec Generating Baseline: 1/1 [==================>.] 9518/10000 92.167 1sec Generating Baseline: 1/1 [==================>.] 9622/10000 92.232 1sec Generating Baseline: 1/1 [==================>.] 9722/10000 92.300      Generating Baseline: 1/1 [===================>] 9823/10000 92.363      Generating Baseline: 1/1 [===================>] 9923/10000 92.427      Generating Baseline: 1/1 [===================>] 10000/10000 92.483 27.32
-Merging data from thread-2 ...
+Generating Baseline: 1/1 [....................] 102/10000 90.534 27secGenerating Baseline: 1/1 [....................] 204/10000 85.998 28secGenerating Baseline: 1/1 [>...................] 307/10000 88.105 27secGenerating Baseline: 1/1 [>...................] 407/10000 89.874 26secGenerating Baseline: 1/1 [>...................] 507/10000 90.848 26secGenerating Baseline: 1/1 [>...................] 610/10000 91.455 25secGenerating Baseline: 1/1 [>...................] 710/10000 91.817 25secGenerating Baseline: 1/1 [=>..................] 810/10000 92.214 24secGenerating Baseline: 1/1 [=>..................] 910/10000 92.594 24secGenerating Baseline: 1/1 [=>..................] 1010/10000 92.950 24secGenerating Baseline: 1/1 [=>..................] 1110/10000 93.256 23secGenerating Baseline: 1/1 [=>..................] 1212/10000 93.489 23secGenerating Baseline: 1/1 [==>.................] 1315/10000 93.704 23secGenerating Baseline: 1/1 [==>.................] 1419/10000 94.017 22secGenerating Baseline: 1/1 [==>.................] 1522/10000 94.207 22secGenerating Baseline: 1/1 [==>.................] 1622/10000 94.445 22secGenerating Baseline: 1/1 [==>.................] 1722/10000 94.608 21secGenerating Baseline: 1/1 [===>................] 1825/10000 94.753 21secGenerating Baseline: 1/1 [===>................] 1926/10000 94.738 21secGenerating Baseline: 1/1 [===>................] 2027/10000 93.485 21secGenerating Baseline: 1/1 [===>................] 2131/10000 92.144 21secGenerating Baseline: 1/1 [===>................] 2234/10000 91.332 21secGenerating Baseline: 1/1 [====>...............] 2334/10000 90.582 21secGenerating Baseline: 1/1 [====>...............] 2434/10000 89.922 21secGenerating Baseline: 1/1 [====>...............] 2536/10000 89.282 20secGenerating Baseline: 1/1 [====>...............] 2640/10000 88.832 20secGenerating Baseline: 1/1 [====>...............] 2742/10000 88.338 20secGenerating Baseline: 1/1 [=====>..............] 2843/10000 87.913 20secGenerating Baseline: 1/1 [=====>..............] 2948/10000 87.524 20secGenerating Baseline: 1/1 [=====>..............] 3050/10000 87.150 19secGenerating Baseline: 1/1 [=====>..............] 3153/10000 86.801 19secGenerating Baseline: 1/1 [======>.............] 3255/10000 86.472 19secGenerating Baseline: 1/1 [======>.............] 3357/10000 86.152 19secGenerating Baseline: 1/1 [======>.............] 3457/10000 85.941 19secGenerating Baseline: 1/1 [======>.............] 3559/10000 85.671 18secGenerating Baseline: 1/1 [======>.............] 3661/10000 85.418 18secGenerating Baseline: 1/1 [=======>............] 3762/10000 85.174 18secGenerating Baseline: 1/1 [=======>............] 3863/10000 84.944 18secGenerating Baseline: 1/1 [=======>............] 3964/10000 84.731 17secGenerating Baseline: 1/1 [=======>............] 4067/10000 84.540 17secGenerating Baseline: 1/1 [=======>............] 4170/10000 84.698 17secGenerating Baseline: 1/1 [========>...........] 4270/10000 84.962 16secGenerating Baseline: 1/1 [========>...........] 4374/10000 85.237 16secGenerating Baseline: 1/1 [========>...........] 4476/10000 85.466 16secGenerating Baseline: 1/1 [========>...........] 4579/10000 85.702 15secGenerating Baseline: 1/1 [========>...........] 4679/10000 85.940 15secGenerating Baseline: 1/1 [=========>..........] 4779/10000 86.167 15secGenerating Baseline: 1/1 [=========>..........] 4883/10000 86.402 14secGenerating Baseline: 1/1 [=========>..........] 4987/10000 86.626 14secGenerating Baseline: 1/1 [=========>..........] 5088/10000 86.787 14secGenerating Baseline: 1/1 [=========>..........] 5188/10000 86.975 13secGenerating Baseline: 1/1 [==========>.........] 5288/10000 87.170 13secGenerating Baseline: 1/1 [==========>.........] 5391/10000 87.352 13secGenerating Baseline: 1/1 [==========>.........] 5491/10000 87.536 12secGenerating Baseline: 1/1 [==========>.........] 5591/10000 87.700 12secGenerating Baseline: 1/1 [==========>.........] 5691/10000 87.872 12secGenerating Baseline: 1/1 [===========>........] 5791/10000 88.011 11secGenerating Baseline: 1/1 [===========>........] 5895/10000 88.163 11secGenerating Baseline: 1/1 [===========>........] 5999/10000 88.326 11secGenerating Baseline: 1/1 [===========>........] 6101/10000 88.447 11secGenerating Baseline: 1/1 [===========>........] 6204/10000 88.578 10secGenerating Baseline: 1/1 [============>.......] 6304/10000 88.732 10secGenerating Baseline: 1/1 [============>.......] 6404/10000 88.870 10secGenerating Baseline: 1/1 [============>.......] 6507/10000 88.984 9sec Generating Baseline: 1/1 [============>.......] 6607/10000 89.119 9sec Generating Baseline: 1/1 [============>.......] 6710/10000 89.232 9sec Generating Baseline: 1/1 [=============>......] 6812/10000 89.335 8sec Generating Baseline: 1/1 [=============>......] 6912/10000 89.457 8sec Generating Baseline: 1/1 [=============>......] 7012/10000 89.579 8sec Generating Baseline: 1/1 [=============>......] 7115/10000 89.683 8sec Generating Baseline: 1/1 [=============>......] 7215/10000 89.791 7sec Generating Baseline: 1/1 [==============>.....] 7315/10000 89.910 7sec Generating Baseline: 1/1 [==============>.....] 7415/10000 90.017 7sec Generating Baseline: 1/1 [==============>.....] 7519/10000 90.121 6sec Generating Baseline: 1/1 [==============>.....] 7622/10000 90.220 6sec Generating Baseline: 1/1 [==============>.....] 7725/10000 90.314 6sec Generating Baseline: 1/1 [===============>....] 7829/10000 90.418 6sec Generating Baseline: 1/1 [===============>....] 7932/10000 90.508 5sec Generating Baseline: 1/1 [===============>....] 8032/10000 90.611 5sec Generating Baseline: 1/1 [===============>....] 8132/10000 90.695 5sec Generating Baseline: 1/1 [===============>....] 8235/10000 90.777 4sec Generating Baseline: 1/1 [================>...] 8335/10000 90.876 4sec Generating Baseline: 1/1 [================>...] 8436/10000 90.936 4sec Generating Baseline: 1/1 [================>...] 8538/10000 91.022 4sec Generating Baseline: 1/1 [================>...] 8639/10000 91.073 3sec Generating Baseline: 1/1 [================>...] 8739/10000 91.157 3sec Generating Baseline: 1/1 [=================>..] 8841/10000 91.226 3sec Generating Baseline: 1/1 [=================>..] 8944/10000 91.194 2sec Generating Baseline: 1/1 [=================>..] 9044/10000 91.271 2sec Generating Baseline: 1/1 [=================>..] 9144/10000 91.334 2sec Generating Baseline: 1/1 [=================>..] 9248/10000 91.411 2sec Generating Baseline: 1/1 [==================>.] 9351/10000 91.468 1sec Generating Baseline: 1/1 [==================>.] 9451/10000 91.539 1sec Generating Baseline: 1/1 [==================>.] 9552/10000 91.607 1sec Generating Baseline: 1/1 [==================>.] 9656/10000 91.670      Generating Baseline: 1/1 [===================>] 9758/10000 91.726      Generating Baseline: 1/1 [===================>] 9858/10000 91.795      Generating Baseline: 1/1 [===================>] 9959/10000 91.866      Generating Baseline: 1/1 [===================>] 10000/10000 91.899 27.203
 Merging data from thread-1 ...
 Merging data from thread-3 ...
+Merging data from thread-2 ...
 Analyzing actor data ...
 
 Generating reports...
@@ -18,18 +18,18 @@ Raid Events:
 
 
 DPS Ranking:
-  49364 100.0%  Raid
-  49364  100.0%  Kymera
+  49384 100.0%  Raid
+  49384  100.0%  Kymera
 
 HPS Ranking:
-  37327 100.0%%  Raid
-  37328  100.0%  Kymera
+  37357 100.0%%  Raid
+  37353  100.0%  Kymera
 
 Player: Kymera dwarf monk brewmaster 90
-  DPS=49364.48906398438 DPS-Error=22.037982532991524/0.04% DPS-Range=4276.543189428194/8.66%
-  HPS=32901.94859019222 HPS-Error=43.953230732078545/0.13% HPS-Range=8340.346782118197/25.35%
-  DTPS=65021.577699900605 DTPS-Error=80.75404070096012/0.12% DTPS-Range=15518.726481224468/23.87%
-  DPR=4433.451472672415 RPS-Out=10.966637935265751 RPS-In=10.863177922324171 Resource=energy Waiting=0.44155045625664047 ApM=71.36100802542842
+  DPS=49384.4389010608 DPS-Error=22.115878387192197/0.04% DPS-Range=4790.1909386349325/9.70%
+  HPS=32933.32237260549 HPS-Error=44.48024581276772/0.14% HPS-Range=8766.567805535045/26.62%
+  DTPS=65080.0223106171 DTPS-Error=80.46075255389745/0.12% DTPS-Range=18535.468018563668/28.48%
+  DPR=4438.260274636792 RPS-Out=10.959928076641893 RPS-In=10.856675571825296 Resource=energy Waiting=0.44556362337951866 ApM=71.35237695077595
   Talents: CwQAi6cZM+HWADeySjzG9Lwx8DAAAwMbbGDzYWM2wMjBAAAAAAYZBzEzMwMMzmBmZmZY2GmxYZYZb22mthZBAA2QAAAmtZpZmZ2YYBgZGmGDAAYA
   Core Stats:    strength=269|269(269)  agility=1996|1918(1845)  stamina=32074|30547(20064)  intellect=637|619(619)  spirit=0|0(0)  health=641480|610940  mana=0|0
   Generic Stats: mastery=25.55%|20.39%(417)  versatility=15.02%|15.02%(649)  leech=1.20%|1.20%(83)  runspeed=7.03%|7.03%(49)
@@ -61,113 +61,113 @@ Player: Kymera dwarf monk brewmaster 90
   Priorities (actions.item_actions):
     use_items
   Actions:
-    auto_attack                               Count=   1.0|  0.000sec  DPE=754361| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    black_ox_brew                             Count=   4.1| 68.604sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    blackout_kick                             Count=  67.2|  4.441sec  DPE= 14196| 6.44%  DPET= 14133  DPR=     0  pDPS= 3179  Miss= 0.00%  Hit= 10805|  9783| 15093  Crit= 25403| 23009| 35184|23.23%
-    breath_of_fire                            Count=  69.6|  4.310sec  DPE= 20461| 6.36%  DPET= 20369  DPR=     0  pDPS= 3142  Miss= 0.00%  Hit= 10900|  9590| 14927  Crit= 22222| 19565| 30184|23.35%
-    breath_of_fire_dot                        Count=  68.6|  4.344sec  DPE=  1571| 0.73%  DPET=     0  DPR=     0  pDPS=  359  TickCount=   148  MissTick= 0.00%  Tick=   587|   527|   821  CritTick=  1198|  1076|  1645|23.31%  UpTime= 98.41%
-    celestial_fortune                         Count= 346.5|  0.893sec  DPE=  5481|16.94%  DPET=     0  DPR=     0  pDPS= 6330  Miss= 0.00%  Hit=  5481|     0|245670
-    celestial_infusion                        Count=  13.0| 22.285sec  DPE=102011|11.86%  DPET=122585  DPR=     0  pDPS= 4425  Miss= 0.00%  Hit=  5548|     0|133165
-    chi_wave                                  Count=  20.3| 14.978sec  DPE=  6530| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    chi_wave_damage                           Count=   0.0|  0.000sec  DPE=     0| 0.90%  DPET=     0  DPR=     0  pDPS=  442  Miss= 0.00%  Hit=  1318|  1177|  1816  Crit=  2687|  2401|  3672|23.37%
-    chi_wave_heal                             Count=   0.0|  0.000sec  DPE=     0| 3.07%  DPET=     0  DPR=     0  pDPS= 1147  Miss= 0.00%  Hit=  3452|     0|  5143  Crit=  6884|     0| 10491|23.30%
-    dragonfire_brew                           Count= 138.2|  2.151sec  DPE=  2703| 2.52%  DPET=     0  DPR=     0  pDPS= 1245  Miss= 0.00%  Hit=  2176|  1918|  2985  Crit=  4437|  3913|  6037|23.28%
-    emberwing_heatwave                        Count=   3.0|120.447sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    empty_barrel                              Count=   0.0|  0.000sec  DPE=     0| 5.63%  DPET=     0  DPR=     0  pDPS= 2781  Miss= 0.00%  Hit= 26204| 23234| 36162  Crit= 53413| 47397| 72477|23.25%
-    expel_harm                                Count=   2.7| 42.840sec  DPE= 18175| 0.43%  DPET= 36049  DPR=  1212  pDPS=  160  Miss= 0.00%  Hit= 13234|     0| 23776  Crit= 26071|     0| 48304|38.49%
-    expel_harm_damage                         Count=   0.0|  0.000sec  DPE=     0| 0.23%  DPET=     0  DPR=     0  pDPS=  112  Miss= 0.00%  Hit= 12809|  1408| 61769
-    exploding_keg                             Count=   5.0| 63.557sec  DPE= 32705| 0.80%  DPET= 32560  DPR=     0  pDPS=  396  Miss= 0.00%  Hit= 19115| 16565| 25104  Crit= 38976| 34658| 50744|23.10%
-    exploding_keg_proc                        Count=   0.0|  0.000sec  DPE=     0| 0.31%  DPET=     0  DPR=     0  pDPS=  151  Miss= 0.00%  Hit=  1514|  1308|  1982  Crit=  3085|  2668|  4043|23.33%
-    extra_kick                                Count=   0.0|  0.000sec  DPE=     0| 1.40%  DPET=     0  DPR=     0  pDPS=  693  Miss= 0.00%  Hit=  2461|  2180|  3363  Crit=  5019|  4446|  6921|23.33%
-    flurry_strike                             Count=   0.0|  0.000sec  DPE=     0| 6.99%  DPET=     0  DPR=     0  pDPS= 3450  Miss= 0.00%  Hit=  2180|  1936|  3014  Crit=  4446|  3950|  6148|38.33%
-    flurry_strike_shado_over_the_battlefield  Count=   0.0|  0.000sec  DPE=     0|12.49%  DPET=     0  DPR=     0  pDPS= 6171  Miss= 0.00%  Hit=  2130|  1813|  2823  Crit=  4343|  3699|  5758|38.27%
-    flurry_strike_stand_ready                 Count=   0.0|  0.000sec  DPE=     0| 0.55%  DPET=     0  DPR=     0  pDPS=  270  Miss= 0.00%  Hit=  1613|  1449|  2017  Crit=  3283|  2956|  4114|38.22%
-    flurry_strike_wisdom_of_the_wall          Count=   0.0|  0.000sec  DPE=     0| 5.57%  DPET=     0  DPR=     0  pDPS= 2754  Miss= 0.00%  Hit=  2400|  1936|  3014  Crit=  4894|  3950|  6148|38.28%
+    auto_attack                               Count=   1.0|  0.000sec  DPE=753938| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    black_ox_brew                             Count=   4.1| 68.340sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    blackout_kick                             Count=  67.2|  4.441sec  DPE= 14212| 6.45%  DPET= 14149  DPR=     0  pDPS= 3181  Miss= 0.00%  Hit= 10805|  9783| 14959  Crit= 25392| 23009| 35184|23.36%
+    breath_of_fire                            Count=  69.6|  4.308sec  DPE= 20465| 6.36%  DPET= 20373  DPR=     0  pDPS= 3144  Miss= 0.00%  Hit= 10898|  9590| 14796  Crit= 22226| 19565| 29917|23.40%
+    breath_of_fire_dot                        Count=  68.6|  4.342sec  DPE=  1570| 0.73%  DPET=     0  DPR=     0  pDPS=  358  TickCount=   148  MissTick= 0.00%  Tick=   587|   527|   814  CritTick=  1198|  1076|  1645|23.26%  UpTime= 98.41%
+    celestial_fortune                         Count= 346.4|  0.892sec  DPE=  5474|16.91%  DPET=     0  DPR=     0  pDPS= 6327  Miss= 0.00%  Hit=  5475|     0|247840
+    celestial_infusion                        Count=  13.0| 22.320sec  DPE=102032|11.85%  DPET=122629  DPR=     0  pDPS= 4423  Miss= 0.00%  Hit=  5549|     0|133427
+    chi_wave                                  Count=  20.3| 14.979sec  DPE=  6521| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    chi_wave_damage                           Count=   0.0|  0.000sec  DPE=     0| 0.89%  DPET=     0  DPR=     0  pDPS=  442  Miss= 0.00%  Hit=  1317|  1177|  1816  Crit=  2687|  2401|  3672|23.24%
+    chi_wave_heal                             Count=   0.0|  0.000sec  DPE=     0| 3.07%  DPET=     0  DPR=     0  pDPS= 1147  Miss= 0.00%  Hit=  3453|     0|  5143  Crit=  6878|     0| 10491|23.30%
+    dragonfire_brew                           Count= 138.2|  2.150sec  DPE=  2703| 2.52%  DPET=     0  DPR=     0  pDPS= 1246  Miss= 0.00%  Hit=  2176|  1918|  2959  Crit=  4438|  3913|  5983|23.29%
+    emberwing_heatwave                        Count=   3.0|120.462sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    empty_barrel                              Count=   0.0|  0.000sec  DPE=     0| 5.64%  DPET=     0  DPR=     0  pDPS= 2788  Miss= 0.00%  Hit= 26195| 23234| 35845  Crit= 53410| 47397| 72477|23.28%
+    expel_harm                                Count=   2.7| 42.833sec  DPE= 18290| 0.43%  DPET= 36280  DPR=  1219  pDPS=  160  Miss= 0.00%  Hit= 13290|     0| 23896  Crit= 26270|     0| 48504|38.52%
+    expel_harm_damage                         Count=   0.0|  0.000sec  DPE=     0| 0.23%  DPET=     0  DPR=     0  pDPS=  113  Miss= 0.00%  Hit= 12897|  1408| 58960
+    exploding_keg                             Count=   5.0| 63.628sec  DPE= 32731| 0.80%  DPET= 32586  DPR=     0  pDPS=  397  Miss= 0.00%  Hit= 19104| 16595| 25104  Crit= 38988| 34765| 51213|23.34%
+    exploding_keg_proc                        Count=   0.0|  0.000sec  DPE=     0| 0.31%  DPET=     0  DPR=     0  pDPS=  151  Miss= 0.00%  Hit=  1513|  1310|  1987  Crit=  3087|  2673|  4043|23.42%
+    extra_kick                                Count=   0.0|  0.000sec  DPE=     0| 1.40%  DPET=     0  DPR=     0  pDPS=  693  Miss= 0.00%  Hit=  2460|  2180|  3333  Crit=  5018|  4446|  6860|23.35%
+    flurry_strike                             Count=   0.0|  0.000sec  DPE=     0| 6.98%  DPET=     0  DPR=     0  pDPS= 3446  Miss= 0.00%  Hit=  2180|  1936|  2987  Crit=  4445|  3950|  6094|38.29%
+    flurry_strike_shado_over_the_battlefield  Count=   0.0|  0.000sec  DPE=     0|12.49%  DPET=     0  DPR=     0  pDPS= 6171  Miss= 0.00%  Hit=  2130|  1813|  2798  Crit=  4342|  3699|  5708|38.30%
+    flurry_strike_stand_ready                 Count=   0.0|  0.000sec  DPE=     0| 0.55%  DPET=     0  DPR=     0  pDPS=  270  Miss= 0.00%  Hit=  1613|  1449|  1998  Crit=  3283|  2956|  4076|38.11%
+    flurry_strike_wisdom_of_the_wall          Count=   0.0|  0.000sec  DPE=     0| 5.57%  DPET=     0  DPR=     0  pDPS= 2756  Miss= 0.00%  Hit=  2400|  1936|  2987  Crit=  4893|  3950|  6094|38.26%
     flurry_strikes                            Count=   0.0|  0.000sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    fortifying_brew                           Count=   3.1|116.256sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    gai_plins_imperial_brew                   Count=  45.6|  6.545sec  DPE= 72330|29.45%  DPET=     0  DPR=     0  pDPS=11005  Miss= 0.00%  Hit= 72329|     0|321782
-    gift_of_the_ox_expire                     Count=  10.9| 23.395sec  DPE= 14683| 1.43%  DPET=     0  DPR=     0  pDPS=  533  Miss= 0.00%  Hit= 12426|     0| 22427  Crit= 22073|     0| 45751|23.39%
-    gift_of_the_ox_trigger                    Count=  47.9| 10.263sec  DPE= 14788| 6.32%  DPET=     0  DPR=     0  pDPS= 2353  Miss= 0.00%  Hit= 12345|     0| 64867  Crit= 22799|     0|132329|23.37%
-    invoke_niuzao_the_black_ox                Count=   3.6| 95.417sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    keg_smash                                 Count=  68.9|  4.336sec  DPE= 56600|19.31%  DPET= 56347  DPR=  2576  pDPS= 9539  Miss= 0.00%  Hit= 33423| 29500| 45914  Crit= 68176| 60179| 92022|23.28%
-    leech                                     Count= 248.8|  1.203sec  DPE=  1470| 3.26%  DPET=     0  DPR=     0  pDPS= 1218  Miss= 0.00%  Hit=  1470|     0|  6878
-    melee_main_hand                           Count= 139.0|  2.629sec  DPE=  5428| 5.09%  DPET=  2102  DPR=     0  pDPS= 2515  Miss= 0.00%  Hit=  4370|  3873|  5974  Crit=  8908|  7901| 12187|23.31%
+    fortifying_brew                           Count=   3.1|116.265sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    gai_plins_imperial_brew                   Count=  45.6|  6.538sec  DPE= 72439|29.48%  DPET=     0  DPR=     0  pDPS=11019  Miss= 0.00%  Hit= 72439|     0|319961
+    gift_of_the_ox_expire                     Count=  10.9| 23.274sec  DPE= 14670| 1.43%  DPET=     0  DPR=     0  pDPS=  533  Miss= 0.00%  Hit= 12404|     0| 22227  Crit= 22111|     0| 44927|23.35%
+    gift_of_the_ox_trigger                    Count=  47.9| 10.255sec  DPE= 14815| 6.33%  DPET=     0  DPR=     0  pDPS= 2358  Miss= 0.00%  Hit= 12405|     0| 64867  Crit= 22710|     0|132703|23.39%
+    invoke_niuzao_the_black_ox                Count=   3.6| 95.410sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    keg_smash                                 Count=  69.0|  4.333sec  DPE= 56619|19.31%  DPET= 56366  DPR=  2580  pDPS= 9541  Miss= 0.00%  Hit= 33419| 29500| 45512  Crit= 68175| 60179| 92022|23.27%
+    leech                                     Count= 248.8|  1.203sec  DPE=  1471| 3.26%  DPET=     0  DPR=     0  pDPS= 1219  Miss= 0.00%  Hit=  1471|     0|  6792
+    melee_main_hand                           Count= 138.9|  2.629sec  DPE=  5428| 5.09%  DPET=  2102  DPR=     0  pDPS= 2513  Miss= 0.00%  Hit=  4369|  3873|  5921  Crit=  8908|  7901| 12187|23.31%
     potion                                    Count=   1.5|  0.000sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    purifying_brew                            Count=  45.6|  6.545sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
-    refreshing_drink                          Count=  10.8| 29.484sec  DPE=121108|11.63%  DPET=     0  DPR=     0  pDPS= 4335  Miss= 0.00%  TickCount=    81  MissTick= 0.00%  Tick= 16138|     0| 26139  UpTime= 26.92%
-    special_delivery                          Count=  65.8|  4.924sec  DPE=  4471| 1.99%  DPET=     0  DPR=     0  pDPS=  981  Miss= 0.00%  Hit=  3635|  3227|  4934  Crit=  7408|  6583| 10156|23.27%
-    stagger                                   Count= 170.3|  1.744sec  DPE= 57970| 0.00%  DPET=     0  DPR=     0  pDPS=32857  TickCount=   591  MissTick= 0.00%  Tick= 16689|     0| 84489  UpTime= 98.57%
-    stomp                                     Count=  28.4| 10.413sec  DPE= 21462| 4.11%  DPET=     0  DPR=     0  pDPS= 2028  Miss= 0.00%  Hit= 17270| 15489| 23685  Crit= 35237| 31598| 48318|23.33%
-    tiger_palm                                Count=  69.4|  4.045sec  DPE= 36389|17.05%  DPET= 36226  DPR=  1456  pDPS= 8399  Miss= 0.00%  Hit= 29297| 14470| 44253  Crit= 59744| 29519| 90277|23.29%
-    vital_flame                               Count=1157.7|  0.290sec  DPE=  1509|15.59%  DPET=     0  DPR=     0  pDPS= 5822  Miss= 0.00%  Hit=  1222|     0| 25433  Crit=  2453|     0| 44362|23.29%
-   invoke_niuzao_the_black_ox (DPS=2596.3218984538644)
-    melee_main_hand                           Count=  62.0|  4.410sec  DPE=  1617| 0.68%  DPET=  1167  DPR=     0  pDPS= 1146  Miss= 0.00%  Hit=  1293|  1077|  1629  Crit=  2687|  2241|  3331|23.23%
-    stomp                                     Count=  13.6| 20.596sec  DPE=  9387| 0.86%  DPET=     0  DPR=     0  pDPS= 1450  Miss= 0.00%  Hit=  7494|  6407|  9608  Crit= 15610| 13331| 19692|23.33%
+    purifying_brew                            Count=  45.6|  6.538sec  DPE=     0| 0.00%  DPET=     0  DPR=     0  pDPS=    0
+    refreshing_drink                          Count=  10.8| 29.488sec  DPE=121271|11.65%  DPET=     0  DPR=     0  pDPS= 4346  Miss= 0.00%  TickCount=    81  MissTick= 0.00%  Tick= 16168|     0| 26139  UpTime= 26.93%
+    special_delivery                          Count=  65.8|  4.920sec  DPE=  4471| 1.98%  DPET=     0  DPR=     0  pDPS=  980  Miss= 0.00%  Hit=  3634|  3227|  4978  Crit=  7413|  6583| 10066|23.27%
+    stagger                                   Count= 170.3|  1.744sec  DPE= 57988| 0.00%  DPET=     0  DPR=     0  pDPS=32877  TickCount=   591  MissTick= 0.00%  Tick= 16699|     0| 83818  UpTime= 98.57%
+    stomp                                     Count=  28.4| 10.384sec  DPE= 21457| 4.11%  DPET=     0  DPR=     0  pDPS= 2030  Miss= 0.00%  Hit= 17272| 15489| 23897  Crit= 35214| 31598| 47886|23.33%
+    tiger_palm                                Count=  69.4|  4.049sec  DPE= 36444|17.06%  DPET= 36281  DPR=  1458  pDPS= 8407  Miss= 0.00%  Hit= 29300| 14470| 44253  Crit= 59784| 29519| 90277|23.43%
+    vital_flame                               Count=1157.7|  0.290sec  DPE=  1510|15.59%  DPET=     0  DPR=     0  pDPS= 5825  Miss= 0.00%  Hit=  1223|     0| 24527  Crit=  2455|     0| 46270|23.29%
+   invoke_niuzao_the_black_ox (DPS=2592.1929723107432)
+    melee_main_hand                           Count=  62.0|  4.404sec  DPE=  1615| 0.68%  DPET=  1166  DPR=     0  pDPS= 1145  Miss= 0.00%  Hit=  1293|  1077|  1615  Crit=  2687|  2241|  3331|23.11%
+    stomp                                     Count=  13.5| 20.594sec  DPE=  9385| 0.86%  DPET=     0  DPR=     0  pDPS= 1448  Miss= 0.00%  Hit=  7495|  6407|  9523  Crit= 15597| 13331| 19815|23.33%
 
   Constant Buffs:
     arcane_intellect/battle_shout/blessing_of_the_bronze/flask_of_the_magisters/mark_of_the_wild/power_word_fortitude/skyfury/voidtouched/well_fed
   Dynamic Buffs:
-    blackout_combo             : start= 67.2 refresh=  0.0 interval=  4.5 trigger=  4.4 duration=  1.4 uptime= 31.32%  benefit= 48.37%
+    blackout_combo             : start= 67.2 refresh=  0.0 interval=  4.5 trigger=  4.4 duration=  1.4 uptime= 31.28%  benefit= 48.36%
     bloodlust                  : start=  1.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration= 40.0 uptime= 13.52%
-    celestial_infusion         : start= 12.8 refresh=  0.2 interval= 22.7 trigger= 22.3 duration=  6.7 uptime= 28.77%
-    chi_wave                   : start= 20.5 refresh=  0.0 interval= 15.0 trigger= 15.0 duration=  2.6 uptime= 17.44%  benefit= 29.49%
+    celestial_infusion         : start= 12.8 refresh=  0.2 interval= 22.7 trigger= 22.3 duration=  6.7 uptime= 28.76%
+    chi_wave                   : start= 20.5 refresh=  0.0 interval= 15.0 trigger= 15.0 duration=  2.6 uptime= 17.43%  benefit= 29.47%
     draught_of_rampant_abandon : start=  1.5 refresh=  0.0 interval=298.3 trigger=  0.0 duration= 26.2 uptime= 12.95%
-    elusive_brawler            : start= 58.4 refresh=184.5 interval=  5.1 trigger=  1.2 duration=  4.7 uptime= 90.85%
-    emberwing_burn_crit        : start=  0.1 refresh=  0.0 interval=161.5 trigger=120.4 duration=  9.9 uptime=  0.35%
-    emberwing_burn_mast        : start=  0.1 refresh=  0.0 interval=172.1 trigger=120.6 duration=  9.9 uptime=  0.32%
-    emberwing_burn_vers        : start=  0.1 refresh=  0.0 interval=163.7 trigger=120.6 duration=  9.9 uptime=  0.33%
+    elusive_brawler            : start= 58.3 refresh=184.5 interval=  5.1 trigger=  1.2 duration=  4.7 uptime= 90.85%
+    emberwing_burn_crit        : start=  0.1 refresh=  0.0 interval=162.8 trigger=120.4 duration=  9.9 uptime=  0.33%
+    emberwing_burn_mast        : start=  0.1 refresh=  0.0 interval=155.9 trigger=120.6 duration=  9.9 uptime=  0.33%
+    emberwing_burn_vers        : start=  0.1 refresh=  0.0 interval=169.5 trigger=120.5 duration=  9.8 uptime=  0.33%
     emberwing_heatwave         : start=  3.0 refresh=  3.0 interval=120.5 trigger= 40.0 duration= 14.7 uptime= 14.77%
-    empty_barrel               : start= 25.9 refresh=  3.4 interval= 11.7 trigger= 10.3 duration=  2.2 uptime= 18.14%  benefit= 37.18%
-    exploding_keg              : start=  5.0 refresh=  0.0 interval= 63.6 trigger= 63.6 duration=  3.0 uptime=  5.00%
-    favored_by_kulzi           : start=  6.9 refresh=  4.2 interval= 42.1 trigger= 24.9 duration= 18.7 uptime= 42.99%
-    flurry_charge              : start= 67.9 refresh= 71.0 interval=  4.4 trigger=  2.2 duration=  3.1 uptime= 70.31%  benefit= 97.52%
-    fortifying_brew            : start=  3.1 refresh=  0.0 interval=116.3 trigger=116.3 duration= 14.7 uptime= 15.15%
-    gift_of_the_ox             : start=  1.9 refresh= 57.4 interval=105.2 trigger=  5.0 duration=157.9 uptime= 98.11%  benefit= 99.34%
-    heavy_stagger_stagger      : start= 23.5 refresh=  0.0 interval= 12.6 trigger= 12.6 duration=  5.9 uptime= 46.29%
+    empty_barrel               : start= 25.9 refresh=  3.4 interval= 11.7 trigger= 10.3 duration=  2.2 uptime= 18.21%  benefit= 37.26%
+    exploding_keg              : start=  5.0 refresh=  0.0 interval= 63.6 trigger= 63.6 duration=  3.0 uptime=  4.99%
+    favored_by_kulzi           : start=  6.9 refresh=  4.2 interval= 42.2 trigger= 25.0 duration= 18.8 uptime= 42.95%
+    flurry_charge              : start= 68.0 refresh= 71.0 interval=  4.4 trigger=  2.2 duration=  3.1 uptime= 70.29%  benefit= 97.51%
+    fortifying_brew            : start=  3.1 refresh=  0.0 interval=116.3 trigger=116.3 duration= 14.7 uptime= 15.16%
+    gift_of_the_ox             : start=  1.9 refresh= 57.4 interval=105.3 trigger=  5.0 duration=158.0 uptime= 98.13%  benefit= 99.24%
+    heavy_stagger_stagger      : start= 23.6 refresh=  0.0 interval= 12.5 trigger= 12.6 duration=  5.9 uptime= 46.32%
     invoke_niuzao_the_black_ox : start=  3.6 refresh=  0.0 interval= 95.4 trigger= 95.4 duration= 24.3 uptime= 29.16%
-    light_stagger_stagger      : start= 20.3 refresh=  0.0 interval= 13.6 trigger= 13.6 duration=  1.0 uptime=  6.48%
-    might_of_the_void          : start=  8.2 refresh=  8.6 interval= 36.4 trigger= 17.0 duration= 21.4 uptime= 58.11%
-    moderate_stagger_stagger   : start= 42.3 refresh=  0.0 interval=  7.0 trigger=  7.0 duration=  3.4 uptime= 47.23%
-    none_stagger               : start=  0.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  1.7 uptime=  0.00%
+    light_stagger_stagger      : start= 20.3 refresh=  0.0 interval= 13.6 trigger= 13.6 duration=  1.0 uptime=  6.45%
+    might_of_the_void          : start=  8.2 refresh=  8.5 interval= 36.3 trigger= 17.1 duration= 21.3 uptime= 58.04%
+    moderate_stagger_stagger   : start= 42.2 refresh=  0.0 interval=  7.0 trigger=  7.0 duration=  3.4 uptime= 47.23%
+    none_stagger               : start=  0.0 refresh=  0.0 interval=  0.0 trigger=  0.0 duration=  1.4 uptime=  0.00%
     predictive_training        : start=  5.5 refresh= 52.0 interval= 59.4 trigger=  5.1 duration= 31.2 uptime= 56.83%
-    pretense_of_instability    : start= 32.0 refresh= 33.9 interval=  9.5 trigger=  4.6 duration=  7.2 uptime= 77.25%
-    refreshing_drink           : start= 12.5 refresh=  3.6 interval= 24.9 trigger= 19.1 duration= 10.0 uptime= 41.66%  benefit= 41.80%
+    pretense_of_instability    : start= 31.9 refresh= 33.8 interval=  9.5 trigger=  4.6 duration=  7.3 uptime= 77.27%
+    refreshing_drink           : start= 12.5 refresh=  3.6 interval= 24.9 trigger= 19.1 duration= 10.0 uptime= 41.67%  benefit= 41.77%
     shuffle                    : start=  1.0 refresh=135.2 interval=  0.0 trigger=  2.2 duration=300.0 uptime=100.00%
     stand_ready                : start=  3.6 refresh=  0.0 interval= 95.4 trigger= 95.4 duration=  0.7 uptime=  0.87%
     swift_as_a_coursing_river  : start=  1.0 refresh= 64.8 interval=  0.0 trigger=  4.6 duration=299.0 uptime= 99.66%
-    void_glass                 : start=  8.1 refresh=  8.7 interval= 24.0 trigger= 17.0 duration= 21.4 uptime= 57.97%
-    voidlust                   : start=  8.1 refresh=  3.0 interval= 35.4 trigger= 24.9 duration= 11.6 uptime= 31.16%
+    void_glass                 : start=  8.1 refresh=  8.6 interval= 24.0 trigger= 17.0 duration= 21.3 uptime= 57.88%
+    voidlust                   : start=  8.1 refresh=  3.0 interval= 35.3 trigger= 25.0 duration= 11.6 uptime= 31.19%
   Up-Times:
-     18.22% : Energy Cap                    
+     18.26% : Energy Cap                    
   Procs:
-      7.42984 |  38.07023sec : Blackout Combo - Keg Smash
-     59.48505 |   4.72583sec : Blackout Combo - Tiger Palm
-     15.62166 |  17.98154sec : Elusive Footwork
-     68.94639 |   4.33623sec : Sal'salabim Breath of Fire Reset
-     23.16442 |  12.69210sec : Skyfury (Main Hand)
+      7.40974 |  38.14926sec : Blackout Combo - Keg Smash
+     59.48615 |   4.72724sec : Blackout Combo - Tiger Palm
+     15.70067 |  17.91237sec : Elusive Footwork
+     68.97730 |   4.33475sec : Sal'salabim Breath of Fire Reset
+     23.08811 |  12.72762sec : Skyfury (Main Hand)
   Gains:
-      2988.1 : Energy Regen            (energy)         (overflow=20.12%)
-       270.9 : black_ox_brew_energy    (energy)         (overflow=66.81%)
-    1899248.6 : celestial_fortune       (health)         (overflow=39.59%)
-    344385.9 : chi_wave_heal           (health)         (overflow=8.29%)
-     48596.5 : expel_harm              (health)         (overflow=4.90%)
-    3301446.0 : gai_plins_imperial_brew (health)         (overflow=7.70%)
-    160203.6 : gift_of_the_ox_expire   (health)         (overflow=25.56%)
-    708735.0 : gift_of_the_ox_trigger  (health)         (overflow=40.60%)
-    365706.6 : leech                   (health)         (overflow=5.10%)
-    1303425.0 : refreshing_drink        (health)         (overflow=17.41%)
-    1746948.1 : vital_flame             (health)         (overflow=11.32%)
+      2986.5 : Energy Regen            (energy)         (overflow=20.16%)
+       270.6 : black_ox_brew_energy    (energy)         (overflow=66.80%)
+    1896419.3 : celestial_fortune       (health)         (overflow=39.57%)
+    344250.0 : chi_wave_heal           (health)         (overflow=8.29%)
+     48768.0 : expel_harm              (health)         (overflow=4.57%)
+    3305542.1 : gai_plins_imperial_brew (health)         (overflow=7.68%)
+    160367.0 : gift_of_the_ox_expire   (health)         (overflow=25.61%)
+    710381.3 : gift_of_the_ox_trigger  (health)         (overflow=40.48%)
+    365933.7 : leech                   (health)         (overflow=5.09%)
+    1306491.3 : refreshing_drink        (health)         (overflow=17.25%)
+    1747917.5 : vital_flame             (health)         (overflow=11.30%)
     Pet "invoke_niuzao_the_black_ox" Gains:
-  Waiting:  0.44%
+  Waiting:  0.45%
 
 
  *** Targets *** 
 
 Target: Fluffy_Pillow humanoid tank_dummy unknown 93
-  DPS=32164.360256573418 DPS-Error=0/0.00% DPS-Range=6878.123572424507/21.38%
-  DTPS=49364.489063984416 DTPS-Error=22.03798253299156/0.04% DTPS-Range=4276.54318942827/8.66%
-  DPR=0.6695361369995152 RPS-Out=47969.9737710867 RPS-In=0 Resource=health Waiting=46.459246391981615 ApM=3.3709790856058164
-  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|17264933  mana=0|0
+  DPS=32203.340590016734 DPS-Error=0/0.00% DPS-Range=7624.187979958706/23.68%
+  DTPS=49384.438901060814 DTPS-Error=22.115878387192236/0.04% DTPS-Range=4790.190938634842/9.70%
+  DPR=0.662103008710956 RPS-Out=48566.06260413796 RPS-In=0 Resource=health Waiting=46.45929174000477 ApM=3.3710223793079748
+  Core Stats:    strength=0|0(0)  agility=0|0(0)  stamina=0|0(0)  intellect=0|0(0)  spirit=0|0(0)  health=0|17786879  mana=0|0
   Generic Stats: mastery=0.00%|0.00%(0)  versatility=0.00%|0.00%(0)  leech=0.00%|0.00%(0)  runspeed=7.00%|7.00%(0)
   Spell Stats:   power=0|0(0)  hit=0.00%|0.00%(0)  crit=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%  manareg=0|0(0)
   Attack Stats:  power=0|0(0)  hit=0.00%|0.00%(0)  crit=5.00%|5.00%(0)  expertise=0.00%|0.00%(0)  haste=0.00%|0.00%(0)  speed=0.00%|0.00%
@@ -180,42 +180,42 @@ Target: Fluffy_Pillow humanoid tank_dummy unknown 93
     spell_dot,damage=100000,range=2000,tick_time=2,cooldown=60,aoe_tanks=1,dot_duration=60,bleed=1
     pause_action,duration=30,cooldown=30,if=time>=30
   Actions:
-    melee_main_hand_Kymera  Count=  77.5|  3.752sec  DPE= 54037|43.46%  DPET= 27019  DPR=  0  pDPS=13969  Miss= 0.00%  Hit=209190| 75124|285029  Dodge=74.17%
-    melee_nuke_Kymera       Count=   5.5| 59.566sec  DPE=431364|24.47%  DPET=215207  DPR=  0  pDPS= 7897  Miss= 0.00%  Hit=431367|268024|570052
+    melee_main_hand_Kymera  Count=  77.5|  3.751sec  DPE= 54186|43.53%  DPET= 27093  DPR=  0  pDPS=14008  Miss= 0.00%  Hit=209291| 76122|285028  Dodge=74.11%
+    melee_nuke_Kymera       Count=   5.5| 59.566sec  DPE=431309|24.44%  DPET=215176  DPR=  0  pDPS= 7895  Miss= 0.00%  Hit=431314|269326|570043
     pause_action            Count=   4.5| 60.014sec  DPE=     0| 0.00%  DPET=     0  DPR=  0  pDPS=    0
-    spell_dot_Kymera        Count=   5.3| 61.013sec  DPE=578511|32.07%  DPET=576001  DPR=  0  pDPS=10299  TickCount=   145  MissTick= 0.00%  Tick= 21337|  7505| 30374  UpTime= 96.53%
+    spell_dot_Kymera        Count=   5.3| 61.014sec  DPE=578583|32.03%  DPET=576052  DPR=  0  pDPS=10300  TickCount=   145  MissTick= 0.00%  Tick= 21339|  7505| 30374  UpTime= 96.54%
     tank_heal               Count=  60.5|  5.000sec  DPE=     0| 0.00%  DPET=     0  DPR=  0  pDPS=    0
 
   Constant Buffs:
     arcane_intellect/battle_shout/bleeding/chaos_brand/hunters_mark/mark_of_the_wild/mortal_wounds/mystic_touch/power_word_fortitude/skyfury
   Dynamic Buffs:
     exploding_keg_debuff : start=  5.0 refresh=  0.0 interval= 63.6 trigger= 63.6 duration=  3.0 uptime=  4.99%
-    keg_smash            : start=  1.0 refresh= 67.9 interval=  2.9 trigger=  4.3 duration=297.1 uptime= 99.01%  benefit= 98.54%
+    keg_smash            : start=  1.0 refresh= 67.9 interval=  2.9 trigger=  4.3 duration=297.1 uptime= 99.01%  benefit= 98.55%
   Procs:
-      4.99900 |  60.01348sec : delayed_aa_cast
+      4.99900 |  60.01351sec : delayed_aa_cast
   Waiting: 46.46%
 
 
 Baseline Performance:
   Networking    = enabled
   RNG Engine    = xoshiro256+
-  Iterations    = 10003 (2374, 2599, 2592, 2438)
-  TotalEvents   = 103076055
-  MaxEventQueue = 138
-  TargetHealth  = 17264933
-  SimSeconds    = 2999751.628
-  CpuSeconds    = 100.09489162400001
-  WallSeconds   = 27.06608397
-  InitSeconds   = 0.023483603000000002
-  MergeSeconds  = 0.0013441990000000001
-  AnalyzeSeconds= 0.004451761
-  SpeedUp       = 29981
-  EndTime       = 2026-04-10 18:20:23+0000
+  Iterations    = 10003 (2576, 2445, 2406, 2576)
+  TotalEvents   = 103084559
+  MaxEventQueue = 139
+  TargetHealth  = 17786880
+  SimSeconds    = 2999748.700
+  CpuSeconds    = 101.21702665800001
+  WallSeconds   = 27.245342883000003
+  InitSeconds   = 0.024885358000000003
+  MergeSeconds  = 0.0012908280000000002
+  AnalyzeSeconds= 0.0044036810000000004
+  SpeedUp       = 29649
+  EndTime       = 2026-04-10 18:52:25+0000
 
 
 Waiting:
-     0.44% : Kymera
+     0.45% : Kymera
 
-text report took 0.000409441 seconds.
-JSON report version 2.0.0 took 0.0057739900000000005 seconds.
-html report took 0.010051105000000001 seconds.
+text report took 0.00045832800000000003 seconds.
+JSON report version 2.0.0 took 0.005390337 seconds.
+html report took 0.009744514000000001 seconds.
