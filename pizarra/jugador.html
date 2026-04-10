@@ -296,24 +296,17 @@
       // Construir tooltip con datos enriquecidos si existen
       let tooltipContent = '';
       if (enriched) {
-        const statsHtml = (enriched.stats || []).map(s =>
-          `<div class="tooltip-stat">${s.display || s.tipo + ': +' + s.valor}</div>`
-        ).join('');
-
         tooltipContent = `
           <div class="tooltip-nombre" style="color:${enriched.calidad_color || 'var(--epic)'}">${enriched.nombre_es}</div>
-          <div class="tooltip-detalle">${enriched.ranura_tipo || item.ranura}</div>
-          <div class="tooltip-detalle">Nivel de objeto <strong>${item.ilvl}</strong></div>
+          <div class="tooltip-detalle">${enriched.ranura_tipo || item.ranura} · ${enriched.tipo || ''}</div>
+          <div class="tooltip-stat" style="color:var(--clase-monje)">Nivel de objeto ${item.ilvl}</div>
           ${enriched.vinculacion ? `<div class="tooltip-detalle">${enriched.vinculacion}</div>` : ''}
-          ${enriched.armadura ? `<div class="tooltip-stat">${enriched.armadura} p. de armadura</div>` : ''}
-          ${statsHtml}
-          ${enriched.tipo ? `<div class="tooltip-detalle" style="margin-top:0.3rem;">${enriched.tipo}</div>` : ''}
-          ${item.tier ? '<div class="tooltip-stat" style="color:var(--epic)">Conjunto de tier</div>' : ''}
-          ${item.crafted ? '<div class="tooltip-stat" style="color:var(--accent)">Fabricado</div>' : ''}
-          ${enriched.tiene_enchant ? '<div class="tooltip-stat" style="color:var(--clase-monje)">Encantado</div>' : ''}
+          ${item.tier ? '<div class="tooltip-stat" style="color:var(--epic);margin-top:0.3rem">Conjunto de tier (4p activo)</div>' : ''}
+          ${item.crafted ? '<div class="tooltip-stat" style="color:var(--accent)">Fabricado · Calidad 5</div>' : ''}
+          ${enriched.tiene_enchant ? '<div class="tooltip-stat" style="color:var(--clase-monje)">Encantado</div>' : '<div class="tooltip-stat" style="color:var(--stagger-intenso)">Sin encantar</div>'}
           ${enriched.tiene_gemas ? '<div class="tooltip-stat" style="color:var(--stat-haste)">Con gema</div>' : ''}
           ${item.alerta ? `<div class="tooltip-alerta">${item.alerta}</div>` : ''}
-          ${enriched.procedencia_nombre ? `<div class="tooltip-procedencia">Fuente: ${enriched.procedencia_nombre}</div>` : ''}
+          <div class="tooltip-detalle" style="margin-top:0.4rem;opacity:0.5">ID: ${item.id}</div>
         `;
       } else {
         tooltipContent = `

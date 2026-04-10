@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador - Pizarra</title>
+  <link rel="stylesheet" href="css/pizarra.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <style>
+    .sim-header {
+      background: linear-gradient(135deg, var(--bg-secondary), rgba(255,165,0,0.1));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .sim-titulo { font-size: 1.5rem; font-weight: 800; color: var(--stat-haste); }
+    .sim-sub { color: var(--text-secondary); margin-top: 0.25rem; }
+
+    .sim-modos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .sim-modo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .sim-modo:hover { border-color: var(--stat-haste); }
+    .sim-modo-titulo { font-weight: 700; color: var(--stat-haste); font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .sim-modo-desc { color: var(--text-secondary); font-size: 0.85rem; }
+
+    .sim-resultado {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .dps-grande {
+      font-size: 3rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      color: var(--stat-haste);
+    }
+    .dps-label { color: var(--text-muted); font-size: 0.85rem; }
+    .dps-rango {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .sim-perfil-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .sim-perfil-box textarea {
+      width: 100%;
+      min-height: 150px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-primary);
+      font-family: monospace;
+      font-size: 0.75rem;
+      padding: 0.75rem;
+      resize: vertical;
+    }
+    .btn-sim {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      background: var(--stat-haste);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 0.75rem;
+    }
+    .btn-sim:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <nav class="nav-lateral">
+      <a href="index.html" class="nav-logo">Wow Midnight</a>
+      <a href="index.html">Panel</a>
+      <a href="jugador.html">Jugador</a>
+      <a href="wowanalyzer.html">WoWAnalyzer</a>
+      <a href="forja.html">Forja</a>
+      <a href="simulador.html" class="activo">Simulador</a>
+      <a href="boss.html">Boss</a>
+      <a href="mazmorra.html">Mazmorra</a>
+    </nav>
+
+    <main class="contenido" id="app">
+      <div class="sim-header">
+        <div class="sim-titulo">Simulador</div>
+        <div class="sim-sub">SimulationCraft ejecut&aacute;ndose en GitHub Actions. Sin colas, sin l&iacute;mites.</div>
+      </div>
+
+      <!-- Modos de simulación -->
+      <div class="sim-modos">
+        <div class="sim-modo" onclick="document.getElementById('stat-weights').scrollIntoView({behavior:'smooth'})">
+          <div class="sim-modo-titulo">Pesos de stats</div>
+          <div class="sim-modo-desc">Calcula cu&aacute;nto DPS ganas por cada punto de cada stat secundaria. Esencial para saber qu&eacute; priorizar.</div>
+        </div>
+        <div class="sim-modo" onclick="document.getElementById('quick-sim').scrollIntoView({behavior:'smooth'})">
+          <div class="sim-modo-titulo">Sim r&aacute;pida</div>
+          <div class="sim-modo-desc">DPS te&oacute;rico con tu equipo actual. Referencia base para comparar con logs reales.</div>
+        </div>
+        <div class="sim-modo" onclick="document.getElementById('perfil-simc').scrollIntoView({behavior:'smooth'})">
+          <div class="sim-modo-titulo">Perfil SimC</div>
+          <div class="sim-modo-desc">Ver y actualizar tu perfil de SimulationCraft. Pega el /simc del juego aqu&iacute;.</div>
+        </div>
+      </div>
+
+      <!-- Resultado actual -->
+      <div id="quick-sim" class="seccion">
+        <h2 class="seccion-titulo">Sim r&aacute;pida - Resultado actual</h2>
+        <div id="resultado-sim">
+          <p style="color:var(--text-muted)">Cargando resultados...</p>
+        </div>
+      </div>
+
+      <!-- Stat Weights -->
+      <div id="stat-weights" class="seccion">
+        <h2 class="seccion-titulo">Pesos de estad&iacute;sticas</h2>
+        <div class="sim-resultado">
+          <p class="sim-sub" style="margin-bottom:1rem;">
+            Cu&aacute;nto DPS ganas por cada punto de stat. Se calculan simulando tu perfil con +1 de cada stat.
+            <strong style="color:var(--stat-crit)">Cambian con cada cambio de equipo</strong> - hay que recalcularlos.
+          </p>
+          <div id="stat-weights-content">
+            <p style="color:var(--text-muted)">Para generar pesos de stats, lanza la Action de SimC con el par&aacute;metro de stat weights.</p>
+            <p style="color:var(--text-muted);margin-top:0.5rem;font-size:0.85rem;">
+              (Pendiente: a&ntilde;adir opci&oacute;n de stat weights al workflow de SimC)
+            </p>
+          </div>
+          <div class="grafica-container" style="margin-top:1rem;">
+            <canvas id="chart-stat-weights" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perfil SimC -->
+      <div id="perfil-simc" class="seccion">
+        <h2 class="seccion-titulo">Perfil SimC</h2>
+        <div class="sim-perfil-box">
+          <p style="color:var(--text-secondary);margin-bottom:0.75rem;font-size:0.85rem;">
+            Tu perfil actual de SimulationCraft. Para actualizarlo: escribe <code>/simc</code> en el juego, copia el texto y p&eacute;galo aqu&iacute;.
+          </p>
+          <textarea id="simc-input" readonly></textarea>
+          <div style="margin-top:0.75rem;display:flex;gap:0.75rem;align-items:center;">
+            <a href="https://github.com/davidfenosaaubia-lang/Wow-mindnigth/actions/workflows/simc-simular.yml"
+               target="_blank" class="btn-sim">
+              Lanzar simulaci&oacute;n
+            </a>
+            <span style="color:var(--text-muted);font-size:0.8rem;">Abre GitHub Actions y dale a Run workflow</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="tarjeta" style="margin-top:2rem;padding:1.5rem;">
+        <h3 style="color:var(--text-secondary);margin-bottom:0.5rem;">C&oacute;mo funciona</h3>
+        <ol style="color:var(--text-secondary);font-size:0.85rem;padding-left:1.5rem;line-height:1.8;">
+          <li>En el juego escribe <code>/simc</code> y copia el texto</li>
+          <li>Actualiza el archivo <code>conocimiento/monje/perfiles/kymera-brewmaster-*.simc</code> en el repo</li>
+          <li>Ve a Actions &gt; &quot;Simular personaje con SimC&quot; &gt; Run workflow</li>
+          <li>En ~5 minutos los resultados aparecen aqu&iacute;</li>
+        </ol>
+        <p style="color:var(--text-muted);font-size:0.8rem;margin-top:0.75rem;">
+          SimC simula juego perfecto. Tu DPS real ser&aacute; menor.
+          &Uacute;salo para <strong>comparar</strong> opciones (A vs B), no como objetivo absoluto.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script>
+    async function cargarResultados() {
+      // Cargar resultado JSON de SimC
+      const simData = await cargarJSON('../analisis/simulaciones/kymera-brewmaster-2026-04-09-resultado.json');
+      const container = document.getElementById('resultado-sim');
+
+      if (simData && simData.sim) {
+        const player = simData.sim.players[0];
+        const dps = player.collected_data.dps;
+        const dtps = player.collected_data.dtps;
+        const opts = simData.sim.options;
+
+        container.innerHTML = `
+          <div class="sim-resultado" style="display:flex;gap:2rem;align-items:center;">
+            <div>
+              <div class="dps-grande">${Math.round(dps.mean).toLocaleString('es')}</div>
+              <div class="dps-label">DPS medio</div>
+              <div class="dps-rango">${Math.round(dps.min).toLocaleString('es')} - ${Math.round(dps.max).toLocaleString('es')}</div>
+            </div>
+            <div style="flex:1;">
+              <div class="stat-linea"><span>Iteraciones</span><span>${opts.iterations.toLocaleString('es')}</span></div>
+              <div class="stat-linea"><span>Duraci&oacute;n del combate</span><span>${opts.max_time}s</span></div>
+              <div class="stat-linea"><span>Tipo de pelea</span><span>Patchwerk (est&aacute;tico)</span></div>
+              <div class="stat-linea"><span>Personaje</span><span style="color:var(--clase-monje)">${player.name}</span></div>
+            </div>
+          </div>
+        `;
+      } else {
+        container.innerHTML = '<p style="color:var(--text-muted)">No hay resultados de simulaci&oacute;n todav&iacute;a. Lanza la Action de SimC.</p>';
+      }
+    }
+
+    async function cargarPerfil() {
+      // Cargar perfil SimC
+      try {
+        const resp = await fetch('../conocimiento/monje/perfiles/kymera-brewmaster-2026-04-09.simc');
+        if (resp.ok) {
+          const texto = await resp.text();
+          document.getElementById('simc-input').value = texto;
+        }
+      } catch (e) {
+        console.error('Error cargando perfil SimC:', e);
+      }
+    }
+
+    // Gráfica placeholder de stat weights (se llenará con datos reales)
+    function renderStatWeightsChart() {
+      const ctx = document.getElementById('chart-stat-weights');
+      if (!ctx) return;
+
+      // Datos placeholder típicos de BrM
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Versatilidad', 'Golpe cr\u00edtico', 'Maestr\u00eda', 'Celeridad'],
+          datasets: [{
+            label: 'DPS por punto de stat',
+            data: [0, 0, 0, 0],
+            backgroundColor: [
+              'rgba(77, 150, 255, 0.7)',
+              'rgba(255, 107, 107, 0.7)',
+              'rgba(107, 203, 119, 0.7)',
+              'rgba(255, 217, 61, 0.7)',
+            ],
+            borderRadius: 4,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            title: { display: true, text: 'Pendiente de simulaci\u00f3n', color: '#666' }
+          },
+          scales: {
+            y: { grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#666' } },
+            x: { grid: { display: false }, ticks: { color: '#888' } }
+          }
+        }
+      });
+    }
+
+    cargarResultados();
+    cargarPerfil();
+    renderStatWeightsChart();
+  </script>
+</body>
+</html>
