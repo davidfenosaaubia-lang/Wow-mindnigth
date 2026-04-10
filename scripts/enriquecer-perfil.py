@@ -125,11 +125,15 @@ def parsear_simc(ruta_perfil):
     """Extrae items del perfil SimC."""
     items = []
     personaje = {}
+    ultimo_comentario = ""
 
     with open(ruta_perfil, "r") as f:
         for linea in f:
             linea = linea.strip()
-            if linea.startswith("#") or not linea:
+            if linea.startswith("#"):
+                ultimo_comentario = linea
+                continue
+            if not linea:
                 continue
 
             # Datos del personaje
@@ -138,7 +142,8 @@ def parsear_simc(ruta_perfil):
                     key = campo.rstrip("=")
                     if key == "monk":
                         key = "nombre"
-                    personaje[key] = linea.split("=", 1)[1]
+                    valor = linea.split("=", 1)[1].strip().strip('"')
+                    personaje[key] = valor
 
             # Items equipados (no los de la bolsa que empiezan con #)
             match = re.match(r'^(\w+)=,id=(\d+)', linea)
@@ -151,9 +156,16 @@ def parsear_simc(ruta_perfil):
                 gems = re.findall(r'gem_id=(\d+)', linea)
                 crafted = 'crafting_quality' in linea
 
+                # ilvl real del comentario: "# Nombre del item (276)"
+                ilvl_real = 0
+                ilvl_match = re.search(r'\((\d+)\)', ultimo_comentario)
+                if ilvl_match:
+                    ilvl_real = int(ilvl_match.group(1))
+
                 items.append({
                     "ranura": ranura,
                     "item_id": item_id,
+                    "ilvl_real": ilvl_real,
                     "enchant_id": int(enchant.group(1)) if enchant else None,
                     "gem_ids": [int(g) for g in gems],
                     "crafted": crafted,
@@ -195,9 +207,9 @@ def enriquecer(api, personaje, items):
     print(f"\n=== Enriqueciendo perfil de {personaje.get('nombre', '?')} ===")
 
     # Imagen del personaje
-    print("  Buscando imagen del personaje...")
     server_slug = personaje.get("server", "zuljin").lower().replace("'", "").replace(" ", "-")
     nombre = personaje.get("nombre", "").lower()
+    print(f"  Buscando imagen: {nombre} @ {server_slug}")
     media = api.get_character_media(server_slug, nombre)
     if media:
         print(f"  OK: Imagen encontrada ({len(media)} assets)")
@@ -233,7 +245,8 @@ def enriquecer(api, personaje, items):
 
         nombre_es = data_es.get("name", "?")
         nombre_en = data_en.get("name", "?") if data_en else "?"
-        ilvl = data_es.get("level", data_es.get("item_level", 0))
+        # ilvl: usar el del SimC (real con upgrades), no el de la API (base)
+        ilvl = item["ilvl_real"] if item.get("ilvl_real", 0) > 0 else data_es.get("level", data_es.get("item_level", 0))
         calidad_raw = data_es.get("quality", {})
         calidad = calidad_raw.get("type", "COMMON") if isinstance(calidad_raw, dict) else calidad_raw
 
