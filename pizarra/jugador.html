@@ -3,9 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kymera - Perfil de Jugador</title>
+  <title>Kymera - Perfil</title>
   <link rel="stylesheet" href="css/pizarra.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <!-- Wowhead tooltips: muestra stats, procedencia, todo en español -->
+  <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+  <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+  <style>
+    /* Layout de personaje estilo WoW */
+    .personaje-panel {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      min-height: 600px;
+    }
+
+    /* Columnas de items */
+    .items-izq, .items-der {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+
+    /* Centro: personaje */
+    .personaje-centro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .personaje-render {
+      width: 280px;
+      height: 420px;
+      border-radius: 12px;
+      border: 2px solid var(--border);
+      background: radial-gradient(ellipse at center, rgba(0,255,150,0.05) 0%, var(--bg-secondary) 70%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .personaje-render img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .personaje-render-placeholder {
+      font-size: 6rem;
+      opacity: 0.3;
+    }
+
+    .personaje-nombre-central {
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    .personaje-nombre-central h2 {
+      color: var(--clase-monje);
+      font-size: 1.3rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .personaje-nombre-central .detalle {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* Slot de item */
+    .item-slot {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.6rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: background 0.15s, border-color 0.15s;
+      min-height: 48px;
+    }
+
+    .item-slot:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .item-slot-alerta {
+      border-color: rgba(255,68,68,0.4);
+      background: rgba(255,68,68,0.05);
+    }
+
+    .items-der .item-slot {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    .item-icono {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      border: 2px solid;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      background: var(--bg-secondary);
+    }
+
+    .item-icono img {
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+    }
+
+    .item-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .item-nombre {
+      font-size: 0.78rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    .item-nombre a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .item-detalle {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+      margin-top: 0.1rem;
+    }
+
+    .item-ilvl {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Colores de calidad para borde del icono */
+    .calidad-epico { border-color: var(--epic); }
+    .calidad-raro { border-color: var(--rare); }
+    .calidad-legendary { border-color: var(--legendary); }
+
+    /* Tags inline pequeños */
+    .item-tag {
+      font-size: 0.6rem;
+      padding: 0.1rem 0.3rem;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+    .item-tag-tier { background: rgba(163,53,238,0.25); color: var(--epic); }
+    .item-tag-craft { background: rgba(79,195,247,0.25); color: var(--accent); }
+
+    /* Stats del personaje */
+    .stats-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 2rem;
+    }
+    .stat-linea {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      font-size: 0.85rem;
+    }
+    .stat-nombre { color: var(--text-secondary); }
+    .stat-valor { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+    /* Arma bottom */
+    .arma-slot {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .arma-slot .item-slot {
+      flex: 0 1 300px;
+    }
+
+    /* Ranura label */
+    .ranura-label {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 900px) {
+      .personaje-panel {
+        grid-template-columns: 1fr;
+      }
+      .items-der .item-slot {
+        flex-direction: row;
+        text-align: left;
+      }
+      .personaje-render {
+        width: 200px;
+        height: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -14,215 +236,188 @@
       <a href="index.html">Panel</a>
       <a href="jugador.html" class="activo">Jugador</a>
       <a href="wowanalyzer.html">WoWAnalyzer</a>
+      <a href="forja.html">Forja</a>
       <a href="boss.html">Boss</a>
       <a href="mazmorra.html">Mazmorra</a>
     </nav>
 
     <main class="contenido" id="app">
-      <p style="color:var(--text-muted)">Cargando...</p>
+      <p style="color:var(--text-muted)">Cargando perfil...</p>
     </main>
   </div>
 
   <script src="js/datos.js"></script>
   <script>
-    async function render() {
-      const app = document.getElementById('app');
-      const datos = await cargarJSON(RUTAS.analisisKymera);
-      const perfilClase = await cargarJSON(RUTAS.perfilMonje);
+    // Datos del equipo con IDs de Wowhead para tooltips
+    const EQUIPO = [
+      // Lado izquierdo (de arriba a abajo)
+      { pos: 'izq', ranura: 'Cabeza', id: 250015, ilvl: 276, nombre: 'Rostro temible de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true },
+      { pos: 'izq', ranura: 'Cuello', id: 240950, ilvl: 285, nombre: 'Amuleto sin\'dorei magistral', calidad: 'epico', crafted: true, gema: true },
+      { pos: 'izq', ranura: 'Hombros', id: 258581, ilvl: 272, nombre: 'Manto de sangrepluma', calidad: 'epico' },
+      { pos: 'izq', ranura: 'Espalda', id: 251206, ilvl: 276, nombre: 'Capa de tejido de flujo', calidad: 'epico', alerta: 'Sin enchant' },
+      { pos: 'izq', ranura: 'Pecho', id: 250018, ilvl: 289, nombre: 'Atuendo de batalla de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true },
+      { pos: 'izq', ranura: 'Muñecas', id: 249327, ilvl: 263, nombre: 'Brazales de piel de Vacío', calidad: 'epico', alerta: 'Sin enchant' },
+      { pos: 'izq', ranura: 'Cintura', id: 251082, ilvl: 276, nombre: 'Cincho de chascaparra', calidad: 'epico' },
 
-      if (!datos) {
-        app.innerHTML = '<p>No se pudieron cargar los datos.</p>';
-        return;
-      }
+      // Lado derecho (de arriba a abajo)
+      { pos: 'der', ranura: 'Manos', id: 250016, ilvl: 289, nombre: 'Puñotruenos de elegido de Ra-den', calidad: 'epico', tier: true },
+      { pos: 'der', ranura: 'Piernas', id: 250014, ilvl: 276, nombre: 'Recorredores raudos de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true },
+      { pos: 'der', ranura: 'Pies', id: 251210, ilvl: 276, nombre: 'Alpargatas de eclipse', calidad: 'epico', enchant: true },
+      { pos: 'der', ranura: 'Anillo 1', id: 151311, ilvl: 266, nombre: 'Anillo del Triunvirato', calidad: 'epico', enchant: true, gema: true },
+      { pos: 'der', ranura: 'Anillo 2', id: 249369, ilvl: 263, nombre: 'Vínculo de la Luz', calidad: 'epico', enchant: true, gema: true },
+      { pos: 'der', ranura: 'Trinket 1', id: 264507, ilvl: 263, nombre: 'Crisol de energías erráticas', calidad: 'epico' },
+      { pos: 'der', ranura: 'Trinket 2', id: 250144, ilvl: 266, nombre: 'Pluma de alascuas', calidad: 'epico' },
 
-      const p = datos.personaje;
-      const eq = datos.equipo;
-      const brm = perfilClase?.especializaciones?.maestro_cervecero;
+      // Arma (abajo centro)
+      { pos: 'arma', ranura: 'Arma', id: 245771, ilvl: 285, nombre: 'Bastón pica de Aln\'hara', calidad: 'epico', crafted: true, enchant: true },
+    ];
 
-      // Construir equipo completo en orden de ranura
-      const equipoCompleto = [
-        { ranura: 'Cabeza', ilvl: 276, nombre: 'Rostro temible de elegido de Ra-den', tier: true, enchant: true, gema: false },
-        { ranura: 'Cuello', ilvl: 285, nombre: 'Amuleto sin\'dorei magistral', tier: false, enchant: false, gema: true, crafted: true },
-        { ranura: 'Hombros', ilvl: 272, nombre: 'Manto de sangrepluma', tier: false, enchant: false, gema: false },
-        { ranura: 'Espalda', ilvl: 276, nombre: 'Capa de tejido de flujo', tier: false, enchant: false, gema: false, alerta: 'Sin enchant' },
-        { ranura: 'Pecho', ilvl: 289, nombre: 'Atuendo de batalla de elegido de Ra-den', tier: true, enchant: true, gema: false },
-        { ranura: 'Muñecas', ilvl: 263, nombre: 'Brazales de piel de Vacío', tier: false, enchant: false, gema: false, alerta: 'Sin enchant · ilvl baja' },
-        { ranura: 'Manos', ilvl: 289, nombre: 'Puñotruenos de elegido de Ra-den', tier: true, enchant: false, gema: false },
-        { ranura: 'Cintura', ilvl: 276, nombre: 'Cincho de chascaparra', tier: false, enchant: false, gema: false },
-        { ranura: 'Piernas', ilvl: 276, nombre: 'Recorredores raudos de elegido de Ra-den', tier: true, enchant: true, gema: false },
-        { ranura: 'Pies', ilvl: 276, nombre: 'Alpargatas de eclipse', tier: false, enchant: true, gema: false },
-        { ranura: 'Anillo 1', ilvl: 266, nombre: 'Anillo del Triunvirato', tier: false, enchant: true, gema: true },
-        { ranura: 'Anillo 2', ilvl: 263, nombre: 'Vínculo de la Luz', tier: false, enchant: true, gema: true },
-        { ranura: 'Trinket 1', ilvl: 263, nombre: 'Crisol de energías erráticas', tier: false, enchant: false, gema: false },
-        { ranura: 'Trinket 2', ilvl: 266, nombre: 'Pluma de alascuas', tier: false, enchant: false, gema: false },
-        { ranura: 'Arma', ilvl: 285, nombre: 'Bastón pica de Aln\'hara', tier: false, enchant: true, gema: false, crafted: true },
-      ];
+    function renderSlot(item) {
+      const tags = [];
+      if (item.tier) tags.push('<span class="item-tag item-tag-tier">Tier</span>');
+      if (item.crafted) tags.push('<span class="item-tag item-tag-craft">Craft</span>');
 
-      let html = `
-        <!-- HEADER DEL PERSONAJE -->
-        <div class="perfil-header">
-          <div class="perfil-avatar">
-            <div class="avatar-placeholder" style="border-color:var(--clase-monje);">
-              <span class="avatar-icon">🍺</span>
-              <span class="avatar-nivel">90</span>
-            </div>
+      const alertaClass = item.alerta ? 'item-slot-alerta' : '';
+      const wowheadUrl = `https://es.wowhead.com/item=${item.id}`;
+
+      return `
+        <div class="item-slot ${alertaClass}">
+          <div class="item-icono calidad-${item.calidad}">
+            <a href="${wowheadUrl}" data-wowhead="item=${item.id}&domain=es" target="_blank"></a>
           </div>
-          <div class="perfil-info">
-            <h1 class="perfil-nombre" style="color:var(--clase-monje);">${p.nombre}</h1>
-            <div class="perfil-detalle">
-              ${p.raza.split('/')[0].trim()} · ${p.spec.split('/')[0].trim()}
-              <span class="tag tag-tank">TANK</span>
-            </div>
-            <div class="perfil-servidor">${p.servidor} · ilvl <strong class="ilvl ilvl-medio">${eq.ilvl_estimado}</strong> · Tier <strong style="color:var(--epic)">4p</strong></div>
-          </div>
-          <div class="perfil-stats-rapidos">
-            <div class="stat-rapido">
-              <span class="stat-rapido-num">${equipoCompleto.filter(e => e.alerta).length}</span>
-              <span class="stat-rapido-label">Alertas</span>
-            </div>
-            <div class="stat-rapido">
-              <span class="stat-rapido-num">${equipoCompleto.filter(e => e.tier).length}</span>
-              <span class="stat-rapido-label">Tier</span>
-            </div>
-            <div class="stat-rapido">
-              <span class="stat-rapido-num">${equipoCompleto.filter(e => e.crafted).length}</span>
-              <span class="stat-rapido-label">Crafted</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ALERTAS (solo si hay) -->
-        ${equipoCompleto.filter(e => e.alerta).map(e => `
-          <div class="alerta">${e.ranura}: ${e.alerta}</div>
-        `).join('')}
-
-        <!-- DOS COLUMNAS: Equipo + Stats -->
-        <div class="dos-columnas">
-          <!-- COLUMNA IZQUIERDA: Equipo -->
-          <div class="seccion">
-            <h2 class="seccion-titulo">Equipo</h2>
-            <table class="tabla-equipo">
-              <thead>
-                <tr><th>Ranura</th><th>ilvl</th><th>Objeto</th><th></th></tr>
-              </thead>
-              <tbody>
-                ${equipoCompleto.map(e => {
-                  const tags = [];
-                  if (e.tier) tags.push('<span class="tag-mini tag-tier">T</span>');
-                  if (e.crafted) tags.push('<span class="tag-mini tag-craft">C</span>');
-                  if (e.enchant) tags.push('<span class="tag-mini tag-ench">E</span>');
-                  if (e.gema) tags.push('<span class="tag-mini tag-gem">G</span>');
-
-                  const rowClass = e.alerta ? 'fila-alerta' : '';
-                  return `
-                    <tr class="${rowClass}">
-                      <td class="ranura-nombre">${e.ranura}</td>
-                      <td class="ilvl ${claseIlvl(e.ilvl)}">${e.ilvl}</td>
-                      <td class="objeto-nombre">${e.nombre}</td>
-                      <td class="tags-cell">${tags.join('')}</td>
-                    </tr>
-                  `;
-                }).join('')}
-              </tbody>
-            </table>
-            <div class="leyenda-tags">
-              <span class="tag-mini tag-tier">T</span> Tier
-              <span class="tag-mini tag-craft">C</span> Crafted
-              <span class="tag-mini tag-ench">E</span> Enchant
-              <span class="tag-mini tag-gem">G</span> Gema
-            </div>
-          </div>
-
-          <!-- COLUMNA DERECHA: Stats + Mecánica -->
-          <div>
-            <!-- Gráfica de ilvl por ranura -->
-            <div class="seccion">
-              <h2 class="seccion-titulo">Distribución de ilvl</h2>
-              <div class="grafica-container">
-                <canvas id="chart-ilvl" height="200"></canvas>
-              </div>
-            </div>
-
-            <!-- Mecánica clave -->
-            ${brm ? `
-            <div class="seccion">
-              <h2 class="seccion-titulo">Mecánica: ${brm.mecanica_clave.es}</h2>
-              <div class="tarjeta">
-                <p style="margin-bottom:0.75rem;">${brm.mecanica_clave.explicacion}</p>
-                <div class="stagger-niveles">
-                  ${brm.mecanica_clave.niveles.map(n => `
-                    <span class="stagger-tag stagger-${n.color}">${n.es}</span>
-                  `).join('')}
-                </div>
-              </div>
-            </div>
-
-            <!-- Stats prioridad -->
-            <div class="seccion">
-              <h2 class="seccion-titulo">Prioridad de stats</h2>
-              <div class="stats-priority">
-                ${brm.stats_prioridad.map((s, i) => `
-                  <div class="stat-row">
-                    <span class="stat-rank">${i + 1}</span>
-                    <span class="stat-name">${s.stat_es}</span>
-                    <span class="stat-reason">${s.razon}</span>
-                  </div>
-                `).join('')}
-              </div>
-              <p class="nota-stats">${brm.notas_stats}</p>
-            </div>
-            ` : ''}
-
-            <!-- Mejoras -->
-            <div class="seccion">
-              <h2 class="seccion-titulo">Próximas mejoras</h2>
-              ${datos.mejoras_inmediatas.map((m, i) => `
-                <div class="mejora"><span class="mejora-num">${i + 1}</span> ${m}</div>
-              `).join('')}
+          <div class="item-info">
+            <span class="item-nombre">
+              <a href="${wowheadUrl}" data-wowhead="item=${item.id}&domain=es" target="_blank"
+                 style="color:var(--${item.calidad})">${item.nombre}</a>
+            </span>
+            <div class="item-detalle">
+              <span class="ranura-label">${item.ranura}</span>
+              <span class="item-ilvl ${claseIlvl(item.ilvl)}">${item.ilvl}</span>
+              ${tags.join('')}
+              ${item.alerta ? `<span style="color:var(--stagger-intenso);font-size:0.65rem;">${item.alerta}</span>` : ''}
             </div>
           </div>
         </div>
       `;
+    }
 
-      app.innerHTML = html;
+    function render() {
+      const app = document.getElementById('app');
 
-      // Gráfica de ilvl
-      const ctx = document.getElementById('chart-ilvl');
-      if (ctx) {
-        const colores = equipoCompleto.map(e => {
-          if (e.alerta) return 'rgba(255, 68, 68, 0.8)';
-          if (e.tier) return 'rgba(163, 53, 238, 0.8)';
-          if (e.crafted) return 'rgba(79, 195, 247, 0.8)';
-          return 'rgba(160, 160, 176, 0.6)';
-        });
+      const itemsIzq = EQUIPO.filter(e => e.pos === 'izq');
+      const itemsDer = EQUIPO.filter(e => e.pos === 'der');
+      const arma = EQUIPO.find(e => e.pos === 'arma');
 
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: equipoCompleto.map(e => e.ranura),
-            datasets: [{
-              data: equipoCompleto.map(e => e.ilvl),
-              backgroundColor: colores,
-              borderRadius: 3,
-            }]
-          },
-          options: {
-            responsive: true,
-            plugins: { legend: { display: false } },
-            scales: {
-              y: {
-                min: 250,
-                max: 295,
-                grid: { color: 'rgba(255,255,255,0.05)' },
-                ticks: { color: '#666' }
-              },
-              x: {
-                grid: { display: false },
-                ticks: { color: '#888', font: { size: 10 }, maxRotation: 45 }
-              }
-            }
+      app.innerHTML = `
+        <!-- Panel de personaje -->
+        <div class="personaje-panel">
+          <!-- Columna izquierda -->
+          <div class="items-izq">
+            ${itemsIzq.map(renderSlot).join('')}
+          </div>
+
+          <!-- Centro: personaje -->
+          <div class="personaje-centro">
+            <div class="personaje-render" id="render-container">
+              <div class="personaje-render-placeholder">🍺</div>
+            </div>
+            <div class="personaje-nombre-central">
+              <h2>Kymera</h2>
+              <div class="detalle">
+                Enano &middot; Maestro cervecero &middot; Nivel 90
+                <span class="tag tag-tank" style="margin-left:0.3rem;">TANK</span>
+              </div>
+              <div class="detalle" style="margin-top:0.25rem;">
+                Zul'jin (EU) &middot; ilvl <strong class="ilvl ilvl-medio">275</strong> &middot; Tier <strong style="color:var(--epic)">4p</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="items-der">
+            ${itemsDer.map(renderSlot).join('')}
+          </div>
+
+          <!-- Arma abajo -->
+          <div class="arma-slot">
+            ${arma ? renderSlot(arma) : ''}
+          </div>
+        </div>
+
+        <!-- Stats del personaje -->
+        <div class="stats-panel">
+          <h3 class="seccion-titulo">Atributos y estad&iacute;sticas</h3>
+          <div class="stats-grid">
+            <div>
+              <div class="stat-linea">
+                <span class="stat-nombre">Agilidad</span>
+                <span class="stat-valor">1.918</span>
+              </div>
+              <div class="stat-linea">
+                <span class="stat-nombre">Aguante</span>
+                <span class="stat-valor">30.547</span>
+              </div>
+              <div class="stat-linea">
+                <span class="stat-nombre">Armadura</span>
+                <span class="stat-valor">1.271</span>
+              </div>
+              <div class="stat-linea">
+                <span class="stat-nombre">Aplazar (Stagger)</span>
+                <span class="stat-valor" style="color:var(--clase-monje)">43%</span>
+              </div>
+            </div>
+            <div>
+              <div class="stat-linea">
+                <span class="stat-nombre" style="color:var(--stat-crit)">Golpe cr&iacute;tico</span>
+                <span class="stat-valor">22%</span>
+              </div>
+              <div class="stat-linea">
+                <span class="stat-nombre" style="color:var(--stat-haste)">Celeridad</span>
+                <span class="stat-valor">18%</span>
+              </div>
+              <div class="stat-linea">
+                <span class="stat-nombre" style="color:var(--stat-mastery)">Maestr&iacute;a</span>
+                <span class="stat-valor">20%</span>
+              </div>
+              <div class="stat-linea">
+                <span class="stat-nombre" style="color:var(--stat-vers)">Versatilidad</span>
+                <span class="stat-valor">12%</span>
+              </div>
+              <div class="stat-linea">
+                <span class="stat-nombre">Esquivar</span>
+                <span class="stat-valor">17%</span>
+              </div>
+              <div class="stat-linea">
+                <span class="stat-nombre">Parar</span>
+                <span class="stat-valor">3%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alertas -->
+        <div class="seccion">
+          <h3 class="seccion-titulo">Alertas</h3>
+          ${EQUIPO.filter(e => e.alerta).map(e => `
+            <div class="alerta">${e.ranura}: ${e.alerta}</div>
+          `).join('')}
+        </div>
+      `;
+
+      // Intentar cargar imagen del personaje desde datos enriquecidos
+      cargarJSON('datos/jugadores/kymera.json').then(data => {
+        if (data && data.personaje && data.personaje.media) {
+          const renderUrl = data.personaje.media.render || data.personaje.media.main || data.personaje.media['main-raw'];
+          if (renderUrl) {
+            const container = document.getElementById('render-container');
+            container.innerHTML = `<img src="${renderUrl}" alt="Kymera" />`;
           }
-        });
+        }
+      });
+
+      // Refrescar tooltips de Wowhead
+      if (typeof $WowheadPower !== 'undefined') {
+        $WowheadPower.refreshLinks();
       }
     }
 
