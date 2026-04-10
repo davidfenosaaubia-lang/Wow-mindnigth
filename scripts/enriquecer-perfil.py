@@ -257,7 +257,40 @@ def enriquecer(api, personaje, items):
         # Icono
         icon_url = api.get_item_media(item_id)
 
-        print(f"{nombre_es}")
+        # Extraer stats del item de la respuesta de la API
+        stats = []
+        for stat_entry in data_es.get("preview_item", {}).get("stats", []):
+            stat_type = stat_entry.get("type", {})
+            stats.append({
+                "tipo": stat_type.get("name", stat_type.get("type", "?")),
+                "valor": stat_entry.get("value", 0),
+                "display": stat_entry.get("display", {}).get("display_string", ""),
+            })
+
+        # Si no hay stats en preview_item, intentar stats directas
+        if not stats:
+            for stat_entry in data_es.get("stats", []):
+                if isinstance(stat_entry, dict):
+                    stat_type = stat_entry.get("type", {})
+                    stats.append({
+                        "tipo": stat_type.get("name", stat_type.get("type", "?")),
+                        "valor": stat_entry.get("value", 0),
+                    })
+
+        # Tipo de item, subtipo, armadura
+        item_class = data_es.get("item_class", {}).get("name", "")
+        item_subclass = data_es.get("item_subclass", {}).get("name", "")
+        armor = data_es.get("preview_item", {}).get("armor", {}).get("value", 0)
+        durability = data_es.get("preview_item", {}).get("durability", {}).get("value", 0)
+        binding = data_es.get("preview_item", {}).get("binding", {}).get("name", "")
+        inventory_type = data_es.get("inventory_type", {}).get("name", "")
+
+        # Procedencia (de dónde sale)
+        source = data_es.get("source", {})
+        source_type = source.get("type", "") if isinstance(source, dict) else ""
+        source_name = source.get("name", "") if isinstance(source, dict) else ""
+
+        print(f"{nombre_es} ({len(stats)} stats)")
 
         equipo_enriquecido.append({
             "ranura_en": ranura,
@@ -270,6 +303,14 @@ def enriquecer(api, personaje, items):
             "calidad_nombre": CALIDAD_COLOR.get(calidad_num, {}).get("es", "?"),
             "calidad_color": CALIDAD_COLOR.get(calidad_num, {}).get("color", "#fff"),
             "icono": icon_url,
+            "tipo": item_subclass or item_class,
+            "ranura_tipo": inventory_type,
+            "armadura": armor,
+            "durabilidad": durability,
+            "vinculacion": binding,
+            "stats": stats,
+            "procedencia_tipo": source_type,
+            "procedencia_nombre": source_name,
             "enchant_id": item["enchant_id"],
             "tiene_enchant": item["enchant_id"] is not None,
             "gem_ids": item["gem_ids"],

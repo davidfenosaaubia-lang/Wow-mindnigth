@@ -162,6 +162,12 @@
       font-weight: 600;
     }
 
+    .tooltip-stat {
+      font-size: 0.8rem;
+      color: var(--text-primary);
+      padding: 0.1rem 0;
+    }
+
     .tooltip-procedencia {
       color: var(--text-muted);
       font-size: 0.75rem;
@@ -287,23 +293,41 @@
         ? `<img src="${iconUrl}" alt="${item.nombre}" />`
         : `<span class="placeholder-icon">${ICONOS_PLACEHOLDER[item.ranura] || '?'}</span>`;
 
-      const tags = [];
-      if (item.tier) tags.push('Tier set');
-      if (item.crafted) tags.push('Fabricado');
+      // Construir tooltip con datos enriquecidos si existen
+      let tooltipContent = '';
+      if (enriched) {
+        const statsHtml = (enriched.stats || []).map(s =>
+          `<div class="tooltip-stat">${s.display || s.tipo + ': +' + s.valor}</div>`
+        ).join('');
+
+        tooltipContent = `
+          <div class="tooltip-nombre" style="color:${enriched.calidad_color || 'var(--epic)'}">${enriched.nombre_es}</div>
+          <div class="tooltip-detalle">${enriched.ranura_tipo || item.ranura}</div>
+          <div class="tooltip-detalle">Nivel de objeto <strong>${item.ilvl}</strong></div>
+          ${enriched.vinculacion ? `<div class="tooltip-detalle">${enriched.vinculacion}</div>` : ''}
+          ${enriched.armadura ? `<div class="tooltip-stat">${enriched.armadura} p. de armadura</div>` : ''}
+          ${statsHtml}
+          ${enriched.tipo ? `<div class="tooltip-detalle" style="margin-top:0.3rem;">${enriched.tipo}</div>` : ''}
+          ${item.tier ? '<div class="tooltip-stat" style="color:var(--epic)">Conjunto de tier</div>' : ''}
+          ${item.crafted ? '<div class="tooltip-stat" style="color:var(--accent)">Fabricado</div>' : ''}
+          ${enriched.tiene_enchant ? '<div class="tooltip-stat" style="color:var(--clase-monje)">Encantado</div>' : ''}
+          ${enriched.tiene_gemas ? '<div class="tooltip-stat" style="color:var(--stat-haste)">Con gema</div>' : ''}
+          ${item.alerta ? `<div class="tooltip-alerta">${item.alerta}</div>` : ''}
+          ${enriched.procedencia_nombre ? `<div class="tooltip-procedencia">Fuente: ${enriched.procedencia_nombre}</div>` : ''}
+        `;
+      } else {
+        tooltipContent = `
+          <div class="tooltip-nombre" style="color:var(--epic)">${item.nombre}</div>
+          <div class="tooltip-detalle">${item.ranura} · ilvl ${item.ilvl}</div>
+          ${item.alerta ? `<div class="tooltip-alerta">${item.alerta}</div>` : ''}
+        `;
+      }
 
       return `
         <div class="item-slot ${alertaClass}">
           ${iconHtml}
           <span class="item-ilvl-badge ${claseIlvl(item.ilvl)}">${item.ilvl}</span>
-          <div class="item-tooltip">
-            <div class="tooltip-nombre" style="color:var(--epic)">${item.nombre}</div>
-            <div class="tooltip-detalle">
-              ${item.ranura} · ilvl ${item.ilvl}
-              ${tags.length ? '<br>' + tags.join(' · ') : ''}
-            </div>
-            ${item.alerta ? `<div class="tooltip-alerta">${item.alerta}</div>` : ''}
-            ${procedencia ? `<div class="tooltip-procedencia">${procedencia}</div>` : ''}
-          </div>
+          <div class="item-tooltip">${tooltipContent}</div>
         </div>
       `;
     }
