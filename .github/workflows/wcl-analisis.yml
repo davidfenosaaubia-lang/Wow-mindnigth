@@ -1,0 +1,59 @@
+name: Analizar logs de Warcraft Logs
+
+on:
+  workflow_dispatch:
+    inputs:
+      personaje:
+        description: 'Nombre del personaje'
+        required: true
+        default: 'Kymera'
+      servidor:
+        description: 'Servidor (slug)'
+        required: true
+        default: "Zul'jin"
+      region:
+        description: 'Region'
+        required: true
+        default: 'EU'
+
+permissions:
+  contents: write
+
+jobs:
+  analizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install requests
+
+      - name: Ejecutar análisis WCL
+        env:
+          WCL_CLIENT_ID: ${{ secrets.WCL_CLIENT_ID }}
+          WCL_CLIENT_SECRET: ${{ secrets.WCL_CLIENT_SECRET }}
+        run: |
+          python3 scripts/wcl-analyzer.py \
+            --personaje "${{ github.event.inputs.personaje }}" \
+            --servidor "${{ github.event.inputs.servidor }}" \
+            --region "${{ github.event.inputs.region }}" \
+            2>&1 | tee analisis/logs/ultimo-wcl-log.txt
+
+      - name: Commit y push si hay datos nuevos
+        run: |
+          git config user.name "WCL Bot"
+          git config user.email "wcl-bot@users.noreply.github.com"
+          git add analisis/logs/
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "Actualizar análisis WCL - ${{ github.event.inputs.personaje }} $(date +%Y-%m-%d)"
+            git push
+          fi

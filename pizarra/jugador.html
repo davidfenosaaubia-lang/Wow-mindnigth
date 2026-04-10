@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pizarra - Perfil de Jugador</title>
+  <title>Kymera - Perfil de Jugador</title>
   <link rel="stylesheet" href="css/pizarra.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 </head>
@@ -12,178 +12,221 @@
     <nav class="nav-lateral">
       <a href="index.html" class="nav-logo">Wow Midnight</a>
       <a href="index.html">Panel</a>
-      <a href="jugador.html?nombre=kymera" class="activo">Jugador</a>
-      <a href="comparar.html">Comparar</a>
+      <a href="jugador.html" class="activo">Jugador</a>
+      <a href="wowanalyzer.html">WoWAnalyzer</a>
       <a href="boss.html">Boss</a>
       <a href="mazmorra.html">Mazmorra</a>
     </nav>
 
     <main class="contenido" id="app">
-      <p class="text-muted">Cargando datos...</p>
+      <p style="color:var(--text-muted)">Cargando...</p>
     </main>
   </div>
 
   <script src="js/datos.js"></script>
   <script>
-    async function renderPerfil() {
+    async function render() {
       const app = document.getElementById('app');
       const datos = await cargarJSON(RUTAS.analisisKymera);
+      const perfilClase = await cargarJSON(RUTAS.perfilMonje);
 
       if (!datos) {
-        app.innerHTML = '<p>No se pudieron cargar los datos del jugador.</p>';
+        app.innerHTML = '<p>No se pudieron cargar los datos.</p>';
         return;
       }
 
       const p = datos.personaje;
       const eq = datos.equipo;
+      const brm = perfilClase?.especializaciones?.maestro_cervecero;
 
-      // Header
+      // Construir equipo completo en orden de ranura
+      const equipoCompleto = [
+        { ranura: 'Cabeza', ilvl: 276, nombre: 'Rostro temible de elegido de Ra-den', tier: true, enchant: true, gema: false },
+        { ranura: 'Cuello', ilvl: 285, nombre: 'Amuleto sin\'dorei magistral', tier: false, enchant: false, gema: true, crafted: true },
+        { ranura: 'Hombros', ilvl: 272, nombre: 'Manto de sangrepluma', tier: false, enchant: false, gema: false },
+        { ranura: 'Espalda', ilvl: 276, nombre: 'Capa de tejido de flujo', tier: false, enchant: false, gema: false, alerta: 'Sin enchant' },
+        { ranura: 'Pecho', ilvl: 289, nombre: 'Atuendo de batalla de elegido de Ra-den', tier: true, enchant: true, gema: false },
+        { ranura: 'Muñecas', ilvl: 263, nombre: 'Brazales de piel de Vacío', tier: false, enchant: false, gema: false, alerta: 'Sin enchant · ilvl baja' },
+        { ranura: 'Manos', ilvl: 289, nombre: 'Puñotruenos de elegido de Ra-den', tier: true, enchant: false, gema: false },
+        { ranura: 'Cintura', ilvl: 276, nombre: 'Cincho de chascaparra', tier: false, enchant: false, gema: false },
+        { ranura: 'Piernas', ilvl: 276, nombre: 'Recorredores raudos de elegido de Ra-den', tier: true, enchant: true, gema: false },
+        { ranura: 'Pies', ilvl: 276, nombre: 'Alpargatas de eclipse', tier: false, enchant: true, gema: false },
+        { ranura: 'Anillo 1', ilvl: 266, nombre: 'Anillo del Triunvirato', tier: false, enchant: true, gema: true },
+        { ranura: 'Anillo 2', ilvl: 263, nombre: 'Vínculo de la Luz', tier: false, enchant: true, gema: true },
+        { ranura: 'Trinket 1', ilvl: 263, nombre: 'Crisol de energías erráticas', tier: false, enchant: false, gema: false },
+        { ranura: 'Trinket 2', ilvl: 266, nombre: 'Pluma de alascuas', tier: false, enchant: false, gema: false },
+        { ranura: 'Arma', ilvl: 285, nombre: 'Bastón pica de Aln\'hara', tier: false, enchant: true, gema: false, crafted: true },
+      ];
+
       let html = `
-        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem;">
-          <div class="clase-indicator" style="background:var(--clase-monje); height:50px;"></div>
-          <div>
-            <h1 class="titulo-pagina">${p.nombre}</h1>
-            <div class="subtitulo">
-              ${p.spec} &middot; ${p.servidor} &middot; ilvl ~${eq.ilvl_estimado}
+        <!-- HEADER DEL PERSONAJE -->
+        <div class="perfil-header">
+          <div class="perfil-avatar">
+            <div class="avatar-placeholder" style="border-color:var(--clase-monje);">
+              <span class="avatar-icon">🍺</span>
+              <span class="avatar-nivel">90</span>
+            </div>
+          </div>
+          <div class="perfil-info">
+            <h1 class="perfil-nombre" style="color:var(--clase-monje);">${p.nombre}</h1>
+            <div class="perfil-detalle">
+              ${p.raza.split('/')[0].trim()} · ${p.spec.split('/')[0].trim()}
               <span class="tag tag-tank">TANK</span>
+            </div>
+            <div class="perfil-servidor">${p.servidor} · ilvl <strong class="ilvl ilvl-medio">${eq.ilvl_estimado}</strong> · Tier <strong style="color:var(--epic)">4p</strong></div>
+          </div>
+          <div class="perfil-stats-rapidos">
+            <div class="stat-rapido">
+              <span class="stat-rapido-num">${equipoCompleto.filter(e => e.alerta).length}</span>
+              <span class="stat-rapido-label">Alertas</span>
+            </div>
+            <div class="stat-rapido">
+              <span class="stat-rapido-num">${equipoCompleto.filter(e => e.tier).length}</span>
+              <span class="stat-rapido-label">Tier</span>
+            </div>
+            <div class="stat-rapido">
+              <span class="stat-rapido-num">${equipoCompleto.filter(e => e.crafted).length}</span>
+              <span class="stat-rapido-label">Crafted</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALERTAS (solo si hay) -->
+        ${equipoCompleto.filter(e => e.alerta).map(e => `
+          <div class="alerta">${e.ranura}: ${e.alerta}</div>
+        `).join('')}
+
+        <!-- DOS COLUMNAS: Equipo + Stats -->
+        <div class="dos-columnas">
+          <!-- COLUMNA IZQUIERDA: Equipo -->
+          <div class="seccion">
+            <h2 class="seccion-titulo">Equipo</h2>
+            <table class="tabla-equipo">
+              <thead>
+                <tr><th>Ranura</th><th>ilvl</th><th>Objeto</th><th></th></tr>
+              </thead>
+              <tbody>
+                ${equipoCompleto.map(e => {
+                  const tags = [];
+                  if (e.tier) tags.push('<span class="tag-mini tag-tier">T</span>');
+                  if (e.crafted) tags.push('<span class="tag-mini tag-craft">C</span>');
+                  if (e.enchant) tags.push('<span class="tag-mini tag-ench">E</span>');
+                  if (e.gema) tags.push('<span class="tag-mini tag-gem">G</span>');
+
+                  const rowClass = e.alerta ? 'fila-alerta' : '';
+                  return `
+                    <tr class="${rowClass}">
+                      <td class="ranura-nombre">${e.ranura}</td>
+                      <td class="ilvl ${claseIlvl(e.ilvl)}">${e.ilvl}</td>
+                      <td class="objeto-nombre">${e.nombre}</td>
+                      <td class="tags-cell">${tags.join('')}</td>
+                    </tr>
+                  `;
+                }).join('')}
+              </tbody>
+            </table>
+            <div class="leyenda-tags">
+              <span class="tag-mini tag-tier">T</span> Tier
+              <span class="tag-mini tag-craft">C</span> Crafted
+              <span class="tag-mini tag-ench">E</span> Enchant
+              <span class="tag-mini tag-gem">G</span> Gema
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA: Stats + Mecánica -->
+          <div>
+            <!-- Gráfica de ilvl por ranura -->
+            <div class="seccion">
+              <h2 class="seccion-titulo">Distribución de ilvl</h2>
+              <div class="grafica-container">
+                <canvas id="chart-ilvl" height="200"></canvas>
+              </div>
+            </div>
+
+            <!-- Mecánica clave -->
+            ${brm ? `
+            <div class="seccion">
+              <h2 class="seccion-titulo">Mecánica: ${brm.mecanica_clave.es}</h2>
+              <div class="tarjeta">
+                <p style="margin-bottom:0.75rem;">${brm.mecanica_clave.explicacion}</p>
+                <div class="stagger-niveles">
+                  ${brm.mecanica_clave.niveles.map(n => `
+                    <span class="stagger-tag stagger-${n.color}">${n.es}</span>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats prioridad -->
+            <div class="seccion">
+              <h2 class="seccion-titulo">Prioridad de stats</h2>
+              <div class="stats-priority">
+                ${brm.stats_prioridad.map((s, i) => `
+                  <div class="stat-row">
+                    <span class="stat-rank">${i + 1}</span>
+                    <span class="stat-name">${s.stat_es}</span>
+                    <span class="stat-reason">${s.razon}</span>
+                  </div>
+                `).join('')}
+              </div>
+              <p class="nota-stats">${brm.notas_stats}</p>
+            </div>
+            ` : ''}
+
+            <!-- Mejoras -->
+            <div class="seccion">
+              <h2 class="seccion-titulo">Próximas mejoras</h2>
+              ${datos.mejoras_inmediatas.map((m, i) => `
+                <div class="mejora"><span class="mejora-num">${i + 1}</span> ${m}</div>
+              `).join('')}
             </div>
           </div>
         </div>
       `;
 
-      // Alertas
-      const enchantsFaltantes = Object.entries(eq.encantamientos)
-        .filter(([_, v]) => v.startsWith('NO'))
-        .map(([k, _]) => k.replace(/_/g, ' '));
-
-      if (enchantsFaltantes.length > 0) {
-        html += `<div class="alerta">Faltan encantamientos: ${enchantsFaltantes.join(', ')}</div>`;
-      }
-
-      // Mejoras inmediatas
-      if (datos.mejoras_inmediatas && datos.mejoras_inmediatas.length > 0) {
-        html += `<div class="seccion"><h2 class="seccion-titulo">Mejoras inmediatas</h2>`;
-        datos.mejoras_inmediatas.forEach(m => {
-          html += `<div class="mejora">${m}</div>`;
-        });
-        html += `</div>`;
-      }
-
-      // Equipo - Tier Set
-      html += `
-        <div class="seccion">
-          <h2 class="seccion-titulo">Tier Set: ${eq.tier_set.set}</h2>
-          <div class="tarjeta" style="margin-bottom:1rem;">
-            <strong>${eq.tier_set.bonus}</strong>
-            <table class="tabla-equipo" style="margin-top:0.75rem;">
-              <tr><th>Ranura</th><th>ilvl</th><th>Nombre</th></tr>
-              ${eq.tier_set.piezas.map(p => `
-                <tr>
-                  <td>${p.ranura}</td>
-                  <td class="ilvl ${claseIlvl(p.ilvl)}">${p.ilvl}</td>
-                  <td>${p.nombre_es}</td>
-                </tr>
-              `).join('')}
-            </table>
-            <p style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">${eq.tier_set.notas}</p>
-          </div>
-        </div>
-      `;
-
-      // Crafted
-      html += `
-        <div class="seccion">
-          <h2 class="seccion-titulo">Objetos fabricados</h2>
-          <table class="tabla-equipo">
-            <tr><th>Ranura</th><th>ilvl</th><th>Nombre</th><th>Stats</th></tr>
-            ${eq.crafted.map(c => `
-              <tr>
-                <td>${c.ranura}</td>
-                <td class="ilvl ${claseIlvl(c.ilvl)}">${c.ilvl}</td>
-                <td>${c.nombre_es}</td>
-                <td style="color:var(--text-secondary)">${c.stats}</td>
-              </tr>
-            `).join('')}
-          </table>
-        </div>
-      `;
-
-      // Trinkets
-      html += `
-        <div class="seccion">
-          <h2 class="seccion-titulo">Abalorios</h2>
-          <table class="tabla-equipo">
-            <tr><th>Nombre</th><th>ilvl</th></tr>
-            ${eq.trinkets.map(t => `
-              <tr>
-                <td>${t.nombre_es}</td>
-                <td class="ilvl ${claseIlvl(t.ilvl)}">${t.ilvl}</td>
-              </tr>
-            `).join('')}
-          </table>
-        </div>
-      `;
-
-      // Puntos débiles
-      html += `
-        <div class="seccion">
-          <h2 class="seccion-titulo">Puntos d&eacute;biles del equipo</h2>
-          <table class="tabla-equipo">
-            <tr><th>Ranura</th><th>ilvl</th><th>Nombre</th><th>Nota</th></tr>
-            ${eq.puntos_debiles.map(pd => `
-              <tr>
-                <td>${pd.ranura}</td>
-                <td class="ilvl ilvl-bajo">${pd.ilvl}</td>
-                <td>${pd.nombre_es}</td>
-                <td style="color:var(--text-muted)">${pd.comentario || ''}</td>
-              </tr>
-            `).join('')}
-          </table>
-        </div>
-      `;
-
-      // Encantamientos y gemas
-      html += `
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-          <div class="seccion">
-            <h2 class="seccion-titulo">Encantamientos</h2>
-            <table class="tabla-equipo">
-              ${Object.entries(eq.encantamientos).map(([ranura, estado]) => `
-                <tr>
-                  <td>${ranura.replace(/_/g, ' ')}</td>
-                  <td><span class="tag ${estado.startsWith('SI') ? 'tag-si' : 'tag-no'}">${estado.startsWith('SI') ? 'SI' : 'FALTA'}</span></td>
-                </tr>
-              `).join('')}
-            </table>
-          </div>
-          <div class="seccion">
-            <h2 class="seccion-titulo">Gemas</h2>
-            <table class="tabla-equipo">
-              ${Object.entries(eq.gemas).map(([ranura, estado]) => `
-                <tr>
-                  <td>${ranura.replace(/_/g, ' ')}</td>
-                  <td><span class="tag tag-si">${estado}</span></td>
-                </tr>
-              `).join('')}
-            </table>
-          </div>
-        </div>
-      `;
-
-      // Observaciones
-      if (datos.observaciones && datos.observaciones.length > 0) {
-        html += `
-          <div class="seccion">
-            <h2 class="seccion-titulo">Observaciones</h2>
-            ${datos.observaciones.map(o => `<p style="margin-bottom:0.5rem;color:var(--text-secondary);">- ${o}</p>`).join('')}
-          </div>
-        `;
-      }
-
       app.innerHTML = html;
+
+      // Gráfica de ilvl
+      const ctx = document.getElementById('chart-ilvl');
+      if (ctx) {
+        const colores = equipoCompleto.map(e => {
+          if (e.alerta) return 'rgba(255, 68, 68, 0.8)';
+          if (e.tier) return 'rgba(163, 53, 238, 0.8)';
+          if (e.crafted) return 'rgba(79, 195, 247, 0.8)';
+          return 'rgba(160, 160, 176, 0.6)';
+        });
+
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: equipoCompleto.map(e => e.ranura),
+            datasets: [{
+              data: equipoCompleto.map(e => e.ilvl),
+              backgroundColor: colores,
+              borderRadius: 3,
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: {
+              y: {
+                min: 250,
+                max: 295,
+                grid: { color: 'rgba(255,255,255,0.05)' },
+                ticks: { color: '#666' }
+              },
+              x: {
+                grid: { display: false },
+                ticks: { color: '#888', font: { size: 10 }, maxRotation: 45 }
+              }
+            }
+          }
+        });
+      }
     }
 
-    renderPerfil();
+    render();
   </script>
 </body>
 </html>

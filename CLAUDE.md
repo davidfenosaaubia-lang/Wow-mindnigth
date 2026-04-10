@@ -59,7 +59,7 @@ son legibles por humanos y consumibles por scripts.
 - Los análisis deben ser consumibles por el usuario como "pizarra" de enseñanza
 - La estructura debe poder escalar a addons propios en el futuro
 
-## Estado del proyecto (última actualización: 2026-04-09)
+## Estado del proyecto (última actualización: 2026-04-10)
 
 ### Completado
 - Estructura base del repositorio
@@ -78,28 +78,38 @@ son legibles por humanos y consumibles por scripts.
   - conocimiento/monje/perfiles/kymera-brewmaster-2026-04-09.simc
   - conocimiento/monje/perfiles/analisis-kymera-2026-04-09.json
 - Script Warcraft Logs: scripts/wcl-analyzer.py (GraphQL v2)
-- WCL API keys configuradas (WCL_CLIENT_SECRET en GitHub, falta WCL_CLIENT_ID)
-- Pizarra visual creada (pizarra/):
-  - index.html: panel de guild con tarjeta de Kymera
-  - jugador.html: perfil detallado de equipo, enchants, mejoras
-  - CSS tema oscuro con colores de clase WoW
+- WCL API keys configuradas en GitHub Secrets (4 secrets: Blizzard + WCL)
+- Pizarra visual (pizarra/):
+  - index.html: panel de guild con tarjeta de Kymera y stats del ecosistema
+  - jugador.html: perfil rediseñado con avatar, gráfica de ilvl, stats, mecánicas
+  - wowanalyzer.html: módulos de análisis BrM mapeados de WoWAnalyzer
+    - Core: Stagger, DamageTaken, HealingDone, BrewCDR, MajorDefensives
+    - Habilidades: PurifyingBrew, CelestialBrew, KegSmash, BreathOfFire,
+      TigerPalm, Shuffle, GiftOfTheOx, HighTolerance
+    - APL Check con prioridad básica BrM
+  - CSS tema oscuro con colores de clase WoW, stagger, parse colors
   - JS vanilla + Chart.js CDN, sin frameworks
+- GitHub Actions:
+  - rosetta-api.yml: actualiza Rosetta cada miércoles
+  - wcl-analisis.yml: consulta logs de WCL por personaje (manual)
+  - simc-simular.yml: ejecuta SimC con perfil del repo (manual)
+- Repo público, GitHub Pages activado
 - Guild: Artic Penguins (posiblemente Sanguino EU)
 
 ### Pendiente
-- Hacer repo público para activar GitHub Pages (pizarra web)
-- Añadir WCL_CLIENT_ID a GitHub Secrets
+- Lanzar Action de WCL para obtener primeros logs reales
+- Lanzar Action de SimC para primera simulación
 - Descargar habilidades individuales por spec desde talent tree API
   (el endpoint spec_talent_tree existe pero hay que ajustar el parsing)
-- Crear rotaciones detalladas para Maestro cervecero y Tejedor de niebla
-- Primer análisis de logs reales con WCL API
-- Ampliar pizarra: vista de boss (timeline de daño), comparar, mazmorra
+- Poblar la pizarra de WoWAnalyzer con datos reales de logs
+- Vista de boss con timeline de daño (la más valiosa para el usuario)
+- Vista de mazmorra con análisis de M+
 - Añadir más jugadores de la guild al panel
 - Verificar nombres de habilidades del Monje con datos de la API
 
 ### Próximos pasos sugeridos
-1. Hacer repo público y activar GitHub Pages
-2. Añadir WCL_CLIENT_ID y probar conexión con Warcraft Logs
+1. Lanzar Actions de WCL y SimC para tener datos reales
+2. Poblar módulos de WoWAnalyzer con datos de logs
 3. Arreglar descarga de habilidades del talent tree
-4. Vista de boss con timeline de daño (la más valiosa para el usuario)
+4. Vista de boss con timeline de daño
 5. Añadir jugadores de la guild al panel

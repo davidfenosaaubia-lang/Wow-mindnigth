@@ -1,0 +1,80 @@
+name: Simular personaje con SimulationCraft
+
+on:
+  workflow_dispatch:
+    inputs:
+      perfil:
+        description: 'Ruta al archivo .simc del perfil'
+        required: true
+        default: 'conocimiento/monje/perfiles/kymera-brewmaster-2026-04-09.simc'
+      iteraciones:
+        description: 'Numero de iteraciones'
+        required: true
+        default: '10000'
+
+permissions:
+  contents: write
+
+jobs:
+  simular:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Descargar SimulationCraft
+        run: |
+          echo "=== Descargando SimulationCraft ==="
+          # Buscar la última release de SimC para Linux
+          SIMC_URL=$(curl -s https://api.github.com/repos/simulationcraft/simc/releases/latest \
+            | grep -o 'https://.*simc-.*-linux.tar.gz' | head -1)
+
+          if [ -z "$SIMC_URL" ]; then
+            echo "No se encontró release de SimC para Linux, compilando desde source..."
+            sudo apt-get update && sudo apt-get install -y g++ make libcurl4-openssl-dev
+            git clone --depth 1 https://github.com/simulationcraft/simc.git /tmp/simc-src
+            cd /tmp/simc-src/engine
+            make -j$(nproc) optimized
+            sudo cp simc /usr/local/bin/simc
+          else
+            echo "Descargando: $SIMC_URL"
+            curl -sL "$SIMC_URL" | tar xz -C /tmp
+            SIMC_BIN=$(find /tmp -name "simc" -type f | head -1)
+            sudo cp "$SIMC_BIN" /usr/local/bin/simc
+            sudo chmod +x /usr/local/bin/simc
+          fi
+
+          simc --version || echo "SimC instalado (version check puede fallar)"
+
+      - name: Ejecutar simulación
+        run: |
+          echo "=== Ejecutando simulación ==="
+          echo "Perfil: ${{ github.event.inputs.perfil }}"
+          echo "Iteraciones: ${{ github.event.inputs.iteraciones }}"
+
+          PERFIL="${{ github.event.inputs.perfil }}"
+          NOMBRE=$(basename "$PERFIL" .simc)
+          SALIDA="analisis/simulaciones"
+          mkdir -p "$SALIDA"
+
+          simc "$PERFIL" \
+            iterations=${{ github.event.inputs.iteraciones }} \
+            json2="${SALIDA}/${NOMBRE}-resultado.json" \
+            html="${SALIDA}/${NOMBRE}-resultado.html" \
+            2>&1 | tee "${SALIDA}/${NOMBRE}-log.txt"
+
+          echo "=== Simulación completada ==="
+          ls -la "$SALIDA/"
+
+      - name: Commit y push resultados
+        run: |
+          git config user.name "SimC Bot"
+          git config user.email "simc-bot@users.noreply.github.com"
+          git add analisis/simulaciones/
+          if git diff --cached --quiet; then
+            echo "Sin resultados nuevos"
+          else
+            git commit -m "Simulación SimC - $(date +%Y-%m-%d)"
+            git push
+          fi

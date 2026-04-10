@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WoWAnalyzer - Pizarra</title>
+  <link rel="stylesheet" href="css/pizarra.css">
+</head>
+<body>
+  <div class="layout">
+    <nav class="nav-lateral">
+      <a href="index.html" class="nav-logo">Wow Midnight</a>
+      <a href="index.html">Panel</a>
+      <a href="jugador.html">Jugador</a>
+      <a href="wowanalyzer.html" class="activo">WoWAnalyzer</a>
+      <a href="boss.html">Boss</a>
+      <a href="mazmorra.html">Mazmorra</a>
+    </nav>
+
+    <main class="contenido">
+      <h1 class="titulo-pagina">WoWAnalyzer - Maestro cervecero</h1>
+      <p class="subtitulo">M&oacute;dulos de an&aacute;lisis extra&iacute;dos de WoWAnalyzer, adaptados para Brewmaster. Se alimentan de logs de Warcraft Logs.</p>
+
+      <!-- Estado de conexiones -->
+      <div class="seccion">
+        <h2 class="seccion-titulo">Estado de las fuentes de datos</h2>
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem;">
+          <div class="tarjeta">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(79,195,247,0.2);">&#x1f517;</div>
+              Blizzard API
+            </div>
+            <div class="analyzer-metrica">
+              <span>Clases/Specs</span>
+              <span class="analyzer-valor estado-conectado">13 clases</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Mazmorras</span>
+              <span class="analyzer-valor estado-conectado">82</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Habilidades</span>
+              <span class="analyzer-valor estado-pendiente">Pendiente</span>
+            </div>
+          </div>
+          <div class="tarjeta">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(255,128,0,0.2);">&#x1f4ca;</div>
+              Warcraft Logs
+            </div>
+            <div class="analyzer-metrica">
+              <span>API v2</span>
+              <span class="analyzer-valor estado-conectado">Configurado</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Logs de Kymera</span>
+              <span class="analyzer-valor estado-pendiente">Por consultar</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Rankings BrM</span>
+              <span class="analyzer-valor estado-pendiente">Por consultar</span>
+            </div>
+          </div>
+          <div class="tarjeta">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(163,53,238,0.2);">&#x2699;</div>
+              SimulationCraft
+            </div>
+            <div class="analyzer-metrica">
+              <span>Perfil SimC</span>
+              <span class="analyzer-valor estado-conectado">Kymera BrM</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Simulaci&oacute;n</span>
+              <span class="analyzer-valor estado-pendiente">Action pendiente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÓDULOS DE ANÁLISIS: CORE -->
+      <div class="seccion">
+        <h2 class="seccion-titulo">Core - M&eacute;tricas fundamentales</h2>
+        <p class="subtitulo">Los n&uacute;meros base que definen tu rendimiento como tanque. Fuente: Warcraft Logs.</p>
+        <div class="analyzer-grid">
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(255,68,68,0.2);">&#x1f6e1;</div>
+              Tambaleo (Stagger)
+            </div>
+            <div class="analyzer-metrica">
+              <span>% da&ntilde;o en stagger</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Stagger medio</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Tiempo en stagger intenso</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Da&ntilde;o purgado vs absorbido</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">El m&oacute;dulo m&aacute;s cr&iacute;tico para BrM. Mide cu&aacute;nto da&ntilde;o conviertes en stagger y cu&aacute;nto purgas.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(255,68,68,0.2);">&#x1f4a5;</div>
+              Da&ntilde;o recibido
+            </div>
+            <div class="analyzer-metrica">
+              <span>DTPS (Da&ntilde;o/seg recibido)</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Da&ntilde;o f&iacute;sico vs m&aacute;gico</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Picos de da&ntilde;o</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Cu&aacute;nto da&ntilde;o recibes y de qu&eacute; tipo. Los picos son lo que mata, no el da&ntilde;o sostenido.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(0,255,150,0.2);">&#x1f49a;</div>
+              Sanaci&oacute;n recibida y propia
+            </div>
+            <div class="analyzer-metrica">
+              <span>Self-healing total</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Orbes de Don del Buey</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Fortuna celestial (procs)</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Cu&aacute;nto te curas t&uacute; solo. Un BrM bueno se autocura mucho, reduciendo carga al healer.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(79,195,247,0.2);">&#x23f1;</div>
+              Reducci&oacute;n de CDs de Brews
+            </div>
+            <div class="analyzer-metrica">
+              <span>CDR total de brews</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Cargas desperdiciadas</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Uptime de Shuffle</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Las brews se recargan con Golpe barril y Palmada de tigre. Desperdiciar cargas = menos purificaciones disponibles.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(163,53,238,0.2);">&#x1f6e1;</div>
+              Defensivas mayores
+            </div>
+            <div class="analyzer-metrica">
+              <span>Brebaje celestial: usos</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Brebaje celestial: absorci&oacute;n media</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Zen Meditation: usos</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Forma de piedra (racial): usos</span>
+              <span class="analyzer-valor analyzer-pendiente">Necesita log</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Cu&aacute;ndo y c&oacute;mo usas tus defensivas. No usar CDs = malgastar supervivencia.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MÓDULOS: HABILIDADES -->
+      <div class="seccion">
+        <h2 class="seccion-titulo">Habilidades - An&aacute;lisis individual</h2>
+        <p class="subtitulo">Cada habilidad clave analizada: uso, uptime, eficiencia. Basado en la estructura de WoWAnalyzer.</p>
+        <div class="analyzer-grid">
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(255,204,0,0.2);">&#x1f37a;</div>
+              Brebaje purificador
+            </div>
+            <div class="analyzer-metrica">
+              <span>Usos totales</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Da&ntilde;o purgado total</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Purificaci&oacute;n media</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Purificaciones en stagger intenso</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">La habilidad MÁS importante del BrM. Saber cuándo purificar es lo que separa un buen tanque de uno mediocre.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(163,53,238,0.2);">&#x1f37b;</div>
+              Brebaje celestial
+            </div>
+            <div class="analyzer-metrica">
+              <span>Escudo medio</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Escudo desperdiciado (%)</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">El escudo se calcula con tus purificaciones recientes. M&aacute;s purificaci&oacute;n antes = escudo mayor.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(255,128,0,0.2);">&#x1f44a;</div>
+              Golpe barril (Keg Smash)
+            </div>
+            <div class="analyzer-metrica">
+              <span>Usos vs posibles</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>CDR generada</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Tu builder principal. Reduce CDs de brews y aplica debuff. Usarlo en CD es fundamental.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(255,68,68,0.2);">&#x1f525;</div>
+              Aliento de fuego (Breath of Fire)
+            </div>
+            <div class="analyzer-metrica">
+              <span>Uptime del debuff</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Da&ntilde;o total</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Reduce da&ntilde;o de enemigos afectados. El uptime debe ser lo m&aacute;s alto posible.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(255,209,61,0.2);">&#x1f90c;</div>
+              Palmada de tigre (Tiger Palm)
+            </div>
+            <div class="analyzer-metrica">
+              <span>Usos totales</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>CDR generada</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Filler que genera CDR de brews. Nunca dejes de pegar.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(0,255,150,0.2);">&#x1f300;</div>
+              Shuffle
+            </div>
+            <div class="analyzer-metrica">
+              <span>Uptime (%)</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Buff pasivo que aumenta la armadura y el stagger. Debe estar activo siempre. Se mantiene usando builders.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(0,255,150,0.2);">&#x1f402;</div>
+              Don del Buey (Gift of the Ox)
+            </div>
+            <div class="analyzer-metrica">
+              <span>Orbes generados</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <div class="analyzer-metrica">
+              <span>Orbes recogidos vs perdidos</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Orbes de curaci&oacute;n que aparecen al recibir da&ntilde;o. Recogerlos es self-healing gratuito.</p>
+          </div>
+
+          <div class="analyzer-modulo">
+            <div class="analyzer-modulo-titulo">
+              <div class="analyzer-modulo-icon" style="background:rgba(79,195,247,0.2);">&#x2728;</div>
+              Alta tolerancia (High Tolerance)
+            </div>
+            <div class="analyzer-metrica">
+              <span>Celeridad media ganada</span>
+              <span class="analyzer-valor analyzer-pendiente">-</span>
+            </div>
+            <p class="analyzer-pendiente" style="margin-top:0.5rem;">Talento que da celeridad proporcional al stagger. M&aacute;s stagger = m&aacute;s celeridad = m&aacute;s CDR.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- APL CHECK -->
+      <div class="seccion">
+        <h2 class="seccion-titulo">APL Check - Lista de prioridades</h2>
+        <p class="subtitulo">Comprobaci&oacute;n de que sigues la lista de prioridades &oacute;ptima. Requiere log detallado.</p>
+        <div class="tarjeta">
+          <p style="color:var(--text-muted);">La APL (Action Priority List) define el orden &oacute;ptimo de habilidades. Cuando tengamos un log,
+          este m&oacute;dulo comparar&aacute; tu secuencia de habilidades real contra la &oacute;ptima y marcar&aacute; desviaciones.</p>
+          <div style="margin-top:1rem;">
+            <strong style="color:var(--text-secondary);">Prioridad b&aacute;sica BrM (single target):</strong>
+            <ol style="margin-top:0.5rem; color:var(--text-secondary); font-size:0.85rem; padding-left:1.5rem;">
+              <li>Golpe barril (Keg Smash) - en CD siempre</li>
+              <li>Aliento de fuego (Breath of Fire) - mantener debuff</li>
+              <li>Viento arrollador de jade (Rising Sun Kick) - si disponible</li>
+              <li>Palmada de tigre (Tiger Palm) - filler</li>
+              <li>Brebaje purificador - cuando stagger es alto</li>
+              <li>Brebaje celestial - antes de da&ntilde;o grande</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
