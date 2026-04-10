@@ -22,6 +22,6 @@ Items encontrados: 15
   [Arma] item 245771... Bastón pica de Aln'hara
 
   GUARDADO: pizarra/datos/jugadores/kymera.json
-  ilvl medio: 153
+  ilvl medio: 275
   Items: 15
   Imagen: SI
