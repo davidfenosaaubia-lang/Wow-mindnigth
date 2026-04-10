@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forja de An&aacute;lisis - Maestro cervecero</title>
+  <link rel="stylesheet" href="css/pizarra.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <style>
+    /* Estilos específicos de la Forja */
+    .forja-header {
+      background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .forja-titulo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--clase-monje), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .forja-sub {
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
+    }
+    .parse-badge {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.8rem;
+      border: 3px solid;
+    }
+    .parse-label {
+      font-size: 0.6rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Resumen de combate */
+    .resumen-combate {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .resumen-stat {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .resumen-stat-valor {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .resumen-stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Timeline */
+    .timeline-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .timeline-titulo {
+      font-weight: 600;
+    }
+    .timeline-fases {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .fase-tag {
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: rgba(79,195,247,0.15);
+      color: var(--accent);
+    }
+
+    /* Diagnóstico */
+    .diagnostico {
+      border-left: 3px solid;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      border-radius: 0 8px 8px 0;
+      background: var(--bg-card);
+    }
+    .diagnostico-bien {
+      border-color: var(--clase-monje);
+    }
+    .diagnostico-mejorar {
+      border-color: var(--stat-haste);
+    }
+    .diagnostico-critico {
+      border-color: var(--stagger-intenso);
+    }
+    .diagnostico-titulo {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+    .diagnostico-texto {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .diagnostico-dato {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .diagnostico-contexto {
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Desglose de habilidades */
+    .habilidad-barra {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .habilidad-nombre {
+      width: 180px;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .habilidad-barra-visual {
+      flex: 1;
+      height: 20px;
+      background: var(--bg-secondary);
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+    }
+    .habilidad-barra-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+    .habilidad-valor {
+      width: 80px;
+      text-align: right;
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Comparador con mediana */
+    .vs-mediana {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .vs-flecha-up { color: var(--clase-monje); }
+    .vs-flecha-down { color: var(--stagger-intenso); }
+
+    /* Sección de hipótesis */
+    .hipotesis {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .hipotesis-titulo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .hipotesis-texto {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .hipotesis-texto strong {
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 768px) {
+      .resumen-combate { grid-template-columns: repeat(2, 1fr); }
+      .forja-header { flex-direction: column; text-align: center; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <nav class="nav-lateral">
+      <a href="index.html" class="nav-logo">Wow Midnight</a>
+      <a href="index.html">Panel</a>
+      <a href="jugador.html">Jugador</a>
+      <a href="wowanalyzer.html">WoWAnalyzer</a>
+      <a href="forja.html" class="activo">Forja</a>
+      <a href="boss.html">Boss</a>
+      <a href="mazmorra.html">Mazmorra</a>
+    </nav>
+
+    <main class="contenido">
+
+      <!-- HEADER -->
+      <div class="forja-header">
+        <div>
+          <div class="forja-titulo">Forja de An&aacute;lisis</div>
+          <div class="forja-sub">
+            <strong style="color:var(--clase-monje)">Kymera</strong> &middot;
+            Maestro cervecero &middot;
+            Priorato de la Llama Sagrada +12 &middot;
+            <span style="color:var(--text-muted)">Datos de ejemplo - se alimentar&aacute; de logs reales</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:center;">
+          <div class="parse-badge" style="color:var(--parse-morado);border-color:var(--parse-morado);">
+            87
+            <span class="parse-label">Parse</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESUMEN DE COMBATE -->
+      <div class="resumen-combate">
+        <div class="resumen-stat">
+          <div class="resumen-stat-valor" style="color:var(--accent);">14:23</div>
+          <div class="resumen-stat-label">Duraci&oacute;n</div>
+        </div>
+        <div class="resumen-stat">
+          <div class="resumen-stat-valor">12.4k</div>
+          <div class="resumen-stat-label">DPS</div>
+        </div>
+        <div class="resumen-stat">
+          <div class="resumen-stat-valor" style="color:var(--stagger-moderado);">38.2k</div>
+          <div class="resumen-stat-label">DTPS recibido</div>
+        </div>
+        <div class="resumen-stat">
+          <div class="resumen-stat-valor" style="color:var(--clase-monje);">8.1k</div>
+          <div class="resumen-stat-label">Self-healing/s</div>
+        </div>
+        <div class="resumen-stat">
+          <div class="resumen-stat-valor">0</div>
+          <div class="resumen-stat-label">Muertes</div>
+        </div>
+      </div>
+
+      <!-- TIMELINE DE DAÑO -->
+      <div class="timeline-container">
+        <div class="timeline-header">
+          <span class="timeline-titulo">Timeline de da&ntilde;o recibido</span>
+          <div class="timeline-fases">
+            <span class="fase-tag">Trash 1</span>
+            <span class="fase-tag">Boss 1</span>
+            <span class="fase-tag">Trash 2</span>
+            <span class="fase-tag">Boss 2</span>
+            <span class="fase-tag">Trash 3</span>
+            <span class="fase-tag">Boss Final</span>
+          </div>
+        </div>
+        <canvas id="chart-timeline" height="120"></canvas>
+      </div>
+
+      <!-- DIAGNÓSTICOS: Lo que WoWAnalyzer haría + contexto de WCL -->
+      <div class="seccion">
+        <h2 class="seccion-titulo">Diagn&oacute;stico del combate</h2>
+        <p class="subtitulo">Cada punto combina el dato (WCL) con el an&aacute;lisis (WoWAnalyzer) y el contexto (por qu&eacute; importa).</p>
+
+        <div class="diagnostico diagnostico-bien">
+          <div class="diagnostico-titulo">Tambaleo: gesti&oacute;n correcta</div>
+          <div class="diagnostico-texto">
+            Has convertido el <span class="diagnostico-dato">61%</span> del da&ntilde;o f&iacute;sico en stagger.
+            Purificaste <span class="diagnostico-dato">23 veces</span> con una media de
+            <span class="diagnostico-dato">45.2k</span> purgado por uso.
+            El <span class="diagnostico-dato">78%</span> de tus purificaciones fueron en stagger moderado o intenso.
+          </div>
+          <div class="diagnostico-contexto">
+            Esto est&aacute; por encima de la mediana de BrM en este nivel de key (55% stagger, 18 purificaciones).
+            Sigues purificando en los momentos correctos - cuando el stagger es alto, no por p&aacute;nico.
+          </div>
+        </div>
+
+        <div class="diagnostico diagnostico-bien">
+          <div class="diagnostico-titulo">Shuffle: uptime casi perfecto</div>
+          <div class="diagnostico-texto">
+            Uptime de Shuffle: <span class="diagnostico-dato">97.3%</span>.
+            Solo <span class="diagnostico-dato">2.3 segundos</span> sin Shuffle en todo el combate.
+          </div>
+          <div class="diagnostico-contexto">
+            El objetivo es 95%+. Est&aacute;s por encima. Los huecos probablemente son transiciones entre pulls.
+          </div>
+        </div>
+
+        <div class="diagnostico diagnostico-mejorar">
+          <div class="diagnostico-titulo">Brebaje celestial: uso mejorable</div>
+          <div class="diagnostico-texto">
+            Usaste Brebaje celestial <span class="diagnostico-dato">4 veces</span> de
+            <span class="diagnostico-dato">7 posibles</span>.
+            El escudo medio fue <span class="diagnostico-dato">62.3k</span>, pero en 2 usos el escudo fue inferior a
+            <span class="diagnostico-dato">30k</span> (no purificaste antes de usarlo).
+          </div>
+          <div class="diagnostico-contexto">
+            El escudo de Brebaje celestial se calcula con tus purificaciones recientes.
+            Si purificas justo antes de usarlo, el escudo es mayor. Los 3 usos que no hiciste
+            son 3 ventanas de supervivencia que desperdiciaste. En un +15 eso te puede matar.
+          </div>
+        </div>
+
+        <div class="diagnostico diagnostico-mejorar">
+          <div class="diagnostico-titulo">Golpe barril: 2 usos perdidos</div>
+          <div class="diagnostico-texto">
+            Usaste Golpe barril <span class="diagnostico-dato">86 veces</span> de
+            <span class="diagnostico-dato">88 posibles</span> (eficiencia: <span class="diagnostico-dato">97.7%</span>).
+            Los 2 usos perdidos fueron durante los pulls del segundo pasillo.
+          </div>
+          <div class="diagnostico-contexto">
+            97.7% es excelente, pero cada Golpe barril que pierdes es CDR de brews que no generas.
+            En pulls grandes de M+ esos 2 usos son ~4 segundos menos en tus CDs de purificación.
+            No es cr&iacute;tico, pero en la frontera entre sobrevivir y morir, cuenta.
+          </div>
+        </div>
+
+        <div class="diagnostico diagnostico-critico">
+          <div class="diagnostico-titulo">Defensivas mayores: 1 uso de Zen Meditation en toda la key</div>
+          <div class="diagnostico-texto">
+            Zen Meditation: <span class="diagnostico-dato">1 uso</span> de
+            <span class="diagnostico-dato">4-5 posibles</span>.
+            Forma de piedra (racial Enano): <span class="diagnostico-dato">2 usos</span> de
+            <span class="diagnostico-dato">5-6 posibles</span>.
+          </div>
+          <div class="diagnostico-contexto">
+            Este es el patr&oacute;n cl&aacute;sico: gestionas bien el stagger (micro) pero infrautilizas
+            las defensivas largas (macro). Zen Meditation tiene 5 min de CD - en una key de 14 min
+            deber&iacute;as usarlo 2-3 veces m&iacute;nimo. Cada uso no hecho es una carga que le pasas al healer.
+            <strong>Pregunta para reflexionar:</strong> &iquest;no lo usaste porque no lo necesitaste, o porque
+            no identificaste el momento? La diferencia importa.
+          </div>
+        </div>
+      </div>
+
+      <!-- DESGLOSE DE HABILIDADES -->
+      <div class="seccion">
+        <h2 class="seccion-titulo">Desglose de da&ntilde;o por habilidad</h2>
+        <div class="tarjeta" style="padding:1.5rem;">
+          <div class="habilidad-barra">
+            <span class="habilidad-nombre">Golpe barril</span>
+            <div class="habilidad-barra-visual">
+              <div class="habilidad-barra-fill" style="width:100%;background:var(--stat-vers);"></div>
+            </div>
+            <span class="habilidad-valor">28.3%</span>
+          </div>
+          <div class="habilidad-barra">
+            <span class="habilidad-nombre">Aliento de fuego</span>
+            <div class="habilidad-barra-visual">
+              <div class="habilidad-barra-fill" style="width:72%;background:var(--stat-crit);"></div>
+            </div>
+            <span class="habilidad-valor">20.4%</span>
+          </div>
+          <div class="habilidad-barra">
+            <span class="habilidad-nombre">Giro de gr&uacute;a</span>
+            <div class="habilidad-barra-visual">
+              <div class="habilidad-barra-fill" style="width:53%;background:var(--stat-haste);"></div>
+            </div>
+            <span class="habilidad-valor">15.1%</span>
+          </div>
+          <div class="habilidad-barra">
+            <span class="habilidad-nombre">Palmada de tigre</span>
+            <div class="habilidad-barra-visual">
+              <div class="habilidad-barra-fill" style="width:42%;background:var(--stat-mastery);"></div>
+            </div>
+            <span class="habilidad-valor">11.9%</span>
+          </div>
+          <div class="habilidad-barra">
+            <span class="habilidad-nombre">Expulsar mal</span>
+            <div class="habilidad-barra-visual">
+              <div class="habilidad-barra-fill" style="width:28%;background:var(--clase-monje);"></div>
+            </div>
+            <span class="habilidad-valor">8.0%</span>
+          </div>
+          <div class="habilidad-barra">
+            <span class="habilidad-nombre">Otros</span>
+            <div class="habilidad-barra-visual">
+              <div class="habilidad-barra-fill" style="width:57%;background:var(--text-muted);"></div>
+            </div>
+            <span class="habilidad-valor">16.3%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAGGER CHART -->
+      <div class="seccion">
+        <h2 class="seccion-titulo">Perfil de Tambaleo durante el combate</h2>
+        <div class="timeline-container">
+          <canvas id="chart-stagger" height="100"></canvas>
+        </div>
+      </div>
+
+      <!-- HIPÓTESIS: La parte epistemológica -->
+      <div class="seccion">
+        <h2 class="seccion-titulo">Hip&oacute;tesis y preguntas</h2>
+        <p class="subtitulo">No son conclusiones. Son preguntas que los datos plantean y que requieren tu contexto para responder.</p>
+
+        <div class="hipotesis">
+          <div class="hipotesis-titulo">Sobre las defensivas largas</div>
+          <div class="hipotesis-texto">
+            Tu micro-gesti&oacute;n de stagger es superior a la mediana. Pero tus defensivas mayores
+            est&aacute;n infrautilizadas. Esto sugiere que <strong>sabes gestionar el da&ntilde;o constante
+            pero no anticipas los picos</strong>. O quiz&aacute;s los picos no llegaron porque tu healer
+            compensaba. Para saberlo necesitamos cruzar tu timeline con el del healer.
+          </div>
+        </div>
+
+        <div class="hipotesis">
+          <div class="hipotesis-titulo">Sobre la eficiencia de Brebaje celestial</div>
+          <div class="hipotesis-texto">
+            2 de tus 4 usos de Brebaje celestial generaron escudos d&eacute;biles. La mec&aacute;nica dice que
+            <strong>el escudo depende de cu&aacute;nto purificaste recientemente</strong>. Si lo usaste sin
+            purificar antes, el escudo fue bajo no por error de timing sino por error de secuencia.
+            Esto es exactamente el tipo de conocimiento que no sale en una gu&iacute;a: no es "usa Celestial
+            Brew en CD", es "purifica &rarr; espera 1 GCD &rarr; Celestial Brew".
+          </div>
+        </div>
+
+        <div class="hipotesis">
+          <div class="hipotesis-titulo">Sobre el DPS del tanque</div>
+          <div class="hipotesis-texto">
+            12.4k DPS est&aacute; en el percentil 87 para BrM en esta key. Eso significa que <strong>tu
+            rotaci&oacute;n ofensiva es s&oacute;lida</strong>. No es el &aacute;rea donde m&aacute;s puedes mejorar.
+            La mejora real est&aacute; en el uso de defensivas - que no se mide en DPS pero se mide en
+            si el healer puede hacer DPS o tiene que gastarse curando tus picos.
+            <strong>El DPS del tanque no es solo tu DPS. Es tu DPS + el DPS que liberas del healer.</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTA DE DATOS -->
+      <div class="tarjeta" style="margin-top:2rem;border-style:dashed;text-align:center;color:var(--text-muted);padding:2rem;">
+        <p style="font-size:0.9rem;">
+          Los datos de esta p&aacute;gina son <strong>de ejemplo</strong> para mostrar la estructura del an&aacute;lisis.
+        </p>
+        <p style="font-size:0.85rem;margin-top:0.5rem;">
+          Cuando lances la Action de WCL con un log real, estos n&uacute;meros se reemplazar&aacute;n con tus datos.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // Timeline de daño (datos de ejemplo)
+    const ctxTimeline = document.getElementById('chart-timeline');
+    if (ctxTimeline) {
+      // Simular datos de DTPS a lo largo del combate
+      const labels = [];
+      const dtps = [];
+      const staggerData = [];
+      for (let i = 0; i < 86; i++) {
+        labels.push(Math.floor(i * 10 / 60) + ':' + String(i * 10 % 60).padStart(2, '0'));
+        // Picos en bosses (aprox 2:00, 5:30, 10:00, 12:00)
+        let base = 25000 + Math.random() * 15000;
+        if ((i > 11 && i < 18) || (i > 32 && i < 40) || (i > 58 && i < 66) || (i > 70 && i < 82)) {
+          base = 40000 + Math.random() * 30000; // Boss
+        }
+        if (i === 15 || i === 36 || i === 63 || i === 76) {
+          base = 80000 + Math.random() * 20000; // Picos grandes
+        }
+        dtps.push(Math.round(base));
+      }
+
+      new Chart(ctxTimeline, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: dtps,
+            borderColor: 'rgba(255, 68, 68, 0.8)',
+            backgroundColor: 'rgba(255, 68, 68, 0.1)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 0,
+            borderWidth: 1.5,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: {
+              grid: { color: 'rgba(255,255,255,0.03)' },
+              ticks: { color: '#666', callback: v => (v/1000).toFixed(0) + 'k' }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#555', maxTicksLimit: 15, font: { size: 10 } }
+            }
+          },
+          interaction: { intersect: false, mode: 'index' },
+        }
+      });
+    }
+
+    // Stagger timeline
+    const ctxStagger = document.getElementById('chart-stagger');
+    if (ctxStagger) {
+      const labels = [];
+      const leve = [];
+      const moderado = [];
+      const intenso = [];
+
+      for (let i = 0; i < 86; i++) {
+        labels.push(Math.floor(i * 10 / 60) + ':' + String(i * 10 % 60).padStart(2, '0'));
+        let totalStagger = 15000 + Math.random() * 20000;
+        if ((i > 11 && i < 18) || (i > 32 && i < 40) || (i > 58 && i < 66) || (i > 70 && i < 82)) {
+          totalStagger = 30000 + Math.random() * 40000;
+        }
+        // Distribuir entre niveles
+        if (totalStagger < 20000) {
+          leve.push(totalStagger);
+          moderado.push(0);
+          intenso.push(0);
+        } else if (totalStagger < 45000) {
+          leve.push(0);
+          moderado.push(totalStagger);
+          intenso.push(0);
+        } else {
+          leve.push(0);
+          moderado.push(0);
+          intenso.push(totalStagger);
+        }
+      }
+
+      new Chart(ctxStagger, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [
+            { label: 'Leve', data: leve, backgroundColor: 'rgba(0,255,150,0.6)', borderRadius: 1 },
+            { label: 'Moderado', data: moderado, backgroundColor: 'rgba(255,204,0,0.6)', borderRadius: 1 },
+            { label: 'Intenso', data: intenso, backgroundColor: 'rgba(255,68,68,0.7)', borderRadius: 1 },
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              labels: { color: '#888', font: { size: 11 }, boxWidth: 12 }
+            }
+          },
+          scales: {
+            x: { stacked: true, grid: { display: false }, ticks: { color: '#555', maxTicksLimit: 15, font: { size: 10 } } },
+            y: { stacked: true, grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#666', callback: v => (v/1000).toFixed(0) + 'k' } }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
