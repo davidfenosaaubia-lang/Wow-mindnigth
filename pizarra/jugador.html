@@ -248,29 +248,55 @@
 
   <script src="js/datos.js"></script>
   <script>
-    // Datos del equipo con IDs de Wowhead para tooltips
+    // Datos del equipo con IDs completos del SimC para tooltips correctos
+    // bonus_id hace que Wowhead muestre el ilvl real (con upgrades)
+    // ench= muestra el enchant, gems= muestra las gemas
     const EQUIPO = [
-      // Lado izquierdo (de arriba a abajo)
-      { pos: 'izq', ranura: 'Cabeza', id: 250015, ilvl: 276, nombre: 'Rostro temible de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true },
-      { pos: 'izq', ranura: 'Cuello', id: 240950, ilvl: 285, nombre: 'Amuleto sin\'dorei magistral', calidad: 'epico', crafted: true, gema: true },
-      { pos: 'izq', ranura: 'Hombros', id: 258581, ilvl: 272, nombre: 'Manto de sangrepluma', calidad: 'epico' },
-      { pos: 'izq', ranura: 'Espalda', id: 251206, ilvl: 276, nombre: 'Capa de tejido de flujo', calidad: 'epico', alerta: 'Sin enchant' },
-      { pos: 'izq', ranura: 'Pecho', id: 250018, ilvl: 289, nombre: 'Atuendo de batalla de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true },
-      { pos: 'izq', ranura: 'Muñecas', id: 249327, ilvl: 263, nombre: 'Brazales de piel de Vacío', calidad: 'epico', alerta: 'Sin enchant' },
-      { pos: 'izq', ranura: 'Cintura', id: 251082, ilvl: 276, nombre: 'Cincho de chascaparra', calidad: 'epico' },
+      // Lado izquierdo
+      { pos: 'izq', ranura: 'Cabeza', id: 250015, ilvl: 276, nombre: 'Rostro temible de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true,
+        wh: 'item=250015&bonus=13334:6652:12667:12798:13338:13575:3161&ench=7961' },
+      { pos: 'izq', ranura: 'Cuello', id: 240950, ilvl: 285, nombre: 'Amuleto sin\'dorei magistral', calidad: 'epico', crafted: true, gema: true,
+        wh: 'item=240950&bonus=12214:12497:12066:12686:8960:8795:13622:13667&gems=240983' },
+      { pos: 'izq', ranura: 'Hombros', id: 258581, ilvl: 272, nombre: 'Manto de sangrepluma', calidad: 'epico',
+        wh: 'item=258581&bonus=13440:6652:13577:12699:12797' },
+      { pos: 'izq', ranura: 'Espalda', id: 251206, ilvl: 276, nombre: 'Capa de tejido de flujo', calidad: 'epico', alerta: 'Sin enchant',
+        wh: 'item=251206&bonus=13440:6652:13577:12699:12798' },
+      { pos: 'izq', ranura: 'Pecho', id: 250018, ilvl: 289, nombre: 'Atuendo de batalla de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true,
+        wh: 'item=250018&bonus=12806:43:13440:13336:13575:3174&ench=7987' },
+      { pos: 'izq', ranura: 'Muñecas', id: 249327, ilvl: 263, nombre: 'Brazales de piel de Vacío', calidad: 'epico', alerta: 'Sin enchant',
+        wh: 'item=249327&bonus=6652:12667:13577:13334:12794' },
+      { pos: 'izq', ranura: 'Cintura', id: 251082, ilvl: 276, nombre: 'Cincho de chascaparra', calidad: 'epico',
+        wh: 'item=251082&bonus=13440:42:12667:13577:12699:12798' },
 
-      // Lado derecho (de arriba a abajo)
-      { pos: 'der', ranura: 'Manos', id: 250016, ilvl: 289, nombre: 'Puñotruenos de elegido de Ra-den', calidad: 'epico', tier: true },
-      { pos: 'der', ranura: 'Piernas', id: 250014, ilvl: 276, nombre: 'Recorredores raudos de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true },
-      { pos: 'der', ranura: 'Pies', id: 251210, ilvl: 276, nombre: 'Alpargatas de eclipse', calidad: 'epico', enchant: true },
-      { pos: 'der', ranura: 'Anillo 1', id: 151311, ilvl: 266, nombre: 'Anillo del Triunvirato', calidad: 'epico', enchant: true, gema: true },
-      { pos: 'der', ranura: 'Anillo 2', id: 249369, ilvl: 263, nombre: 'Vínculo de la Luz', calidad: 'epico', enchant: true, gema: true },
-      { pos: 'der', ranura: 'Trinket 1', id: 264507, ilvl: 263, nombre: 'Crisol de energías erráticas', calidad: 'epico' },
-      { pos: 'der', ranura: 'Trinket 2', id: 250144, ilvl: 266, nombre: 'Pluma de alascuas', calidad: 'epico' },
+      // Lado derecho
+      { pos: 'der', ranura: 'Manos', id: 250016, ilvl: 289, nombre: 'Puñotruenos de elegido de Ra-den', calidad: 'epico', tier: true,
+        wh: 'item=250016&bonus=13337:13440:6652:13574:12806' },
+      { pos: 'der', ranura: 'Piernas', id: 250014, ilvl: 276, nombre: 'Recorredores raudos de elegido de Ra-den', calidad: 'epico', tier: true, enchant: true,
+        wh: 'item=250014&bonus=6652:12798:13339:13575:3161&ench=8159' },
+      { pos: 'der', ranura: 'Pies', id: 251210, ilvl: 276, nombre: 'Alpargatas de eclipse', calidad: 'epico', enchant: true,
+        wh: 'item=251210&bonus=13440:6652:13577:12699:12798&ench=7993' },
+      { pos: 'der', ranura: 'Anillo 1', id: 151311, ilvl: 266, nombre: 'Anillo del Triunvirato', calidad: 'epico', enchant: true, gema: true,
+        wh: 'item=151311&bonus=12795:13440:6652:13668:12699&ench=8027&gems=240914' },
+      { pos: 'der', ranura: 'Anillo 2', id: 249369, ilvl: 263, nombre: 'Vínculo de la Luz', calidad: 'epico', enchant: true, gema: true,
+        wh: 'item=249369&bonus=6652:13668:13333:12790&ench=8023&gems=240882' },
+      { pos: 'der', ranura: 'Trinket 1', id: 264507, ilvl: 263, nombre: 'Crisol de energías erráticas', calidad: 'epico',
+        wh: 'item=264507&bonus=12790' },
+      { pos: 'der', ranura: 'Trinket 2', id: 250144, ilvl: 266, nombre: 'Pluma de alascuas', calidad: 'epico',
+        wh: 'item=250144&bonus=12795:13440:6652:12699' },
 
-      // Arma (abajo centro)
-      { pos: 'arma', ranura: 'Arma', id: 245771, ilvl: 285, nombre: 'Bastón pica de Aln\'hara', calidad: 'epico', crafted: true, enchant: true },
+      // Arma
+      { pos: 'arma', ranura: 'Arma', id: 245771, ilvl: 285, nombre: 'Bastón pica de Aln\'hara', calidad: 'epico', crafted: true, enchant: true,
+        wh: 'item=245771&bonus=12214:12497:12066:13640:8960:8795:13622:13667&ench=8039' },
     ];
+
+    // Talentos del personaje
+    const TALENTOS = {
+      activo: 'CwQAi6cZM+HWADeySjzG9Lwx8DAAAwMbbGDzYWM2wMjBAAAAAAYZBzEzMwMMzmBmZmZY2GmxYZYZb22mthZBAA2QAAAmtZpZmZ2YYBgZGmGDAAYA',
+      guardados: [
+        { nombre: 'suuu', codigo: 'CwQAi6cZM+HWADeySjzG9Lwx8DAAAgZbzYGPwYWmxGmZMAAAAAAALLYgZGMzwYzAzMzMMbjZGjlhltZbb2GmFAAYDAAAMbziZmZ2YYDgZGGjBAAMA' },
+        { nombre: 'kiira', codigo: 'CwQAi6cZM+HWADeySjzG9Lwx8DAAAwMbbGDzYWM2wMjBAAAAAAYZBzgZGYGmZzAzMzMMbDzYsMssNbbz2wsAAAbAAAgZbWMzMzGDLAMzwYMAAgB' },
+      ]
+    };
 
     function renderSlot(item) {
       const tags = [];
@@ -279,15 +305,16 @@
 
       const alertaClass = item.alerta ? 'item-slot-alerta' : '';
       const wowheadUrl = `https://es.wowhead.com/item=${item.id}`;
+      const whData = item.wh ? `${item.wh}&domain=es` : `item=${item.id}&domain=es`;
 
       return `
         <div class="item-slot ${alertaClass}">
           <div class="item-icono calidad-${item.calidad}">
-            <a href="${wowheadUrl}" data-wowhead="item=${item.id}&domain=es" target="_blank"></a>
+            <a href="${wowheadUrl}" data-wowhead="${whData}" target="_blank"></a>
           </div>
           <div class="item-info">
             <span class="item-nombre">
-              <a href="${wowheadUrl}" data-wowhead="item=${item.id}&domain=es" target="_blank"
+              <a href="${wowheadUrl}" data-wowhead="${whData}" target="_blank"
                  style="color:var(--${item.calidad})">${item.nombre}</a>
             </span>
             <div class="item-detalle">
@@ -401,6 +428,40 @@
           ${EQUIPO.filter(e => e.alerta).map(e => `
             <div class="alerta">${e.ranura}: ${e.alerta}</div>
           `).join('')}
+        </div>
+
+        <!-- Talentos -->
+        <div class="seccion">
+          <h3 class="seccion-titulo">Talentos</h3>
+          <div class="tarjeta" style="padding:1.25rem;">
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
+              <a href="https://es.wowhead.com/talent-calc/monk/brewmaster/${TALENTOS.activo}"
+                 target="_blank"
+                 style="padding:0.5rem 1rem;background:var(--clase-monje);color:#000;border-radius:6px;
+                        text-decoration:none;font-weight:600;font-size:0.85rem;">
+                Build activa &rarr; Ver en Wowhead
+              </a>
+              ${TALENTOS.guardados.map(t => `
+                <a href="https://es.wowhead.com/talent-calc/monk/brewmaster/${t.codigo}"
+                   target="_blank"
+                   style="padding:0.5rem 1rem;background:var(--bg-secondary);border:1px solid var(--border);
+                          color:var(--text-secondary);border-radius:6px;text-decoration:none;font-size:0.85rem;">
+                  ${t.nombre} &rarr; Wowhead
+                </a>
+              `).join('')}
+            </div>
+            <div style="font-size:0.8rem;color:var(--text-muted);">
+              Haz clic en cualquier build para abrirla en el calculador de talentos de Wowhead.
+              Puedes modificarla all&iacute; y copiar el string de importaci&oacute;n para pegarlo en el juego.
+            </div>
+            <details style="margin-top:1rem;">
+              <summary style="cursor:pointer;color:var(--text-secondary);font-size:0.8rem;">Talent string (para importar en juego)</summary>
+              <code style="display:block;margin-top:0.5rem;padding:0.75rem;background:var(--bg-secondary);
+                           border-radius:4px;font-size:0.7rem;word-break:break-all;color:var(--text-muted);">
+                ${TALENTOS.activo}
+              </code>
+            </details>
+          </div>
         </div>
       `;
 
