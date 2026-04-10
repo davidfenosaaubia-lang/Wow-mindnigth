@@ -40,6 +40,7 @@ jobs:
           WCL_CLIENT_ID: ${{ secrets.WCL_CLIENT_ID }}
           WCL_CLIENT_SECRET: ${{ secrets.WCL_CLIENT_SECRET }}
         run: |
+          mkdir -p analisis/logs
           python3 scripts/wcl-analyzer.py \
             --personaje "${{ github.event.inputs.personaje }}" \
             --servidor "${{ github.event.inputs.servidor }}" \
