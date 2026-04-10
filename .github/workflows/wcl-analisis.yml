@@ -45,9 +45,9 @@ jobs:
             --personaje "${{ github.event.inputs.personaje }}" \
             --servidor "${{ github.event.inputs.servidor }}" \
             --region "${{ github.event.inputs.region }}" \
-            2>&1 | tee analisis/logs/ultimo-wcl-log.txt
+            2>&1 | tee analisis/logs/ultimo-wcl-log.txt || true
 
-      - name: Commit y push si hay datos nuevos
+      - name: Commit y push
         run: |
           git config user.name "WCL Bot"
           git config user.email "wcl-bot@users.noreply.github.com"
