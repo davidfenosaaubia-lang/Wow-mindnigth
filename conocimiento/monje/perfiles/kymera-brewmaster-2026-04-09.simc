@@ -20,18 +20,33 @@ talents=CwQAi6cZM+HWADeySjzG9Lwx8DAAAwMbbGDzYWM2wMjBAAAAAAYZBzEzMwMMzmBmZmZY2Gmx
 # Saved Loadout: kiira
 # talents=CwQAi6cZM+HWADeySjzG9Lwx8DAAAwMbbGDzYWM2wMjBAAAAAAYZBzgZGYGmZzAzMzMMbDzYsMssNbbz2wsAAAbAAAgZbWMzMzGDLAMzwYMAAgB
 
+# Rostro temible de elegido de Ra den (276)
 head=,id=250015,enchant_id=7961,bonus_id=13334/6652/12667/12798/13338/13575/3161
+# Amuleto sin'dorei magistral (285)
 neck=,id=240950,gem_id=240983,bonus_id=12214/12497/12066/12686/8960/8795/13622/13667,crafted_stats=36/32,crafting_quality=5
+# Manto de sangrepluma (272)
 shoulder=,id=258581,bonus_id=13440/6652/13577/12699/12797
+# Capa de tejido de flujo (276)
 back=,id=251206,bonus_id=13440/6652/13577/12699/12798
+# Atuendo de batalla de elegido de Ra den (289)
 chest=,id=250018,enchant_id=7987,bonus_id=12806/43/13440/13336/13575/3174
+# Brazales de piel de Vacío (263)
 wrist=,id=249327,bonus_id=6652/12667/13577/13334/12794
+# Puñotruenos de elegido de Ra den (289)
 hands=,id=250016,bonus_id=13337/13440/6652/13574/12806
+# Cincho de chascaparra (276)
 waist=,id=251082,bonus_id=13440/42/12667/13577/12699/12798
+# Recorredores raudos de elegido de Ra den (276)
 legs=,id=250014,enchant_id=8159,bonus_id=6652/12798/13339/13575/3161
+# Alpargatas de eclipse (276)
 feet=,id=251210,enchant_id=7993,bonus_id=13440/6652/13577/12699/12798
+# Anillo del Triunvirato (266)
 finger1=,id=151311,enchant_id=8027,gem_id=240914,bonus_id=12795/13440/6652/13668/12699
+# Vínculo de la Luz (263)
 finger2=,id=249369,enchant_id=8023,gem_id=240882,bonus_id=6652/13668/13333/12790
+# Crisol de energías erráticas (263)
 trinket1=,id=264507,bonus_id=12790
+# Pluma de alascuas (266)
 trinket2=,id=250144,bonus_id=12795/13440/6652/12699
+# Bastón pica de Aln'hara (285)
 main_hand=,id=245771,enchant_id=8039,bonus_id=12214/12497/12066/13640/8960/8795/13622/13667,crafted_stats=49/36,crafting_quality=5
