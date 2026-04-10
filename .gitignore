@@ -57,6 +57,10 @@ web_modules/
 # Optional stylelint cache
 .stylelintcache
 
+# Python
+__pycache__/
+*.pyc
+
 # Optional REPL history
 .node_repl_history
 
