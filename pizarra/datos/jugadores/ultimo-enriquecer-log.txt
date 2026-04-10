@@ -1,11 +1,10 @@
-Personaje: "Kymera"
+Personaje: Kymera
 Items encontrados: 15
   OK: Autenticación Blizzard
 
-=== Enriqueciendo perfil de "Kymera" ===
-  Buscando imagen del personaje...
-  WARN: character-media 404
-  WARN: No se pudo obtener imagen del personaje
+=== Enriqueciendo perfil de Kymera ===
+  Buscando imagen: kymera @ zuljin
+  OK: Imagen encontrada (3 assets)
   [Cabeza] item 250015... Rostro temible de elegido de Ra den
   [Cuello] item 240950... Amuleto sin'dorei magistral
   [Hombros] item 258581... Manto de sangrepluma
@@ -22,6 +21,7 @@ Items encontrados: 15
   [Trinket 2] item 250144... Pluma de alascuas
   [Arma] item 245771... Bastón pica de Aln'hara
 
-  GUARDADO: pizarra/datos/jugadores/"kymera".json
+  GUARDADO: pizarra/datos/jugadores/kymera.json
   ilvl medio: 153
   Items: 15
+  Imagen: SI
