@@ -29,6 +29,32 @@ son legibles por humanos y consumibles por scripts.
 - Cada archivo JSON de rosetta tiene la misma estructura:
   {categoria, descripcion, terminos: [{es, en, contexto?, notas?}]}
 
+## Arquitectura de datos: 3 pilares
+
+### Fuentes primarias (de donde salen los datos)
+1. **Blizzard API** - La fuente madre. Datos del juego: personajes, items
+   (nombre ES/EN, icono, stats, calidad, procedencia), clases, habilidades,
+   mazmorras, bandas, rankings M+, imagen render del personaje.
+   TODO lo visual viene de aquí.
+2. **Warcraft Logs (WCL)** - Rendimiento real. Se alimenta del combat log
+   del juego. DPS, HPS, timeline de daño, uso de habilidades, parses.
+   Todo lo que pasó en un combate real.
+3. **SimulationCraft (SimC)** - Rendimiento teórico. Simula combates con
+   juego perfecto. Stat weights, comparación de equipo/talentos.
+
+### Derivados (capas sobre las primarias, NO fuentes propias)
+- WoWAnalyzer = diagnóstico sobre datos de WCL
+- Raidbots = interfaz web para SimC
+- Archon = agrega datos de WCL + Blizzard API
+- Raider.IO = originalmente sobre Blizzard API, ahora redundante con M+ Rating
+- Wowhead = base de datos del juego, NO la usamos como fuente (Blizzard API
+  tiene lo mismo directo). Solo como referencia de diseño.
+
+### Regla: NO usar Wowhead como fuente de datos
+Todo lo que necesitamos (iconos, nombres, stats, procedencia de items)
+viene de la Blizzard API directamente. Wowhead, WoWAnalyzer, Raidbots y
+Archon son referencias de DISEÑO (cómo presentar la info), no fuentes.
+
 ## Usuario: clase y specs
 - **Clase**: Monje (Monk)
 - **Main spec**: Maestro cervecero (Brewmaster) - TANK
