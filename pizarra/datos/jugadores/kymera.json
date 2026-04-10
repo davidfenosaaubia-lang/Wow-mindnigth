@@ -18,7 +18,7 @@
       "ranura_es": "Cabeza",
       "item_id": 250015,
       "nombre_es": "Rostro temible de elegido de Ra den",
-      "nombre_en": "Fearsome Visage of Ra-den's Chosen",
+      "nombre_en": "",
       "ilvl": 276,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -26,41 +26,42 @@
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_helm_leather_raidmonkmidnight_d_01.jpg",
       "tipo": "Cuero",
       "ranura_tipo": "Cabeza",
-      "armadura": 10,
-      "durabilidad": 100,
+      "armadura": 102,
+      "armadura_display": "102 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 9,
-          "display": "+9 intelecto"
+          "tipo": "agilidad",
+          "valor": 110,
+          "display": "+110 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 9,
-          "display": "+9 agilidad"
+          "tipo": "intelecto",
+          "valor": 110,
+          "display": "+110 intelecto"
         },
         {
           "tipo": "aguante",
-          "valor": 14,
-          "display": "+14 aguante"
+          "valor": 1507,
+          "display": "+1507 aguante"
         },
         {
           "tipo": "golpe crítico",
-          "valor": 5,
-          "display": "+5 golpe crítico"
+          "valor": 47,
+          "display": "+47 golpe crítico"
         },
         {
           "tipo": "celeridad",
-          "valor": 13,
-          "display": "+13 celeridad"
+          "valor": 107,
+          "display": "+107 celeridad"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": 7961,
+      "enchants": [
+        "Encantado: Encantar yelmo: Maleficio de parasitismo potenciado |A:Professions-ChatIcon-Quality-12-Tier2:20:20|a"
+      ],
+      "gemas": [],
+      "set": "Senda de elegido de Ra Den",
       "tiene_enchant": true,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -69,7 +70,7 @@
       "ranura_es": "Cuello",
       "item_id": 240950,
       "nombre_es": "Amuleto sin'dorei magistral",
-      "nombre_en": "Masterwork Sin'dorei Amulet",
+      "nombre_en": "",
       "ilvl": 285,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -78,32 +79,31 @@
       "tipo": "Miscelánea",
       "ranura_tipo": "Cuello",
       "armadura": 0,
-      "durabilidad": 0,
+      "armadura_display": "",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
           "tipo": "aguante",
-          "valor": 580,
-          "display": "+580 aguante"
+          "valor": 948,
+          "display": "+948 aguante"
         },
         {
-          "tipo": "celeridad",
-          "valor": 103,
-          "display": "+103 celeridad"
+          "tipo": "golpe crítico",
+          "valor": 147,
+          "display": "+147 golpe crítico"
         },
         {
-          "tipo": "maestría",
-          "valor": 103,
-          "display": "+103 maestría"
+          "tipo": "versatilidad",
+          "valor": 147,
+          "display": "+147 versatilidad"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": null,
-      "tiene_enchant": false,
-      "gem_ids": [
-        240983
+      "enchants": [],
+      "gemas": [
+        "Diamante de Canción Eterna indescifrable"
       ],
+      "set": "",
+      "tiene_enchant": false,
       "tiene_gemas": true,
       "crafted": true
     },
@@ -112,49 +112,48 @@
       "ranura_es": "Hombros",
       "item_id": 258581,
       "nombre_es": "Manto de sangrepluma",
-      "nombre_en": "Bloodfeather Mantle",
+      "nombre_en": "",
       "ilvl": 272,
-      "calidad": 3,
-      "calidad_nombre": "Raro",
-      "calidad_color": "#0070dd",
+      "calidad": 4,
+      "calidad_nombre": "Épico",
+      "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_leather_draenordungeon_c_01shoulder.jpg",
       "tipo": "Cuero",
       "ranura_tipo": "Hombro",
-      "armadura": 6,
-      "durabilidad": 60,
+      "armadura": 91,
+      "armadura_display": "91 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 3,
-          "display": "+3 intelecto"
+          "tipo": "agilidad",
+          "valor": 79,
+          "display": "+79 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 3,
-          "display": "+3 agilidad"
+          "tipo": "intelecto",
+          "valor": 79,
+          "display": "+79 intelecto"
         },
         {
           "tipo": "aguante",
-          "valor": 5,
-          "display": "+5 aguante"
+          "valor": 1076,
+          "display": "+1076 aguante"
         },
         {
           "tipo": "versatilidad",
-          "valor": 3,
-          "display": "+3 versatilidad"
+          "valor": 42,
+          "display": "+42 versatilidad"
         },
         {
           "tipo": "maestría",
-          "valor": 4,
-          "display": "+4 maestría"
+          "valor": 71,
+          "display": "+71 maestría"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": null,
+      "enchants": [],
+      "gemas": [],
+      "set": "",
       "tiene_enchant": false,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -163,54 +162,53 @@
       "ranura_es": "Espalda",
       "item_id": 251206,
       "nombre_es": "Capa de tejido de flujo",
-      "nombre_en": "Fluxweave Cloak",
+      "nombre_en": "",
       "ilvl": 276,
-      "calidad": 3,
-      "calidad_nombre": "Raro",
-      "calidad_color": "#0070dd",
+      "calidad": 4,
+      "calidad_nombre": "Épico",
+      "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_cape_cloth_dungeonharronir_c_01.jpg",
       "tipo": "Tela",
       "ranura_tipo": "Espalda",
-      "armadura": 4,
-      "durabilidad": 0,
+      "armadura": 54,
+      "armadura_display": "54 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 4,
-          "display": "+4 intelecto"
+          "tipo": "agilidad",
+          "valor": 62,
+          "display": "+62 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 4,
-          "display": "+4 agilidad"
+          "tipo": "intelecto",
+          "valor": 62,
+          "display": "+62 intelecto"
         },
         {
           "tipo": "fuerza",
-          "valor": 4,
-          "display": "+4 fuerza"
+          "valor": 62,
+          "display": "+62 fuerza"
         },
         {
           "tipo": "aguante",
-          "valor": 6,
-          "display": "+6 aguante"
+          "valor": 848,
+          "display": "+848 aguante"
         },
         {
           "tipo": "versatilidad",
-          "valor": 3,
-          "display": "+3 versatilidad"
+          "valor": 34,
+          "display": "+34 versatilidad"
         },
         {
           "tipo": "maestría",
-          "valor": 5,
-          "display": "+5 maestría"
+          "valor": 53,
+          "display": "+53 maestría"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": null,
+      "enchants": [],
+      "gemas": [],
+      "set": "",
       "tiene_enchant": false,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -219,7 +217,7 @@
       "ranura_es": "Pecho",
       "item_id": 250018,
       "nombre_es": "Atuendo de batalla de elegido de Ra den",
-      "nombre_en": "Battle Garb of Ra-den's Chosen",
+      "nombre_en": "",
       "ilvl": 289,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -227,41 +225,47 @@
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_chest_leather_raidmonkmidnight_d_01.jpg",
       "tipo": "Cuero",
       "ranura_tipo": "Torso",
-      "armadura": 14,
-      "durabilidad": 165,
+      "armadura": 147,
+      "armadura_display": "147 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 9,
-          "display": "+9 intelecto"
+          "tipo": "agilidad",
+          "valor": 124,
+          "display": "+124 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 9,
-          "display": "+9 agilidad"
+          "tipo": "intelecto",
+          "valor": 124,
+          "display": "+124 intelecto"
         },
         {
           "tipo": "aguante",
-          "valor": 14,
-          "display": "+14 aguante"
+          "valor": 1768,
+          "display": "+1768 aguante"
         },
         {
           "tipo": "golpe crítico",
-          "valor": 12,
-          "display": "+12 golpe crítico"
+          "valor": 107,
+          "display": "+107 golpe crítico"
         },
         {
           "tipo": "celeridad",
-          "valor": 6,
-          "display": "+6 celeridad"
+          "valor": 57,
+          "display": "+57 celeridad"
+        },
+        {
+          "tipo": "Indestructible",
+          "valor": 71,
+          "display": "Indestructible"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": 7987,
+      "enchants": [
+        "Encantado: Encantar torso: Marca del alma-mundo |A:Professions-ChatIcon-Quality-12-Tier2:20:20|a"
+      ],
+      "gemas": [],
+      "set": "Senda de elegido de Ra Den",
       "tiene_enchant": true,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -270,7 +274,7 @@
       "ranura_es": "Muñecas",
       "item_id": 249327,
       "nombre_es": "Brazales de piel de Vacío",
-      "nombre_en": "Void-Skinned Bracers",
+      "nombre_en": "",
       "ilvl": 263,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -278,41 +282,40 @@
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_bracer_leather_raidroguemidnight_d_01.jpg",
       "tipo": "Cuero",
       "ranura_tipo": "Muñecas",
-      "armadura": 7,
-      "durabilidad": 55,
+      "armadura": 63,
+      "armadura_display": "63 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 5,
-          "display": "+5 intelecto"
+          "tipo": "agilidad",
+          "valor": 55,
+          "display": "+55 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 5,
-          "display": "+5 agilidad"
+          "tipo": "intelecto",
+          "valor": 55,
+          "display": "+55 intelecto"
         },
         {
           "tipo": "aguante",
-          "valor": 8,
-          "display": "+8 aguante"
+          "valor": 721,
+          "display": "+721 aguante"
         },
         {
           "tipo": "golpe crítico",
-          "valor": 7,
-          "display": "+7 golpe crítico"
+          "valor": 54,
+          "display": "+54 golpe crítico"
         },
         {
           "tipo": "celeridad",
-          "valor": 3,
-          "display": "+3 celeridad"
+          "valor": 27,
+          "display": "+27 celeridad"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": null,
+      "enchants": [],
+      "gemas": [],
+      "set": "",
       "tiene_enchant": false,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -321,7 +324,7 @@
       "ranura_es": "Manos",
       "item_id": 250016,
       "nombre_es": "Puñotruenos de elegido de Ra den",
-      "nombre_en": "Thunderfists of Ra-den's Chosen",
+      "nombre_en": "",
       "ilvl": 289,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -329,41 +332,40 @@
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_glove_leather_raidmonkmidnight_d_01.jpg",
       "tipo": "Cuero",
       "ranura_tipo": "Manos",
-      "armadura": 8,
-      "durabilidad": 55,
+      "armadura": 83,
+      "armadura_display": "83 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 7,
-          "display": "+7 intelecto"
+          "tipo": "agilidad",
+          "valor": 93,
+          "display": "+93 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 7,
-          "display": "+7 agilidad"
+          "tipo": "intelecto",
+          "valor": 93,
+          "display": "+93 intelecto"
         },
         {
           "tipo": "aguante",
-          "valor": 10,
-          "display": "+10 aguante"
+          "valor": 1326,
+          "display": "+1326 aguante"
         },
         {
           "tipo": "golpe crítico",
-          "valor": 4,
-          "display": "+4 golpe crítico"
+          "valor": 37,
+          "display": "+37 golpe crítico"
         },
         {
           "tipo": "versatilidad",
-          "valor": 10,
-          "display": "+10 versatilidad"
+          "valor": 87,
+          "display": "+87 versatilidad"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": null,
+      "enchants": [],
+      "gemas": [],
+      "set": "Senda de elegido de Ra Den",
       "tiene_enchant": false,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -372,49 +374,53 @@
       "ranura_es": "Cintura",
       "item_id": 251082,
       "nombre_es": "Cincho de chascaparra",
-      "nombre_en": "Snapvine Cinch",
+      "nombre_en": "",
       "ilvl": 276,
-      "calidad": 3,
-      "calidad_nombre": "Raro",
-      "calidad_color": "#0070dd",
+      "calidad": 4,
+      "calidad_nombre": "Épico",
+      "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_belt_leather_dungeonharronir_c_01.jpg",
       "tipo": "Cuero",
       "ranura_tipo": "Cintura",
-      "armadura": 6,
-      "durabilidad": 50,
+      "armadura": 76,
+      "armadura_display": "76 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 5,
-          "display": "+5 intelecto"
+          "tipo": "agilidad",
+          "valor": 82,
+          "display": "+82 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 5,
-          "display": "+5 agilidad"
+          "tipo": "intelecto",
+          "valor": 82,
+          "display": "+82 intelecto"
         },
         {
           "tipo": "aguante",
-          "valor": 8,
-          "display": "+8 aguante"
+          "valor": 1130,
+          "display": "+1130 aguante"
         },
         {
           "tipo": "golpe crítico",
-          "valor": 6,
-          "display": "+6 golpe crítico"
+          "valor": 70,
+          "display": "+70 golpe crítico"
         },
         {
           "tipo": "maestría",
-          "valor": 4,
-          "display": "+4 maestría"
+          "valor": 45,
+          "display": "+45 maestría"
+        },
+        {
+          "tipo": "velocidad",
+          "valor": 49,
+          "display": "+49 velocidad"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": null,
+      "enchants": [],
+      "gemas": [],
+      "set": "",
       "tiene_enchant": false,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -423,7 +429,7 @@
       "ranura_es": "Piernas",
       "item_id": 250014,
       "nombre_es": "Recorredores raudos de elegido de Ra den",
-      "nombre_en": "Swiftsweepers of Ra-den's Chosen",
+      "nombre_en": "",
       "ilvl": 276,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -431,41 +437,42 @@
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_pant_leather_raidmonkmidnight_d_01.jpg",
       "tipo": "Cuero",
       "ranura_tipo": "Piernas",
-      "armadura": 12,
-      "durabilidad": 120,
+      "armadura": 119,
+      "armadura_display": "119 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 9,
-          "display": "+9 intelecto"
+          "tipo": "agilidad",
+          "valor": 110,
+          "display": "+110 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 9,
-          "display": "+9 agilidad"
+          "tipo": "intelecto",
+          "valor": 110,
+          "display": "+110 intelecto"
         },
         {
           "tipo": "aguante",
-          "valor": 14,
-          "display": "+14 aguante"
+          "valor": 1507,
+          "display": "+1507 aguante"
         },
         {
           "tipo": "celeridad",
-          "valor": 12,
-          "display": "+12 celeridad"
+          "valor": 105,
+          "display": "+105 celeridad"
         },
         {
           "tipo": "maestría",
-          "valor": 6,
-          "display": "+6 maestría"
+          "valor": 49,
+          "display": "+49 maestría"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": 8159,
+      "enchants": [
+        "Encantado: +41 p. de agilidad/fuerza y +115 p. de aguante |A:Professions-ChatIcon-Quality-12-Tier2:20:20|a"
+      ],
+      "gemas": [],
+      "set": "Senda de elegido de Ra Den",
       "tiene_enchant": true,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -474,49 +481,50 @@
       "ranura_es": "Pies",
       "item_id": 251210,
       "nombre_es": "Alpargatas de eclipse",
-      "nombre_en": "Eclipse Espadrilles",
+      "nombre_en": "",
       "ilvl": 276,
-      "calidad": 3,
-      "calidad_nombre": "Raro",
-      "calidad_color": "#0070dd",
+      "calidad": 4,
+      "calidad_nombre": "Épico",
+      "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_boot_leather_dungeonharronir_c_01.jpg",
       "tipo": "Cuero",
       "ranura_tipo": "Pies",
-      "armadura": 7,
-      "durabilidad": 65,
+      "armadura": 85,
+      "armadura_display": "85 p. de armadura",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 5,
-          "display": "+5 intelecto"
+          "tipo": "agilidad",
+          "valor": 82,
+          "display": "+82 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 5,
-          "display": "+5 agilidad"
+          "tipo": "intelecto",
+          "valor": 82,
+          "display": "+82 intelecto"
         },
         {
           "tipo": "aguante",
-          "valor": 8,
-          "display": "+8 aguante"
+          "valor": 1130,
+          "display": "+1130 aguante"
         },
         {
           "tipo": "celeridad",
-          "valor": 4,
-          "display": "+4 celeridad"
+          "valor": 45,
+          "display": "+45 celeridad"
         },
         {
           "tipo": "versatilidad",
-          "valor": 6,
-          "display": "+6 versatilidad"
+          "valor": 70,
+          "display": "+70 versatilidad"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": 7993,
+      "enchants": [
+        "Encantado: Encantar botas: Raíces de Shaladrassil |A:Professions-ChatIcon-Quality-12-Tier2:20:20|a"
+      ],
+      "gemas": [],
+      "set": "",
       "tiene_enchant": true,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -525,41 +533,42 @@
       "ranura_es": "Anillo 1",
       "item_id": 151311,
       "nombre_es": "Anillo del Triunvirato",
-      "nombre_en": "Band of the Triumvirate",
+      "nombre_en": "",
       "ilvl": 266,
-      "calidad": 3,
-      "calidad_nombre": "Raro",
-      "calidad_color": "#0070dd",
+      "calidad": 4,
+      "calidad_nombre": "Épico",
+      "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_70_dungeon_ring2b.jpg",
       "tipo": "Miscelánea",
       "ranura_tipo": "Dedo",
       "armadura": 0,
-      "durabilidad": 0,
+      "armadura_display": "",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
           "tipo": "aguante",
-          "valor": 11,
-          "display": "+11 aguante"
+          "valor": 749,
+          "display": "+749 aguante"
         },
         {
           "tipo": "celeridad",
-          "valor": 21,
-          "display": "+21 celeridad"
+          "valor": 143,
+          "display": "+143 celeridad"
         },
         {
           "tipo": "versatilidad",
-          "valor": 16,
-          "display": "+16 versatilidad"
+          "valor": 107,
+          "display": "+107 versatilidad"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": 8027,
-      "tiene_enchant": true,
-      "gem_ids": [
-        240914
+      "enchants": [
+        "Encantado: Encantar anillo: Tenacidad de Lunargenta |A:Professions-ChatIcon-Quality-12-Tier2:20:20|a"
       ],
+      "gemas": [
+        "Lapislázuli mortal impecable"
+      ],
+      "set": "Lamento de Velen",
+      "tiene_enchant": true,
       "tiene_gemas": true,
       "crafted": false
     },
@@ -568,7 +577,7 @@
       "ranura_es": "Anillo 2",
       "item_id": 249369,
       "nombre_es": "Vínculo de la Luz",
-      "nombre_en": "Bond of Light",
+      "nombre_en": "",
       "ilvl": 263,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -577,32 +586,33 @@
       "tipo": "Miscelánea",
       "ranura_tipo": "Dedo",
       "armadura": 0,
-      "durabilidad": 0,
+      "armadura_display": "",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
           "tipo": "aguante",
-          "valor": 8,
-          "display": "+8 aguante"
+          "valor": 721,
+          "display": "+721 aguante"
         },
         {
           "tipo": "celeridad",
-          "valor": 5,
-          "display": "+5 celeridad"
+          "valor": 45,
+          "display": "+45 celeridad"
         },
         {
           "tipo": "maestría",
-          "valor": 21,
-          "display": "+21 maestría"
+          "valor": 199,
+          "display": "+199 maestría"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": 8023,
-      "tiene_enchant": true,
-      "gem_ids": [
-        240882
+      "enchants": [
+        "Encantado: Encantar anillo: Versatilidad thalassiana |A:Professions-ChatIcon-Quality-12-Tier2:20:20|a"
       ],
+      "gemas": [
+        "Lapislázuli mortal"
+      ],
+      "set": "",
+      "tiene_enchant": true,
       "tiene_gemas": true,
       "crafted": false
     },
@@ -611,7 +621,7 @@
       "ranura_es": "Trinket 1",
       "item_id": 264507,
       "nombre_es": "Crisol de energías erráticas",
-      "nombre_en": "Crucible of Erratic Energies",
+      "nombre_en": "",
       "ilvl": 263,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -620,30 +630,29 @@
       "tipo": "Miscelánea",
       "ranura_tipo": "Abalorio",
       "armadura": 0,
-      "durabilidad": 0,
+      "armadura_display": "",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 50,
-          "display": "+50 intelecto"
+          "tipo": "agilidad",
+          "valor": 93,
+          "display": "+93 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 50,
-          "display": "+50 agilidad"
+          "tipo": "intelecto",
+          "valor": 93,
+          "display": "+93 intelecto"
         },
         {
           "tipo": "fuerza",
-          "valor": 50,
-          "display": "+50 fuerza"
+          "valor": 93,
+          "display": "+93 fuerza"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": null,
+      "enchants": [],
+      "gemas": [],
+      "set": "",
       "tiene_enchant": false,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -652,34 +661,33 @@
       "ranura_es": "Trinket 2",
       "item_id": 250144,
       "nombre_es": "Pluma de alascuas",
-      "nombre_en": "Emberwing Feather",
+      "nombre_en": "",
       "ilvl": 266,
-      "calidad": 3,
-      "calidad_nombre": "Raro",
-      "calidad_color": "#0070dd",
+      "calidad": 4,
+      "calidad_nombre": "Épico",
+      "calidad_color": "#a335ee",
       "icono": "https://render.worldofwarcraft.com/eu/icons/56/inv_icon_feather06a.jpg",
       "tipo": "Miscelánea",
       "ranura_tipo": "Abalorio",
       "armadura": 0,
-      "durabilidad": 0,
+      "armadura_display": "",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
-          "tipo": "intelecto",
-          "valor": 7,
-          "display": "+7 intelecto"
+          "tipo": "agilidad",
+          "valor": 95,
+          "display": "+95 agilidad"
         },
         {
-          "tipo": "agilidad",
-          "valor": 7,
-          "display": "+7 agilidad"
+          "tipo": "intelecto",
+          "valor": 95,
+          "display": "+95 intelecto"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": null,
+      "enchants": [],
+      "gemas": [],
+      "set": "",
       "tiene_enchant": false,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": false
     },
@@ -688,7 +696,7 @@
       "ranura_es": "Arma",
       "item_id": 245771,
       "nombre_es": "Bastón pica de Aln'hara",
-      "nombre_en": "Aln'hara Pikestaff",
+      "nombre_en": "",
       "ilvl": 285,
       "calidad": 4,
       "calidad_nombre": "Épico",
@@ -697,39 +705,40 @@
       "tipo": "Bastón",
       "ranura_tipo": "Dos manos",
       "armadura": 0,
-      "durabilidad": 120,
+      "armadura_display": "",
       "vinculacion": "Se liga al recogerlo",
       "stats": [
         {
           "tipo": "agilidad",
-          "valor": 83,
-          "display": "+83 agilidad"
+          "valor": 119,
+          "display": "+119 agilidad"
         },
         {
           "tipo": "aguante",
-          "valor": 1031,
-          "display": "+1031 aguante"
+          "valor": 1685,
+          "display": "+1685 aguante"
         },
         {
           "tipo": "golpe crítico",
-          "valor": 65,
-          "display": "+65 golpe crítico"
+          "valor": 81,
+          "display": "+81 golpe crítico"
         },
         {
-          "tipo": "celeridad",
-          "valor": 65,
-          "display": "+65 celeridad"
+          "tipo": "versatilidad",
+          "valor": 81,
+          "display": "+81 versatilidad"
         }
       ],
-      "procedencia_tipo": "",
-      "procedencia_nombre": "",
-      "enchant_id": 8039,
+      "enchants": [
+        "Encantado: Encantar arma: Agudeza de los ren'dorei |A:Professions-ChatIcon-Quality-12-Tier2:20:20|a"
+      ],
+      "gemas": [],
+      "set": "",
       "tiene_enchant": true,
-      "gem_ids": [],
       "tiene_gemas": false,
       "crafted": true
     }
   ],
   "ilvl_medio": 275,
-  "generado": "2026-04-10 18:22:39"
+  "generado": "2026-04-10 22:56:28"
 }

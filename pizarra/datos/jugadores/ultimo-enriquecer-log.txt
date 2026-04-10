@@ -5,21 +5,23 @@ Items encontrados: 15
 === Enriqueciendo perfil de Kymera ===
   Buscando imagen: kymera @ zuljin
   OK: Imagen encontrada (3 assets)
-  [Cabeza] item 250015... Rostro temible de elegido de Ra den (5 stats)
-  [Cuello] item 240950... Amuleto sin'dorei magistral (3 stats)
-  [Hombros] item 258581... Manto de sangrepluma (5 stats)
-  [Espalda] item 251206... Capa de tejido de flujo (6 stats)
-  [Pecho] item 250018... Atuendo de batalla de elegido de Ra den (5 stats)
-  [Muñecas] item 249327... Brazales de piel de Vacío (5 stats)
-  [Manos] item 250016... Puñotruenos de elegido de Ra den (5 stats)
-  [Cintura] item 251082... Cincho de chascaparra (5 stats)
-  [Piernas] item 250014... Recorredores raudos de elegido de Ra den (5 stats)
-  [Pies] item 251210... Alpargatas de eclipse (5 stats)
-  [Anillo 1] item 151311... Anillo del Triunvirato (3 stats)
-  [Anillo 2] item 249369... Vínculo de la Luz (3 stats)
-  [Trinket 1] item 264507... Crisol de energías erráticas (3 stats)
-  [Trinket 2] item 250144... Pluma de alascuas (2 stats)
-  [Arma] item 245771... Bastón pica de Aln'hara (4 stats)
+  Obteniendo equipamiento real...
+  OK: 15 items equipados
+  [Cabeza] Rostro temible de elegido de Ra den (ilvl 276, 5 stats)
+  [Cuello] Amuleto sin'dorei magistral (ilvl 285, 3 stats)
+  [Hombros] Manto de sangrepluma (ilvl 272, 5 stats)
+  [Espalda] Capa de tejido de flujo (ilvl 276, 6 stats)
+  [Pecho] Atuendo de batalla de elegido de Ra den (ilvl 289, 6 stats)
+  [Muñecas] Brazales de piel de Vacío (ilvl 263, 5 stats)
+  [Manos] Puñotruenos de elegido de Ra den (ilvl 289, 5 stats)
+  [Cintura] Cincho de chascaparra (ilvl 276, 6 stats)
+  [Piernas] Recorredores raudos de elegido de Ra den (ilvl 276, 5 stats)
+  [Pies] Alpargatas de eclipse (ilvl 276, 5 stats)
+  [Anillo 1] Anillo del Triunvirato (ilvl 266, 3 stats)
+  [Anillo 2] Vínculo de la Luz (ilvl 263, 3 stats)
+  [Trinket 1] Crisol de energías erráticas (ilvl 263, 3 stats)
+  [Trinket 2] Pluma de alascuas (ilvl 266, 2 stats)
+  [Arma] Bastón pica de Aln'hara (ilvl 285, 4 stats)
 
   GUARDADO: pizarra/datos/jugadores/kymera.json
   ilvl medio: 275
