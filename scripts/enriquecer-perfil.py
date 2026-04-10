@@ -120,6 +120,27 @@ class BlizzardAPI:
             print(f"  ERROR character-media: {e}")
             return None
 
+    def get_character_equipment(self, realm_slug, character_name):
+        """Obtiene el equipamiento REAL del personaje con stats aplicadas."""
+        self.autenticar()
+        try:
+            resp = requests.get(
+                f"{self.api_url}/profile/wow/character/{realm_slug}/{character_name.lower()}/equipment",
+                headers={"Authorization": f"Bearer {self.token}"},
+                params={
+                    "namespace": f"profile-{self.region}",
+                    "locale": "es_ES",
+                },
+                timeout=15,
+            )
+            if resp.status_code != 200:
+                print(f"  WARN: character-equipment {resp.status_code}")
+                return None
+            return resp.json()
+        except Exception as e:
+            print(f"  ERROR character-equipment: {e}")
+            return None
+
 
 def parsear_simc(ruta_perfil):
     """Extrae items del perfil SimC."""
@@ -203,120 +224,109 @@ CALIDAD_COLOR = {
 
 
 def enriquecer(api, personaje, items):
-    """Consulta la API para cada item y genera datos enriquecidos."""
+    """Consulta la API de perfil para obtener el equipo real con stats."""
     print(f"\n=== Enriqueciendo perfil de {personaje.get('nombre', '?')} ===")
 
-    # Imagen del personaje
     server_slug = personaje.get("server", "zuljin").lower().replace("'", "").replace(" ", "-")
-    nombre = personaje.get("nombre", "").lower()
-    print(f"  Buscando imagen: {nombre} @ {server_slug}")
-    media = api.get_character_media(server_slug, nombre)
+    nombre_char = personaje.get("nombre", "").lower()
+
+    # Imagen del personaje
+    print(f"  Buscando imagen: {nombre_char} @ {server_slug}")
+    media = api.get_character_media(server_slug, nombre_char)
     if media:
         print(f"  OK: Imagen encontrada ({len(media)} assets)")
+
+    # EQUIPAMIENTO REAL del personaje (con stats reales aplicadas)
+    print(f"  Obteniendo equipamiento real...")
+    equipment_data = api.get_character_equipment(server_slug, nombre_char)
+
+    equip_by_slot = {}
+    if equipment_data:
+        for eq_item in equipment_data.get("equipped_items", []):
+            slot_type = eq_item.get("slot", {}).get("type", "")
+            equip_by_slot[slot_type] = eq_item
+        print(f"  OK: {len(equip_by_slot)} items equipados")
     else:
-        print("  WARN: No se pudo obtener imagen del personaje")
+        print("  WARN: No se pudo obtener equipamiento real")
+
+    SLOT_MAP = {
+        "head": "HEAD", "neck": "NECK", "shoulder": "SHOULDER",
+        "back": "BACK", "chest": "CHEST", "wrist": "WRIST",
+        "hands": "HANDS", "waist": "WAIST", "legs": "LEGS",
+        "feet": "FEET", "finger1": "FINGER_1", "finger2": "FINGER_2",
+        "trinket1": "TRINKET_1", "trinket2": "TRINKET_2",
+        "main_hand": "MAIN_HAND", "off_hand": "OFF_HAND",
+    }
 
     equipo_enriquecido = []
 
     for item in items:
         item_id = item["item_id"]
         ranura = item["ranura"]
-        print(f"  [{RANURA_ES.get(ranura, ranura)}] item {item_id}...", end=" ")
+        slot_type = SLOT_MAP.get(ranura, "")
+        eq_real = equip_by_slot.get(slot_type)
+        print(f"  [{RANURA_ES.get(ranura, ranura)}]", end=" ")
 
-        # Nombre en español
-        data_es = api.get_item(item_id, locale="es_ES")
-        data_en = api.get_item(item_id, locale="en_US")
+        if eq_real:
+            nombre_es = eq_real.get("name", "?")
+            ilvl = eq_real.get("level", {}).get("value", item.get("ilvl_real", 0))
+            calidad_raw = eq_real.get("quality", {}).get("type", "EPIC")
+            calidad_map = {"POOR": 0, "COMMON": 1, "UNCOMMON": 2, "RARE": 3, "EPIC": 4, "LEGENDARY": 5}
+            calidad_num = calidad_map.get(calidad_raw, 4)
 
-        if not data_es:
-            print("NO ENCONTRADO")
+            stats = []
+            for s in eq_real.get("stats", []):
+                st = s.get("type", {})
+                stats.append({
+                    "tipo": st.get("name", st.get("type", "?")),
+                    "valor": s.get("value", 0),
+                    "display": s.get("display", {}).get("display_string", ""),
+                })
+
+            armor = eq_real.get("armor", {}).get("value", 0)
+            armor_display = eq_real.get("armor", {}).get("display", {}).get("display_string", "")
+            item_subclass = eq_real.get("item_subclass", {}).get("name", "")
+            inventory_type = eq_real.get("inventory_type", {}).get("name", "")
+            binding = eq_real.get("binding", {}).get("name", "")
+            set_name = eq_real.get("set", {}).get("item_set", {}).get("name", "") if eq_real.get("set") else ""
+            enchants = [e.get("display_string", "") for e in eq_real.get("enchantments", [])]
+            sockets = [s.get("item", {}).get("name", "Gema") for s in eq_real.get("sockets", []) if s.get("item")]
+
+            icon_url = api.get_item_media(eq_real.get("item", {}).get("id", item_id))
+
+            print(f"{nombre_es} (ilvl {ilvl}, {len(stats)} stats)")
             equipo_enriquecido.append({
-                "ranura_en": ranura,
-                "ranura_es": RANURA_ES.get(ranura, ranura),
-                "item_id": item_id,
-                "nombre_es": "?",
-                "nombre_en": "?",
-                "ilvl": 0,
-                "calidad": 0,
-                "enchant_id": item["enchant_id"],
-                "gem_ids": item["gem_ids"],
-                "crafted": item["crafted"],
+                "ranura_en": ranura, "ranura_es": RANURA_ES.get(ranura, ranura),
+                "item_id": eq_real.get("item", {}).get("id", item_id),
+                "nombre_es": nombre_es, "nombre_en": "",
+                "ilvl": ilvl, "calidad": calidad_num,
+                "calidad_nombre": CALIDAD_COLOR.get(calidad_num, {}).get("es", "Épico"),
+                "calidad_color": CALIDAD_COLOR.get(calidad_num, {}).get("color", "#a335ee"),
+                "icono": icon_url, "tipo": item_subclass,
+                "ranura_tipo": inventory_type, "armadura": armor,
+                "armadura_display": armor_display, "vinculacion": binding,
+                "stats": stats, "enchants": enchants, "gemas": sockets,
+                "set": set_name,
+                "tiene_enchant": len(enchants) > 0,
+                "tiene_gemas": len(sockets) > 0,
+                "crafted": item.get("crafted", False),
             })
-            continue
-
-        nombre_es = data_es.get("name", "?")
-        nombre_en = data_en.get("name", "?") if data_en else "?"
-        # ilvl: usar el del SimC (real con upgrades), no el de la API (base)
-        ilvl = item["ilvl_real"] if item.get("ilvl_real", 0) > 0 else data_es.get("level", data_es.get("item_level", 0))
-        calidad_raw = data_es.get("quality", {})
-        calidad = calidad_raw.get("type", "COMMON") if isinstance(calidad_raw, dict) else calidad_raw
-
-        # Mapear calidad a número
-        calidad_map = {"POOR": 0, "COMMON": 1, "UNCOMMON": 2, "RARE": 3, "EPIC": 4, "LEGENDARY": 5}
-        calidad_num = calidad_map.get(calidad, 1)
-
-        # Icono
-        icon_url = api.get_item_media(item_id)
-
-        # Extraer stats del item de la respuesta de la API
-        stats = []
-        for stat_entry in data_es.get("preview_item", {}).get("stats", []):
-            stat_type = stat_entry.get("type", {})
-            stats.append({
-                "tipo": stat_type.get("name", stat_type.get("type", "?")),
-                "valor": stat_entry.get("value", 0),
-                "display": stat_entry.get("display", {}).get("display_string", ""),
+        else:
+            icon_url = api.get_item_media(item_id)
+            data_es = api.get_item(item_id, locale="es_ES")
+            nombre_es = data_es.get("name", "?") if data_es else "?"
+            ilvl = item.get("ilvl_real", 0)
+            print(f"{nombre_es} (fallback)")
+            equipo_enriquecido.append({
+                "ranura_en": ranura, "ranura_es": RANURA_ES.get(ranura, ranura),
+                "item_id": item_id, "nombre_es": nombre_es, "nombre_en": "",
+                "ilvl": ilvl, "calidad": 4,
+                "calidad_nombre": "Épico", "calidad_color": "#a335ee",
+                "icono": icon_url, "stats": [], "enchants": [], "gemas": [],
+                "tiene_enchant": item.get("enchant_id") is not None,
+                "tiene_gemas": len(item.get("gem_ids", [])) > 0,
+                "crafted": item.get("crafted", False),
             })
-
-        # Si no hay stats en preview_item, intentar stats directas
-        if not stats:
-            for stat_entry in data_es.get("stats", []):
-                if isinstance(stat_entry, dict):
-                    stat_type = stat_entry.get("type", {})
-                    stats.append({
-                        "tipo": stat_type.get("name", stat_type.get("type", "?")),
-                        "valor": stat_entry.get("value", 0),
-                    })
-
-        # Tipo de item, subtipo, armadura
-        item_class = data_es.get("item_class", {}).get("name", "")
-        item_subclass = data_es.get("item_subclass", {}).get("name", "")
-        armor = data_es.get("preview_item", {}).get("armor", {}).get("value", 0)
-        durability = data_es.get("preview_item", {}).get("durability", {}).get("value", 0)
-        binding = data_es.get("preview_item", {}).get("binding", {}).get("name", "")
-        inventory_type = data_es.get("inventory_type", {}).get("name", "")
-
-        # Procedencia (de dónde sale)
-        source = data_es.get("source", {})
-        source_type = source.get("type", "") if isinstance(source, dict) else ""
-        source_name = source.get("name", "") if isinstance(source, dict) else ""
-
-        print(f"{nombre_es} ({len(stats)} stats)")
-
-        equipo_enriquecido.append({
-            "ranura_en": ranura,
-            "ranura_es": RANURA_ES.get(ranura, ranura),
-            "item_id": item_id,
-            "nombre_es": nombre_es,
-            "nombre_en": nombre_en,
-            "ilvl": ilvl,
-            "calidad": calidad_num,
-            "calidad_nombre": CALIDAD_COLOR.get(calidad_num, {}).get("es", "?"),
-            "calidad_color": CALIDAD_COLOR.get(calidad_num, {}).get("color", "#fff"),
-            "icono": icon_url,
-            "tipo": item_subclass or item_class,
-            "ranura_tipo": inventory_type,
-            "armadura": armor,
-            "durabilidad": durability,
-            "vinculacion": binding,
-            "stats": stats,
-            "procedencia_tipo": source_type,
-            "procedencia_nombre": source_name,
-            "enchant_id": item["enchant_id"],
-            "tiene_enchant": item["enchant_id"] is not None,
-            "gem_ids": item["gem_ids"],
-            "tiene_gemas": len(item["gem_ids"]) > 0,
-            "crafted": item["crafted"],
-        })
 
     return {
         "personaje": {

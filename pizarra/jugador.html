@@ -301,10 +301,12 @@
           <div class="tooltip-detalle">${enriched.ranura_tipo || item.ranura} · ${enriched.tipo || ''}</div>
           <div class="tooltip-stat" style="color:var(--clase-monje)">Nivel de objeto ${item.ilvl}</div>
           ${enriched.vinculacion ? `<div class="tooltip-detalle">${enriched.vinculacion}</div>` : ''}
-          ${item.tier ? '<div class="tooltip-stat" style="color:var(--epic);margin-top:0.3rem">Conjunto de tier (4p activo)</div>' : ''}
+          ${enriched.armadura_display ? `<div class="tooltip-stat">${enriched.armadura_display}</div>` : (enriched.armadura ? `<div class="tooltip-stat">${enriched.armadura} p. de armadura</div>` : '')}
+          ${(enriched.stats || []).map(s => `<div class="tooltip-stat">${s.display || '+' + s.valor + ' ' + s.tipo}</div>`).join('')}
+          ${enriched.set ? `<div class="tooltip-stat" style="color:var(--epic);margin-top:0.3rem">${enriched.set}</div>` : ''}
+          ${(enriched.enchants || []).map(e => `<div class="tooltip-stat" style="color:var(--clase-monje)">${e}</div>`).join('')}
+          ${(enriched.gemas || []).map(g => `<div class="tooltip-stat" style="color:var(--stat-haste)">${g}</div>`).join('')}
           ${item.crafted ? '<div class="tooltip-stat" style="color:var(--accent)">Fabricado · Calidad 5</div>' : ''}
-          ${enriched.tiene_enchant ? '<div class="tooltip-stat" style="color:var(--clase-monje)">Encantado</div>' : '<div class="tooltip-stat" style="color:var(--stagger-intenso)">Sin encantar</div>'}
-          ${enriched.tiene_gemas ? '<div class="tooltip-stat" style="color:var(--stat-haste)">Con gema</div>' : ''}
           ${item.alerta ? `<div class="tooltip-alerta">${item.alerta}</div>` : ''}
           <div class="tooltip-detalle" style="margin-top:0.4rem;opacity:0.5">ID: ${item.id}</div>
         `;
