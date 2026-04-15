@@ -2,7 +2,7 @@
   "fuente": "Blizzard API",
   "tipo": "Clases, especializaciones y habilidades",
   "region": "eu",
-  "generado": "2026-04-09 16:15:37",
+  "generado": "2026-04-15 10:45:24",
   "clases": [
     {
       "id": 3,
@@ -211,7 +211,29 @@
       "id": 5,
       "es": "Sacerdote",
       "en": "Priest",
-      "especializaciones": []
+      "especializaciones": [
+        {
+          "id": 256,
+          "es": "Disciplina",
+          "en": "Discipline",
+          "rol": "HEALER",
+          "habilidades": []
+        },
+        {
+          "id": 257,
+          "es": "Sagrado",
+          "en": "Holy",
+          "rol": "HEALER",
+          "habilidades": []
+        },
+        {
+          "id": 258,
+          "es": "Sombra",
+          "en": "Shadow",
+          "rol": "DAMAGE",
+          "habilidades": []
+        }
+      ]
     },
     {
       "id": 2,

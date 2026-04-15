@@ -10,91 +10,136 @@ Autenticando con Blizzard API...
   OK: Encontradas 13 clases (key: 'classes')
   Clase: Cazador (Hunter) [id:3]
     Spec: Bestias (Beast Mastery) [id:253]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Puntería (Marksmanship) [id:254]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Supervivencia (Survival) [id:255]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Brujo (Warlock) [id:9]
     Spec: Aflicción (Affliction) [id:265]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Demonología (Demonology) [id:266]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Destrucción (Destruction) [id:267]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Druida (Druid) [id:11]
     Spec: Equilibrio (Balance) [id:102]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Feral (Feral) [id:103]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Guardián (Guardian) [id:104]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Restauración (Restoration) [id:105]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Mago (Mage) [id:8]
     Spec: Arcano (Arcane) [id:62]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Fuego (Fire) [id:63]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Escarcha (Frost) [id:64]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Caballero de la Muerte (Death Knight) [id:6]
     Spec: Sangre (Blood) [id:250]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Escarcha (Frost) [id:251]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Profano (Unholy) [id:252]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Cazador de demonios (Demon Hunter) [id:12]
     Spec: Devastación (Havoc) [id:577]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Venganza (Vengeance) [id:581]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Devorador (Devourer) [id:1480]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Monje (Monk) [id:10]
     Spec: Maestro cervecero (Brewmaster) [id:268]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Viajero del viento (Windwalker) [id:269]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Tejedor de niebla (Mistweaver) [id:270]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Sacerdote (Priest) [id:5]
-  ERROR en /data/wow/playable-class/5: 504 Server Error: Gateway Timeout for url: https://eu.api.blizzard.com/data/wow/playable-class/5?namespace=static-eu&locale=en_US
+    Spec: Disciplina (Discipline) [id:256]
+      0 habilidades del talent tree
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Sagrado (Holy) [id:257]
+      0 habilidades del talent tree
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
+    Spec: Sombra (Shadow) [id:258]
+      0 habilidades del talent tree
+      (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Paladín (Paladin) [id:2]
     Spec: Sagrado (Holy) [id:65]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Protección (Protection) [id:66]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Reprensión (Retribution) [id:70]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Pícaro (Rogue) [id:4]
     Spec: Asesinato (Assassination) [id:259]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Forajido (Outlaw) [id:260]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Sutileza (Subtlety) [id:261]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Chamán (Shaman) [id:7]
     Spec: Elemental (Elemental) [id:262]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Mejora (Enhancement) [id:263]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Restauración (Restoration) [id:264]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Guerrero (Warrior) [id:1]
     Spec: Armas (Arms) [id:71]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Furia (Fury) [id:72]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Protección (Protection) [id:73]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
   Clase: Evocador (Evoker) [id:13]
     Spec: Devastación (Devastation) [id:1467]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Preservación (Preservation) [id:1468]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
     Spec: Aumento (Augmentation) [id:1473]
+      0 habilidades del talent tree
       (sin habilidades - keys: ['_links', 'id', 'playable_class', 'name', 'gender_description', 'media', 'role', 'pvp_talents', 'spec_talent_tree', 'power_type', 'primary_stat_type', 'hero_talent_trees'])
 
   TOTAL: 13 clases, 0 habilidades
