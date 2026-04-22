@@ -2,7 +2,7 @@
   "fuente": "Blizzard API",
   "tipo": "Mazmorras",
   "region": "eu",
-  "generado": "2026-04-15 10:45:25",
+  "generado": "2026-04-22 10:49:08",
   "mazmorras": [
     {
       "id": 56,
@@ -325,31 +325,6 @@
       "en": "Operation: Floodgate"
     },
     {
-      "id": 556,
-      "es": "Foso de Saron",
-      "en": "Pit of Saron"
-    },
-    {
-      "id": 557,
-      "es": "Aguja Brisaveloz",
-      "en": "Windrunner Spire"
-    },
-    {
-      "id": 558,
-      "es": "Bancal del Magister",
-      "en": "Magisters' Terrace"
-    },
-    {
-      "id": 559,
-      "es": "Punto de Nexo: Xenas",
-      "en": "Nexus-Point Xenas"
-    },
-    {
-      "id": 560,
-      "es": "Cavernas de Maisara",
-      "en": "Maisara Caverns"
-    },
-    {
       "id": 456,
       "es": "Trono de las Mareas",
       "en": "Throne of the Tides"
@@ -408,6 +383,31 @@
       "id": 542,
       "es": "Ecodomo Al'dani",
       "en": "Eco-Dome Al'dani"
+    },
+    {
+      "id": 556,
+      "es": "Foso de Saron",
+      "en": "Pit of Saron"
+    },
+    {
+      "id": 557,
+      "es": "Aguja Brisaveloz",
+      "en": "Windrunner Spire"
+    },
+    {
+      "id": 558,
+      "es": "Bancal del Magister",
+      "en": "Magisters' Terrace"
+    },
+    {
+      "id": 559,
+      "es": "Punto de Nexo: Xenas",
+      "en": "Nexus-Point Xenas"
+    },
+    {
+      "id": 560,
+      "es": "Cavernas de Maisara",
+      "en": "Maisara Caverns"
     },
     {
       "id": 583,

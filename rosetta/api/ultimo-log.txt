@@ -213,11 +213,6 @@ Autenticando con Blizzard API...
     El Amanecer del Infinito: la Caída de Galakrond -> Dawn of the Infinite: Galakrond's Fall
     El Amanecer del Infinito: el Ascenso de Murozond -> Dawn of the Infinite: Murozond's Rise
     Operación: Compuerta -> Operation: Floodgate
-    Foso de Saron -> Pit of Saron
-    Aguja Brisaveloz -> Windrunner Spire
-    Bancal del Magister -> Magisters' Terrace
-    Punto de Nexo: Xenas -> Nexus-Point Xenas
-    Cavernas de Maisara -> Maisara Caverns
     Trono de las Mareas -> Throne of the Tides
     Priorato de la Llama Sagrada -> Priory of the Sacred Flame
     El Grajero -> The Rookery
@@ -230,6 +225,11 @@ Autenticando con Blizzard API...
     Grim Batol -> Grim Batol
     El Núcleo Pétreo -> The Stonecore
     Ecodomo Al'dani -> Eco-Dome Al'dani
+    Foso de Saron -> Pit of Saron
+    Aguja Brisaveloz -> Windrunner Spire
+    Bancal del Magister -> Magisters' Terrace
+    Punto de Nexo: Xenas -> Nexus-Point Xenas
+    Cavernas de Maisara -> Maisara Caverns
     Trono del Triunvirato -> Seat of the Triumvirate
 
   GUARDADO: /home/runner/work/Wow-mindnigth/Wow-mindnigth/rosetta/api/mazmorras.json
