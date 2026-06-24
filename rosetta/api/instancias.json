@@ -2,7 +2,7 @@
   "fuente": "Blizzard API",
   "tipo": "Bandas, mazmorras y contenido por expansión",
   "region": "eu",
-  "generado": "2026-06-17 10:24:46",
+  "generado": "2026-06-24 08:52:20",
   "instancias": [
     {
       "id": 317,
@@ -1321,6 +1321,13 @@
       "tipo": "raids"
     },
     {
+      "id": 1305,
+      "es": "Micosis",
+      "en": "Sporefall",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
       "id": 1271,
       "es": "Ara-Kara, Ciudad de los Ecos",
       "en": "Ara-Kara, City of Echoes",
@@ -1457,6 +1464,13 @@
       "id": 1308,
       "es": "Marcha a Quel'Danas",
       "en": "March on Quel'Danas",
+      "expansion": "Midnight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1305,
+      "es": "Micosis",
+      "en": "Sporefall",
       "expansion": "Midnight",
       "tipo": "raids"
     },

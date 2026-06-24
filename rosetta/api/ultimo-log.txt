@@ -435,6 +435,7 @@ Autenticando con Blizzard API...
     [raids] La Falla Onírica -> The Dreamrift
     [raids] La Aguja del Vacío -> The Voidspire
     [raids] Marcha a Quel'Danas -> March on Quel'Danas
+    [raids] Micosis -> Sporefall
     [dungeons] Ara-Kara, Ciudad de los Ecos -> Ara-Kara, City of Echoes
     [dungeons] Bancal del Magister -> Magisters' Terrace
     [dungeons] Cavernas de Maisara -> Maisara Caverns
@@ -456,6 +457,7 @@ Autenticando con Blizzard API...
     [raids] La Falla Onírica -> The Dreamrift
     [raids] La Aguja del Vacío -> The Voidspire
     [raids] Marcha a Quel'Danas -> March on Quel'Danas
+    [raids] Micosis -> Sporefall
     [dungeons] Guarida de Nalorakk -> Den of Nalorakk
     [dungeons] Bancal del Magister -> Magisters' Terrace
     [dungeons] Cavernas de Maisara -> Maisara Caverns
