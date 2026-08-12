@@ -2,7 +2,7 @@
   "fuente": "Blizzard API",
   "tipo": "Bandas, mazmorras y contenido por expansión",
   "region": "eu",
-  "generado": "2026-08-05 08:15:53",
+  "generado": "2026-08-12 07:07:14",
   "instancias": [
     {
       "id": 317,
@@ -1279,20 +1279,6 @@
       "tipo": "dungeons"
     },
     {
-      "id": 1278,
-      "es": "Khaz Algar",
-      "en": "Khaz Algar",
-      "expansion": "Temporada actual",
-      "tipo": "raids"
-    },
-    {
-      "id": 1302,
-      "es": "Forja de Maná Omega",
-      "en": "Manaforge Omega",
-      "expansion": "Temporada actual",
-      "tipo": "raids"
-    },
-    {
       "id": 1312,
       "es": "Midnight",
       "en": "Midnight",
@@ -1328,107 +1314,72 @@
       "tipo": "raids"
     },
     {
-      "id": 1271,
-      "es": "Ara-Kara, Ciudad de los Ecos",
-      "en": "Ara-Kara, City of Echoes",
+      "id": 1317,
+      "es": "La Gruta Mareal",
+      "en": "The Tidebound Grotto",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
+      "id": 1320,
+      "es": "Abismo Venenoso",
+      "en": "The Venomous Abyss",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
+      "id": 1322,
+      "es": "Altar de los Colmillos",
+      "en": "Altar of Fangs",
       "expansion": "Temporada actual",
       "tipo": "dungeons"
     },
     {
-      "id": 1300,
-      "es": "Bancal del Magister",
-      "en": "Magisters' Terrace",
+      "id": 1311,
+      "es": "Guarida de Nalorakk",
+      "en": "Den of Nalorakk",
       "expansion": "Temporada actual",
       "tipo": "dungeons"
     },
     {
-      "id": 1315,
-      "es": "Cavernas de Maisara",
-      "en": "Maisara Caverns",
+      "id": 1304,
+      "es": "Frontal de la Muerte",
+      "en": "Murder Row",
       "expansion": "Temporada actual",
       "tipo": "dungeons"
     },
     {
-      "id": 1316,
-      "es": "Punto de Nexo: Xenas",
-      "en": "Nexus-Point Xenas",
+      "id": 1309,
+      "es": "El Valle Cegador",
+      "en": "The Blinding Vale",
       "expansion": "Temporada actual",
       "tipo": "dungeons"
     },
     {
-      "id": 1299,
-      "es": "Aguja Brisaveloz",
-      "en": "Windrunner Spire",
+      "id": 1313,
+      "es": "Arena Lacravacua",
+      "en": "Voidscar Arena",
       "expansion": "Temporada actual",
       "tipo": "dungeons"
     },
     {
-      "id": 1201,
-      "es": "Academia Algeth'ar",
-      "en": "Algeth'ar Academy",
+      "id": 1041,
+      "es": "Reposo de los Reyes",
+      "en": "Kings' Rest",
       "expansion": "Temporada actual",
       "tipo": "dungeons"
     },
     {
-      "id": 278,
-      "es": "Foso de Saron",
-      "en": "Pit of Saron",
+      "id": 1202,
+      "es": "Estanques de Vida Rubí",
+      "en": "Ruby Life Pools",
       "expansion": "Temporada actual",
       "tipo": "dungeons"
     },
     {
-      "id": 945,
-      "es": "Trono del Triunvirato",
-      "en": "Seat of the Triumvirate",
-      "expansion": "Temporada actual",
-      "tipo": "dungeons"
-    },
-    {
-      "id": 476,
-      "es": "Trecho Celestial",
-      "en": "Skyreach",
-      "expansion": "Temporada actual",
-      "tipo": "dungeons"
-    },
-    {
-      "id": 1270,
-      "es": "El Rompealbas",
-      "en": "The Dawnbreaker",
-      "expansion": "Temporada actual",
-      "tipo": "dungeons"
-    },
-    {
-      "id": 1267,
-      "es": "Priorato de la Llama Sagrada",
-      "en": "Priory of the Sacred Flame",
-      "expansion": "Temporada actual",
-      "tipo": "dungeons"
-    },
-    {
-      "id": 1298,
-      "es": "Operación: Compuerta",
-      "en": "Operation: Floodgate",
-      "expansion": "Temporada actual",
-      "tipo": "dungeons"
-    },
-    {
-      "id": 1303,
-      "es": "Ecodomo Al'dani",
-      "en": "Eco-Dome Al'dani",
-      "expansion": "Temporada actual",
-      "tipo": "dungeons"
-    },
-    {
-      "id": 1185,
-      "es": "Salas de la Expiación",
-      "en": "Halls of Atonement",
-      "expansion": "Temporada actual",
-      "tipo": "dungeons"
-    },
-    {
-      "id": 1194,
-      "es": "Tazavesh, el Mercado Velado",
-      "en": "Tazavesh, the Veiled Market",
+      "id": 1030,
+      "es": "Templo de Sethraliss",
+      "en": "Temple of Sethraliss",
       "expansion": "Temporada actual",
       "tipo": "dungeons"
     },
@@ -1471,6 +1422,20 @@
       "id": 1305,
       "es": "Micosis",
       "en": "Sporefall",
+      "expansion": "Midnight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1317,
+      "es": "La Gruta Mareal",
+      "en": "The Tidebound Grotto",
+      "expansion": "Midnight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1320,
+      "es": "Abismo Venenoso",
+      "en": "The Venomous Abyss",
       "expansion": "Midnight",
       "tipo": "raids"
     },
@@ -1527,6 +1492,13 @@
       "id": 1299,
       "es": "Aguja Brisaveloz",
       "en": "Windrunner Spire",
+      "expansion": "Midnight",
+      "tipo": "dungeons"
+    },
+    {
+      "id": 1322,
+      "es": "Altar de los Colmillos",
+      "en": "Altar of Fangs",
       "expansion": "Midnight",
       "tipo": "dungeons"
     },

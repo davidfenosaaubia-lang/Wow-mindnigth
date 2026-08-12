@@ -148,7 +148,7 @@ Autenticando con Blizzard API...
 
 === Descargando mazmorras ===
   Probando /data/wow/mythic-keystone/dungeon/index...
-    OK: 82 entradas (key: 'dungeons')
+    OK: 87 entradas (key: 'dungeons')
     Cervecería del Trueno -> Stormstout Brewery
     Puerta del Sol Poniente -> Gate of the Setting Sun
     Monasterio del Shadopan -> Shado-Pan Monastery
@@ -230,7 +230,12 @@ Autenticando con Blizzard API...
     Bancal del Magister -> Magisters' Terrace
     Punto de Nexo: Xenas -> Nexus-Point Xenas
     Cavernas de Maisara -> Maisara Caverns
+    El Valle Cegador -> The Blinding Vale
     Trono del Triunvirato -> Seat of the Triumvirate
+    Arena Lacravacua -> Voidscar Arena
+    Guarida de Nalorakk -> Den of Nalorakk
+    Frontal de la Muerte -> Murder Row
+    Altar de los Colmillos -> Altar of Fangs
 
   GUARDADO: /home/runner/work/Wow-mindnigth/Wow-mindnigth/rosetta/api/mazmorras.json
 
@@ -429,28 +434,21 @@ Autenticando con Blizzard API...
     [dungeons] Uldaman: Legado de Tyr -> Uldaman: Legacy of Tyr
     [dungeons] Amanecer del Infinito -> Dawn of the Infinite
   Expansion: Temporada actual
-    [raids] Khaz Algar -> Khaz Algar
-    [raids] Forja de Maná Omega -> Manaforge Omega
     [raids] Midnight -> Midnight
     [raids] La Falla Onírica -> The Dreamrift
     [raids] La Aguja del Vacío -> The Voidspire
     [raids] Marcha a Quel'Danas -> March on Quel'Danas
     [raids] Micosis -> Sporefall
-    [dungeons] Ara-Kara, Ciudad de los Ecos -> Ara-Kara, City of Echoes
-    [dungeons] Bancal del Magister -> Magisters' Terrace
-    [dungeons] Cavernas de Maisara -> Maisara Caverns
-    [dungeons] Punto de Nexo: Xenas -> Nexus-Point Xenas
-    [dungeons] Aguja Brisaveloz -> Windrunner Spire
-    [dungeons] Academia Algeth'ar -> Algeth'ar Academy
-    [dungeons] Foso de Saron -> Pit of Saron
-    [dungeons] Trono del Triunvirato -> Seat of the Triumvirate
-    [dungeons] Trecho Celestial -> Skyreach
-    [dungeons] El Rompealbas -> The Dawnbreaker
-    [dungeons] Priorato de la Llama Sagrada -> Priory of the Sacred Flame
-    [dungeons] Operación: Compuerta -> Operation: Floodgate
-    [dungeons] Ecodomo Al'dani -> Eco-Dome Al'dani
-    [dungeons] Salas de la Expiación -> Halls of Atonement
-    [dungeons] Tazavesh, el Mercado Velado -> Tazavesh, the Veiled Market
+    [raids] La Gruta Mareal -> The Tidebound Grotto
+    [raids] Abismo Venenoso -> The Venomous Abyss
+    [dungeons] Altar de los Colmillos -> Altar of Fangs
+    [dungeons] Guarida de Nalorakk -> Den of Nalorakk
+    [dungeons] Frontal de la Muerte -> Murder Row
+    [dungeons] El Valle Cegador -> The Blinding Vale
+    [dungeons] Arena Lacravacua -> Voidscar Arena
+    [dungeons] Reposo de los Reyes -> Kings' Rest
+    [dungeons] Estanques de Vida Rubí -> Ruby Life Pools
+    [dungeons] Templo de Sethraliss -> Temple of Sethraliss
     [dungeons] Mazmorras de piedra angular -> Keystone Dungeons
   Expansion: Midnight
     [raids] Midnight -> Midnight
@@ -458,6 +456,8 @@ Autenticando con Blizzard API...
     [raids] La Aguja del Vacío -> The Voidspire
     [raids] Marcha a Quel'Danas -> March on Quel'Danas
     [raids] Micosis -> Sporefall
+    [raids] La Gruta Mareal -> The Tidebound Grotto
+    [raids] Abismo Venenoso -> The Venomous Abyss
     [dungeons] Guarida de Nalorakk -> Den of Nalorakk
     [dungeons] Bancal del Magister -> Magisters' Terrace
     [dungeons] Cavernas de Maisara -> Maisara Caverns
@@ -466,6 +466,7 @@ Autenticando con Blizzard API...
     [dungeons] El Valle Cegador -> The Blinding Vale
     [dungeons] Arena Lacravacua -> Voidscar Arena
     [dungeons] Aguja Brisaveloz -> Windrunner Spire
+    [dungeons] Altar de los Colmillos -> Altar of Fangs
   Expansion: The War Within
     [raids] Khaz Algar -> Khaz Algar
     [raids] Palacio Nerub'ar -> Nerub-ar Palace

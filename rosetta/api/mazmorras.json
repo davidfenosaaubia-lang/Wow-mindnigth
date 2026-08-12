@@ -2,7 +2,7 @@
   "fuente": "Blizzard API",
   "tipo": "Mazmorras",
   "region": "eu",
-  "generado": "2026-08-05 08:15:35",
+  "generado": "2026-08-12 07:06:55",
   "mazmorras": [
     {
       "id": 56,
@@ -410,9 +410,34 @@
       "en": "Maisara Caverns"
     },
     {
+      "id": 584,
+      "es": "El Valle Cegador",
+      "en": "The Blinding Vale"
+    },
+    {
       "id": 583,
       "es": "Trono del Triunvirato",
       "en": "Seat of the Triumvirate"
+    },
+    {
+      "id": 585,
+      "es": "Arena Lacravacua",
+      "en": "Voidscar Arena"
+    },
+    {
+      "id": 586,
+      "es": "Guarida de Nalorakk",
+      "en": "Den of Nalorakk"
+    },
+    {
+      "id": 587,
+      "es": "Frontal de la Muerte",
+      "en": "Murder Row"
+    },
+    {
+      "id": 588,
+      "es": "Altar de los Colmillos",
+      "en": "Altar of Fangs"
     }
   ]
 }
