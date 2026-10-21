@@ -441,6 +441,7 @@ Autenticando con Blizzard API...
     [raids] Micosis -> Sporefall
     [raids] La Gruta Mareal -> The Tidebound Grotto
     [raids] Abismo Venenoso -> The Venomous Abyss
+    [raids] La liberación de Kith'ix -> The Unbinding of Kith'ix
     [dungeons] Altar de los Colmillos -> Altar of Fangs
     [dungeons] Guarida de Nalorakk -> Den of Nalorakk
     [dungeons] Frontal de la Muerte -> Murder Row
@@ -458,6 +459,7 @@ Autenticando con Blizzard API...
     [raids] Micosis -> Sporefall
     [raids] La Gruta Mareal -> The Tidebound Grotto
     [raids] Abismo Venenoso -> The Venomous Abyss
+    [raids] La liberación de Kith'ix -> The Unbinding of Kith'ix
     [dungeons] Guarida de Nalorakk -> Den of Nalorakk
     [dungeons] Bancal del Magister -> Magisters' Terrace
     [dungeons] Cavernas de Maisara -> Maisara Caverns

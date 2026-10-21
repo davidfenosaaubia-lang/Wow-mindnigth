@@ -2,7 +2,7 @@
   "fuente": "Blizzard API",
   "tipo": "Bandas, mazmorras y contenido por expansión",
   "region": "eu",
-  "generado": "2026-10-14 10:48:21",
+  "generado": "2026-10-21 10:46:56",
   "instancias": [
     {
       "id": 317,
@@ -1328,6 +1328,13 @@
       "tipo": "raids"
     },
     {
+      "id": 1324,
+      "es": "La liberación de Kith'ix",
+      "en": "The Unbinding of Kith'ix",
+      "expansion": "Temporada actual",
+      "tipo": "raids"
+    },
+    {
       "id": 1322,
       "es": "Altar de los Colmillos",
       "en": "Altar of Fangs",
@@ -1436,6 +1443,13 @@
       "id": 1320,
       "es": "Abismo Venenoso",
       "en": "The Venomous Abyss",
+      "expansion": "Midnight",
+      "tipo": "raids"
+    },
+    {
+      "id": 1324,
+      "es": "La liberación de Kith'ix",
+      "en": "The Unbinding of Kith'ix",
       "expansion": "Midnight",
       "tipo": "raids"
     },
